@@ -36,20 +36,41 @@ const slugs = Object.keys(pages).sort();
 async function capture(which) {
   const origin = which === 'live' ? LIVE : LOCAL;
   const prefix = which === 'snapshot' ? '/__live' : '';
-  const browser = await chromium.launch();
+  // these pages are up to 37,000px tall; full-page capture of the original
+  // WordPress markup can exhaust the renderer, so give it room and restart the
+  // browser between viewports
+  const launch = () => chromium.launch({
+    args: ['--disable-dev-shm-usage', '--disable-gpu', '--no-sandbox'],
+  });
+  let browser = await launch();
   for (const vp of VIEWPORTS) {
     const dir = path.join(SHOTS, vp.name, which);
     fs.mkdirSync(dir, { recursive: true });
     for (const slug of slugs) {
       const file = path.join(dir, slug + '.png');
       if (fs.existsSync(file) && fs.statSync(file).size > 1000) continue;
-      const ctx = await browser.newContext({
-        userAgent: UA,
-        viewport: { width: vp.width, height: vp.height },
-        isMobile: vp.mobile,
-        hasTouch: vp.mobile,
-        deviceScaleFactor: 1,
-      });
+      // a long capture run can lose the browser; bring it back rather than
+      // dying half way through
+      if (!browser.isConnected()) browser = await launch();
+      let ctx;
+      try {
+        ctx = await browser.newContext({
+          userAgent: UA,
+          viewport: { width: vp.width, height: vp.height },
+          isMobile: vp.mobile,
+          hasTouch: vp.mobile,
+          deviceScaleFactor: 1,
+        });
+      } catch (e) {
+        browser = await launch();
+        ctx = await browser.newContext({
+          userAgent: UA,
+          viewport: { width: vp.width, height: vp.height },
+          isMobile: vp.mobile,
+          hasTouch: vp.mobile,
+          deviceScaleFactor: 1,
+        });
+      }
       const page = await ctx.newPage();
       try {
         await page.goto(origin + prefix + pages[slug].route, { waitUntil: 'load', timeout: 120000 });
@@ -86,13 +107,16 @@ async function capture(which) {
         console.log('\nFAIL', vp.name, slug, String(e).split('\n')[0].slice(0, 90));
         if (fs.existsSync(file)) fs.unlinkSync(file);
       }
-      await ctx.close();
+      await ctx.close().catch(() => {});
       if (which === 'live') await new Promise((r) => setTimeout(r, Number(process.env.LIVE_DELAY_MS || 1200)));
       if (which === 'snapshot') await new Promise((r) => setTimeout(r, 150));
     }
     console.log('\n' + which + ' ' + vp.name + ' done');
+    // a fresh browser per viewport keeps renderer memory from accumulating
+    await browser.close().catch(() => {});
+    browser = await launch();
   }
-  await browser.close();
+  await browser.close().catch(() => {});
 }
 
 // --------------------------------------------------------------------- diff

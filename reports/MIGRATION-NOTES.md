@@ -255,3 +255,18 @@ number, date, total, payment method, line items and billing address; cart
 emptied afterwards. No JavaScript errors, and no horizontal overflow at 1440,
 768 or 390. Test orders were routed to `info@zeecustomboxes.com` via
 `ORDER_TO_OVERRIDE` so the client's inboxes were not used.
+
+## Visual re-verification after the cart work
+
+Re-captured all 198 comparisons (66 pages × 3 breakpoints) against the replayed
+live markup: **198/198 identical in full-page height, 197/198 under 1% differing
+pixels, 195 under 0.2%.**
+
+The one case above 1% (`/category/information/` at desktop, 5.3%) is a
+lazy-loaded image that had not painted in the *reference* capture — the Astro
+page shows it correctly and the page heights match exactly.
+
+The reCAPTCHA widget is now excluded from the pixel comparison. It is loaded
+from Google and reserves its space whenever it happens to arrive, which made
+otherwise identical product pages differ by the widget's height. That it renders
+is asserted separately by `validate.py` and by the runtime check.

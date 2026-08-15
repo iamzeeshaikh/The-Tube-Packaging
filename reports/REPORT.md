@@ -79,42 +79,42 @@ All **66** pages emit byte-identical JSON-LD: the Organization block on the home
 ### Against snapshot — the captured live HTML replayed against the same local assets (isolates the migration from the randomly ordered product grids)
 
 - Comparisons: **198** (of 198 possible)
-- Under 1% differing pixels: **198 / 198**
+- Under 1% differing pixels: **197 / 198**
 - Under 0.2%: **195 / 198**
 - Identical full-page height: **198 / 198**
 
 | Page | Breakpoint | Differing pixels | Height (ref → Astro) |
 |---|---|---|---|
-| /my-account/lost-password/ | mobile | 0.498% | 2343 → 2343 |
+| /category/information/ | desktop | 5.299% | 12958 → 12958 |
+| /thank-you/ | mobile | 0.443% | 2633 → 2633 |
 | /category/uncategorized/ | mobile | 0.258% | 6111 → 6111 |
-| /cart/ | tablet | 0.215% | 2753 → 2753 |
-| /shop/page/2/ | mobile | 0.105% | 11147 → 11147 |
-| /product-category/custom-paper-tubes/ | mobile | 0.104% | 11192 → 11192 |
-| /terms-conditions/ | mobile | 0.1% | 11537 → 11537 |
-| /5-ways-large-cardboard-tubes-boost-product-protection/ | tablet | 0.074% | 8034 → 8034 |
-| /product/poster-mailing-tubes/ | mobile | 0.064% | 18245 → 18245 |
-| /product/luxury-tube-packaging/ | mobile | 0.063% | 18401 → 18401 |
-| /category/uncategorized/ | desktop | 0.062% | 5074 → 5074 |
+| /shop/ | mobile | 0.104% | 11241 → 11241 |
+| /product/white-paper-tubes/ | mobile | 0.065% | 18020 → 18020 |
+| /product/paper-lipstick-tubes/ | mobile | 0.064% | 18144 → 18144 |
+| /product/paper-towel-tubes/ | mobile | 0.062% | 18908 → 18908 |
+| /product/wrapping-paper-tubes/ | mobile | 0.062% | 18724 → 18724 |
+| /product/tea-paper-tubes/ | mobile | 0.06% | 19523 → 19523 |
+| /product/kraft-mailing-tubes/ | mobile | 0.059% | 19729 → 19729 |
 
 ### Against live — the live site over the network (also carries the random product order, and the live host rate-limited part of the run)
 
 - Comparisons: **143** (of 198 possible)
-- Under 1% differing pixels: **125 / 143**
-- Under 0.2%: **109 / 143**
-- Identical full-page height: **118 / 143**
+- Under 1% differing pixels: **80 / 143**
+- Under 0.2%: **33 / 143**
+- Identical full-page height: **85 / 143**
 
 | Page | Breakpoint | Differing pixels | Height (ref → Astro) |
 |---|---|---|---|
 | /terms-conditions/ | mobile | 17.23% | 11568 → 11537 |
-| / | tablet | 16.25% | 29941 → 29941 |
-| / | mobile | 11.342% | 37016 → 37016 |
-| / | desktop | 8.482% | 18854 → 18854 |
-| /about-us/ | mobile | 5.427% | 9372 → 9336 |
-| /cardboard-tubes-for-business-effective-solutions-for-packaging-and-storage/ | desktop | 2.835% | 6492 → 6492 |
-| /cardboard-tubes-for-business-effective-solutions-for-packaging-and-storage/ | tablet | 1.883% | 7500 → 7500 |
-| /6-design-ideas-for-custom-square-paper-tubes/ | mobile | 1.847% | 22520 → 22550 |
-| /product/white-paper-tubes/ | desktop | 1.422% | 9528 → 9559 |
-| /cosmetic-tubes-complete-packaging-guide-for-beauty-product-manufacturers/ | mobile | 1.395% | 37383 → 37383 |
+| / | tablet | 16.977% | 29941 → 29864 |
+| /product/lotion-tubes/ | mobile | 15.49% | 21591 → 21514 |
+| /product/paper-lipstick-tubes/ | mobile | 15.409% | 18221 → 18144 |
+| /product/skincare-tubes/ | mobile | 15.404% | 21742 → 21665 |
+| /product/cylinder-mailing-tubes/ | mobile | 15.351% | 21633 → 21556 |
+| /product/tube-food-packaging/ | mobile | 15.347% | 20431 → 20354 |
+| /product/luxury-tube-packaging/ | mobile | 15.206% | 18401 → 18324 |
+| /product/tea-paper-tubes/ | mobile | 15.01% | 19632 → 19523 |
+| /product/large-paper-tubes/ | mobile | 14.96% | 22031 → 21954 |
 
 
 ## 12. Build and crawl results

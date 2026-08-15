@@ -255,11 +255,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     18854
+     18777
     ],
     "sizeAstro": [
      1440,
-     18854
+     18777
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -278,11 +278,11 @@
     ],
     "sizeAstro": [
      1440,
-     18854
+     18777
     ],
-    "heightDelta": 0,
-    "diffPixels": 2302912,
-    "diffPercent": 8.482,
+    "heightDelta": -77,
+    "diffPixels": 2563125,
+    "diffPercent": 9.479,
     "diffBands": [
      [
       840,
@@ -339,21 +339,16 @@
    "vs_snapshot": {
     "sizeLive": [
      768,
-     29941
+     29864
     ],
     "sizeAstro": [
      768,
-     29941
+     29864
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.02,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -362,11 +357,11 @@
     ],
     "sizeAstro": [
      768,
-     29941
+     29864
     ],
-    "heightDelta": 0,
-    "diffPixels": 3732111,
-    "diffPercent": 16.23,
+    "heightDelta": -77,
+    "diffPixels": 3893741,
+    "diffPercent": 16.977,
     "diffBands": [
      [
       2246,
@@ -423,21 +418,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     37016
+     36939
     ],
     "sizeAstro": [
      390,
-     37016
+     36939
     ],
     "heightDelta": 0,
-    "diffPixels": 4551,
-    "diffPercent": 0.032,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -446,16 +436,12 @@
     ],
     "sizeAstro": [
      390,
-     37016
+     36939
     ],
-    "heightDelta": 0,
-    "diffPixels": 1641945,
-    "diffPercent": 11.374,
+    "heightDelta": -77,
+    "diffPixels": 1740239,
+    "diffPercent": 12.08,
     "diffBands": [
-     [
-      784,
-      829
-     ],
      [
       2970,
       3163
@@ -495,6 +481,14 @@
      [
       12259,
       13315
+     ],
+     [
+      35706,
+      35809
+     ],
+     [
+      35831,
+      35852
      ]
     ]
    }
@@ -863,12 +857,12 @@
      12958
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.024,
+    "diffPixels": 988793,
+    "diffPercent": 5.299,
     "diffBands": [
      [
-      840,
-      885
+      4624,
+      5708
      ]
     ]
    }
@@ -918,14 +912,9 @@
      5074
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.062,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   },
   "tablet": {
@@ -955,9 +944,14 @@
      6111
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 6139,
+    "diffPercent": 0.258,
+    "diffBands": [
+     [
+      4450,
+      4485
+     ]
+    ]
    }
   }
  },
@@ -1109,14 +1103,9 @@
      21083
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.028,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -1153,9 +1142,14 @@
      37383
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.031,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -1167,13 +1161,9 @@
      37383
     ],
     "heightDelta": 0,
-    "diffPixels": 207890,
-    "diffPercent": 1.426,
+    "diffPixels": 203336,
+    "diffPercent": 1.395,
     "diffBands": [
-     [
-      784,
-      829
-     ],
      [
       34577,
       34783
@@ -1306,14 +1296,9 @@
      2343
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.498,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  },
@@ -1345,14 +1330,9 @@
      7610
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.078,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   },
   "mobile": {
@@ -1929,14 +1909,9 @@
      11093
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.029,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -1948,12 +1923,16 @@
      11093
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.045,
+    "diffPixels": 78724,
+    "diffPercent": 0.493,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -1983,12 +1962,20 @@
      15317
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.022,
+    "diffPixels": 44117,
+    "diffPercent": 0.375,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -1997,21 +1984,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22357
+     22280
     ],
     "sizeAstro": [
      390,
-     22357
+     22280
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2020,15 +2002,59 @@
     ],
     "sizeAstro": [
      390,
-     22357
+     22280
     ],
-    "heightDelta": -31,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
+    "heightDelta": -108,
+    "diffPixels": 1262838,
+    "diffPercent": 14.533,
     "diffBands": [
      [
-      784,
-      829
+      2406,
+      2434
+     ],
+     [
+      2569,
+      2592
+     ],
+     [
+      2613,
+      3031
+     ],
+     [
+      3081,
+      3094
+     ],
+     [
+      3118,
+      3119
+     ],
+     [
+      3144,
+      3171
+     ],
+     [
+      3195,
+      3235
+     ],
+     [
+      3285,
+      3343
+     ],
+     [
+      3365,
+      5432
+     ],
+     [
+      5454,
+      5646
+     ],
+     [
+      5667,
+      5956
+     ],
+     [
+      5978,
+      6057
      ]
     ]
    }
@@ -2039,11 +2065,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10842
+     10817
     ],
     "sizeAstro": [
      1440,
-     10842
+     10817
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2057,39 +2083,59 @@
     ],
     "sizeAstro": [
      1440,
-     10842
+     10817
     ],
-    "heightDelta": -24,
-    "diffPixels": 171709,
-    "diffPercent": 1.1,
+    "heightDelta": -49,
+    "diffPixels": 1608430,
+    "diffPercent": 10.326,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
      ],
      [
-      9078,
-      9199
+      831,
+      1090
      ],
      [
-      9224,
-      9342
+      1192,
+      1230
      ],
      [
-      10187,
-      10276
+      1254,
+      1255
      ],
      [
-      10307,
-      10330
+      1315,
+      2500
      ],
      [
-      10384,
-      10636
+      2525,
+      2934
      ],
      [
-      10743,
-      10834
+      2965,
+      3347
+     ],
+     [
+      3369,
+      4118
+     ],
+     [
+      4145,
+      4554
+     ],
+     [
+      4584,
+      5737
+     ],
+     [
+      5763,
+      6172
+     ],
+     [
+      6405,
+      7142
      ]
     ]
    }
@@ -2119,12 +2165,20 @@
      14926
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.022,
+    "diffPixels": 44117,
+    "diffPercent": 0.385,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -2133,21 +2187,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22597
+     22520
     ],
     "sizeAstro": [
      390,
-     22597
+     22520
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2156,15 +2205,59 @@
     ],
     "sizeAstro": [
      390,
-     22597
+     22520
     ],
-    "heightDelta": -71,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
+    "heightDelta": -148,
+    "diffPixels": 1267899,
+    "diffPercent": 14.436,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2159,
+      2190
+     ],
+     [
+      2325,
+      2347
+     ],
+     [
+      2369,
+      2787
+     ],
+     [
+      2837,
+      2850
+     ],
+     [
+      2873,
+      2874
+     ],
+     [
+      2899,
+      2927
+     ],
+     [
+      2950,
+      2990
+     ],
+     [
+      3041,
+      3098
+     ],
+     [
+      3120,
+      5234
+     ],
+     [
+      5255,
+      5444
+     ],
+     [
+      5468,
+      5574
      ]
     ]
    }
@@ -2175,11 +2268,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     11354
+     11277
     ],
     "sizeAstro": [
      1440,
-     11354
+     11277
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2193,15 +2286,59 @@
     ],
     "sizeAstro": [
      1440,
-     11354
+     11277
     ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.044,
+    "heightDelta": -77,
+    "diffPixels": 1658201,
+    "diffPercent": 10.211,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1603
+     ],
+     [
+      1633,
+      1678
+     ],
+     [
+      1710,
+      1755
+     ],
+     [
+      1783,
+      1828
+     ],
+     [
+      1853,
+      1869
+     ],
+     [
+      1893,
+      2079
      ]
     ]
    }
@@ -2231,12 +2368,20 @@
      15432
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.022,
+    "diffPixels": 44117,
+    "diffPercent": 0.372,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -2245,11 +2390,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     21451
+     21374
     ],
     "sizeAstro": [
      390,
-     21451
+     21374
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2263,12 +2408,61 @@
     ],
     "sizeAstro": [
      390,
-     21451
+     21374
     ],
-    "heightDelta": -32,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -109,
+    "diffPixels": 1197152,
+    "diffPercent": 14.361,
+    "diffBands": [
+     [
+      2097,
+      2127
+     ],
+     [
+      2262,
+      2284
+     ],
+     [
+      2306,
+      2724
+     ],
+     [
+      2774,
+      2787
+     ],
+     [
+      2810,
+      2811
+     ],
+     [
+      2836,
+      2864
+     ],
+     [
+      2887,
+      2927
+     ],
+     [
+      2978,
+      3029
+     ],
+     [
+      3057,
+      4500
+     ],
+     [
+      4530,
+      4968
+     ],
+     [
+      4996,
+      5044
+     ],
+     [
+      5065,
+      5877
+     ]
+    ]
    }
   }
  },
@@ -2277,16 +2471,21 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     9590
+     9513
     ],
     "sizeAstro": [
      1440,
-     9590
+     9513
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.033,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -2295,15 +2494,59 @@
     ],
     "sizeAstro": [
      1440,
-     9590
+     9513
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.019,
+    "heightDelta": -77,
+    "diffPixels": 1426827,
+    "diffPercent": 10.416,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1497
+     ],
+     [
+      1526,
+      1574
+     ],
+     [
+      1601,
+      1646
+     ],
+     [
+      1678,
+      1723
+     ],
+     [
+      1748,
+      1797
+     ],
+     [
+      1821,
+      1838
      ]
     ]
    }
@@ -2319,14 +2562,9 @@
      13085
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.045,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2338,15 +2576,19 @@
      13085
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.071,
+    "diffPixels": 48671,
+    "diffPercent": 0.484,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -2356,11 +2598,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18685
+     18608
     ],
     "sizeAstro": [
      390,
-     18685
+     18608
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2374,19 +2616,59 @@
     ],
     "sizeAstro": [
      390,
-     18685
+     18608
     ],
-    "heightDelta": -31,
-    "diffPixels": 30006,
-    "diffPercent": 0.412,
+    "heightDelta": -108,
+    "diffPixels": 1062442,
+    "diffPercent": 14.64,
     "diffBands": [
      [
-      15143,
-      15515
+      784,
+      829
      ],
      [
-      15536,
-      15903
+      2064,
+      2095
+     ],
+     [
+      2230,
+      2253
+     ],
+     [
+      2274,
+      2692
+     ],
+     [
+      2742,
+      2755
+     ],
+     [
+      2779,
+      2780
+     ],
+     [
+      2805,
+      2832
+     ],
+     [
+      2856,
+      2896
+     ],
+     [
+      2946,
+      2998
+     ],
+     [
+      3026,
+      4155
+     ],
+     [
+      4177,
+      4232
+     ],
+     [
+      4254,
+      4452
      ]
     ]
    }
@@ -2418,12 +2700,16 @@
      10872
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.046,
+    "diffPixels": 83278,
+    "diffPercent": 0.532,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -2439,9 +2725,14 @@
      15003
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.04,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -2453,15 +2744,19 @@
      15003
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.062,
+    "diffPixels": 48671,
+    "diffPercent": 0.422,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -2471,11 +2766,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22746
+     22669
     ],
     "sizeAstro": [
      390,
-     22746
+     22669
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2489,15 +2784,59 @@
     ],
     "sizeAstro": [
      390,
-     22746
+     22669
     ],
-    "heightDelta": -71,
-    "diffPixels": 4554,
-    "diffPercent": 0.051,
+    "heightDelta": -148,
+    "diffPixels": 1262843,
+    "diffPercent": 14.284,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2191,
+      2221
+     ],
+     [
+      2356,
+      2379
+     ],
+     [
+      2400,
+      2818
+     ],
+     [
+      2868,
+      2881
+     ],
+     [
+      2905,
+      2906
+     ],
+     [
+      2931,
+      2958
+     ],
+     [
+      2982,
+      3022
+     ],
+     [
+      3072,
+      3124
+     ],
+     [
+      3151,
+      5200
+     ],
+     [
+      5223,
+      5511
+     ],
+     [
+      5534,
+      5724
      ]
     ]
    }
@@ -2529,12 +2868,16 @@
      10371
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.527,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -2550,14 +2893,9 @@
      14334
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.041,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2569,15 +2907,19 @@
      14334
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.065,
+    "diffPixels": 48671,
+    "diffPercent": 0.442,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -2587,11 +2929,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     20104
+     20027
     ],
     "sizeAstro": [
      390,
-     20104
+     20027
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -2610,15 +2952,59 @@
     ],
     "sizeAstro": [
      390,
-     20104
+     20027
     ],
-    "heightDelta": 32,
-    "diffPixels": 4554,
-    "diffPercent": 0.058,
+    "heightDelta": -45,
+    "diffPixels": 1133714,
+    "diffPercent": 14.515,
     "diffBands": [
      [
-      784,
-      829
+      2133,
+      2163
+     ],
+     [
+      2298,
+      2320
+     ],
+     [
+      2342,
+      2760
+     ],
+     [
+      2810,
+      2823
+     ],
+     [
+      2846,
+      2847
+     ],
+     [
+      2872,
+      2900
+     ],
+     [
+      2923,
+      2963
+     ],
+     [
+      3014,
+      3065
+     ],
+     [
+      3093,
+      4263
+     ],
+     [
+      4284,
+      4302
+     ],
+     [
+      4324,
+      4527
+     ],
+     [
+      4557,
+      5128
      ]
     ]
    }
@@ -2629,21 +3015,16 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     11744
+     11719
     ],
     "sizeAstro": [
      1440,
-     11744
+     11719
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.027,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2652,39 +3033,59 @@
     ],
     "sizeAstro": [
      1440,
-     11744
+     11719
     ],
-    "heightDelta": 24,
-    "diffPixels": 167099,
-    "diffPercent": 0.99,
+    "heightDelta": -1,
+    "diffPixels": 1577373,
+    "diffPercent": 9.347,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
      ],
      [
-      9957,
-      10078
+      831,
+      1090
      ],
      [
-      10103,
-      10221
+      1192,
+      1230
      ],
      [
-      11066,
-      11155
+      1254,
+      1255
      ],
      [
-      11186,
-      11208
+      1314,
+      1977
      ],
      [
-      11260,
-      11514
+      1998,
+      2715
      ],
      [
-      11621,
-      11713
+      2742,
+      3065
+     ],
+     [
+      3097,
+      4155
+     ],
+     [
+      4181,
+      4504
+     ],
+     [
+      4536,
+      5563
+     ],
+     [
+      5589,
+      5912
+     ],
+     [
+      5944,
+      6701
      ]
     ]
    }
@@ -2700,14 +3101,9 @@
      15995
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.037,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -2719,15 +3115,19 @@
      15995
     ],
     "heightDelta": 23,
-    "diffPixels": 140785,
-    "diffPercent": 1.148,
+    "diffPixels": 182330,
+    "diffPercent": 1.486,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ],
      [
@@ -2765,10 +3165,6 @@
      [
       15741,
       15744
-     ],
-     [
-      15777,
-      15800
      ]
     ]
    }
@@ -2777,15 +3173,15 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     24636
+     24559
     ],
     "sizeAstro": [
      390,
-     24636
+     24559
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
-    "diffPercent": 0.047,
+    "diffPercent": 0.048,
     "diffBands": [
      [
       784,
@@ -2800,12 +3196,61 @@
     ],
     "sizeAstro": [
      390,
-     24636
+     24559
     ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -77,
+    "diffPixels": 1290576,
+    "diffPercent": 13.474,
+    "diffBands": [
+     [
+      2159,
+      2190
+     ],
+     [
+      2325,
+      2347
+     ],
+     [
+      2369,
+      2787
+     ],
+     [
+      2837,
+      2850
+     ],
+     [
+      2873,
+      2874
+     ],
+     [
+      2899,
+      2927
+     ],
+     [
+      2950,
+      2990
+     ],
+     [
+      3041,
+      3098
+     ],
+     [
+      3120,
+      4053
+     ],
+     [
+      4074,
+      6086
+     ],
+     [
+      6107,
+      6215
+     ],
+     [
+      6237,
+      6426
+     ]
+    ]
    }
   }
  },
@@ -2814,11 +3259,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10516
+     10460
     ],
     "sizeAstro": [
      1440,
-     10516
+     10460
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -2832,15 +3277,59 @@
     ],
     "sizeAstro": [
      1440,
-     10516
+     10460
     ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.047,
+    "heightDelta": -56,
+    "diffPixels": 1627749,
+    "diffPercent": 10.807,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1161,
+      1174
+     ],
+     [
+      1197,
+      1230
+     ],
+     [
+      1254,
+      1255
+     ],
+     [
+      1283,
+      1311
+     ],
+     [
+      1340,
+      1679
+     ],
+     [
+      1712,
+      2031
+     ],
+     [
+      2072,
+      2088
+     ],
+     [
+      2109,
+      2252
+     ],
+     [
+      2289,
+      2304
+     ],
+     [
+      2327,
+      2432
      ]
     ]
    }
@@ -2870,15 +3359,19 @@
      14145
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.066,
+    "diffPixels": 48671,
+    "diffPercent": 0.448,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -2888,11 +3381,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     21633
+     21556
     ],
     "sizeAstro": [
      390,
-     21633
+     21556
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -2911,15 +3404,59 @@
     ],
     "sizeAstro": [
      390,
-     21633
+     21556
     ],
-    "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.054,
+    "heightDelta": -77,
+    "diffPixels": 1290501,
+    "diffPercent": 15.351,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2126,
+      2158
+     ],
+     [
+      2293,
+      2316
+     ],
+     [
+      2337,
+      2755
+     ],
+     [
+      2805,
+      2818
+     ],
+     [
+      2842,
+      2843
+     ],
+     [
+      2868,
+      2895
+     ],
+     [
+      2919,
+      2959
+     ],
+     [
+      3009,
+      3067
+     ],
+     [
+      3089,
+      5137
+     ],
+     [
+      5160,
+      5351
+     ],
+     [
+      5373,
+      5428
      ]
     ]
    }
@@ -2951,12 +3488,16 @@
      10817
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.505,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -2986,15 +3527,19 @@
      14942
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.062,
+    "diffPixels": 48671,
+    "diffPercent": 0.424,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -3004,11 +3549,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22308
+     22231
     ],
     "sizeAstro": [
      390,
-     22308
+     22231
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -3022,15 +3567,59 @@
     ],
     "sizeAstro": [
      390,
-     22308
+     22231
     ],
-    "heightDelta": -31,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
+    "heightDelta": -108,
+    "diffPixels": 1246136,
+    "diffPercent": 14.373,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2224,
+      2253
+     ],
+     [
+      2388,
+      2410
+     ],
+     [
+      2432,
+      2850
+     ],
+     [
+      2900,
+      2913
+     ],
+     [
+      2936,
+      2937
+     ],
+     [
+      2962,
+      2990
+     ],
+     [
+      3013,
+      3053
+     ],
+     [
+      3104,
+      3155
+     ],
+     [
+      3183,
+      5169
+     ],
+     [
+      5192,
+      5383
+     ],
+     [
+      5405,
+      5513
      ]
     ]
    }
@@ -3041,11 +3630,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10842
+     10765
     ],
     "sizeAstro": [
      1440,
-     10842
+     10765
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -3064,15 +3653,59 @@
     ],
     "sizeAstro": [
      1440,
-     10842
+     10765
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.016,
+    "heightDelta": -77,
+    "diffPixels": 1836442,
+    "diffPercent": 11.847,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1699
+     ],
+     [
+      1727,
+      2133
+     ],
+     [
+      2156,
+      2210
+     ],
+     [
+      2233,
+      2350
+     ],
+     [
+      2376,
+      2427
+     ],
+     [
+      2453,
+      2517
      ]
     ]
    }
@@ -3102,16 +3735,20 @@
      14866
     ],
     "heightDelta": -32,
-    "diffPixels": 159566,
-    "diffPercent": 1.398,
+    "diffPixels": 196557,
+    "diffPercent": 1.722,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
-      1009
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ],
      [
       12155,
@@ -3148,10 +3785,6 @@
      [
       13948,
       13959
-     ],
-     [
-      14076,
-      14087
      ]
     ]
    }
@@ -3160,11 +3793,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22689
+     22612
     ],
     "sizeAstro": [
      390,
-     22689
+     22612
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -3178,15 +3811,59 @@
     ],
     "sizeAstro": [
      390,
-     22689
+     22612
     ],
-    "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.051,
+    "heightDelta": -77,
+    "diffPixels": 1266720,
+    "diffPercent": 14.364,
     "diffBands": [
      [
-      784,
-      829
+      2097,
+      2127
+     ],
+     [
+      2262,
+      2284
+     ],
+     [
+      2306,
+      2724
+     ],
+     [
+      2774,
+      2787
+     ],
+     [
+      2810,
+      2811
+     ],
+     [
+      2836,
+      2864
+     ],
+     [
+      2887,
+      2927
+     ],
+     [
+      2978,
+      3035
+     ],
+     [
+      3057,
+      5188
+     ],
+     [
+      5209,
+      5254
+     ],
+     [
+      5277,
+      5469
+     ],
+     [
+      5490,
+      5598
      ]
     ]
    }
@@ -3218,12 +3895,16 @@
      10850
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.046,
+    "diffPixels": 83278,
+    "diffPercent": 0.533,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -3253,15 +3934,19 @@
      15036
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.062,
+    "diffPixels": 48671,
+    "diffPercent": 0.421,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -3271,63 +3956,19 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22570
+     22493
     ],
     "sizeAstro": [
      390,
      22493
     ],
-    "heightDelta": -77,
-    "diffPixels": 1276377,
-    "diffPercent": 14.55,
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
     "diffBands": [
      [
       784,
       829
-     ],
-     [
-      2224,
-      2253
-     ],
-     [
-      2388,
-      2410
-     ],
-     [
-      2432,
-      2850
-     ],
-     [
-      2900,
-      2913
-     ],
-     [
-      2936,
-      2937
-     ],
-     [
-      2962,
-      2990
-     ],
-     [
-      3013,
-      3053
-     ],
-     [
-      3104,
-      3161
-     ],
-     [
-      3183,
-      5232
-     ],
-     [
-      5255,
-      5446
-     ],
-     [
-      5468,
-      5518
      ]
     ]
    },
@@ -3341,13 +3982,9 @@
      22493
     ],
     "heightDelta": -77,
-    "diffPixels": 1276377,
-    "diffPercent": 14.55,
+    "diffPixels": 1271239,
+    "diffPercent": 14.492,
     "diffBands": [
-     [
-      784,
-      829
-     ],
      [
       2224,
       2253
@@ -3391,6 +4028,10 @@
      [
       5468,
       5518
+     ],
+     [
+      5551,
+      5607
      ]
     ]
    }
@@ -3401,16 +4042,21 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10453
+     10376
     ],
     "sizeAstro": [
      1440,
-     10453
+     10376
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.03,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -3419,15 +4065,59 @@
     ],
     "sizeAstro": [
      1440,
-     10453
+     10376
     ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.047,
+    "heightDelta": -77,
+    "diffPixels": 1567952,
+    "diffPercent": 10.494,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1295
+     ],
+     [
+      1331,
+      1497
+     ],
+     [
+      1526,
+      1574
+     ],
+     [
+      1601,
+      1649
+     ],
+     [
+      1678,
+      1726
+     ],
+     [
+      1748,
+      1798
+     ],
+     [
+      1822,
+      1837
      ]
     ]
    }
@@ -3457,12 +4147,20 @@
      14485
     ],
     "heightDelta": 8,
-    "diffPixels": 94492,
-    "diffPercent": 0.85,
+    "diffPixels": 136037,
+    "diffPercent": 1.224,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ],
      [
       11766,
@@ -3499,14 +4197,6 @@
      [
       13312,
       13331
-     ],
-     [
-      13358,
-      13374
-     ],
-     [
-      13398,
-      13417
      ]
     ]
    }
@@ -3515,15 +4205,34 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     20305
+     20228
     ],
     "sizeAstro": [
      390,
      20228
     ],
-    "heightDelta": -77,
-    "diffPixels": 1153012,
-    "diffPercent": 14.616,
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20376
+    ],
+    "sizeAstro": [
+     390,
+     20228
+    ],
+    "heightDelta": -148,
+    "diffPixels": 1152563,
+    "diffPercent": 14.61,
     "diffBands": [
      [
       2097,
@@ -3574,69 +4283,6 @@
       5578
      ]
     ]
-   },
-   "vs_live": {
-    "sizeLive": [
-     390,
-     20376
-    ],
-    "sizeAstro": [
-     390,
-     20228
-    ],
-    "heightDelta": -148,
-    "diffPixels": 1157566,
-    "diffPercent": 14.673,
-    "diffBands": [
-     [
-      784,
-      829
-     ],
-     [
-      2097,
-      2127
-     ],
-     [
-      2262,
-      2284
-     ],
-     [
-      2306,
-      2724
-     ],
-     [
-      2774,
-      2787
-     ],
-     [
-      2810,
-      2811
-     ],
-     [
-      2836,
-      2864
-     ],
-     [
-      2887,
-      2927
-     ],
-     [
-      2978,
-      3029
-     ],
-     [
-      3057,
-      4299
-     ],
-     [
-      4320,
-      4522
-     ],
-     [
-      4553,
-      5098
-     ]
-    ]
    }
   }
  },
@@ -3645,11 +4291,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10279
+     10254
     ],
     "sizeAstro": [
      1440,
-     10279
+     10254
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -3663,15 +4309,59 @@
     ],
     "sizeAstro": [
      1440,
-     10279
+     10254
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "heightDelta": -25,
+    "diffPixels": 1262852,
+    "diffPercent": 8.553,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1192,
+      1230
+     ],
+     [
+      1254,
+      1255
+     ],
+     [
+      1315,
+      2025
+     ],
+     [
+      2055,
+      2423
+     ],
+     [
+      2446,
+      2615
+     ],
+     [
+      2636,
+      3037
+     ],
+     [
+      3067,
+      3466
+     ],
+     [
+      3490,
+      4050
+     ],
+     [
+      4079,
+      4450
+     ],
+     [
+      4471,
+      5030
      ]
     ]
    }
@@ -3687,14 +4377,9 @@
      14282
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.042,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -3706,12 +4391,20 @@
      14282
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.023,
+    "diffPixels": 44117,
+    "diffPercent": 0.402,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -3720,15 +4413,34 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
+     19729
+    ],
+    "sizeAstro": [
+     390,
+     19729
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.059,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
      19806
     ],
     "sizeAstro": [
      390,
-     19734
+     19729
     ],
-    "heightDelta": -72,
-    "diffPixels": 1083384,
-    "diffPercent": 14.077,
+    "heightDelta": -77,
+    "diffPixels": 1095618,
+    "diffPercent": 14.239,
     "diffBands": [
      [
       2159,
@@ -3779,69 +4491,6 @@
       5908
      ]
     ]
-   },
-   "vs_live": {
-    "sizeLive": [
-     390,
-     19806
-    ],
-    "sizeAstro": [
-     390,
-     19734
-    ],
-    "heightDelta": -72,
-    "diffPixels": 1087938,
-    "diffPercent": 14.136,
-    "diffBands": [
-     [
-      784,
-      829
-     ],
-     [
-      2159,
-      2190
-     ],
-     [
-      2325,
-      2347
-     ],
-     [
-      2369,
-      2787
-     ],
-     [
-      2837,
-      2850
-     ],
-     [
-      2873,
-      2874
-     ],
-     [
-      2899,
-      2927
-     ],
-     [
-      2950,
-      2990
-     ],
-     [
-      3041,
-      3097
-     ],
-     [
-      3120,
-      4180
-     ],
-     [
-      4203,
-      4437
-     ],
-     [
-      4467,
-      4962
-     ]
-    ]
    }
   }
  },
@@ -3857,14 +4506,9 @@
      10968
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.029,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -3876,12 +4520,16 @@
      10968
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.016,
+    "diffPixels": 78724,
+    "diffPercent": 0.498,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -3897,14 +4545,9 @@
      15482
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.038,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -3916,12 +4559,20 @@
      15482
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.022,
+    "diffPixels": 44117,
+    "diffPercent": 0.371,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -3930,63 +4581,19 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22847
+     22770
     ],
     "sizeAstro": [
      390,
      22770
     ],
-    "heightDelta": -77,
-    "diffPixels": 1228353,
-    "diffPercent": 13.832,
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.051,
     "diffBands": [
      [
       784,
       829
-     ],
-     [
-      2406,
-      2434
-     ],
-     [
-      2569,
-      2592
-     ],
-     [
-      2613,
-      3031
-     ],
-     [
-      3081,
-      3094
-     ],
-     [
-      3118,
-      3119
-     ],
-     [
-      3144,
-      3171
-     ],
-     [
-      3195,
-      3235
-     ],
-     [
-      3285,
-      3343
-     ],
-     [
-      3364,
-      5382
-     ],
-     [
-      5405,
-      5597
-     ],
-     [
-      5618,
-      5725
      ]
     ]
    },
@@ -4000,13 +4607,9 @@
      22770
     ],
     "heightDelta": -77,
-    "diffPixels": 1228353,
-    "diffPercent": 13.832,
+    "diffPixels": 1223803,
+    "diffPercent": 13.781,
     "diffBands": [
-     [
-      784,
-      829
-     ],
      [
       2406,
       2434
@@ -4050,6 +4653,10 @@
      [
       5618,
       5725
+     ],
+     [
+      5747,
+      5938
      ]
     ]
    }
@@ -4067,9 +4674,14 @@
      10825
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.029,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
    }
   },
   "tablet": {
@@ -4092,65 +4704,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22569
+     22492
     ],
     "sizeAstro": [
      390,
-     22497
+     22492
     ],
-    "heightDelta": -72,
-    "diffPixels": 1259755,
-    "diffPercent": 14.358,
-    "diffBands": [
-     [
-      784,
-      829
-     ],
-     [
-      2171,
-      2202
-     ],
-     [
-      2337,
-      2359
-     ],
-     [
-      2381,
-      2799
-     ],
-     [
-      2849,
-      2862
-     ],
-     [
-      2885,
-      2886
-     ],
-     [
-      2911,
-      2939
-     ],
-     [
-      2962,
-      3002
-     ],
-     [
-      3053,
-      3104
-     ],
-     [
-      3131,
-      5212
-     ],
-     [
-      5235,
-      5426
-     ],
-     [
-      5448,
-      5554
-     ]
-    ]
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  },
@@ -4159,11 +4722,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10513
+     10436
     ],
     "sizeAstro": [
      1440,
-     10513
+     10436
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -4177,15 +4740,59 @@
     ],
     "sizeAstro": [
      1440,
-     10513
+     10436
     ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.047,
+    "heightDelta": -77,
+    "diffPixels": 1545695,
+    "diffPercent": 10.286,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1498
+     ],
+     [
+      1526,
+      1575
+     ],
+     [
+      1601,
+      1646
+     ],
+     [
+      1678,
+      1723
+     ],
+     [
+      1749,
+      1797
+     ],
+     [
+      1824,
+      1838
      ]
     ]
    }
@@ -4201,14 +4808,9 @@
      14403
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.041,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -4220,15 +4822,19 @@
      14403
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.064,
+    "diffPixels": 48671,
+    "diffPercent": 0.44,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -4238,65 +4844,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     20300
+     20223
     ],
     "sizeAstro": [
      390,
      20223
     ],
-    "heightDelta": -77,
-    "diffPixels": 1132887,
-    "diffPercent": 14.364,
-    "diffBands": [
-     [
-      2097,
-      2127
-     ],
-     [
-      2262,
-      2284
-     ],
-     [
-      2306,
-      2724
-     ],
-     [
-      2774,
-      2787
-     ],
-     [
-      2810,
-      2811
-     ],
-     [
-      2836,
-      2864
-     ],
-     [
-      2887,
-      2927
-     ],
-     [
-      2978,
-      3034
-     ],
-     [
-      3057,
-      4194
-     ],
-     [
-      4217,
-      4236
-     ],
-     [
-      4257,
-      4459
-     ],
-     [
-      4490,
-      4928
-     ]
-    ]
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -4308,9 +4865,13 @@
      20223
     ],
     "heightDelta": -77,
-    "diffPixels": 1132887,
-    "diffPercent": 14.364,
+    "diffPixels": 1137051,
+    "diffPercent": 14.417,
     "diffBands": [
+     [
+      784,
+      829
+     ],
      [
       2097,
       2127
@@ -4354,10 +4915,6 @@
      [
       4257,
       4459
-     ],
-     [
-      4490,
-      4928
      ]
     ]
    }
@@ -4389,12 +4946,16 @@
      10677
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.512,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -4410,14 +4971,9 @@
      14599
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.041,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -4429,12 +4985,20 @@
      14599
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.023,
+    "diffPixels": 44117,
+    "diffPercent": 0.393,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -4443,63 +5007,19 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22031
+     21954
     ],
     "sizeAstro": [
      390,
      21954
     ],
-    "heightDelta": -77,
-    "diffPixels": 1281423,
-    "diffPercent": 14.966,
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.053,
     "diffBands": [
      [
       784,
       829
-     ],
-     [
-      2286,
-      2316
-     ],
-     [
-      2451,
-      2473
-     ],
-     [
-      2495,
-      2913
-     ],
-     [
-      2963,
-      2976
-     ],
-     [
-      2999,
-      3000
-     ],
-     [
-      3025,
-      3053
-     ],
-     [
-      3076,
-      3116
-     ],
-     [
-      3167,
-      3224
-     ],
-     [
-      3246,
-      5565
-     ],
-     [
-      5589,
-      5701
-     ],
-     [
-      5723,
-      5915
      ]
     ]
    },
@@ -4513,8 +5033,8 @@
      21954
     ],
     "heightDelta": -77,
-    "diffPixels": 1281423,
-    "diffPercent": 14.966,
+    "diffPixels": 1280843,
+    "diffPercent": 14.96,
     "diffBands": [
      [
       784,
@@ -4580,14 +5100,9 @@
      10531
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.03,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -4599,12 +5114,16 @@
      10531
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.047,
+    "diffPixels": 83278,
+    "diffPercent": 0.549,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -4620,14 +5139,9 @@
      14570
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.041,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -4639,12 +5153,20 @@
      14570
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.023,
+    "diffPixels": 44117,
+    "diffPercent": 0.394,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -4653,11 +5175,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     21591
+     21514
     ],
     "sizeAstro": [
      390,
-     21591
+     21514
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -4671,15 +5193,59 @@
     ],
     "sizeAstro": [
      390,
-     21591
+     21514
     ],
-    "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.054,
+    "heightDelta": -77,
+    "diffPixels": 1299710,
+    "diffPercent": 15.49,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2170,
+      2201
+     ],
+     [
+      2336,
+      2359
+     ],
+     [
+      2380,
+      2798
+     ],
+     [
+      2848,
+      2861
+     ],
+     [
+      2885,
+      2886
+     ],
+     [
+      2911,
+      2938
+     ],
+     [
+      2962,
+      3002
+     ],
+     [
+      3052,
+      3104
+     ],
+     [
+      3131,
+      5417
+     ],
+     [
+      5439,
+      5493
+     ],
+     [
+      5522,
+      5579
      ]
     ]
    }
@@ -4690,11 +5256,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     9621
+     9544
     ],
     "sizeAstro": [
      1440,
-     9621
+     9544
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -4708,15 +5274,59 @@
     ],
     "sizeAstro": [
      1440,
-     9621
+     9544
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.019,
+    "heightDelta": -77,
+    "diffPixels": 1449808,
+    "diffPercent": 10.549,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1605
+     ],
+     [
+      1633,
+      1677
+     ],
+     [
+      1710,
+      1754
+     ],
+     [
+      1781,
+      1828
+     ],
+     [
+      1853,
+      1869
+     ],
+     [
+      1893,
+      1948
      ]
     ]
    }
@@ -4746,12 +5356,20 @@
      12596
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.027,
+    "diffPixels": 44117,
+    "diffPercent": 0.456,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -4760,11 +5378,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18401
+     18324
     ],
     "sizeAstro": [
      390,
-     18401
+     18324
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -4778,12 +5396,61 @@
     ],
     "sizeAstro": [
      390,
-     18401
+     18324
     ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -77,
+    "diffPixels": 1086662,
+    "diffPercent": 15.206,
+    "diffBands": [
+     [
+      784,
+      829
+     ],
+     [
+      2097,
+      2127
+     ],
+     [
+      2262,
+      2284
+     ],
+     [
+      2306,
+      2724
+     ],
+     [
+      2774,
+      2787
+     ],
+     [
+      2810,
+      2811
+     ],
+     [
+      2836,
+      2864
+     ],
+     [
+      2887,
+      2927
+     ],
+     [
+      2978,
+      3034
+     ],
+     [
+      3057,
+      4236
+     ],
+     [
+      4257,
+      4531
+     ],
+     [
+      4562,
+      5082
+     ]
+    ]
    }
   }
  },
@@ -4799,14 +5466,9 @@
      11816
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.027,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   },
   "tablet": {
@@ -4829,21 +5491,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22266
+     22189
     ],
     "sizeAstro": [
      390,
-     22266
+     22189
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  },
@@ -4873,12 +5530,16 @@
      9144
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.02,
+    "diffPixels": 78724,
+    "diffPercent": 0.598,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -4894,8 +5555,216 @@
      12295
     ],
     "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     12295
+    ],
+    "sizeAstro": [
+     768,
+     12295
+    ],
+    "heightDelta": 0,
+    "diffPixels": 44117,
+    "diffPercent": 0.467,
+    "diffBands": [
+     [
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18144
+    ],
+    "sizeAstro": [
+     390,
+     18144
+    ],
+    "heightDelta": 0,
     "diffPixels": 4554,
-    "diffPercent": 0.048,
+    "diffPercent": 0.064,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18221
+    ],
+    "sizeAstro": [
+     390,
+     18144
+    ],
+    "heightDelta": -77,
+    "diffPixels": 1090381,
+    "diffPercent": 15.409,
+    "diffBands": [
+     [
+      2224,
+      2253
+     ],
+     [
+      2388,
+      2410
+     ],
+     [
+      2432,
+      2850
+     ],
+     [
+      2900,
+      2913
+     ],
+     [
+      2936,
+      2937
+     ],
+     [
+      2962,
+      2990
+     ],
+     [
+      3013,
+      3053
+     ],
+     [
+      3104,
+      3155
+     ],
+     [
+      3181,
+      3839
+     ],
+     [
+      3861,
+      4806
+     ],
+     [
+      4842,
+      5655
+     ],
+     [
+      5682,
+      6482
+     ]
+    ]
+   }
+  }
+ },
+ "product__paper-towel-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9763
+    ],
+    "sizeAstro": [
+     1440,
+     9763
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9840
+    ],
+    "sizeAstro": [
+     1440,
+     9763
+    ],
+    "heightDelta": -77,
+    "diffPixels": 1455798,
+    "diffPercent": 10.355,
+    "diffBands": [
+     [
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1497
+     ],
+     [
+      1526,
+      1574
+     ],
+     [
+      1601,
+      1647
+     ],
+     [
+      1678,
+      1724
+     ],
+     [
+      1748,
+      1797
+     ],
+     [
+      1821,
+      1837
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13378
+    ],
+    "sizeAstro": [
+     768,
+     13378
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.044,
     "diffBands": [
      [
       964,
@@ -4906,19 +5775,27 @@
    "vs_live": {
     "sizeLive": [
      768,
-     12295
+     13378
     ],
     "sizeAstro": [
      768,
-     12295
+     13378
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.027,
+    "diffPixels": 44117,
+    "diffPercent": 0.429,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -4927,118 +5804,21 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18221
+     18908
     ],
     "sizeAstro": [
      390,
-     18221
+     18908
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   },
-   "vs_live": {
-    "sizeLive": [
-     390,
-     18221
-    ],
-    "sizeAstro": [
-     390,
-     18221
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   }
-  }
- },
- "product__paper-towel-tubes": {
-  "desktop": {
-   "vs_snapshot": {
-    "sizeLive": [
-     1440,
-     9840
-    ],
-    "sizeAstro": [
-     1440,
-     9840
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   },
-   "vs_live": {
-    "sizeLive": [
-     1440,
-     9840
-    ],
-    "sizeAstro": [
-     1440,
-     9840
-    ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.018,
+    "diffPixels": 4554,
+    "diffPercent": 0.062,
     "diffBands": [
      [
-      858,
-      899
+      784,
+      829
      ]
     ]
-   }
-  },
-  "tablet": {
-   "vs_snapshot": {
-    "sizeLive": [
-     768,
-     13378
-    ],
-    "sizeAstro": [
-     768,
-     13378
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   },
-   "vs_live": {
-    "sizeLive": [
-     768,
-     13378
-    ],
-    "sizeAstro": [
-     768,
-     13378
-    ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.025,
-    "diffBands": [
-     [
-      738,
-      780
-     ]
-    ]
-   }
-  },
-  "mobile": {
-   "vs_snapshot": {
-    "sizeLive": [
-     390,
-     18985
-    ],
-    "sizeAstro": [
-     390,
-     18985
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5047,23 +5827,59 @@
     ],
     "sizeAstro": [
      390,
-     18985
+     18908
     ],
-    "heightDelta": 31,
-    "diffPixels": 34560,
-    "diffPercent": 0.468,
+    "heightDelta": -46,
+    "diffPixels": 1096936,
+    "diffPercent": 14.875,
     "diffBands": [
      [
       784,
       829
      ],
      [
-      15412,
-      15784
+      2064,
+      2095
      ],
      [
-      15805,
-      16172
+      2230,
+      2253
+     ],
+     [
+      2274,
+      2692
+     ],
+     [
+      2742,
+      2755
+     ],
+     [
+      2779,
+      2780
+     ],
+     [
+      2805,
+      2832
+     ],
+     [
+      2856,
+      2896
+     ],
+     [
+      2946,
+      2998
+     ],
+     [
+      3026,
+      4102
+     ],
+     [
+      4123,
+      4140
+     ],
+     [
+      4164,
+      4366
      ]
     ]
    }
@@ -5074,21 +5890,16 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     12359
+     12282
     ],
     "sizeAstro": [
      1440,
-     12359
+     12282
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.026,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5097,15 +5908,59 @@
     ],
     "sizeAstro": [
      1440,
-     12359
+     12282
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.014,
+    "heightDelta": -77,
+    "diffPixels": 1764171,
+    "diffPercent": 9.975,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1289
+     ],
+     [
+      1331,
+      1497
+     ],
+     [
+      1526,
+      1574
+     ],
+     [
+      1601,
+      1646
+     ],
+     [
+      1678,
+      1723
+     ],
+     [
+      1751,
+      1797
+     ],
+     [
+      1821,
+      1838
      ]
     ]
    }
@@ -5121,9 +5976,14 @@
      16330
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.036,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -5135,12 +5995,20 @@
      16330
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.021,
+    "diffPixels": 48671,
+    "diffPercent": 0.388,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      1009
      ]
     ]
    }
@@ -5149,21 +6017,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22543
+     22466
     ],
     "sizeAstro": [
      390,
-     22543
+     22466
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.052,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5172,12 +6035,61 @@
     ],
     "sizeAstro": [
      390,
-     22543
+     22466
     ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -77,
+    "diffPixels": 1175726,
+    "diffPercent": 13.419,
+    "diffBands": [
+     [
+      2013,
+      2044
+     ],
+     [
+      2179,
+      2201
+     ],
+     [
+      2223,
+      2641
+     ],
+     [
+      2691,
+      2704
+     ],
+     [
+      2727,
+      2728
+     ],
+     [
+      2753,
+      2781
+     ],
+     [
+      2804,
+      2844
+     ],
+     [
+      2895,
+      2946
+     ],
+     [
+      2973,
+      4322
+     ],
+     [
+      4353,
+      4870
+     ],
+     [
+      4892,
+      5554
+     ],
+     [
+      5578,
+      5627
+     ]
+    ]
    }
   }
  },
@@ -5207,12 +6119,16 @@
      10578
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.517,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -5228,9 +6144,14 @@
      14630
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -5242,15 +6163,19 @@
      14630
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.063,
+    "diffPixels": 48671,
+    "diffPercent": 0.433,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -5260,16 +6185,21 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     20589
+     20512
     ],
     "sizeAstro": [
      390,
-     20589
+     20512
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.057,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -5278,12 +6208,61 @@
     ],
     "sizeAstro": [
      390,
-     20589
+     20512
     ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -77,
+    "diffPixels": 1175360,
+    "diffPercent": 14.693,
+    "diffBands": [
+     [
+      2191,
+      2221
+     ],
+     [
+      2356,
+      2379
+     ],
+     [
+      2400,
+      2818
+     ],
+     [
+      2868,
+      2881
+     ],
+     [
+      2905,
+      2906
+     ],
+     [
+      2931,
+      2958
+     ],
+     [
+      2982,
+      3022
+     ],
+     [
+      3072,
+      3124
+     ],
+     [
+      3151,
+      4299
+     ],
+     [
+      4320,
+      4563
+     ],
+     [
+      4593,
+      5137
+     ],
+     [
+      5160,
+      6194
+     ]
+    ]
    }
   }
  },
@@ -5313,12 +6292,16 @@
      9292
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.019,
+    "diffPixels": 78724,
+    "diffPercent": 0.588,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -5353,15 +6336,19 @@
      13122
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.071,
+    "diffPixels": 48671,
+    "diffPercent": 0.483,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
+      710,
+      889
+     ],
+     [
+      915,
       1009
      ]
     ]
@@ -5371,21 +6358,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18245
+     18168
     ],
     "sizeAstro": [
      390,
-     18245
+     18168
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.064,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5394,51 +6376,59 @@
     ],
     "sizeAstro": [
      390,
-     18245
+     18168
     ],
-    "heightDelta": 71,
-    "diffPixels": 33915,
-    "diffPercent": 0.478,
+    "heightDelta": -6,
+    "diffPixels": 1003988,
+    "diffPercent": 14.17,
     "diffBands": [
      [
       784,
       829
      ],
      [
-      14633,
-      14681
+      2224,
+      2253
      ],
      [
-      14704,
-      14804
+      2388,
+      2410
      ],
      [
-      14826,
-      14924
+      2432,
+      2850
      ],
      [
-      14953,
-      14992
+      2900,
+      2913
      ],
      [
-      15026,
-      15060
+      2936,
+      2937
      ],
      [
-      15097,
-      15190
+      2962,
+      2990
      ],
      [
-      15212,
-      15310
+      3013,
+      3053
      ],
      [
-      15341,
-      15376
+      3104,
+      3160
      ],
      [
-      15418,
-      15432
+      3183,
+      4144
+     ],
+     [
+      4167,
+      4258
+     ],
+     [
+      4281,
+      4483
      ]
     ]
    }
@@ -5456,14 +6446,9 @@
      10778
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.029,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5475,12 +6460,16 @@
      10778
     ],
     "heightDelta": 24,
-    "diffPixels": 171612,
-    "diffPercent": 1.108,
+    "diffPixels": 243210,
+    "diffPercent": 1.571,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ],
      [
       8991,
@@ -5534,16 +6523,20 @@
      15103
     ],
     "heightDelta": 23,
-    "diffPixels": 141100,
-    "diffPercent": 1.218,
+    "diffPixels": 178091,
+    "diffPercent": 1.538,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
-      1009
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ],
      [
       12369,
@@ -5580,10 +6573,6 @@
      [
       14849,
       14852
-     ],
-     [
-      14885,
-      14908
      ]
     ]
    }
@@ -5592,16 +6581,21 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22451
+     22374
     ],
     "sizeAstro": [
      390,
-     22451
+     22374
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -5610,12 +6604,61 @@
     ],
     "sizeAstro": [
      390,
-     22451
+     22374
     ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -77,
+    "diffPixels": 1238651,
+    "diffPercent": 14.195,
+    "diffBands": [
+     [
+      2191,
+      2221
+     ],
+     [
+      2356,
+      2379
+     ],
+     [
+      2400,
+      2818
+     ],
+     [
+      2868,
+      2881
+     ],
+     [
+      2905,
+      2906
+     ],
+     [
+      2931,
+      2958
+     ],
+     [
+      2982,
+      3022
+     ],
+     [
+      3072,
+      3124
+     ],
+     [
+      3151,
+      5201
+     ],
+     [
+      5223,
+      5416
+     ],
+     [
+      5437,
+      5544
+     ],
+     [
+      5566,
+      5755
+     ]
+    ]
    }
   }
  },
@@ -5631,14 +6674,9 @@
      10657
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.03,
-    "diffBands": [
-     [
-      840,
-      885
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -5650,12 +6688,16 @@
      10657
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.513,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -5690,12 +6732,20 @@
      14685
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.023,
+    "diffPixels": 48671,
+    "diffPercent": 0.432,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      1009
      ]
     ]
    }
@@ -5704,11 +6754,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     21742
+     21665
     ],
     "sizeAstro": [
      390,
-     21742
+     21665
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -5722,15 +6772,59 @@
     ],
     "sizeAstro": [
      390,
-     21742
+     21665
     ],
-    "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.054,
+    "heightDelta": -77,
+    "diffPixels": 1301526,
+    "diffPercent": 15.404,
     "diffBands": [
      [
       784,
       829
+     ],
+     [
+      2226,
+      2257
+     ],
+     [
+      2392,
+      2415
+     ],
+     [
+      2436,
+      2854
+     ],
+     [
+      2904,
+      2917
+     ],
+     [
+      2941,
+      2942
+     ],
+     [
+      2967,
+      2994
+     ],
+     [
+      3018,
+      3058
+     ],
+     [
+      3108,
+      3160
+     ],
+     [
+      3188,
+      5321
+     ],
+     [
+      5345,
+      5466
+     ],
+     [
+      5490,
+      5602
      ]
     ]
    }
@@ -5769,151 +6863,9 @@
      15272
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   }
-  },
-  "mobile": {
-   "vs_snapshot": {
-    "sizeLive": [
-     390,
-     22558
-    ],
-    "sizeAstro": [
-     390,
-     22558
-    ],
-    "heightDelta": 0,
     "diffPixels": 4554,
-    "diffPercent": 0.052,
+    "diffPercent": 0.039,
     "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
-   }
-  }
- },
- "product__square-paper-tubes": {
-  "desktop": {
-   "vs_snapshot": {
-    "sizeLive": [
-     1440,
-     10342
-    ],
-    "sizeAstro": [
-     1440,
-     10342
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   }
-  },
-  "tablet": {
-   "vs_snapshot": {
-    "sizeLive": [
-     768,
-     14187
-    ],
-    "sizeAstro": [
-     768,
-     14187
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   }
-  },
-  "mobile": {
-   "vs_snapshot": {
-    "sizeLive": [
-     390,
-     19941
-    ],
-    "sizeAstro": [
-     390,
-     19941
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   }
-  }
- },
- "product__tea-paper-tubes": {
-  "desktop": {
-   "vs_snapshot": {
-    "sizeLive": [
-     1440,
-     10373
-    ],
-    "sizeAstro": [
-     1440,
-     10373
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   },
-   "vs_live": {
-    "sizeLive": [
-     1440,
-     10373
-    ],
-    "sizeAstro": [
-     1440,
-     10373
-    ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
-    "diffBands": [
-     [
-      858,
-      899
-     ]
-    ]
-   }
-  },
-  "tablet": {
-   "vs_snapshot": {
-    "sizeLive": [
-     768,
-     13944
-    ],
-    "sizeAstro": [
-     768,
-     13944
-    ],
-    "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
-   },
-   "vs_live": {
-    "sizeLive": [
-     768,
-     13944
-    ],
-    "sizeAstro": [
-     768,
-     13944
-    ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.067,
-    "diffBands": [
-     [
-      738,
-      780
-     ],
      [
       964,
       1009
@@ -5925,11 +6877,216 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     19600
+     22481
     ],
     "sizeAstro": [
      390,
-     19600
+     22481
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__square-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10265
+    ],
+    "sizeAstro": [
+     1440,
+     10265
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14187
+    ],
+    "sizeAstro": [
+     768,
+     14187
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.042,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19864
+    ],
+    "sizeAstro": [
+     390,
+     19864
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.059,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__tea-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10296
+    ],
+    "sizeAstro": [
+     1440,
+     10296
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10373
+    ],
+    "sizeAstro": [
+     1440,
+     10296
+    ],
+    "heightDelta": -77,
+    "diffPixels": 1537589,
+    "diffPercent": 10.371,
+    "diffBands": [
+     [
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1603
+     ],
+     [
+      1633,
+      1726
+     ],
+     [
+      1749,
+      1797
+     ],
+     [
+      1822,
+      1837
+     ],
+     [
+      1862,
+      1963
+     ],
+     [
+      1984,
+      2047
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13944
+    ],
+    "sizeAstro": [
+     768,
+     13944
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.043,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13944
+    ],
+    "sizeAstro": [
+     768,
+     13944
+    ],
+    "heightDelta": 0,
+    "diffPixels": 44117,
+    "diffPercent": 0.412,
+    "diffBands": [
+     [
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19523
+    ],
+    "sizeAstro": [
+     390,
+     19523
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -5948,15 +7105,59 @@
     ],
     "sizeAstro": [
      390,
-     19600
+     19523
     ],
-    "heightDelta": -32,
-    "diffPixels": 11971,
-    "diffPercent": 0.157,
+    "heightDelta": -109,
+    "diffPixels": 1142851,
+    "diffPercent": 15.01,
     "diffBands": [
      [
-      16059,
-      16378
+      784,
+      829
+     ],
+     [
+      2007,
+      2037
+     ],
+     [
+      2172,
+      2194
+     ],
+     [
+      2216,
+      2634
+     ],
+     [
+      2684,
+      2697
+     ],
+     [
+      2720,
+      2721
+     ],
+     [
+      2746,
+      2774
+     ],
+     [
+      2797,
+      2837
+     ],
+     [
+      2888,
+      2939
+     ],
+     [
+      2967,
+      4176
+     ],
+     [
+      4198,
+      4401
+     ],
+     [
+      4431,
+      5036
      ]
     ]
    }
@@ -5967,11 +7168,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10753
+     10676
     ],
     "sizeAstro": [
      1440,
-     10753
+     10676
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -5985,15 +7186,59 @@
     ],
     "sizeAstro": [
      1440,
-     10753
+     10676
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "heightDelta": -77,
+    "diffPixels": 1620327,
+    "diffPercent": 10.54,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1498
+     ],
+     [
+      1526,
+      1575
+     ],
+     [
+      1601,
+      1649
+     ],
+     [
+      1678,
+      1726
+     ],
+     [
+      1748,
+      1797
+     ],
+     [
+      1821,
+      1838
      ]
     ]
    }
@@ -6023,12 +7268,20 @@
      14147
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.024,
+    "diffPixels": 44117,
+    "diffPercent": 0.406,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -6037,21 +7290,16 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     20431
+     20354
     ],
     "sizeAstro": [
      390,
-     20431
+     20354
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.057,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -6060,15 +7308,59 @@
     ],
     "sizeAstro": [
      390,
-     20431
+     20354
     ],
-    "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.057,
+    "heightDelta": -77,
+    "diffPixels": 1218284,
+    "diffPercent": 15.347,
     "diffBands": [
      [
-      784,
-      829
+      2064,
+      2095
+     ],
+     [
+      2230,
+      2253
+     ],
+     [
+      2274,
+      2692
+     ],
+     [
+      2742,
+      2755
+     ],
+     [
+      2779,
+      2780
+     ],
+     [
+      2805,
+      2832
+     ],
+     [
+      2856,
+      2896
+     ],
+     [
+      2946,
+      2998
+     ],
+     [
+      3026,
+      4227
+     ],
+     [
+      4248,
+      4491
+     ],
+     [
+      4521,
+      4800
+     ],
+     [
+      4826,
+      4983
      ]
     ]
    }
@@ -6079,11 +7371,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     10555
+     10499
     ],
     "sizeAstro": [
      1440,
-     10555
+     10499
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -6102,35 +7394,25 @@
      14406
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.041,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   },
   "mobile": {
    "vs_snapshot": {
     "sizeLive": [
      390,
-     21862
+     21785
     ],
     "sizeAstro": [
      390,
-     21862
+     21785
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.053,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  },
@@ -6160,12 +7442,16 @@
      10771
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.017,
+    "diffPixels": 78724,
+    "diffPercent": 0.508,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
      ]
     ]
    }
@@ -6181,14 +7467,9 @@
      14744
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.04,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -6200,16 +7481,20 @@
      14744
     ],
     "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.063,
+    "diffPixels": 44117,
+    "diffPercent": 0.39,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
      ],
      [
-      964,
-      1009
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -6218,11 +7503,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     22150
+     22073
     ],
     "sizeAstro": [
      390,
-     22150
+     22073
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -6236,12 +7521,61 @@
     ],
     "sizeAstro": [
      390,
-     22150
+     22073
     ],
-    "heightDelta": -31,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "heightDelta": -108,
+    "diffPixels": 1268794,
+    "diffPercent": 14.739,
+    "diffBands": [
+     [
+      2382,
+      2410
+     ],
+     [
+      2545,
+      2568
+     ],
+     [
+      2589,
+      3007
+     ],
+     [
+      3057,
+      3070
+     ],
+     [
+      3094,
+      3095
+     ],
+     [
+      3120,
+      3147
+     ],
+     [
+      3171,
+      3211
+     ],
+     [
+      3261,
+      3313
+     ],
+     [
+      3341,
+      5452
+     ],
+     [
+      5475,
+      5665
+     ],
+     [
+      5688,
+      5796
+     ],
+     [
+      5818,
+      6063
+     ]
+    ]
    }
   }
  },
@@ -6250,11 +7584,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     9559
+     9482
     ],
     "sizeAstro": [
      1440,
-     9559
+     9482
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -6268,35 +7602,59 @@
     ],
     "sizeAstro": [
      1440,
-     9559
+     9482
     ],
-    "heightDelta": 31,
-    "diffPixels": 195039,
-    "diffPercent": 1.422,
+    "heightDelta": -46,
+    "diffPixels": 1284204,
+    "diffPercent": 9.405,
     "diffBands": [
      [
-      858,
-      899
+      788,
+      798
      ],
      [
-      7764,
-      8036
+      831,
+      1090
      ],
      [
-      8873,
-      8970
+      1140,
+      1153
      ],
      [
-      8993,
-      9023
+      1177,
+      1178
      ],
      [
-      9067,
-      9329
+      1217,
+      1230
      ],
      [
-      9429,
-      9526
+      1254,
+      1294
+     ],
+     [
+      1331,
+      1377
+     ],
+     [
+      1408,
+      1463
+     ],
+     [
+      1495,
+      1540
+     ],
+     [
+      1570,
+      1614
+     ],
+     [
+      1647,
+      1691
+     ],
+     [
+      1717,
+      1765
      ]
     ]
    }
@@ -6312,14 +7670,9 @@
      12870
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.046,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -6331,12 +7684,20 @@
      12870
     ],
     "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.026,
+    "diffPixels": 44117,
+    "diffPercent": 0.446,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
      ]
     ]
    }
@@ -6345,16 +7706,21 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18097
+     18020
     ],
     "sizeAstro": [
      390,
-     18097
+     18020
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.065,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -6363,19 +7729,59 @@
     ],
     "sizeAstro": [
      390,
-     18097
+     18020
     ],
-    "heightDelta": 32,
-    "diffPixels": 29759,
-    "diffPercent": 0.422,
+    "heightDelta": -45,
+    "diffPixels": 1015847,
+    "diffPercent": 14.455,
     "diffBands": [
      [
-      14524,
-      14896
+      784,
+      829
      ],
      [
-      14917,
-      15284
+      2033,
+      2064
+     ],
+     [
+      2199,
+      2221
+     ],
+     [
+      2243,
+      2661
+     ],
+     [
+      2711,
+      2724
+     ],
+     [
+      2747,
+      2748
+     ],
+     [
+      2773,
+      2801
+     ],
+     [
+      2824,
+      2864
+     ],
+     [
+      2915,
+      2966
+     ],
+     [
+      2994,
+      3912
+     ],
+     [
+      3934,
+      3952
+     ],
+     [
+      3975,
+      4177
      ]
     ]
    }
@@ -6386,11 +7792,11 @@
    "vs_snapshot": {
     "sizeLive": [
      1440,
-     9559
+     9482
     ],
     "sizeAstro": [
      1440,
-     9559
+     9482
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -6404,15 +7810,59 @@
     ],
     "sizeAstro": [
      1440,
-     9559
+     9482
     ],
-    "heightDelta": 0,
-    "diffPixels": 7126,
-    "diffPercent": 0.052,
+    "heightDelta": -77,
+    "diffPixels": 1452772,
+    "diffPercent": 10.64,
     "diffBands": [
      [
-      840,
-      899
+      788,
+      798
+     ],
+     [
+      831,
+      1090
+     ],
+     [
+      1140,
+      1153
+     ],
+     [
+      1177,
+      1178
+     ],
+     [
+      1217,
+      1230
+     ],
+     [
+      1254,
+      1295
+     ],
+     [
+      1331,
+      1498
+     ],
+     [
+      1526,
+      1575
+     ],
+     [
+      1601,
+      1646
+     ],
+     [
+      1678,
+      1723
+     ],
+     [
+      1748,
+      1797
+     ],
+     [
+      1824,
+      1837
      ]
     ]
    }
@@ -6421,11 +7871,11 @@
    "vs_snapshot": {
     "sizeLive": [
      768,
-     13166
+     13154
     ],
     "sizeAstro": [
      768,
-     13166
+     13154
     ],
     "heightDelta": 0,
     "diffPixels": 0,
@@ -6439,15 +7889,59 @@
     ],
     "sizeAstro": [
      768,
-     13166
+     13154
     ],
-    "heightDelta": 0,
-    "diffPixels": 2572,
-    "diffPercent": 0.025,
+    "heightDelta": -12,
+    "diffPixels": 1050399,
+    "diffPercent": 10.398,
     "diffBands": [
      [
-      738,
-      780
+      667,
+      682
+     ],
+     [
+      710,
+      889
+     ],
+     [
+      915,
+      946
+     ],
+     [
+      1060,
+      1147
+     ],
+     [
+      1190,
+      1211
+     ],
+     [
+      1288,
+      1386
+     ],
+     [
+      1411,
+      1532
+     ],
+     [
+      1561,
+      1681
+     ],
+     [
+      1715,
+      1754
+     ],
+     [
+      1776,
+      1836
+     ],
+     [
+      1865,
+      1896
+     ],
+     [
+      1922,
+      2021
      ]
     ]
    }
@@ -6456,11 +7950,11 @@
    "vs_snapshot": {
     "sizeLive": [
      390,
-     18801
+     18724
     ],
     "sizeAstro": [
      390,
-     18801
+     18724
     ],
     "heightDelta": 0,
     "diffPixels": 4554,
@@ -6479,19 +7973,59 @@
     ],
     "sizeAstro": [
      390,
-     18801
+     18724
     ],
-    "heightDelta": 32,
-    "diffPixels": 29761,
-    "diffPercent": 0.407,
+    "heightDelta": -45,
+    "diffPixels": 1089076,
+    "diffPercent": 14.914,
     "diffBands": [
      [
-      15228,
-      15600
+      2033,
+      2064
      ],
      [
-      15621,
-      15988
+      2199,
+      2221
+     ],
+     [
+      2243,
+      2661
+     ],
+     [
+      2711,
+      2724
+     ],
+     [
+      2747,
+      2748
+     ],
+     [
+      2773,
+      2801
+     ],
+     [
+      2824,
+      2864
+     ],
+     [
+      2915,
+      2972
+     ],
+     [
+      2993,
+      4079
+     ],
+     [
+      4100,
+      4117
+     ],
+     [
+      4140,
+      4342
+     ],
+     [
+      4373,
+      4977
      ]
     ]
    }
@@ -6723,14 +8257,9 @@
      17198
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.034,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -6758,9 +8287,14 @@
      11241
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.104,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -6772,9 +8306,14 @@
      11241
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.104,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    }
   }
  },
@@ -6806,14 +8345,9 @@
      17198
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.034,
-    "diffBands": [
-     [
-      964,
-      1009
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   },
   "mobile": {
@@ -6827,14 +8361,9 @@
      11147
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.105,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  },
@@ -7025,14 +8554,9 @@
      11537
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.1,
-    "diffBands": [
-     [
-      797,
-      842
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    },
    "vs_live": {
     "sizeLive": [
@@ -7171,9 +8695,14 @@
      2633
     ],
     "heightDelta": 0,
-    "diffPixels": 0,
-    "diffPercent": 0,
-    "diffBands": []
+    "diffPixels": 4554,
+    "diffPercent": 0.443,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
    },
    "vs_live": {
     "sizeLive": [
@@ -7217,9 +8746,13 @@
      24291
     ],
     "heightDelta": 0,
-    "diffPixels": 178791,
-    "diffPercent": 0.511,
+    "diffPixels": 183345,
+    "diffPercent": 0.524,
     "diffBands": [
+     [
+      840,
+      885
+     ],
      [
       23100,
       23334
@@ -7416,14 +8949,9 @@
      18515
     ],
     "heightDelta": 0,
-    "diffPixels": 4554,
-    "diffPercent": 0.063,
-    "diffBands": [
-     [
-      784,
-      829
-     ]
-    ]
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
    }
   }
  }

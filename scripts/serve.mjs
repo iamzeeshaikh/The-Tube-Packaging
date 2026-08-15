@@ -57,8 +57,9 @@ const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');
   let pathname = decodeURIComponent(url.pathname);
 
-  if (pathname === '/api/form') {
-    const { default: handler } = await import('../api/form.js');
+  if (pathname === '/api/form' || pathname === '/api/order') {
+    const mod = pathname === '/api/form' ? '../api/form.js' : '../api/order.js';
+    const { default: handler } = await import(mod);
     return handler(req, vercelRes(res));
   }
 

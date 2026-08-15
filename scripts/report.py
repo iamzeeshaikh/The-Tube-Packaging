@@ -217,14 +217,32 @@ def main():
                 w(f"- {n} — {k}")
     w("")
 
+    w("## 12b. Cart and Cash-on-Delivery checkout\n")
+    cat = json.load(open(os.path.join(ROOT, "src/data/catalogue.json")))
+    w("Added at the client's request, because WooCommerce's cart and checkout could not "
+      "work without a backend. Cash on delivery is the only payment method, which is also "
+      "the only gateway the WordPress store had enabled.\n")
+    w(f"- Catalogue: **{len(cat['products'])} products**, prices read from each product's own "
+      "`Product` JSON-LD so cart and schema cannot disagree")
+    w("- Cart state lives in `localStorage`; the existing `?add-to-cart=<id>` links and AJAX "
+      "buttons are reused unchanged")
+    w("- Markup is WooCommerce's classic cart/checkout inside the Rishi theme's own wrappers, "
+      "so the existing stylesheets style it and the responsive behaviour is the theme's")
+    w("- `api/order.js` re-reads every price server-side, then emails the order to the store "
+      "and a confirmation to the customer")
+    w("- `/checkout/` is no longer a redirect, so that sitemap URL now returns 200; "
+      "`/checkout/order-received/` is new")
+    w("- Orders are emailed, not stored: no order list, stock decrement, order status or "
+      "account history without a real commerce backend\n")
+
     w("## 13. Items that could not be replicated exactly\n")
     w("| Item | Why | Handling |")
     w("|---|---|---|")
     for row in [
-        ("Cart and checkout accumulate nothing",
-         "WooCommerce needs a PHP backend and a session",
-         "add-to-cart links, product IDs, prices and the /cart/ and /checkout/ pages are "
-         "preserved exactly; /checkout/ reproduces the live 302 to /cart/"),
+        ("Orders are not stored",
+         "there is no commerce backend to store them in",
+         "the cart and Cash-on-Delivery checkout work and every order is emailed to the "
+         "store and the customer, but there is no order list, stock decrement or order status"),
         ("My Account login / registration / password reset",
          "needs WordPress to process the POST",
          "pages render identically, forms are inert"),

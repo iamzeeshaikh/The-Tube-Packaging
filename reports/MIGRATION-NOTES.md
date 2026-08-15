@@ -196,3 +196,62 @@ too (entrance animations, off-canvas drawer, search modal, gallery slider).
 
 The build has not been deployed and the live site has not been touched. Run
 `npx astro build` and deploy `dist/` plus `api/` once the review is signed off.
+
+---
+
+# Working cart and Cash-on-Delivery checkout
+
+Added after the migration was reviewed, at the client's request: the cart had to
+actually work and the checkout must not be a dead end. Cash on delivery is the
+only payment method — which is also the only gateway the WordPress store had
+enabled (`woocommerce_cod_settings`: enabled, "Cash on delivery", "Pay with cash
+upon delivery.").
+
+**This is the one place the site is no longer a 1:1 copy of the WordPress
+front end**, and only because WordPress's version did not work without a
+backend. Everything else is untouched — the 66 migrated pages still compare
+identical.
+
+## How it works
+
+- `scripts/catalogue.py` reads the captured product pages and writes
+  `src/data/catalogue.json`: id, SKU, name, slug, price, thumbnail and category
+  for all 35 products. Prices come from each product's own `Product` JSON-LD, so
+  the cart and the schema can never disagree.
+- `public/assets/cart.js` keeps the cart in `localStorage`, intercepts the
+  existing `?add-to-cart=<id>` links and AJAX buttons (their markup is
+  unchanged), and renders the cart, checkout and order-received views.
+- The markup is WooCommerce's own classic cart/checkout markup inside the Rishi
+  theme's wrappers (`.rishi-cart-wrapper`, `.form-order-wrapper`), so the theme's
+  existing stylesheets style all of it — no new design, and the responsive
+  behaviour at 768/390 is the theme's own.
+- `api/order.js` emails the order to the store and a confirmation to the
+  customer. It **re-reads every price from the catalogue server-side**, so a
+  tampered payload cannot change the total.
+
+## URLs
+
+| URL | Before | Now |
+|---|---|---|
+| `/cart/` | empty-cart panel only | empty panel when empty, full cart table when not |
+| `/checkout/` | 302 to `/cart/` | renders the checkout |
+| `/checkout/order-received/` | did not exist | order confirmation |
+
+`/checkout/` is no longer redirected, so the sitemap URL now returns 200.
+
+## What still needs a backend
+
+Orders are emailed, not stored: there is no order list, no stock decrement, no
+order status and no customer account history. If the client wants those, the
+site needs a real commerce backend.
+
+## Tested end to end
+
+Add to cart from the shop, a category page and a product page; quantity update;
+remove; empty-cart state; checkout validation (WooCommerce-style error notice
+and `.woocommerce-invalid` rows); order placed with Cash on delivery; order
+email accepted by `smtp.gmail.com`; order-received page showing the order
+number, date, total, payment method, line items and billing address; cart
+emptied afterwards. No JavaScript errors, and no horizontal overflow at 1440,
+768 or 390. Test orders were routed to `info@zeecustomboxes.com` via
+`ORDER_TO_OVERRIDE` so the client's inboxes were not used.

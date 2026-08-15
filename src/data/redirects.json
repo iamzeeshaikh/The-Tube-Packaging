@@ -1,13 +1,29 @@
 {
-  "_comment": "Behaviour the live WordPress site has today, reproduced verbatim. /checkout/ 302s to /cart/ because WooCommerce redirects an empty cart, and the three capitalised product-category URLs are internal links that WordPress answers with 200 and a canonical pointing at the lower-case URL, so they are rewritten (not redirected) to keep that exact response.",
+  "_comment": "Behaviour the live WordPress site has today, reproduced verbatim, except /checkout/: WooCommerce 302'd it to /cart/ whenever the cart was empty, which with no cart backend was always. The cart now works client-side, so /checkout/ renders the checkout. The three capitalised product-category URLs are internal links that WordPress answers with 200 and a canonical pointing at the lower-case URL, so they are rewritten (not redirected) to keep that exact response.",
   "redirects": [
-    { "source": "/checkout/", "destination": "/cart/", "statusCode": 302 },
-    { "source": "/shop/page/1/", "destination": "/shop/", "statusCode": 301 },
-    { "source": "/product-category/custom-paper-tubes/page/1/", "destination": "/product-category/custom-paper-tubes/", "statusCode": 301 }
+    {
+      "source": "/shop/page/1/",
+      "destination": "/shop/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/custom-paper-tubes/page/1/",
+      "destination": "/product-category/custom-paper-tubes/",
+      "statusCode": 301
+    }
   ],
   "rewrites": [
-    { "source": "/product-category/Custom-Cardboard-Tubes/", "destination": "/product-category/custom-cardboard-tubes/" },
-    { "source": "/product-category/Custom-Paper-Tubes/", "destination": "/product-category/custom-paper-tubes/" },
-    { "source": "/product-category/Custom-Plastic-Tubes/", "destination": "/product-category/custom-plastic-tubes/" }
+    {
+      "source": "/product-category/Custom-Cardboard-Tubes/",
+      "destination": "/product-category/custom-cardboard-tubes/"
+    },
+    {
+      "source": "/product-category/Custom-Paper-Tubes/",
+      "destination": "/product-category/custom-paper-tubes/"
+    },
+    {
+      "source": "/product-category/Custom-Plastic-Tubes/",
+      "destination": "/product-category/custom-plastic-tubes/"
+    }
   ]
 }

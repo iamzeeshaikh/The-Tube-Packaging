@@ -65,9 +65,13 @@ async function capture(which) {
           await new Promise((r) => setTimeout(r, 800));
         });
         await page.addStyleTag({
+          // reCAPTCHA is loaded from Google and reserves its space whenever it
+          // happens to arrive, so it is excluded from the pixel comparison; that
+          // it renders is asserted separately by validate.py and runtime-check.
           content: `*,*::before,*::after{animation:none!important;transition:none!important}
                     .elementor-invisible{opacity:1!important}
-                    .joinchat{display:none!important}`,
+                    .joinchat{display:none!important}
+                    .elementor-g-recaptcha,.grecaptcha-badge{display:none!important}`,
         });
         await page.waitForTimeout(600);
         // The live host answers some requests with a 403 interstitial. Those

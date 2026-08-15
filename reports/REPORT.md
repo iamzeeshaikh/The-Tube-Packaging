@@ -16,19 +16,17 @@
 ## 2. Astro URLs created
 
 - Static pages built: **66**
-- Redirects: **3**
+- Redirects: **2**
 - Rewrites (case aliases): **3**
 - Sitemaps + robots.txt: **7 + 1**
 
 ## 3. Missing URL report
 
-No sitemap URL is missing. Every source URL has an equivalent in the Astro build, either as a page or (for `/checkout/`) as the same redirect the live site serves.
-
+- MISSING: https://thetubepackaging.com/checkout/
 ## 4. Redirect report
 
 | Source | Destination | Status | Reason |
 |---|---|---|---|
-| /checkout/ | /cart/ | 302 | live site 302s an empty cart to /cart/ |
 | /shop/page/1/ | /shop/ | 301 | live site 301s page/1 to the unpaginated URL |
 | /product-category/custom-paper-tubes/page/1/ | /product-category/custom-paper-tubes/ | 301 | live site 301s page/1 to the unpaginated URL |
 | /product-category/Custom-Cardboard-Tubes/ | /product-category/custom-cardboard-tubes/ | 200 (rewrite) | live site answers 200 with a canonical to the lower-case URL |
@@ -57,10 +55,10 @@ All **66** pages carry the identical set of image `src` values, `alt` text and `
 
 External hosts linked from the site:
 
-- www.facebook.com (134 reference(s))
-- www.linkedin.com (134 reference(s))
-- join.chat (66 reference(s))
-- www.googletagmanager.com (66 reference(s))
+- www.facebook.com (138 reference(s))
+- www.linkedin.com (138 reference(s))
+- join.chat (68 reference(s))
+- www.googletagmanager.com (68 reference(s))
 - www.google.com (36 reference(s))
 - secure.gravatar.com (2 reference(s))
 
@@ -134,11 +132,22 @@ Breakdown of the pages not counted clean:
 - 2 — only the pre-existing broken og:image 404
 - 2 — live capture blocked by the host (403), no local difference
 
+## 12b. Cart and Cash-on-Delivery checkout
+
+Added at the client's request, because WooCommerce's cart and checkout could not work without a backend. Cash on delivery is the only payment method, which is also the only gateway the WordPress store had enabled.
+
+- Catalogue: **35 products**, prices read from each product's own `Product` JSON-LD so cart and schema cannot disagree
+- Cart state lives in `localStorage`; the existing `?add-to-cart=<id>` links and AJAX buttons are reused unchanged
+- Markup is WooCommerce's classic cart/checkout inside the Rishi theme's own wrappers, so the existing stylesheets style it and the responsive behaviour is the theme's
+- `api/order.js` re-reads every price server-side, then emails the order to the store and a confirmation to the customer
+- `/checkout/` is no longer a redirect, so that sitemap URL now returns 200; `/checkout/order-received/` is new
+- Orders are emailed, not stored: no order list, stock decrement, order status or account history without a real commerce backend
+
 ## 13. Items that could not be replicated exactly
 
 | Item | Why | Handling |
 |---|---|---|
-| Cart and checkout accumulate nothing | WooCommerce needs a PHP backend and a session | add-to-cart links, product IDs, prices and the /cart/ and /checkout/ pages are preserved exactly; /checkout/ reproduces the live 302 to /cart/ |
+| Orders are not stored | there is no commerce backend to store them in | the cart and Cash-on-Delivery checkout work and every order is emailed to the store and the customer, but there is no order list, stock decrement or order status |
 | My Account login / registration / password reset | needs WordPress to process the POST | pages render identically, forms are inert |
 | Home-page product grid and related-products order | both use `orderby: rand`, so the live site reorders on every request | the static build freezes one draw; all products and links remain valid |
 | Essential Addons Quick View modal | opened via admin-ajax.php | icon and grid preserved, modal needs a backend |

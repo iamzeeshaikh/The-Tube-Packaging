@@ -1,20 +1,14 @@
 ---
-import pages from '../data/pages.json';
+// The site chrome, driven by a captured page record. `[...path].astro` renders
+// the migrated pages with it; the cart-flow pages that WordPress never served
+// as HTML (checkout, order received) borrow the cart page's record so they
+// inherit the same head, body classes, header, footer and scripts.
 import { rewrite } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
 import JoinChat from '../components/JoinChat.astro';
-
-export function getStaticPaths() {
-  return Object.values(pages).map((page) => ({
-    // Astro's rest param wants the path without the leading/trailing slash;
-    // trailingSlash: 'always' + build.format 'directory' restore them.
-    params: { path: page.route === '/' ? undefined : page.route.slice(1, -1) },
-    props: { page },
-  }));
-}
 
 const { page } = Astro.props;
 ---
@@ -31,7 +25,7 @@ const { page } = Astro.props;
 			<Fragment set:html={skipLink} />
 				<Header page={page} />
 				<Offcanvas page={page} />
-				<Fragment set:html={rewrite(page.content)} />
+				<slot />
 				<Footer page={page} />
 				</div><!-- #page -->
 <Fragment set:html={rewrite(page.bodyTail)} />

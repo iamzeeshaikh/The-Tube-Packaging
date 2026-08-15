@@ -24,8 +24,10 @@ soups = {f: BeautifulSoup(h, "lxml") for f, h in docs.items()}
 sitemap = set()
 for f in glob.glob(os.path.join(ROOT, "public", "*-sitemap.xml")):
     sitemap |= set(re.findall(r"<loc>([^<]+)</loc>", open(f, encoding="utf-8").read()))
-built = {SITE + p["route"] for p in pages.values()}
-handled = built | {SITE + r["source"] for r in rd["redirects"]}
+# resolve against what the build actually emits, not just the captured pages:
+# /checkout/ and /checkout/order-received/ are authored Astro pages
+emitted = {SITE + "/" + os.path.relpath(f, DIST).replace("index.html", "") for f in html_files}
+handled = emitted | {SITE + r["source"] for r in rd["redirects"]}
 check("every sitemap URL has an Astro equivalent", not (sitemap - handled),
       "missing: %s" % sorted(sitemap - handled))
 
@@ -53,6 +55,21 @@ odd = {k: v for k, v in h1s.items() if v != 1}
 live_odd = {"about-us/index.html": 2, "refund_returns/index.html": 0}
 check("no page gained or lost an H1 relative to the live site",
       odd == live_odd, "found %s, live has %s" % (odd, live_odd))
+
+# --- the cart flow ------------------------------------------------------------
+for route in ("cart", "checkout", "checkout/order-received"):
+    check("/%s/ is served as a page" % route,
+          os.path.isfile(os.path.join(DIST, route, "index.html")))
+cart_js = open(os.path.join(DIST, "assets", "cart.js"), encoding="utf-8").read()
+check("Cash on delivery is the checkout's payment method",
+      "Cash on delivery" in cart_js and "Pay with cash upon delivery." in cart_js)
+cat = json.load(open(os.path.join(DIST, "assets", "catalogue.json")))
+check("cart catalogue covers all 35 products", len(cat["products"]) == 35,
+      "%d" % len(cat["products"]))
+bad_price = [p["slug"] for p in cat["products"].values() if p["price"] != 0.3]
+check("catalogue prices match the live product schema", not bad_price, str(bad_price[:5]))
+check("every page can add to cart",
+      all("assets/cart.js" in h for h in docs.values()))
 
 # --- schema: compare against the live capture rather than a magic number ------
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

@@ -1,0 +1,26 @@
+---
+// WooCommerce's checkout page. On the WordPress site this URL 302'd to /cart/
+// whenever the cart was empty; now that the cart works client-side it renders
+// the checkout, with Cash on delivery -- the one gateway the store has enabled.
+import Shell from '../layouts/Shell.astro';
+import PageBody from '../components/PageBody.astro';
+import { cartFlowPage } from '../lib/cartpages.js';
+
+const page = cartFlowPage({
+  route: '/checkout/',
+  title: 'Checkout - The Tube Packaging',
+  bodyClasses: 'woocommerce-checkout',
+});
+---
+<Shell page={page}>
+  <PageBody postId={8} title="Checkout" crumb="Checkout" route="/checkout/">
+    <div id="ttp-checkout"></div>
+    <noscript>
+      <div class="woocommerce"><div class="woocommerce-info">
+        Checkout needs JavaScript enabled. Please email
+        <a href="mailto:info@thetubepackaging.com">info@thetubepackaging.com</a>
+        or call <a href="tel:(503)%20358-0443">(503) 358-0443</a> to place your order.
+      </div></div>
+    </noscript>
+  </PageBody>
+</Shell>

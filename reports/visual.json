@@ -1,0 +1,6887 @@
+{
+ "5-industries-that-can-benefit-most-from-cardboard-tube-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     8710
+    ],
+    "sizeAstro": [
+     1440,
+     8710
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     11306
+    ],
+    "sizeAstro": [
+     768,
+     11306
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19199
+    ],
+    "sizeAstro": [
+     390,
+     19199
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "5-ways-large-cardboard-tubes-boost-product-protection": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     6750
+    ],
+    "sizeAstro": [
+     1440,
+     6750
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     8034
+    ],
+    "sizeAstro": [
+     768,
+     8034
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.074,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     11323
+    ],
+    "sizeAstro": [
+     390,
+     11323
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "6-design-ideas-for-custom-square-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11343
+    ],
+    "sizeAstro": [
+     1440,
+     11343
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     11343
+    ],
+    "sizeAstro": [
+     1440,
+     11343
+    ],
+    "heightDelta": 0,
+    "diffPixels": 87483,
+    "diffPercent": 0.536,
+    "diffBands": [
+     [
+      840,
+      885
+     ],
+     [
+      10152,
+      10386
+     ],
+     [
+      10409,
+      10454
+     ],
+     [
+      10488,
+      10498
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13916
+    ],
+    "sizeAstro": [
+     768,
+     13916
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13916
+    ],
+    "sizeAstro": [
+     768,
+     13916
+    ],
+    "heightDelta": 0,
+    "diffPixels": 33298,
+    "diffPercent": 0.312,
+    "diffBands": [
+     [
+      11836,
+      11975
+     ],
+     [
+      11998,
+      12105
+     ],
+     [
+      12137,
+      12148
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22550
+    ],
+    "sizeAstro": [
+     390,
+     22550
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22520
+    ],
+    "sizeAstro": [
+     390,
+     22550
+    ],
+    "heightDelta": 30,
+    "diffPixels": 162178,
+    "diffPercent": 1.847,
+    "diffBands": [
+     [
+      20461,
+      20666
+     ],
+     [
+      20689,
+      20809
+     ],
+     [
+      20899,
+      21162
+     ],
+     [
+      21295,
+      21600
+     ],
+     [
+      21691,
+      21949
+     ],
+     [
+      21970,
+      22350
+     ],
+     [
+      22402,
+      22469
+     ]
+    ]
+   }
+  }
+ },
+ "__home": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     18854
+    ],
+    "sizeAstro": [
+     1440,
+     18854
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     18854
+    ],
+    "sizeAstro": [
+     1440,
+     18854
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2302912,
+    "diffPercent": 8.482,
+    "diffBands": [
+     [
+      840,
+      885
+     ],
+     [
+      2404,
+      2653
+     ],
+     [
+      2681,
+      2930
+     ],
+     [
+      2958,
+      3207
+     ],
+     [
+      3235,
+      3484
+     ],
+     [
+      3512,
+      3761
+     ],
+     [
+      3789,
+      4038
+     ],
+     [
+      4066,
+      4315
+     ],
+     [
+      4343,
+      4592
+     ],
+     [
+      4620,
+      4869
+     ],
+     [
+      4897,
+      5146
+     ],
+     [
+      5174,
+      5423
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     29941
+    ],
+    "sizeAstro": [
+     768,
+     29941
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     29941
+    ],
+    "sizeAstro": [
+     768,
+     29941
+    ],
+    "heightDelta": 0,
+    "diffPixels": 3736665,
+    "diffPercent": 16.25,
+    "diffBands": [
+     [
+      964,
+      1009
+     ],
+     [
+      2246,
+      2581
+     ],
+     [
+      2609,
+      2943
+     ],
+     [
+      2971,
+      3306
+     ],
+     [
+      3334,
+      3669
+     ],
+     [
+      3697,
+      4032
+     ],
+     [
+      4069,
+      4387
+     ],
+     [
+      4432,
+      4742
+     ],
+     [
+      4785,
+      5120
+     ],
+     [
+      5148,
+      5482
+     ],
+     [
+      5510,
+      5845
+     ],
+     [
+      5873,
+      6208
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     37016
+    ],
+    "sizeAstro": [
+     390,
+     37016
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     37016
+    ],
+    "sizeAstro": [
+     390,
+     37016
+    ],
+    "heightDelta": 0,
+    "diffPixels": 1637394,
+    "diffPercent": 11.342,
+    "diffBands": [
+     [
+      2970,
+      3163
+     ],
+     [
+      3277,
+      3477
+     ],
+     [
+      3500,
+      4981
+     ],
+     [
+      5002,
+      6782
+     ],
+     [
+      6803,
+      7396
+     ],
+     [
+      7417,
+      8238
+     ],
+     [
+      8259,
+      11247
+     ],
+     [
+      11357,
+      11860
+     ],
+     [
+      11971,
+      12141
+     ],
+     [
+      12259,
+      13315
+     ]
+    ]
+   }
+  }
+ },
+ "about-us": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     5492
+    ],
+    "sizeAstro": [
+     1440,
+     5492
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     5492
+    ],
+    "sizeAstro": [
+     1440,
+     5492
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7215,
+    "diffPercent": 0.091,
+    "diffBands": [
+     [
+      840,
+      885
+     ],
+     [
+      3770,
+      3786
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     7050
+    ],
+    "sizeAstro": [
+     768,
+     7050
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     7050
+    ],
+    "sizeAstro": [
+     768,
+     7050
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2661,
+    "diffPercent": 0.049,
+    "diffBands": [
+     [
+      4134,
+      4151
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     396,
+     9336
+    ],
+    "sizeAstro": [
+     396,
+     9336
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     396,
+     9372
+    ],
+    "sizeAstro": [
+     396,
+     9336
+    ],
+    "heightDelta": -36,
+    "diffPixels": 200629,
+    "diffPercent": 5.427,
+    "diffBands": [
+     [
+      5985,
+      6002
+     ],
+     [
+      6025,
+      6086
+     ],
+     [
+      6107,
+      6254
+     ],
+     [
+      6422,
+      6433
+     ],
+     [
+      6458,
+      6557
+     ],
+     [
+      6584,
+      6595
+     ],
+     [
+      6620,
+      6723
+     ],
+     [
+      6746,
+      6757
+     ],
+     [
+      6782,
+      6857
+     ],
+     [
+      6919,
+      6929
+     ],
+     [
+      6950,
+      6965
+     ],
+     [
+      6986,
+      6986
+     ]
+    ]
+   }
+  }
+ },
+ "author__shanimazhar82gmail-com": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     16988
+    ],
+    "sizeAstro": [
+     1440,
+     16988
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     18020
+    ],
+    "sizeAstro": [
+     768,
+     18020
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4552,
+    "diffPercent": 0.033,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19001
+    ],
+    "sizeAstro": [
+     390,
+     19001
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "cardboard-tubes-for-business-effective-solutions-for-packaging-and-storage": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     6492
+    ],
+    "sizeAstro": [
+     1440,
+     6492
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     6492
+    ],
+    "sizeAstro": [
+     1440,
+     6492
+    ],
+    "heightDelta": 0,
+    "diffPixels": 265024,
+    "diffPercent": 2.835,
+    "diffBands": [
+     [
+      5300,
+      5535
+     ],
+     [
+      5558,
+      5678
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     7500
+    ],
+    "sizeAstro": [
+     768,
+     7500
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     7500
+    ],
+    "sizeAstro": [
+     768,
+     7500
+    ],
+    "heightDelta": 0,
+    "diffPixels": 108434,
+    "diffPercent": 1.883,
+    "diffBands": [
+     [
+      5419,
+      5558
+     ],
+     [
+      5580,
+      5761
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     10892
+    ],
+    "sizeAstro": [
+     390,
+     10892
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "cart": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     2086
+    ],
+    "sizeAstro": [
+     1440,
+     2086
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     2753
+    ],
+    "sizeAstro": [
+     768,
+     2753
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.215,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     3984
+    ],
+    "sizeAstro": [
+     390,
+     3984
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "category__information": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     12958
+    ],
+    "sizeAstro": [
+     1440,
+     12958
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13838
+    ],
+    "sizeAstro": [
+     768,
+     13838
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     14590
+    ],
+    "sizeAstro": [
+     390,
+     14590
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "category__uncategorized": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     5074
+    ],
+    "sizeAstro": [
+     1440,
+     5074
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     5920
+    ],
+    "sizeAstro": [
+     768,
+     5920
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     6111
+    ],
+    "sizeAstro": [
+     390,
+     6111
+    ],
+    "heightDelta": 0,
+    "diffPixels": 6139,
+    "diffPercent": 0.258,
+    "diffBands": [
+     [
+      4450,
+      4485
+     ]
+    ]
+   }
+  }
+ },
+ "contact-us": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     4891
+    ],
+    "sizeAstro": [
+     1440,
+     4891
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     4891
+    ],
+    "sizeAstro": [
+     1440,
+     4891
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.065,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     5872
+    ],
+    "sizeAstro": [
+     768,
+     5872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     5872
+    ],
+    "sizeAstro": [
+     768,
+     5872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     396,
+     7067
+    ],
+    "sizeAstro": [
+     396,
+     7067
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     396,
+     7067
+    ],
+    "sizeAstro": [
+     396,
+     7067
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "cosmetic-tubes-complete-packaging-guide-for-beauty-product-manufacturers": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     17495
+    ],
+    "sizeAstro": [
+     1440,
+     17495
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     17495
+    ],
+    "sizeAstro": [
+     1440,
+     17495
+    ],
+    "heightDelta": 0,
+    "diffPixels": 252963,
+    "diffPercent": 1.004,
+    "diffBands": [
+     [
+      16303,
+      16538
+     ],
+     [
+      16561,
+      16680
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     21083
+    ],
+    "sizeAstro": [
+     768,
+     21083
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.028,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     21083
+    ],
+    "sizeAstro": [
+     768,
+     21083
+    ],
+    "heightDelta": 0,
+    "diffPixels": 103537,
+    "diffPercent": 0.639,
+    "diffBands": [
+     [
+      19002,
+      19141
+     ],
+     [
+      19164,
+      19344
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     37383
+    ],
+    "sizeAstro": [
+     390,
+     37383
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.031,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     37383
+    ],
+    "sizeAstro": [
+     390,
+     37383
+    ],
+    "heightDelta": 0,
+    "diffPixels": 203336,
+    "diffPercent": 1.395,
+    "diffBands": [
+     [
+      34577,
+      34783
+     ],
+     [
+      34806,
+      35241
+     ],
+     [
+      35273,
+      35284
+     ],
+     [
+      35324,
+      35529
+     ],
+     [
+      35552,
+      35597
+     ],
+     [
+      35631,
+      35642
+     ]
+    ]
+   }
+  }
+ },
+ "my-account": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     1858
+    ],
+    "sizeAstro": [
+     1440,
+     1858
+    ],
+    "heightDelta": 0,
+    "diffPixels": 191,
+    "diffPercent": 0.007,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     2551
+    ],
+    "sizeAstro": [
+     768,
+     2551
+    ],
+    "heightDelta": 0,
+    "diffPixels": 191,
+    "diffPercent": 0.01,
+    "diffBands": [
+     [
+      552,
+      555
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     2553
+    ],
+    "sizeAstro": [
+     390,
+     2553
+    ],
+    "heightDelta": 0,
+    "diffPixels": 191,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      548,
+      560
+     ]
+    ]
+   }
+  }
+ },
+ "my-account__lost-password": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     1554
+    ],
+    "sizeAstro": [
+     1440,
+     1554
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     2278
+    ],
+    "sizeAstro": [
+     768,
+     2278
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     2343
+    ],
+    "sizeAstro": [
+     390,
+     2343
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.498,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "privacy-policy": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     6147
+    ],
+    "sizeAstro": [
+     1440,
+     6147
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     7610
+    ],
+    "sizeAstro": [
+     768,
+     7610
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     396,
+     10946
+    ],
+    "sizeAstro": [
+     396,
+     10946
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product-category__custom-cardboard-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     2529
+    ],
+    "sizeAstro": [
+     1440,
+     2529
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     2529
+    ],
+    "sizeAstro": [
+     1440,
+     2529
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.125,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     9614
+    ],
+    "sizeAstro": [
+     768,
+     9614
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     9614
+    ],
+    "sizeAstro": [
+     768,
+     9614
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     6733
+    ],
+    "sizeAstro": [
+     390,
+     6733
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     6733
+    ],
+    "sizeAstro": [
+     390,
+     6733
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.173,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product-category__custom-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     3702
+    ],
+    "sizeAstro": [
+     1440,
+     3702
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     3702
+    ],
+    "sizeAstro": [
+     1440,
+     3702
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.085,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     17143
+    ],
+    "sizeAstro": [
+     768,
+     17143
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.035,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     17143
+    ],
+    "sizeAstro": [
+     768,
+     17143
+    ],
+    "heightDelta": 0,
+    "diffPixels": 176829,
+    "diffPercent": 1.343,
+    "diffBands": [
+     [
+      5297,
+      5644
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     11192
+    ],
+    "sizeAstro": [
+     390,
+     11192
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.104,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     11192
+    ],
+    "sizeAstro": [
+     390,
+     11192
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.104,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product-category__custom-paper-tubes__page__2": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     2047
+    ],
+    "sizeAstro": [
+     1440,
+     2047
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     3175
+    ],
+    "sizeAstro": [
+     768,
+     3175
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     2799
+    ],
+    "sizeAstro": [
+     390,
+     2799
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product-category__custom-plastic-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     2498
+    ],
+    "sizeAstro": [
+     1440,
+     2498
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     2498
+    ],
+    "sizeAstro": [
+     1440,
+     2498
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     7751
+    ],
+    "sizeAstro": [
+     768,
+     7751
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     7751
+    ],
+    "sizeAstro": [
+     768,
+     7751
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     5485
+    ],
+    "sizeAstro": [
+     390,
+     5485
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     5485
+    ],
+    "sizeAstro": [
+     390,
+     5485
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product-category__mailing-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     1967
+    ],
+    "sizeAstro": [
+     1440,
+     1967
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     1967
+    ],
+    "sizeAstro": [
+     1440,
+     1967
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     4958
+    ],
+    "sizeAstro": [
+     768,
+     4958
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     4958
+    ],
+    "sizeAstro": [
+     768,
+     4958
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.12,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     3872
+    ],
+    "sizeAstro": [
+     390,
+     3872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     3872
+    ],
+    "sizeAstro": [
+     390,
+     3872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product-category__specialty-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     1967
+    ],
+    "sizeAstro": [
+     1440,
+     1967
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     1967
+    ],
+    "sizeAstro": [
+     1440,
+     1967
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.161,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     4958
+    ],
+    "sizeAstro": [
+     768,
+     4958
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     4958
+    ],
+    "sizeAstro": [
+     768,
+     4958
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     3825
+    ],
+    "sizeAstro": [
+     390,
+     3825
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     3825
+    ],
+    "sizeAstro": [
+     390,
+     3825
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__black-paper-candle-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11093
+    ],
+    "sizeAstro": [
+     1440,
+     11093
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     11093
+    ],
+    "sizeAstro": [
+     1440,
+     11093
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.016,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15317
+    ],
+    "sizeAstro": [
+     768,
+     15317
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.039,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15317
+    ],
+    "sizeAstro": [
+     768,
+     15317
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.061,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22357
+    ],
+    "sizeAstro": [
+     390,
+     22357
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22388
+    ],
+    "sizeAstro": [
+     390,
+     22357
+    ],
+    "heightDelta": -31,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__candle-tube-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10842
+    ],
+    "sizeAstro": [
+     1440,
+     10842
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10866
+    ],
+    "sizeAstro": [
+     1440,
+     10842
+    ],
+    "heightDelta": -24,
+    "diffPixels": 171709,
+    "diffPercent": 1.1,
+    "diffBands": [
+     [
+      840,
+      899
+     ],
+     [
+      9078,
+      9199
+     ],
+     [
+      9224,
+      9342
+     ],
+     [
+      10187,
+      10276
+     ],
+     [
+      10307,
+      10330
+     ],
+     [
+      10384,
+      10636
+     ],
+     [
+      10743,
+      10834
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14926
+    ],
+    "sizeAstro": [
+     768,
+     14926
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14926
+    ],
+    "sizeAstro": [
+     768,
+     14926
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.022,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22597
+    ],
+    "sizeAstro": [
+     390,
+     22597
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22668
+    ],
+    "sizeAstro": [
+     390,
+     22597
+    ],
+    "heightDelta": -71,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__cardboard-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11354
+    ],
+    "sizeAstro": [
+     1440,
+     11354
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     11354
+    ],
+    "sizeAstro": [
+     1440,
+     11354
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.044,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15432
+    ],
+    "sizeAstro": [
+     768,
+     15432
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.038,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15432
+    ],
+    "sizeAstro": [
+     768,
+     15432
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.06,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     21451
+    ],
+    "sizeAstro": [
+     390,
+     21451
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     21483
+    ],
+    "sizeAstro": [
+     390,
+     21451
+    ],
+    "heightDelta": -32,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__cardboard-toilet-paper": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9590
+    ],
+    "sizeAstro": [
+     1440,
+     9590
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9590
+    ],
+    "sizeAstro": [
+     1440,
+     9590
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13085
+    ],
+    "sizeAstro": [
+     768,
+     13085
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.045,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13085
+    ],
+    "sizeAstro": [
+     768,
+     13085
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.071,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18685
+    ],
+    "sizeAstro": [
+     390,
+     18685
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18716
+    ],
+    "sizeAstro": [
+     390,
+     18685
+    ],
+    "heightDelta": -31,
+    "diffPixels": 34560,
+    "diffPercent": 0.474,
+    "diffBands": [
+     [
+      784,
+      829
+     ],
+     [
+      15143,
+      15515
+     ],
+     [
+      15536,
+      15903
+     ]
+    ]
+   }
+  }
+ },
+ "product__cardboard-tube-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10872
+    ],
+    "sizeAstro": [
+     1440,
+     10872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.029,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10872
+    ],
+    "sizeAstro": [
+     1440,
+     10872
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.016,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15003
+    ],
+    "sizeAstro": [
+     768,
+     15003
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15003
+    ],
+    "sizeAstro": [
+     768,
+     15003
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22746
+    ],
+    "sizeAstro": [
+     390,
+     22746
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.051,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22817
+    ],
+    "sizeAstro": [
+     390,
+     22746
+    ],
+    "heightDelta": -71,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__cosmetic-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10371
+    ],
+    "sizeAstro": [
+     1440,
+     10371
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.03,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10371
+    ],
+    "sizeAstro": [
+     1440,
+     10371
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.048,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14334
+    ],
+    "sizeAstro": [
+     768,
+     14334
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14334
+    ],
+    "sizeAstro": [
+     768,
+     14334
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.065,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20104
+    ],
+    "sizeAstro": [
+     390,
+     20104
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20072
+    ],
+    "sizeAstro": [
+     390,
+     20104
+    ],
+    "heightDelta": 32,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__custom-shipping-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11744
+    ],
+    "sizeAstro": [
+     1440,
+     11744
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     11720
+    ],
+    "sizeAstro": [
+     1440,
+     11744
+    ],
+    "heightDelta": 24,
+    "diffPixels": 171653,
+    "diffPercent": 1.017,
+    "diffBands": [
+     [
+      840,
+      899
+     ],
+     [
+      9957,
+      10078
+     ],
+     [
+      10103,
+      10221
+     ],
+     [
+      11066,
+      11155
+     ],
+     [
+      11186,
+      11208
+     ],
+     [
+      11260,
+      11514
+     ],
+     [
+      11621,
+      11713
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15995
+    ],
+    "sizeAstro": [
+     768,
+     15995
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15972
+    ],
+    "sizeAstro": [
+     768,
+     15995
+    ],
+    "heightDelta": 23,
+    "diffPixels": 136231,
+    "diffPercent": 1.111,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      13261,
+      13383
+     ],
+     [
+      13404,
+      13545
+     ],
+     [
+      14352,
+      14609
+     ],
+     [
+      14749,
+      14771
+     ],
+     [
+      14807,
+      15056
+     ],
+     [
+      15182,
+      15432
+     ],
+     [
+      15460,
+      15538
+     ],
+     [
+      15564,
+      15720
+     ],
+     [
+      15741,
+      15744
+     ],
+     [
+      15777,
+      15800
+     ],
+     [
+      15868,
+      15905
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     24636
+    ],
+    "sizeAstro": [
+     390,
+     24636
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     24636
+    ],
+    "sizeAstro": [
+     390,
+     24636
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.047,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__cylinder-mailing-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10516
+    ],
+    "sizeAstro": [
+     1440,
+     10516
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10516
+    ],
+    "sizeAstro": [
+     1440,
+     10516
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.047,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14145
+    ],
+    "sizeAstro": [
+     768,
+     14145
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.042,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14145
+    ],
+    "sizeAstro": [
+     768,
+     14145
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.024,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     21633
+    ],
+    "sizeAstro": [
+     390,
+     21633
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     21633
+    ],
+    "sizeAstro": [
+     390,
+     21633
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__deodorant-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10817
+    ],
+    "sizeAstro": [
+     1440,
+     10817
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10817
+    ],
+    "sizeAstro": [
+     1440,
+     10817
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14942
+    ],
+    "sizeAstro": [
+     768,
+     14942
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14942
+    ],
+    "sizeAstro": [
+     768,
+     14942
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22308
+    ],
+    "sizeAstro": [
+     390,
+     22308
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22339
+    ],
+    "sizeAstro": [
+     390,
+     22308
+    ],
+    "heightDelta": -31,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__empty-lipgloss-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10842
+    ],
+    "sizeAstro": [
+     1440,
+     10842
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.029,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10842
+    ],
+    "sizeAstro": [
+     1440,
+     10842
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.016,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14866
+    ],
+    "sizeAstro": [
+     768,
+     14866
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.04,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14898
+    ],
+    "sizeAstro": [
+     768,
+     14866
+    ],
+    "heightDelta": -32,
+    "diffPixels": 155012,
+    "diffPercent": 1.358,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      12155,
+      12448
+     ],
+     [
+      13247,
+      13511
+     ],
+     [
+      13643,
+      13674
+     ],
+     [
+      13701,
+      13712
+     ],
+     [
+      13733,
+      13755
+     ],
+     [
+      13779,
+      13798
+     ],
+     [
+      13819,
+      13841
+     ],
+     [
+      13862,
+      13927
+     ],
+     [
+      13948,
+      13959
+     ],
+     [
+      14076,
+      14087
+     ],
+     [
+      14108,
+      14621
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22689
+    ],
+    "sizeAstro": [
+     390,
+     22689
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.051,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22689
+    ],
+    "sizeAstro": [
+     390,
+     22689
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__empty-lotion-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10850
+    ],
+    "sizeAstro": [
+     1440,
+     10850
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10850
+    ],
+    "sizeAstro": [
+     1440,
+     10850
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.046,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15036
+    ],
+    "sizeAstro": [
+     768,
+     15036
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15036
+    ],
+    "sizeAstro": [
+     768,
+     15036
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22570
+    ],
+    "sizeAstro": [
+     390,
+     22570
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22570
+    ],
+    "sizeAstro": [
+     390,
+     22570
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__industrial-cardboard-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10453
+    ],
+    "sizeAstro": [
+     1440,
+     10453
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10453
+    ],
+    "sizeAstro": [
+     1440,
+     10453
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.047,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14485
+    ],
+    "sizeAstro": [
+     768,
+     14485
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14477
+    ],
+    "sizeAstro": [
+     768,
+     14485
+    ],
+    "heightDelta": 8,
+    "diffPixels": 94492,
+    "diffPercent": 0.85,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      11766,
+      11823
+     ],
+     [
+      11851,
+      11873
+     ],
+     [
+      11909,
+      11965
+     ],
+     [
+      11993,
+      12035
+     ],
+     [
+      12858,
+      12901
+     ],
+     [
+      12935,
+      12992
+     ],
+     [
+      13028,
+      13098
+     ],
+     [
+      13254,
+      13261
+     ],
+     [
+      13312,
+      13331
+     ],
+     [
+      13358,
+      13374
+     ],
+     [
+      13398,
+      13417
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20305
+    ],
+    "sizeAstro": [
+     390,
+     20305
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20376
+    ],
+    "sizeAstro": [
+     390,
+     20305
+    ],
+    "heightDelta": -71,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__kraft-mailing-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10279
+    ],
+    "sizeAstro": [
+     1440,
+     10279
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10279
+    ],
+    "sizeAstro": [
+     1440,
+     10279
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14282
+    ],
+    "sizeAstro": [
+     768,
+     14282
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.042,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14282
+    ],
+    "sizeAstro": [
+     768,
+     14282
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.023,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19806
+    ],
+    "sizeAstro": [
+     390,
+     19806
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     19806
+    ],
+    "sizeAstro": [
+     390,
+     19806
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.059,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__kraft-paper-candle-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10968
+    ],
+    "sizeAstro": [
+     1440,
+     10968
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.029,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10968
+    ],
+    "sizeAstro": [
+     1440,
+     10968
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.016,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15482
+    ],
+    "sizeAstro": [
+     768,
+     15482
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.038,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15482
+    ],
+    "sizeAstro": [
+     768,
+     15482
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.022,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22847
+    ],
+    "sizeAstro": [
+     390,
+     22847
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22847
+    ],
+    "sizeAstro": [
+     390,
+     22847
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__kraft-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10825
+    ],
+    "sizeAstro": [
+     1440,
+     10825
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15098
+    ],
+    "sizeAstro": [
+     768,
+     15098
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.039,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22569
+    ],
+    "sizeAstro": [
+     390,
+     22569
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__large-cardboard-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10513
+    ],
+    "sizeAstro": [
+     1440,
+     10513
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10513
+    ],
+    "sizeAstro": [
+     1440,
+     10513
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.047,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14403
+    ],
+    "sizeAstro": [
+     768,
+     14403
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14403
+    ],
+    "sizeAstro": [
+     768,
+     14403
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.064,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20300
+    ],
+    "sizeAstro": [
+     390,
+     20300
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20300
+    ],
+    "sizeAstro": [
+     390,
+     20300
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.058,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__large-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10677
+    ],
+    "sizeAstro": [
+     1440,
+     10677
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10677
+    ],
+    "sizeAstro": [
+     1440,
+     10677
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14599
+    ],
+    "sizeAstro": [
+     768,
+     14599
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14599
+    ],
+    "sizeAstro": [
+     768,
+     14599
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.023,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22031
+    ],
+    "sizeAstro": [
+     390,
+     22031
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22031
+    ],
+    "sizeAstro": [
+     390,
+     22031
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__lotion-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10531
+    ],
+    "sizeAstro": [
+     1440,
+     10531
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.03,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10531
+    ],
+    "sizeAstro": [
+     1440,
+     10531
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.047,
+    "diffBands": [
+     [
+      840,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14570
+    ],
+    "sizeAstro": [
+     768,
+     14570
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14570
+    ],
+    "sizeAstro": [
+     768,
+     14570
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.023,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     21591
+    ],
+    "sizeAstro": [
+     390,
+     21591
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     21591
+    ],
+    "sizeAstro": [
+     390,
+     21591
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.054,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__luxury-tube-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9621
+    ],
+    "sizeAstro": [
+     1440,
+     9621
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9621
+    ],
+    "sizeAstro": [
+     1440,
+     9621
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     12596
+    ],
+    "sizeAstro": [
+     768,
+     12596
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     12596
+    ],
+    "sizeAstro": [
+     768,
+     12596
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.027,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18401
+    ],
+    "sizeAstro": [
+     390,
+     18401
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.063,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18401
+    ],
+    "sizeAstro": [
+     390,
+     18401
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.063,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__paper-lip-balm-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11816
+    ],
+    "sizeAstro": [
+     1440,
+     11816
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.027,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     16083
+    ],
+    "sizeAstro": [
+     768,
+     16083
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.037,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22266
+    ],
+    "sizeAstro": [
+     390,
+     22266
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__paper-lipstick-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9144
+    ],
+    "sizeAstro": [
+     1440,
+     9144
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9144
+    ],
+    "sizeAstro": [
+     1440,
+     9144
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.02,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     12295
+    ],
+    "sizeAstro": [
+     768,
+     12295
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.048,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     12295
+    ],
+    "sizeAstro": [
+     768,
+     12295
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.027,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18221
+    ],
+    "sizeAstro": [
+     390,
+     18221
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18221
+    ],
+    "sizeAstro": [
+     390,
+     18221
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__paper-towel-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9840
+    ],
+    "sizeAstro": [
+     1440,
+     9840
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9840
+    ],
+    "sizeAstro": [
+     1440,
+     9840
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.018,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13378
+    ],
+    "sizeAstro": [
+     768,
+     13378
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.044,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13378
+    ],
+    "sizeAstro": [
+     768,
+     13378
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.069,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18985
+    ],
+    "sizeAstro": [
+     390,
+     18985
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18954
+    ],
+    "sizeAstro": [
+     390,
+     18985
+    ],
+    "heightDelta": 31,
+    "diffPixels": 30006,
+    "diffPercent": 0.406,
+    "diffBands": [
+     [
+      15412,
+      15784
+     ],
+     [
+      15805,
+      16172
+     ]
+    ]
+   }
+  }
+ },
+ "product__paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     12359
+    ],
+    "sizeAstro": [
+     1440,
+     12359
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.026,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     12359
+    ],
+    "sizeAstro": [
+     1440,
+     12359
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.014,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     16330
+    ],
+    "sizeAstro": [
+     768,
+     16330
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.036,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     16330
+    ],
+    "sizeAstro": [
+     768,
+     16330
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.057,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22543
+    ],
+    "sizeAstro": [
+     390,
+     22543
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22543
+    ],
+    "sizeAstro": [
+     390,
+     22543
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__plastic-tube-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10578
+    ],
+    "sizeAstro": [
+     1440,
+     10578
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10578
+    ],
+    "sizeAstro": [
+     1440,
+     10578
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14630
+    ],
+    "sizeAstro": [
+     768,
+     14630
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14630
+    ],
+    "sizeAstro": [
+     768,
+     14630
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.063,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20589
+    ],
+    "sizeAstro": [
+     390,
+     20589
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20589
+    ],
+    "sizeAstro": [
+     390,
+     20589
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__poster-mailing-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9292
+    ],
+    "sizeAstro": [
+     1440,
+     9292
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9292
+    ],
+    "sizeAstro": [
+     1440,
+     9292
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13122
+    ],
+    "sizeAstro": [
+     768,
+     13122
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13122
+    ],
+    "sizeAstro": [
+     768,
+     13122
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.026,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18245
+    ],
+    "sizeAstro": [
+     390,
+     18245
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.064,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18174
+    ],
+    "sizeAstro": [
+     390,
+     18245
+    ],
+    "heightDelta": 71,
+    "diffPixels": 33915,
+    "diffPercent": 0.478,
+    "diffBands": [
+     [
+      784,
+      829
+     ],
+     [
+      14633,
+      14681
+     ],
+     [
+      14704,
+      14804
+     ],
+     [
+      14826,
+      14924
+     ],
+     [
+      14953,
+      14992
+     ],
+     [
+      15026,
+      15060
+     ],
+     [
+      15097,
+      15190
+     ],
+     [
+      15212,
+      15310
+     ],
+     [
+      15341,
+      15376
+     ],
+     [
+      15418,
+      15432
+     ]
+    ]
+   }
+  }
+ },
+ "product__round-cardboard-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10778
+    ],
+    "sizeAstro": [
+     1440,
+     10778
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10754
+    ],
+    "sizeAstro": [
+     1440,
+     10778
+    ],
+    "heightDelta": 24,
+    "diffPixels": 167058,
+    "diffPercent": 1.079,
+    "diffBands": [
+     [
+      858,
+      899
+     ],
+     [
+      8991,
+      9112
+     ],
+     [
+      9137,
+      9255
+     ],
+     [
+      10100,
+      10189
+     ],
+     [
+      10220,
+      10242
+     ],
+     [
+      10294,
+      10548
+     ],
+     [
+      10655,
+      10746
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15103
+    ],
+    "sizeAstro": [
+     768,
+     15103
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.039,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     15080
+    ],
+    "sizeAstro": [
+     768,
+     15103
+    ],
+    "heightDelta": 23,
+    "diffPixels": 136546,
+    "diffPercent": 1.179,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      12369,
+      12491
+     ],
+     [
+      12512,
+      12654
+     ],
+     [
+      13460,
+      13717
+     ],
+     [
+      13857,
+      13879
+     ],
+     [
+      13915,
+      14164
+     ],
+     [
+      14290,
+      14540
+     ],
+     [
+      14568,
+      14646
+     ],
+     [
+      14672,
+      14828
+     ],
+     [
+      14849,
+      14852
+     ],
+     [
+      14885,
+      14908
+     ],
+     [
+      14976,
+      15013
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22451
+    ],
+    "sizeAstro": [
+     390,
+     22451
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22451
+    ],
+    "sizeAstro": [
+     390,
+     22451
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.052,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__skincare-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10657
+    ],
+    "sizeAstro": [
+     1440,
+     10657
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.03,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10657
+    ],
+    "sizeAstro": [
+     1440,
+     10657
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14685
+    ],
+    "sizeAstro": [
+     768,
+     14685
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.04,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14685
+    ],
+    "sizeAstro": [
+     768,
+     14685
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.023,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     21742
+    ],
+    "sizeAstro": [
+     390,
+     21742
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     21742
+    ],
+    "sizeAstro": [
+     390,
+     21742
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.054,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__small-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10720
+    ],
+    "sizeAstro": [
+     1440,
+     10720
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.03,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     15272
+    ],
+    "sizeAstro": [
+     768,
+     15272
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.039,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22558
+    ],
+    "sizeAstro": [
+     390,
+     22558
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__square-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10342
+    ],
+    "sizeAstro": [
+     1440,
+     10342
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14187
+    ],
+    "sizeAstro": [
+     768,
+     14187
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.042,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19941
+    ],
+    "sizeAstro": [
+     390,
+     19941
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__tea-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10373
+    ],
+    "sizeAstro": [
+     1440,
+     10373
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10373
+    ],
+    "sizeAstro": [
+     1440,
+     10373
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13944
+    ],
+    "sizeAstro": [
+     768,
+     13944
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13944
+    ],
+    "sizeAstro": [
+     768,
+     13944
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.067,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     19600
+    ],
+    "sizeAstro": [
+     390,
+     19600
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     19632
+    ],
+    "sizeAstro": [
+     390,
+     19600
+    ],
+    "heightDelta": -32,
+    "diffPixels": 16525,
+    "diffPercent": 0.216,
+    "diffBands": [
+     [
+      784,
+      829
+     ],
+     [
+      16059,
+      16378
+     ]
+    ]
+   }
+  }
+ },
+ "product__tube-food-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10753
+    ],
+    "sizeAstro": [
+     1440,
+     10753
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10753
+    ],
+    "sizeAstro": [
+     1440,
+     10753
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14147
+    ],
+    "sizeAstro": [
+     768,
+     14147
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14147
+    ],
+    "sizeAstro": [
+     768,
+     14147
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.024,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20431
+    ],
+    "sizeAstro": [
+     390,
+     20431
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.057,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     20431
+    ],
+    "sizeAstro": [
+     390,
+     20431
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.057,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "product__white-lipstick-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10555
+    ],
+    "sizeAstro": [
+     1440,
+     10555
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14406
+    ],
+    "sizeAstro": [
+     768,
+     14406
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.041,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     21862
+    ],
+    "sizeAstro": [
+     390,
+     21862
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__white-paper-candle-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     10771
+    ],
+    "sizeAstro": [
+     1440,
+     10771
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     10771
+    ],
+    "sizeAstro": [
+     1440,
+     10771
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.017,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     14744
+    ],
+    "sizeAstro": [
+     768,
+     14744
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.04,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     14744
+    ],
+    "sizeAstro": [
+     768,
+     14744
+    ],
+    "heightDelta": 0,
+    "diffPixels": 7126,
+    "diffPercent": 0.063,
+    "diffBands": [
+     [
+      738,
+      780
+     ],
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     22150
+    ],
+    "sizeAstro": [
+     390,
+     22150
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     22181
+    ],
+    "sizeAstro": [
+     390,
+     22150
+    ],
+    "heightDelta": -31,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "product__white-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9559
+    ],
+    "sizeAstro": [
+     1440,
+     9559
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9528
+    ],
+    "sizeAstro": [
+     1440,
+     9559
+    ],
+    "heightDelta": 31,
+    "diffPixels": 195039,
+    "diffPercent": 1.422,
+    "diffBands": [
+     [
+      858,
+      899
+     ],
+     [
+      7764,
+      8036
+     ],
+     [
+      8873,
+      8970
+     ],
+     [
+      8993,
+      9023
+     ],
+     [
+      9067,
+      9329
+     ],
+     [
+      9429,
+      9526
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     12870
+    ],
+    "sizeAstro": [
+     768,
+     12870
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.046,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     12870
+    ],
+    "sizeAstro": [
+     768,
+     12870
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.026,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18097
+    ],
+    "sizeAstro": [
+     390,
+     18097
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18065
+    ],
+    "sizeAstro": [
+     390,
+     18097
+    ],
+    "heightDelta": 32,
+    "diffPixels": 29759,
+    "diffPercent": 0.422,
+    "diffBands": [
+     [
+      14524,
+      14896
+     ],
+     [
+      14917,
+      15284
+     ]
+    ]
+   }
+  }
+ },
+ "product__wrapping-paper-tubes": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9559
+    ],
+    "sizeAstro": [
+     1440,
+     9559
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.033,
+    "diffBands": [
+     [
+      840,
+      885
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     9559
+    ],
+    "sizeAstro": [
+     1440,
+     9559
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.019,
+    "diffBands": [
+     [
+      858,
+      899
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13166
+    ],
+    "sizeAstro": [
+     768,
+     13166
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     13166
+    ],
+    "sizeAstro": [
+     768,
+     13166
+    ],
+    "heightDelta": 0,
+    "diffPixels": 2572,
+    "diffPercent": 0.025,
+    "diffBands": [
+     [
+      738,
+      780
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18801
+    ],
+    "sizeAstro": [
+     390,
+     18801
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.062,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     18769
+    ],
+    "sizeAstro": [
+     390,
+     18801
+    ],
+    "heightDelta": 32,
+    "diffPixels": 29761,
+    "diffPercent": 0.407,
+    "diffBands": [
+     [
+      15228,
+      15600
+     ],
+     [
+      15621,
+      15988
+     ]
+    ]
+   }
+  }
+ },
+ "refund_returns": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     3468
+    ],
+    "sizeAstro": [
+     1440,
+     3468
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     3468
+    ],
+    "sizeAstro": [
+     1440,
+     3468
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     4639
+    ],
+    "sizeAstro": [
+     768,
+     4639
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     4639
+    ],
+    "sizeAstro": [
+     768,
+     4639
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     396,
+     5838
+    ],
+    "sizeAstro": [
+     396,
+     5838
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     396,
+     5838
+    ],
+    "sizeAstro": [
+     396,
+     5838
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "shipping-policy": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     6405
+    ],
+    "sizeAstro": [
+     1440,
+     6405
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     6405
+    ],
+    "sizeAstro": [
+     1440,
+     6405
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     7160
+    ],
+    "sizeAstro": [
+     768,
+     7160
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     7160
+    ],
+    "sizeAstro": [
+     768,
+     7160
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     7707
+    ],
+    "sizeAstro": [
+     390,
+     7707
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     7707
+    ],
+    "sizeAstro": [
+     390,
+     7707
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "shop": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     3788
+    ],
+    "sizeAstro": [
+     1440,
+     3788
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     3788
+    ],
+    "sizeAstro": [
+     1440,
+     3788
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     17198
+    ],
+    "sizeAstro": [
+     768,
+     17198
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     17198
+    ],
+    "sizeAstro": [
+     768,
+     17198
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.034,
+    "diffBands": [
+     [
+      964,
+      1009
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     11241
+    ],
+    "sizeAstro": [
+     390,
+     11241
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     11241
+    ],
+    "sizeAstro": [
+     390,
+     11241
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "shop__page__2": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     3757
+    ],
+    "sizeAstro": [
+     1440,
+     3757
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     17198
+    ],
+    "sizeAstro": [
+     768,
+     17198
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     11147
+    ],
+    "sizeAstro": [
+     390,
+     11147
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.105,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "shop__page__3": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     2102
+    ],
+    "sizeAstro": [
+     1440,
+     2102
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     2102
+    ],
+    "sizeAstro": [
+     1440,
+     2102
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     5092
+    ],
+    "sizeAstro": [
+     768,
+     5092
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     5092
+    ],
+    "sizeAstro": [
+     768,
+     5092
+    ],
+    "heightDelta": 0,
+    "diffPixels": 10592,
+    "diffPercent": 0.271,
+    "diffBands": [
+     [
+      4211,
+      4238
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     3931
+    ],
+    "sizeAstro": [
+     390,
+     3931
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     3931
+    ],
+    "sizeAstro": [
+     390,
+     3931
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "terms-conditions": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     6845
+    ],
+    "sizeAstro": [
+     1440,
+     6845
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     6845
+    ],
+    "sizeAstro": [
+     1440,
+     6845
+    ],
+    "heightDelta": 0,
+    "diffPixels": 20075,
+    "diffPercent": 0.204,
+    "diffBands": [
+     [
+      340,
+      419
+     ],
+     [
+      647,
+      663
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     8326
+    ],
+    "sizeAstro": [
+     768,
+     8326
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     8326
+    ],
+    "sizeAstro": [
+     768,
+     8326
+    ],
+    "heightDelta": 0,
+    "diffPixels": 20347,
+    "diffPercent": 0.318,
+    "diffBands": [
+     [
+      250,
+      330
+     ],
+     [
+      620,
+      637
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     396,
+     11537
+    ],
+    "sizeAstro": [
+     396,
+     11537
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.1,
+    "diffBands": [
+     [
+      797,
+      842
+     ]
+    ]
+   },
+   "vs_live": {
+    "sizeLive": [
+     396,
+     11568
+    ],
+    "sizeAstro": [
+     396,
+     11537
+    ],
+    "heightDelta": -31,
+    "diffPixels": 787169,
+    "diffPercent": 17.23,
+    "diffBands": [
+     [
+      281,
+      453
+     ],
+     [
+      872,
+      1296
+     ],
+     [
+      1318,
+      5683
+     ],
+     [
+      5705,
+      6185
+     ],
+     [
+      6206,
+      6300
+     ],
+     [
+      6321,
+      8451
+     ],
+     [
+      8623,
+      8634
+     ],
+     [
+      8655,
+      8754
+     ],
+     [
+      8785,
+      8796
+     ],
+     [
+      8817,
+      8920
+     ],
+     [
+      8947,
+      8958
+     ],
+     [
+      8979,
+      9054
+     ]
+    ]
+   }
+  }
+ },
+ "thank-you": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     1971
+    ],
+    "sizeAstro": [
+     1440,
+     1971
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     1971
+    ],
+    "sizeAstro": [
+     1440,
+     1971
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     2555
+    ],
+    "sizeAstro": [
+     768,
+     2555
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     2555
+    ],
+    "sizeAstro": [
+     768,
+     2555
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     2633
+    ],
+    "sizeAstro": [
+     390,
+     2633
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     2633
+    ],
+    "sizeAstro": [
+     390,
+     2633
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ },
+ "the-ultimate-guide-to-tube-packaging-from-food-to-industrial-applications": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     24291
+    ],
+    "sizeAstro": [
+     1440,
+     24291
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     1440,
+     24291
+    ],
+    "sizeAstro": [
+     1440,
+     24291
+    ],
+    "heightDelta": 0,
+    "diffPixels": 178791,
+    "diffPercent": 0.511,
+    "diffBands": [
+     [
+      23100,
+      23334
+     ],
+     [
+      23357,
+      23476
+     ],
+     [
+      23636,
+      23702
+     ]
+    ]
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     27505
+    ],
+    "sizeAstro": [
+     768,
+     27505
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     768,
+     27505
+    ],
+    "sizeAstro": [
+     768,
+     27505
+    ],
+    "heightDelta": 0,
+    "diffPixels": 70248,
+    "diffPercent": 0.333,
+    "diffBands": [
+     [
+      25425,
+      25564
+     ],
+     [
+      25587,
+      25765
+     ]
+    ]
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     41977
+    ],
+    "sizeAstro": [
+     390,
+     41977
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   },
+   "vs_live": {
+    "sizeLive": [
+     390,
+     41977
+    ],
+    "sizeAstro": [
+     390,
+     41977
+    ],
+    "heightDelta": 0,
+    "diffPixels": 146380,
+    "diffPercent": 0.894,
+    "diffBands": [
+     [
+      784,
+      829
+     ],
+     [
+      39530,
+      39735
+     ],
+     [
+      39758,
+      40191
+     ],
+     [
+      40225,
+      40236
+     ]
+    ]
+   }
+  }
+ },
+ "why-mailing-tubes-are-essential-for-shipping-posters-and-documents": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     11940
+    ],
+    "sizeAstro": [
+     1440,
+     11940
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     13168
+    ],
+    "sizeAstro": [
+     768,
+     13168
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     20848
+    ],
+    "sizeAstro": [
+     390,
+     20848
+    ],
+    "heightDelta": 0,
+    "diffPixels": 4554,
+    "diffPercent": 0.056,
+    "diffBands": [
+     [
+      784,
+      829
+     ]
+    ]
+   }
+  }
+ },
+ "why-wrapping-paper-tubes-are-the-future-of-gift-packaging": {
+  "desktop": {
+   "vs_snapshot": {
+    "sizeLive": [
+     1440,
+     9329
+    ],
+    "sizeAstro": [
+     1440,
+     9329
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "tablet": {
+   "vs_snapshot": {
+    "sizeLive": [
+     768,
+     12060
+    ],
+    "sizeAstro": [
+     768,
+     12060
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  },
+  "mobile": {
+   "vs_snapshot": {
+    "sizeLive": [
+     390,
+     18515
+    ],
+    "sizeAstro": [
+     390,
+     18515
+    ],
+    "heightDelta": 0,
+    "diffPixels": 0,
+    "diffPercent": 0,
+    "diffBands": []
+   }
+  }
+ }
+}

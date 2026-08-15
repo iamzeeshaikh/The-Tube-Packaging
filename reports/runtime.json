@@ -1,0 +1,687 @@
+{
+ "5-industries-that-can-benefit-most-from-cardboard-tube-packaging": {
+  "route": "/5-industries-that-can-benefit-most-from-cardboard-tube-packaging/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "5-ways-large-cardboard-tubes-boost-product-protection": {
+  "route": "/5-ways-large-cardboard-tubes-boost-product-protection/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "6-design-ideas-for-custom-square-paper-tubes": {
+  "route": "/6-design-ideas-for-custom-square-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "__home": {
+  "route": "/",
+  "diffs": {},
+  "astroErrors": [
+   "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "astroFailedRequests": [
+   "404 http://localhost:4399/wp-content/uploads/2026/02/ChatGPT-Image-Feb-24-2026-09_27_44-AM.png"
+  ],
+  "liveErrors": [
+   "console: Failed to load resource: the server responded with a status of 403 ()",
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "about-us": {
+  "route": "/about-us/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "author__shanimazhar82gmail-com": {
+  "route": "/author/shanimazhar82gmail-com/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "cardboard-tubes-for-business-effective-solutions-for-packaging-and-storage": {
+  "route": "/cardboard-tubes-for-business-effective-solutions-for-packaging-and-storage/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "cart": {
+  "route": "/cart/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "category__information": {
+  "route": "/category/information/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "category__uncategorized": {
+  "route": "/category/uncategorized/",
+  "diffs": {
+   "brokenImages": {
+    "live": [
+     "/wp-content/uploads/2024/09/DHL.png",
+     "/wp-content/uploads/2024/09/FEDEX.png",
+     "/wp-content/uploads/2024/09/dmca-badge-w250-2x1-01.png",
+     "/wp-content/uploads/2024/09/secure-icons.png",
+     "/wp-content/uploads/2024/10/certificate.png"
+    ],
+    "astro": []
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: Failed to load resource: net::ERR_NETWORK_CHANGED",
+   "console: Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+   "console: Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+  ]
+ },
+ "contact-us": {
+  "route": "/contact-us/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "cosmetic-tubes-complete-packaging-guide-for-beauty-product-manufacturers": {
+  "route": "/cosmetic-tubes-complete-packaging-guide-for-beauty-product-manufacturers/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "my-account": {
+  "route": "/my-account/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "my-account__lost-password": {
+  "route": "/my-account/lost-password/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "privacy-policy": {
+  "route": "/privacy-policy/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__custom-cardboard-tubes": {
+  "route": "/product-category/custom-cardboard-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__custom-paper-tubes": {
+  "route": "/product-category/custom-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__custom-paper-tubes__page__2": {
+  "route": "/product-category/custom-paper-tubes/page/2/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__custom-plastic-tubes": {
+  "route": "/product-category/custom-plastic-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__mailing-tubes": {
+  "route": "/product-category/mailing-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product-category__specialty-tubes": {
+  "route": "/product-category/specialty-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "product__black-paper-candle-tubes": {
+  "route": "/product/black-paper-candle-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__candle-tube-packaging": {
+  "route": "/product/candle-tube-packaging/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__cardboard-paper-tubes": {
+  "route": "/product/cardboard-paper-tubes/",
+  "diffs": {
+   "zoomImg": {
+    "live": 0,
+    "astro": 1
+   },
+   "brokenImages": {
+    "live": [
+     "/wp-content/uploads/2024/07/Cardboard-Toilet-Paper-300x300.jpg",
+     "/wp-content/uploads/2024/07/Small-Paper-Tubes-300x300.jpg",
+     "/wp-content/uploads/2024/07/White-Paper-Tubes-300x300.jpg",
+     "/wp-content/uploads/2024/07/Large-Paper-Tubes-300x300.jpg",
+     "/wp-content/uploads/2024/09/secure-icons.png",
+     "/wp-content/uploads/2024/10/certificate.png"
+    ],
+    "astro": []
+   },
+   "imageCount": {
+    "live": 42,
+    "astro": 43
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied.",
+   "console: Failed to load resource: net::ERR_NETWORK_CHANGED",
+   "console: Failed to load resource: net::ERR_ADDRESS_UNREACHABLE",
+   "console: Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+  ]
+ },
+ "product__cardboard-toilet-paper": {
+  "route": "/product/cardboard-toilet-paper/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__cardboard-tube-packaging": {
+  "route": "/product/cardboard-tube-packaging/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__cosmetic-tubes": {
+  "route": "/product/cosmetic-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__custom-shipping-tubes": {
+  "route": "/product/custom-shipping-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__cylinder-mailing-tubes": {
+  "route": "/product/cylinder-mailing-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__deodorant-paper-tubes": {
+  "route": "/product/deodorant-paper-tubes/",
+  "diffs": {
+   "zoomImg": {
+    "live": 0,
+    "astro": 1
+   },
+   "imageCount": {
+    "live": 42,
+    "astro": 43
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__empty-lipgloss-tubes": {
+  "route": "/product/empty-lipgloss-tubes/",
+  "diffs": {
+   "zoomImg": {
+    "live": 0,
+    "astro": 1
+   },
+   "imageCount": {
+    "live": 42,
+    "astro": 43
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__empty-lotion-tubes": {
+  "route": "/product/empty-lotion-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__industrial-cardboard-tubes": {
+  "route": "/product/industrial-cardboard-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__kraft-mailing-tubes": {
+  "route": "/product/kraft-mailing-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__kraft-paper-candle-tubes": {
+  "route": "/product/kraft-paper-candle-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__kraft-paper-tubes": {
+  "route": "/product/kraft-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__large-cardboard-tubes": {
+  "route": "/product/large-cardboard-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__large-paper-tubes": {
+  "route": "/product/large-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__lotion-tubes": {
+  "route": "/product/lotion-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__luxury-tube-packaging": {
+  "route": "/product/luxury-tube-packaging/",
+  "diffs": {
+   "zoomImg": {
+    "live": 0,
+    "astro": 1
+   },
+   "imageCount": {
+    "live": 42,
+    "astro": 43
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__paper-lip-balm-tubes": {
+  "route": "/product/paper-lip-balm-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__paper-lipstick-tubes": {
+  "route": "/product/paper-lipstick-tubes/",
+  "diffs": {},
+  "astroErrors": [
+   "console: Framing 'https://www.google.com/' violates the following report-only Content Security Policy directive: \"frame-ancestors 'self'\". The violation has been logged,"
+  ],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__paper-towel-tubes": {
+  "route": "/product/paper-towel-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__paper-tubes": {
+  "route": "/product/paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__plastic-tube-packaging": {
+  "route": "/product/plastic-tube-packaging/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__poster-mailing-tubes": {
+  "route": "/product/poster-mailing-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__round-cardboard-tubes": {
+  "route": "/product/round-cardboard-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__skincare-tubes": {
+  "route": "/product/skincare-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__small-paper-tubes": {
+  "route": "/product/small-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__square-paper-tubes": {
+  "route": "/product/square-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__tea-paper-tubes": {
+  "route": "/product/tea-paper-tubes/",
+  "diffs": {
+   "zoomImg": {
+    "live": 0,
+    "astro": 1
+   },
+   "imageCount": {
+    "live": 42,
+    "astro": 43
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__tube-food-packaging": {
+  "route": "/product/tube-food-packaging/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__white-lipstick-tubes": {
+  "route": "/product/white-lipstick-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__white-paper-candle-tubes": {
+  "route": "/product/white-paper-candle-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__white-paper-tubes": {
+  "route": "/product/white-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "product__wrapping-paper-tubes": {
+  "route": "/product/wrapping-paper-tubes/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: requestStorageAccess: Permission denied."
+  ]
+ },
+ "refund_returns": {
+  "route": "/refund_returns/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "shipping-policy": {
+  "route": "/shipping-policy/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "shop": {
+  "route": "/shop/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "shop__page__2": {
+  "route": "/shop/page/2/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "shop__page__3": {
+  "route": "/shop/page/3/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "terms-conditions": {
+  "route": "/terms-conditions/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "thank-you": {
+  "route": "/thank-you/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "the-ultimate-guide-to-tube-packaging-from-food-to-industrial-applications": {
+  "route": "/the-ultimate-guide-to-tube-packaging-from-food-to-industrial-applications/",
+  "diffs": {},
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": []
+ },
+ "why-mailing-tubes-are-essential-for-shipping-posters-and-documents": {
+  "route": "/why-mailing-tubes-are-essential-for-shipping-posters-and-documents/",
+  "diffs": {
+   "stickyHeaders": {
+    "live": 0,
+    "astro": 2
+   },
+   "joinchatReady": {
+    "live": false,
+    "astro": true
+   },
+   "offcanvasHidden": {
+    "live": null,
+    "astro": "true"
+   },
+   "searchModals": {
+    "live": 0,
+    "astro": 1
+   },
+   "menuItems": {
+    "live": 0,
+    "astro": 6
+   },
+   "subMenus": {
+    "live": 0,
+    "astro": 5
+   },
+   "bodyClass": {
+    "live": "",
+    "astro": "box-layout e--ua-blink e--ua-mac e--ua-webkit elementor-default elementor-kit-13 elementor-page elementor-page-1660 elementor-template-full-width full-width link-highlight-style1 post-template post-template-elementor_header_footer postid-1660 single single-format-standard single-post theme-rishi woocommerce-js wp-embed-responsive wp-singular wp-theme-rishi"
+   },
+   "imageCount": {
+    "live": 0,
+    "astro": 10
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: Failed to load resource: the server responded with a status of 403 ()"
+  ]
+ },
+ "why-wrapping-paper-tubes-are-the-future-of-gift-packaging": {
+  "route": "/why-wrapping-paper-tubes-are-the-future-of-gift-packaging/",
+  "diffs": {
+   "stickyHeaders": {
+    "live": 0,
+    "astro": 2
+   },
+   "joinchatReady": {
+    "live": false,
+    "astro": true
+   },
+   "offcanvasHidden": {
+    "live": null,
+    "astro": "true"
+   },
+   "searchModals": {
+    "live": 0,
+    "astro": 1
+   },
+   "menuItems": {
+    "live": 0,
+    "astro": 6
+   },
+   "subMenus": {
+    "live": 0,
+    "astro": 5
+   },
+   "bodyClass": {
+    "live": "",
+    "astro": "box-layout elementor-default elementor-kit-13 full-width link-highlight-style1 post-template-default postid-1150 single single-format-standard single-post theme-rishi woocommerce-js wp-embed-responsive wp-singular wp-theme-rishi"
+   },
+   "imageCount": {
+    "live": 0,
+    "astro": 11
+   }
+  },
+  "astroErrors": [],
+  "astroFailedRequests": [],
+  "liveErrors": [
+   "console: Failed to load resource: the server responded with a status of 403 ()"
+  ]
+ }
+}

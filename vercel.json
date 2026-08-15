@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "astro build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/checkout", "destination": "/cart/", "permanent": false },
+    { "source": "/checkout/", "destination": "/cart/", "permanent": false },
+    { "source": "/shop/page/1", "destination": "/shop/", "permanent": true },
+    { "source": "/shop/page/1/", "destination": "/shop/", "permanent": true },
+    { "source": "/product-category/custom-paper-tubes/page/1", "destination": "/product-category/custom-paper-tubes/", "permanent": true },
+    { "source": "/product-category/custom-paper-tubes/page/1/", "destination": "/product-category/custom-paper-tubes/", "permanent": true }
+  ],
+  "rewrites": [
+    {
+      "source": "/product-category/Custom-Cardboard-Tubes/",
+      "destination": "/product-category/custom-cardboard-tubes/index.html"
+    },
+    {
+      "source": "/product-category/Custom-Paper-Tubes/",
+      "destination": "/product-category/custom-paper-tubes/index.html"
+    },
+    {
+      "source": "/product-category/Custom-Plastic-Tubes/",
+      "destination": "/product-category/custom-plastic-tubes/index.html"
+    }
+  ]
+}

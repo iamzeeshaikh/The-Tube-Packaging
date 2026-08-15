@@ -1,0 +1,42 @@
+---
+import pages from '../data/pages.json';
+import { rewrite } from '../lib/site.js';
+import { skipLink } from '../lib/chrome.js';
+import Header from '../components/Header.astro';
+import Offcanvas from '../components/Offcanvas.astro';
+import Footer from '../components/Footer.astro';
+import JoinChat from '../components/JoinChat.astro';
+
+export function getStaticPaths() {
+  return Object.values(pages).map((page) => ({
+    // Astro's rest param wants the path without the leading/trailing slash;
+    // trailingSlash: 'always' + build.format 'directory' restore them.
+    params: { path: page.route === '/' ? undefined : page.route.slice(1, -1) },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<Fragment set:html={rewrite(page.head)} />
+</head>
+
+<body class={page.bodyClass}>
+<Fragment set:html={page.bodyOpen} />
+
+		<div id="main-container" class="site">
+			<Fragment set:html={skipLink} />
+				<Header page={page} />
+				<Offcanvas page={page} />
+				<Fragment set:html={rewrite(page.content)} />
+				<Footer page={page} />
+				</div><!-- #page -->
+<Fragment set:html={rewrite(page.bodyTail)} />
+{page.popup && <Fragment set:html={rewrite(page.popup)} />}
+<JoinChat page={page} />
+<script src="/assets/ttp.js" data-elementor-frontend={page.elementorFrontend ? "1" : "0"} defer></script>
+</body>
+</html>

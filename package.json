@@ -1,0 +1,25 @@
+{
+  "name": "thetubepackaging",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "astro build",
+    "preview": "node scripts/serve.mjs",
+    "extract": "python3 scripts/extract.py",
+    "compare": "python3 scripts/compare.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "astro": "^7.2.1",
+    "busboy": "^1.6.0",
+    "nodemailer": "^9.0.5"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  },
+  "private": true
+}

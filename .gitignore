@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-qa/
+.astro/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# QA artefacts: ~500MB of full-page screenshots and the raw crawl of the live
+# site. Regenerate with scripts/crawl.py and scripts/screenshots.mjs.
+reports/screenshots/
+reports/crop-*.png

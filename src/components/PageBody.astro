@@ -1,8 +1,12 @@
 ---
 // The theme's page wrapper, matching the markup WordPress emitted for the cart
 // page: breadcrumb, article, entry header, entry content.
+import { rewrite } from '../lib/site.js';
+
 const { postId, title, crumb, route } = Astro.props;
-const SITE = 'https://thetubepackaging.com';
+// absolute like the theme's own breadcrumbs, but routed through rewrite() so a
+// QA build points at the QA origin instead of the live site
+const SITE = rewrite('https://thetubepackaging.com');
 ---
 <div class="site-content">
 	<div class="rishi-container" data-strech="none">

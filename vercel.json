@@ -27,7 +27,6 @@
   ],
   "headers": [
     {
-      "//": "Staging only. The condition matches the *.vercel.app hostnames, so the header disappears by itself the moment the real domain is attached -- thetubepackaging.com never receives it.",
       "source": "/(.*)",
       "has": [
         {

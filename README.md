@@ -52,6 +52,13 @@ Copy `.env.example` to `.env` and fill it in; set the same variables in the
 host. `.env` is gitignored and must stay that way — it holds the SMTP password
 and the reCAPTCHA secret.
 
+`vercel.json` sends `X-Robots-Tag: noindex, nofollow` only on hosts matching
+`.*\.vercel\.app`, which keeps the staging deploy out of the index while the
+site is being reviewed. Because the rule is keyed on the hostname, the header
+stops being sent the moment `thetubepackaging.com` is pointed at the project —
+there is nothing to remember to undo at cutover, and the production domain
+can never inherit a `noindex`.
+
 ## Verification
 
 The migration is checked by script, not by eye:

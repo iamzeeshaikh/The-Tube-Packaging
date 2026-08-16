@@ -29,11 +29,13 @@ def cf_decode(h):
         r'<a([^>]*?)href="/cdn-cgi/l/email-protection#([0-9a-f]+)"([^>]*)>\s*<span[^>]*class="__cf_email__"[^>]*data-cfemail="[0-9a-f]+"[^>]*>.*?</span>\s*</a>',
         lambda m: '<a%shref="mailto:%s"%s>%s</a>' % (m.group(1), _dec(m.group(2)), m.group(3), _dec(m.group(2))),
         h, flags=re.S)
-    # the author archive uses a bare <a class="__cf_email__"> with no #hash
+    # The author archive uses a bare <a class="__cf_email__"> with no #hash.
+    # That variant wraps text that was never a link -- Cloudflare's own decoder
+    # replaces the whole anchor with the plain address, which is what the live
+    # page renders ("By shanimazhar82@gmail.com"), so restore plain text here.
     h = re.sub(
-        r'<a href="/cdn-cgi/l/email-protection"([^>]*?)data-cfemail="([0-9a-f]+)"([^>]*)>.*?</a>',
-        lambda m: '<a href="mailto:%s"%s%s>%s</a>' % (
-            _dec(m.group(2)), m.group(1), m.group(3), _dec(m.group(2))),
+        r'<a href="/cdn-cgi/l/email-protection"(?![^>]*href="mailto)[^>]*?data-cfemail="([0-9a-f]+)"[^>]*>.*?</a>',
+        lambda m: _dec(m.group(1)),
         h, flags=re.S)
     h = re.sub(r'<span[^>]*class="__cf_email__"[^>]*data-cfemail="([0-9a-f]+)"[^>]*>.*?</span>',
                lambda m: _dec(m.group(1)), h, flags=re.S)
@@ -277,11 +279,20 @@ CHROME_KEYS = ("header", "offcanvas", "footer")
 SKIP_FILES = {"checkout.html"}
 
 
+# WooCommerce builds the product-category ItemList `url` values from the
+# request URI, so the cache-busting query string used during the crawl made it
+# drop the trailing slash. Visitors and Googlebot get the slashed form; restore
+# it so the JSON-LD matches what the live site actually publishes.
+CATEGORY_URL = re.compile(
+    r'(thetubepackaging\.com(?:\\/|/)product-category(?:\\/|/)[a-z0-9-]+)(?=["#])')
+
+
 def read_page(f):
     slug = os.path.basename(f)[:-5]
     raw = cf_decode(open(f, encoding="utf-8", errors="replace").read())
     # the search-modal key is randomised on every render; pin it
     raw = re.sub(r'data-modal-key="\d+"', 'data-modal-key="ttp-search"', raw)
+    raw = CATEGORY_URL.sub(lambda m: m.group(1) + ("\\/" if "\\/" in m.group(1) else "/"), raw)
     parts = {
         "header": slice_element(raw, r'<header id="header"', "header"),
         "offcanvas": slice_element(raw, r'<div id="rishi-offcanvas"', "div"),

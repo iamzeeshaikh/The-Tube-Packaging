@@ -281,7 +281,7 @@
       if (field.name && field.name !== 'payment_method') payload.billing[field.name] = field.value;
     });
 
-    fetch('/api/order', {
+    fetch('/api/order/', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload),

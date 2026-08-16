@@ -1,0 +1,11 @@
+# QA artefacts and migration source material -- none of it is needed to build or
+# serve the site, and reports/screenshots alone is ~500MB.
+reports/
+scripts/crawl/
+dist/
+dist-qa/
+node_modules/
+.astro/
+.env
+.env.*
+!.env.example

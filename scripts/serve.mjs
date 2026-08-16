@@ -57,8 +57,10 @@ const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');
   let pathname = decodeURIComponent(url.pathname);
 
-  if (pathname === '/api/form' || pathname === '/api/order') {
-    const mod = pathname === '/api/form' ? '../api/form.js' : '../api/order.js';
+  // production serves these with a trailing slash (vercel.json trailingSlash)
+  const apiRoute = pathname.replace(/\/$/, '');
+  if (apiRoute === '/api/form' || apiRoute === '/api/order') {
+    const mod = apiRoute === '/api/form' ? '../api/form.js' : '../api/order.js';
     const { default: handler } = await import(mod);
     return handler(req, vercelRes(res));
   }

@@ -14,9 +14,6 @@
   'use strict';
 
   // ---------------------------------------------------------------- 1. UA
-  // Elementor stamps these only where its frontend bundle loads, i.e. on pages
-  // that actually contain Elementor content -- match that, or non-Elementor
-  // pages (blog posts, WooCommerce archives) end up with classes they never had.
   // Elementor stamps these only where its frontend bundle was enqueued, which
   // is not simply "the page contains Elementor markup" -- /thank-you/ has
   // Elementor containers but never loaded the bundle. The build records what
@@ -276,7 +273,7 @@
     var data = new FormData(form);
     data.append('page_url', location.href);
 
-    fetch('/api/form', { method: 'POST', body: data })
+    fetch('/api/form/', { method: 'POST', body: data })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (res) {
         if (button) button.classList.remove('elementor-button-state');

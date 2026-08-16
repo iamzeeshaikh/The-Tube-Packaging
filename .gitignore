@@ -11,3 +11,4 @@ dist-qa/
 # site. Regenerate with scripts/crawl.py and scripts/screenshots.mjs.
 reports/screenshots/
 reports/crop-*.png
+.vercel

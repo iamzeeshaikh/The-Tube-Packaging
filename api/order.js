@@ -123,8 +123,10 @@ export default async function handler(req, res) {
   });
 
   const from = `"${process.env.MAIL_FROM_NAME || STORE_NAME}" <${process.env.MAIL_FROM_EMAIL}>`;
+  // recipients come from the environment; the store's own public address is the
+  // fallback so a missing variable can never send orders nowhere
   const storeTo = (process.env.ORDER_TO_OVERRIDE || process.env.ORDER_TO ||
-    'shanimazhar82@gmail.com, customforms24@gmail.com')
+    process.env.MAIL_FROM_EMAIL)
     .split(',').map((s) => s.trim()).filter(Boolean);
 
   try {

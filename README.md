@@ -59,6 +59,31 @@ stops being sent the moment `thetubepackaging.com` is pointed at the project —
 there is nothing to remember to undo at cutover, and the production domain
 can never inherit a `noindex`.
 
+## Domain
+
+The canonical host is the apex, **`https://thetubepackaging.com`** — no `www`,
+which is what the WordPress site already served (`www` 301s to the apex, and
+`http` 301s to `https`). Every canonical, `og:url` and sitemap entry in the
+build already points there.
+
+Both hosts are attached to the Vercel project. `www` is not a second copy of the
+site: the first rule in `vercel.json` redirects `www.thetubepackaging.com` to the
+apex, preserving the path, so it behaves as it does today.
+
+DNS lives on **Cloudflare** (`arnold`/`pola.ns.cloudflare.com`), so the cutover
+is a Cloudflare change, not a registrar one:
+
+| Record | Name | Value | Proxy |
+|---|---|---|---|
+| `A` | `thetubepackaging.com` | `76.76.21.21` | DNS only (grey cloud) |
+| `CNAME` | `www` | `cname.vercel-dns.com` | DNS only (grey cloud) |
+
+Keep both grey-clouded. Proxying them through Cloudflare puts a second CDN and
+certificate in front of Vercel, which is what breaks certificate issuance and
+causes redirect loops on the other sites in this portfolio. Until these records
+change, the domain shows "Invalid Configuration" in Vercel and the live
+WordPress site keeps serving — adding the domain on its own changes nothing.
+
 ## Verification
 
 The migration is checked by script, not by eye:

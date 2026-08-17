@@ -5,6 +5,17 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www\\.thetubepackaging\\.com"
+        }
+      ],
+      "destination": "https://thetubepackaging.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/shop/page/1",
       "destination": "/shop/",
       "permanent": true

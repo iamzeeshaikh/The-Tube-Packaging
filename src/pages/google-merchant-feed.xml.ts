@@ -1,81 +1,62 @@
 import type { APIRoute } from 'astro';
-import catalogueRaw from '../data/catalogue.json';
-import pagesRaw from '../data/pages.json';
+import merchantRaw from '../data/merchant.json';
 
 export const prerender = true;
 
-// Google Merchant Center product feed (RSS 2.0 + g: namespace), same shape as
-// the insertshub / customperfumeboxes feeds. Regenerated on every build from
-// catalogue.json (id/name/url/image/price) + pages.json (meta descriptions).
+// Google Merchant Center product feed (RSS 2.0 + g: namespace).
+// merchant.json is a verbatim copy of the GMC export taken from the old
+// Google Listings & Ads plugin feed (products_2026-08-17 TSV) — ids, titles,
+// HTML descriptions, images and product types must stay byte-identical so the
+// existing Merchant Center listings are not altered by the migration.
 
-const SITE_URL = process.env.SITE_ORIGIN || 'https://thetubepackaging.com';
-const BRAND = 'The Tube Packaging';
+const merchant = merchantRaw as Record<string, {
+  id: string; title: string; description: string; link: string;
+  image_link: string; additional_image_links: string[];
+  price: string; condition: string; availability: string;
+  brand: string; product_type: string; shipping_countries: string[];
+}>;
 
-type Product = {
-  id: number; name: string; slug: string; url: string;
-  price: number; full: string; category: string;
-};
-const products = Object.values(
-  (catalogueRaw as { products: Record<string, Product> }).products,
-);
-const pages = pagesRaw as Record<string, { head: string }>;
-
-const CATEGORY_NAMES: Record<string, string> = {
-  'custom-cardboard-tubes': 'Custom Cardboard Tubes',
-  'custom-paper-tubes': 'Custom Paper Tubes',
-  'custom-plastic-tubes': 'Custom Plastic Tubes',
-  'specialty-tubes': 'Specialty Tubes',
-};
-
-function decodeEntities(s: string) {
-  return s
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
-    .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
-    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-}
 function esc(s: string) {
   return String(s || '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 }
 
-function description(slug: string, name: string) {
-  const head = pages[`product__${slug}`]?.head || '';
-  const meta =
-    head.match(/<meta name="description" content="([^"]*)"/)?.[1] ||
-    head.match(/property="og:description" content="([^"]*)"/)?.[1] ||
-    '';
-  return (decodeEntities(meta) || `${name} — custom printed wholesale packaging by ${BRAND}.`).slice(0, 4900);
-}
-
 export const GET: APIRoute = () => {
-  const items = products
-    .sort((a, b) => a.id - b.id)
-    .map((p) => `  <item>
-    <g:id>gla_${p.id}</g:id>
-    <title>${esc(p.name)}</title>
-    <description>${esc(description(p.slug, p.name))}</description>
-    <link>${esc(SITE_URL + p.url)}</link>
-    <g:image_link>${esc(SITE_URL + p.full)}</g:image_link>
-    <g:availability>in stock</g:availability>
-    <g:price>${p.price.toFixed(2)} USD</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>${esc(BRAND)}</g:brand>
-    <g:mpn>gla_${p.id}</g:mpn>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:product_type>${esc(CATEGORY_NAMES[p.category] || p.category)}</g:product_type>
-    <g:shipping>
-      <g:country>US</g:country>
+  const items = Object.values(merchant)
+    .map((m) => {
+      const addl = m.additional_image_links
+        .map((u) => `    <g:additional_image_link>${esc(u)}</g:additional_image_link>`)
+        .join('\n');
+      const shipping = m.shipping_countries
+        .map((c) => `    <g:shipping>
+      <g:country>${esc(c)}</g:country>
       <g:price>0.00 USD</g:price>
-    </g:shipping>
-  </item>`)
+    </g:shipping>`)
+        .join('\n');
+      return `  <item>
+    <g:id>${esc(m.id)}</g:id>
+    <title>${esc(m.title)}</title>
+    <description>${esc(m.description)}</description>
+    <link>${esc(m.link)}</link>
+    <g:image_link>${esc(m.image_link)}</g:image_link>
+${addl}
+    <g:availability>${esc(m.availability)}</g:availability>
+    <g:price>${esc(m.price)}</g:price>
+    <g:condition>${esc(m.condition)}</g:condition>
+    <g:brand>${esc(m.brand)}</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:product_type>${esc(m.product_type)}</g:product_type>
+${shipping}
+  </item>`;
+    })
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>${esc(BRAND)}</title>
-    <link>${SITE_URL}/</link>
+    <title>The Tube Packaging</title>
+    <link>https://thetubepackaging.com/</link>
     <description>Custom tube packaging — product feed</description>
 ${items}
   </channel>

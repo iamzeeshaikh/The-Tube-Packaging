@@ -10,6 +10,6 @@ Allow: /wp-admin/admin-ajax.php
 User-agent: *
 Disallow:
 
-Sitemap: http://thetubepackaging.com/sitemap_index.xml
+Sitemap: https://thetubepackaging.com/sitemap.xml
 # ---------------------------
 # END YOAST BLOCK

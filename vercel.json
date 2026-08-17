@@ -55,6 +55,10 @@
   ],
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap_index.xml"
+    },
+    {
       "source": "/product-category/Custom-Cardboard-Tubes/",
       "destination": "/product-category/custom-cardboard-tubes/index.html"
     },

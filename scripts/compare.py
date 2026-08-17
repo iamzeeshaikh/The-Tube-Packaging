@@ -72,6 +72,14 @@ def norm_asset(u):
 # Differences that are deliberate, with the reason. Compared against the live
 # *raw* HTML these show up as diffs; against what a visitor actually sees they
 # are what makes the two match.
+SCHEMA_SLASH_WHY = (
+    "WooCommerce builds the ItemList `url` values from the request URI, so the "
+    "cache-busting query string this crawl was fetched with made all of them "
+    "drop their trailing slash. A visitor and Googlebot get the slashed form, "
+    "which is what the build now emits, so the diff is against the crawl "
+    "artefact rather than against the live page."
+)
+
 INTENTIONAL = {
     "cart": {
         "keys": {"h2", "words", "text"},
@@ -81,6 +89,13 @@ INTENTIONAL = {
                "markup, so it matches the rendered page rather than the skeleton.",
     },
 }
+for _slug in ("product-category__custom-cardboard-tubes",
+              "product-category__custom-paper-tubes",
+              "product-category__custom-paper-tubes__page__2",
+              "product-category__custom-plastic-tubes",
+              "product-category__mailing-tubes",
+              "product-category__specialty-tubes"):
+    INTENTIONAL[_slug] = {"keys": {"schema"}, "why": SCHEMA_SLASH_WHY}
 
 
 def main():

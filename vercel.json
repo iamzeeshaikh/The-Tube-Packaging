@@ -5,14 +5,14 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
-          "value": "www\\.thetubepackaging\\.com"
+          "value": "www.thetubepackaging.com"
         }
       ],
-      "destination": "https://thetubepackaging.com/:path*",
+      "destination": "https://thetubepackaging.com/$1",
       "permanent": true
     },
     {

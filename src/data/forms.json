@@ -17,7 +17,14 @@
    "save-to-database",
    "email",
    "redirect"
-  ]
+  ],
+  "field_labels": {
+   "name": "Name",
+   "field_dbb1ca6": "Phone",
+   "email": "Email",
+   "field_bbc69d7": "Preferred Contact Method",
+   "message": "Additional Information"
+  }
  },
  "2bb183f5": {
   "form_name": "Instant Quote",
@@ -38,7 +45,15 @@
    "save-to-database",
    "email",
    "redirect"
-  ]
+  ],
+  "field_labels": {
+   "name": "Name",
+   "email": "Email",
+   "field_f54cfcb": "Phone",
+   "field_a858f27": "Product",
+   "message": "Message",
+   "field_e4013ab": "Attachment"
+  }
  },
  "e0d8389": {
   "form_name": "Instant Quote",
@@ -59,7 +74,15 @@
    "save-to-database",
    "email",
    "redirect"
-  ]
+  ],
+  "field_labels": {
+   "name": "Name",
+   "email": "Email",
+   "field_f54cfcb": "Phone",
+   "field_a858f27": "Product",
+   "message": "Message",
+   "field_e4013ab": "Attachment"
+  }
  },
  "7eeee1ea": {
   "form_name": "Contact Us",
@@ -74,7 +97,15 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occurred.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "Send"
+  "button_text": "Send",
+  "field_labels": {
+   "name": "First Name",
+   "field_c0493bd": "Last Name",
+   "field_719ed13": "Phone Number",
+   "email": "Email",
+   "message": "Message",
+   "field_eedd072": "Attachment"
+  }
  },
  "70a5bdc": {
   "form_name": "Contact Us",
@@ -89,7 +120,14 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occurred.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "Send"
+  "button_text": "Send",
+  "field_labels": {
+   "name": "First Name",
+   "field_c0493bd": "Last Name",
+   "field_719ed13": "Phone Number",
+   "email": "Email",
+   "message": "Message"
+  }
  },
  "693e3f36": {
   "form_name": "Schedule Appointment",
@@ -104,7 +142,12 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occured.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "submit \\\\u27f6"
+  "button_text": "submit \\\\u27f6",
+  "field_labels": {
+   "name": "Name",
+   "email": "Email",
+   "message": "Message"
+  }
  },
  "4ec39e2": {
   "form_name": "Contact Us",
@@ -119,7 +162,14 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occurred.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "Send"
+  "button_text": "Send",
+  "field_labels": {
+   "name": "First Name",
+   "field_c0493bd": "Last Name",
+   "field_719ed13": "Phone Number",
+   "email": "Email",
+   "message": "Message"
+  }
  },
  "4675000": {
   "form_name": "Contact Us",
@@ -134,7 +184,14 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occurred.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "Send"
+  "button_text": "Send",
+  "field_labels": {
+   "name": "First Name",
+   "field_c0493bd": "Last Name",
+   "field_719ed13": "Phone Number",
+   "email": "Email",
+   "message": "Message"
+  }
  },
  "344590d": {
   "form_name": "Contact Us",
@@ -149,6 +206,13 @@
   "success_message": "The form was sent successfully.",
   "error_message": "An error occurred.",
   "invalid_message": "There's something wrong. The form is invalid.",
-  "button_text": "Send"
+  "button_text": "Send",
+  "field_labels": {
+   "name": "First Name",
+   "field_c0493bd": "Last Name",
+   "field_719ed13": "Phone Number",
+   "email": "Email",
+   "message": "Message"
+  }
  }
 }

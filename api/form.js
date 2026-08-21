@@ -51,9 +51,17 @@ const HONEYPOT = new Set([
   'form_fields[field_7678a05]', 'form_fields[field_361fe73]',
 ]);
 
-function labelFor(key) {
+// Elementor mailed the field's *label*, not its generated id. forms.json carries
+// the label for every field, so notifications read "Phone" rather than
+// "field_f54cfcb"; anything unmapped falls back to a readable version of the id.
+function labelFor(key, cfg) {
   const m = key.match(/^form_fields\[(.+?)\](\[\])?$/);
-  return m ? m[1] : key;
+  const id = m ? m[1] : key;
+  const mapped = cfg.field_labels && cfg.field_labels[id];
+  if (mapped) return mapped;
+  return id.replace(/^field_[0-9a-f]+$/, 'Additional Detail')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 export default async function handler(req, res) {
@@ -103,7 +111,7 @@ export default async function handler(req, res) {
 
   const rows = Object.entries(fields)
     .filter(([k]) => k.startsWith('form_fields[') && !HONEYPOT.has(k))
-    .map(([k, v]) => [labelFor(k), [].concat(v).join(', ')])
+    .map(([k, v]) => [labelFor(k, cfg), [].concat(v).join(', ')])
     .filter(([, v]) => v !== '');
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>

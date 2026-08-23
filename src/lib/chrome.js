@@ -1,5 +1,6 @@
 import chrome from '../data/chrome.json';
 import { rewrite } from './site.js';
+import { withMenuIcons } from './menu-icons.js';
 
 const TAG_SPLIT = /(<[^>]+>)/;
 
@@ -20,10 +21,18 @@ const tokens = {
  */
 export function region(name, page) {
   const diff = page.chromeDiff?.[name];
-  if (!diff) return rewrite(chrome[name]);
-  const out = tokens[name].slice();
-  for (const [i, tag] of Object.entries(diff)) out[i] = tag;
-  return rewrite(out.join(''));
+  const html = diff
+    ? (() => {
+        const out = tokens[name].slice();
+        for (const [i, tag] of Object.entries(diff)) out[i] = tag;
+        return out.join('');
+      })()
+    : chrome[name];
+  // The dropdown icons go in here, never into chrome.json: `diff` addresses
+  // tokens by index, so anything added to the stored markup shifts the tags
+  // after it and lands, for instance, the site logo inside a menu link.
+  const iconed = name === 'footer' ? html : withMenuIcons(html);
+  return rewrite(iconed);
 }
 
 export const skipLink = rewrite(chrome.skip);

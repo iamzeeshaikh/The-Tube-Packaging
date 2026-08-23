@@ -60,7 +60,7 @@ const css = `
    ══════════════════════════════════════════════════════════════════════ */
 .site-header .site-navigation-1 .sub-menu,
 .site-header .site-navigation-2 .sub-menu{
-  --dropdown-width:264px;
+  --dropdown-width:290px;
   --dropdown-items-spacing:10px;
   --dropdown-top-offset:10px;
   --border-radius:16px !important;
@@ -108,7 +108,7 @@ const css = `
    the left-hand menus flip and hang off the left edge instead. */
 @media (min-width:1025px){
   .site-header .rishi-menu > .menu-item-has-children > .sub-menu:has(> li:nth-child(9)){
-    --dropdown-width:480px;
+    --dropdown-width:520px;
     display:grid;
     grid-template-columns:1fr 1fr;
     align-content:start;
@@ -1013,6 +1013,82 @@ select.elementor-field-textual,.tp-quote__select{
 
 @media (max-width:1024px){
   .single-product .elementor-location-single .elementor-section:nth-of-type(2) > .elementor-container{flex-wrap:wrap}
+}
+
+/* the icons in the header and drawer dropdowns */
+.tpm-mi{
+  width:18px;
+  height:18px;
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:currentColor;
+  opacity:.5;
+  transition:opacity .16s ease, transform .16s ease;
+}
+.tpm-mi svg{width:100%;height:100%;display:block}
+/* the theme sets space-between on submenu links so the caret sits right; with
+   an icon in front the label has to stay next to it instead */
+.site-header .menu-item-has-children .sub-menu li a:has(.tpm-mi),
+.rishi-mobile-menu .sub-menu li a:has(.tpm-mi){
+  justify-content:flex-start;
+  align-items:center;
+  flex-wrap:nowrap;
+  gap:10px;
+  text-align:left;
+}
+.sub-menu li a:hover .tpm-mi,
+.sub-menu li a:focus-visible .tpm-mi{opacity:1;transform:scale(1.08)}
+.sub-menu li.current-menu-item > a .tpm-mi{opacity:1}
+@media (prefers-reduced-motion:reduce){.tpm-mi{transition:none}}
+
+/* ── the closing "send the layout" band on the product template ──────── */
+.single-product .elementor-element-30a324b{
+  padding-block:clamp(44px,5vw,80px);
+}
+.single-product .elementor-element-4846a866{
+  border-radius:24px;
+  box-shadow:0 30px 70px -34px rgba(11,18,32,.55);
+  overflow:hidden;
+}
+.single-product .elementor-element-4846a866 > .elementor-container{
+  padding-block:clamp(28px,3.4vw,46px);
+}
+.single-product .elementor-element-188f5746 .elementor-heading-title{
+  font-size:clamp(25px,2.8vw,36px);
+  line-height:1.16;
+  letter-spacing:-.024em;
+  color:var(--tpm-ink);
+}
+.single-product .elementor-element-75a4e59 p{
+  font-size:16px;
+  line-height:1.6;
+  color:var(--tpm-muted);
+  margin-top:10px;
+}
+.single-product .elementor-element-75a4e59 p strong{font-weight:500}
+/* the form sits inside the card already — it must not draw a second one */
+.single-product .elementor-element-30a324b .elementor-widget-form{
+  background:none;
+  border:none;
+  box-shadow:none;
+}
+.single-product .elementor-element-30a324b .elementor-widget-form > .elementor-widget-container{
+  padding:8px 0 0 !important;
+}
+.single-product .elementor-element-30a324b .e-form__buttons{
+  justify-content:center;
+  margin-top:6px;
+}
+.single-product .elementor-element-30a324b .e-form__buttons .elementor-button{
+  min-width:240px;
+  width:auto;
+}
+/* the contact-method select shares a 25% column with three text fields */
+.single-product .elementor-element-30a324b select.elementor-field-textual{
+  font-size:15px;
+  padding-inline:13px 32px;
 }
 
 /* ══════════════════════════════════════════════════════════════════════

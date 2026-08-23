@@ -88,12 +88,26 @@ being pushed.
 ## 5. Lotion tubes — two near-identical URLs
 
 `/product/lotion-tubes/` and `/product/empty-lotion-tubes/` target the same
-cluster. `empty-lotion-tubes` earns 108 clicks on 13,978 impressions;
-`lotion-tubes` is the better title match for "lotion tubes" (1,530 impressions,
-position 8.66).
+cluster, and they are much closer than a glance suggests `[export]`:
+
+| URL | Clicks | Impressions | CTR | Position |
+|---|---|---|---|---|
+| `/product/empty-lotion-tubes/` | 108 | 13,978 | 0.77% | 14.22 |
+| `/product/lotion-tubes/` | 97 | 8,147 | **1.19%** | **13.33** |
+
+`lotion-tubes` earns near-identical clicks off 40% fewer impressions, with
+better CTR and better position, and is the better match for the commercial head
+term "lotion tubes" (1,530 impressions, position 8.66). `empty-lotion-tubes`
+wins only on impression volume, which comes from the "empty" modifier matching a
+large consumer-side cluster ("empty lipgloss tubes" sits at position 2.40) that
+converts worse.
+
+**My recommendation is `/product/lotion-tubes/`, but narrowly** — this is a
+close call and it depends on something I cannot see: whether the "empty tubes"
+traffic ever turns into quotes. If it does, the volume argues the other way.
 
 Nothing was merged, canonicalised or redirected. **Needed:** which is the
-preferred URL. A recommendation with reasoning follows in Stage 10 Tier D.
+preferred URL.
 
 ---
 

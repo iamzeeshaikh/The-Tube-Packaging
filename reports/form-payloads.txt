@@ -1,0 +1,65 @@
+
+===== /product/paper-tubes/ =====
+  post_id = 241
+  form_id = 2bb183f5
+  referer_title = Paper Tubes Wholesale | The Tube Packaging
+  queried_id = 226
+  form_fields[name] = Test Buyer
+  form_fields[email] = test@example.com
+  form_fields[field_f54cfcb] = 5033580443
+  form_fields[field_a858f27] = 12 x 60mm kraft tube
+  form_fields[message] = Quantity 2,000. Please quote.
+  form_fields[field_e4013ab][] =   form_fields[field_228829a] =   g-recaptcha-response = PROBE-NOT-A-REAL-TOKEN
+  page_url = http://127.0.0.1:4321/product/paper-tubes/
+
+===== /product/cosmetic-tubes/ =====
+  post_id = 241
+  form_id = 2bb183f5
+  referer_title = Cosmetic Tubes Wholesale | The Tube Packaging
+  queried_id = 86
+  form_fields[name] = Test Buyer
+  form_fields[email] = test@example.com
+  form_fields[field_f54cfcb] = 5033580443
+  form_fields[field_a858f27] = 12 x 60mm kraft tube
+  form_fields[message] = Quantity 2,000. Please quote.
+  form_fields[field_e4013ab][] =   form_fields[field_228829a] =   g-recaptcha-response = PROBE-NOT-A-REAL-TOKEN
+  page_url = http://127.0.0.1:4321/product/cosmetic-tubes/
+
+===== /product/kraft-mailing-tubes/ =====
+  post_id = 241
+  form_id = 2bb183f5
+  referer_title = Kraft Mailing Tubes Wholesale | The Tube Packaging
+  queried_id = 81
+  form_fields[name] = Test Buyer
+  form_fields[email] = test@example.com
+  form_fields[field_f54cfcb] = 5033580443
+  form_fields[field_a858f27] = 12 x 60mm kraft tube
+  form_fields[message] = Quantity 2,000. Please quote.
+  form_fields[field_e4013ab][] =   form_fields[field_228829a] =   g-recaptcha-response = PROBE-NOT-A-REAL-TOKEN
+  page_url = http://127.0.0.1:4321/product/kraft-mailing-tubes/
+
+===== /product/luxury-tube-packaging/ =====
+  post_id = 241
+  form_id = 2bb183f5
+  referer_title = Luxury Tube Packaging Wholesale | The Tube Packaging
+  queried_id = 179
+  form_fields[name] = Test Buyer
+  form_fields[email] = test@example.com
+  form_fields[field_f54cfcb] = 5033580443
+  form_fields[field_a858f27] = 12 x 60mm kraft tube
+  form_fields[message] = Quantity 2,000. Please quote.
+  form_fields[field_e4013ab][] =   form_fields[field_228829a] =   g-recaptcha-response = PROBE-NOT-A-REAL-TOKEN
+  page_url = http://127.0.0.1:4321/product/luxury-tube-packaging/
+
+===== /product/large-cardboard-tubes/ =====
+  post_id = 241
+  form_id = 2bb183f5
+  referer_title = Large Cardboard Tubes Wholesale | The Tube Packaging
+  queried_id = 174
+  form_fields[name] = Test Buyer
+  form_fields[email] = test@example.com
+  form_fields[field_f54cfcb] = 5033580443
+  form_fields[field_a858f27] = 12 x 60mm kraft tube
+  form_fields[message] = Quantity 2,000. Please quote.
+  form_fields[field_e4013ab][] =   form_fields[field_228829a] =   g-recaptcha-response = PROBE-NOT-A-REAL-TOKEN
+  page_url = http://127.0.0.1:4321/product/large-cardboard-tubes/

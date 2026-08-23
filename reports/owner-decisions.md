@@ -183,3 +183,37 @@ correctly, so it is cosmetic in the DOM rather than visible to a reader.
 Not cleaned up: it is dead markup, not a defect with a search or conversion
 consequence, and removing it means editing seven pages' body HTML for no
 measurable gain. **Needed:** say the word if you want it stripped.
+
+---
+
+## 10. `priceValidUntil` expires from 10 November 2026 — needs a decision before then
+
+Every product offer carries a `priceValidUntil` captured from WordPress at crawl
+time. They are static values in `pages.json` and will not roll forward.
+
+| Date | Products |
+|---|---|
+| 2026-11-10 | 5 |
+| 2026-11-12 | 12 |
+| 2026-11-18 | 1 |
+| 2026-12-08 | 1 |
+| 2026-12-09 | 13 |
+| 2026-12-16 | 2 |
+| 2026-12-23 | 1 |
+
+Nothing is expired today. **The first five lapse on 10 November 2026 and all 35
+have lapsed by 24 December.** Google drops the price from rich results on an
+expired value and can flag it in Merchant Center — which, given Merchant
+listings are 44% of clicks, is the highest-consequence dated item in this whole
+programme.
+
+Two fixes, neither done because both touch offer markup that Section 0 protects:
+
+1. **Remove the property.** It is optional. Google uses the page price. Simplest
+   and lowest-risk.
+2. **Generate it at build time** as a rolling date (e.g. today + 12 months), so
+   it never expires.
+
+**Recommendation: option 2**, because it preserves the markup exactly as Google
+currently sees it and only changes the value. **Needed: approval, before
+November.**

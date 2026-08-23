@@ -3,6 +3,7 @@ import pages from '../data/pages.json';
 import { rewrite } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
+import { modernCss } from '../lib/modern.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
@@ -24,6 +25,7 @@ const { page } = Astro.props;
 <head>
 <Fragment set:html={rewrite(page.head)} />
 <Fragment set:html={cssFixes} />
+<Fragment set:html={modernCss} />
 </head>
 
 <body class={page.bodyClass}>

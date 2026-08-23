@@ -51,7 +51,7 @@ const COLUMNS = [
   'internal_link_count', 'external_link_count', 'image_srcs', 'images_missing_alt',
   'schema_types', 'product_id', 'sku', 'price', 'currency', 'availability', 'brand',
   'has_aggregate_rating', 'review_count', 'breadcrumb_present', 'ga4_present',
-  'gtm_present', 'form_count', 'in_sitemap',
+  'google_ads_present', 'gtm_present', 'form_count', 'in_sitemap',
   'gsc_clicks', 'gsc_impressions', 'gsc_ctr', 'gsc_position',
 ];
 
@@ -239,8 +239,12 @@ const EXTRACT = (origin) => {
     has_aggregate_rating: rating ? 'yes' : 'no',
     review_count: rating?.reviewCount ?? rating?.ratingCount ?? '',
     breadcrumb_present: types.some((t) => t.includes('BreadcrumbList')) ? 'yes' : 'no',
-    ga4_present: /gtag\(|googletagmanager\.com\/gtag|G-[A-Z0-9]{8,}/.test(html) ? 'yes' : 'no',
-    gtm_present: /GTM-[A-Z0-9]+/.test(html) ? 'yes' : 'no',
+    // A gtag.js loader is NOT evidence of GA4 -- this site loads gtag.js for a
+    // Google Ads conversion ID (AW-...) and has no GA4 property at all. Only a
+    // G-XXXXXXXX measurement ID counts.
+    ga4_present: /\bG-[A-Z0-9]{8,}\b/.test(html) ? 'yes' : 'no',
+    google_ads_present: /\bAW-\d{6,}\b/.test(html) ? 'yes' : 'no',
+    gtm_present: /\bGTM-[A-Z0-9]+\b/.test(html) ? 'yes' : 'no',
     form_count: document.querySelectorAll('form').length,
   };
 };

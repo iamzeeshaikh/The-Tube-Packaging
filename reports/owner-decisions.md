@@ -217,3 +217,31 @@ Two fixes, neither done because both touch offer markup that Section 0 protects:
 **Recommendation: option 2**, because it preserves the markup exactly as Google
 currently sees it and only changes the value. **Needed: approval, before
 November.**
+
+---
+
+## 11. There is no GA4 property, and no conversion event on any form
+
+`gtag.js` is on all 68 pages but loads **Google Ads `AW-16676839357`**. There is
+no `G-XXXXXXXX` measurement ID anywhere on the site, no GTM container, and no
+`generate_lead`, `form_submit` or `conversion` event fires when a quote is
+submitted.
+
+The business currently has an ad tag and no analytics, and the ad tag is never
+told when a lead happens. Every quote arrives as an email and nothing else
+records it — which is why "most leads die on price" cannot be measured today.
+
+**Needed:**
+
+1. A **GA4 measurement ID** (`G-XXXXXXXX`), or confirmation that no property
+   exists and one should be created.
+2. A **Google Ads conversion action and label** for "quote submitted", from the
+   account that owns `AW-16676839357`.
+3. Confirmation that `AW-16676839357` is still an active, spending account — it
+   is a Google-for-WooCommerce tag inherited from the WordPress build and may
+   point at a dormant one.
+
+With 1 and 2 the implementation is small and self-contained: one event in the
+existing submit success callback in `public/assets/ttp.js`, which all nine forms
+already pass through. Firing it on `/thank-you/` instead would miss seven of
+them, because only two forms redirect there.

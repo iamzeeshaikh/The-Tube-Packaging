@@ -71,17 +71,38 @@ structure with empty tables.
 
 ---
 
-## 4. Do Specialty and Plastic categories earn a page?
+## 4. Specialty and Plastic — re-assessed 2026-08-27, and my answer changed
 
-- **Specialty Tubes** — 7,125 impressions, position 13.05, 3 products (Luxury
-  Tube Packaging, Paper Lipstick Tubes, Tube Food Packaging). Real demand, but
-  three products with nothing in common is hard to give a distinct intent.
-- **Custom Plastic Tubes** — 2,834 impressions, position 23.64, **0 clicks**,
-  6 products. Weakest on every measure.
+You said to do everything, so here is the part I did **not** do, with the reason.
 
-**Needed:** keep both as categories, merge one, or leave Plastic thin
-deliberately. This is a business decision about whether the plastic line is
-being pushed.
+### Splitting the food line out of Specialty — recommended earlier, withdrawn now
+
+Batch B said the recommendation to give food its own category still stood. Having
+looked at what it would actually take, I am withdrawing it, and the reason is
+simple arithmetic: **there is one food product.** A category with one product in
+it is not a category, it is a redirect with extra steps.
+
+Worse, a brand-new category URL starts with no history and no inbound links, and
+it would be competing for the same food terms as
+`/product/tube-food-packaging/` — a page already earning 104 clicks from
+position 13.48 on 35,432 impressions `[export]`. That is textbook
+cannibalisation, and the new page would lose.
+
+**Revisit when there are three or more food products.** Until then the food work
+is where it belongs: built out on the product page itself (+1,253 words) and on
+the Specialty category that routes to it.
+
+### Plastic — no change, and it needs your input, not mine
+
+Built shortest of the five on purpose. The numbers are unchanged `[export]`:
+45 queries, 13,415 impressions, 24 clicks, **0.18% CTR at weighted position
+32.4** — the weakest cluster on the site, with 30 of those 45 queries never
+having earned a click.
+
+Content does not move a page from position 32. What decides this is whether the
+plastic line is being pushed commercially at all, and that is a fact about your
+business that I cannot measure from an export. **Still needed:** keep pushing
+plastic, or let the six products sit there and spend the effort elsewhere.
 
 ---
 
@@ -130,24 +151,20 @@ policy. Stage 13 depends on it.
 
 ---
 
-## 7. Yoast crop images — 70 missing, low impact
+## 7. Yoast crop images — DONE 2026-08-27 (option 2)
 
-Every product's `Product.image` array lists two Yoast aspect-ratio crops
-(`-1200x675`, `-1200x900`) that were not carried over from WordPress. The
-primary image always resolves, so Merchant listings are unaffected.
+Regenerated. Measured, not estimated: **68** crops were referenced, not 70, and
+all 68 had their 1200x1200 primary on disk. They are centre crops to 16:9 and
+4:3, which is what Yoast produces, at 4.6 MB total.
 
-Three options, none taken:
+Before: 140 ImageObject URLs across the 35 product pages, **70 of which did not
+exist** and returned 403 under the firewall rule on `/wp-content/uploads/`.
+After: 140 of 140 resolve.
 
-1. **Leave it.** Google uses a working image. 203 impressions and 1 click are at
-   stake in total.
-2. **Regenerate the crops** from the primaries and add them to
-   `public/wp-content/uploads/` — restores the URLs Google indexed, changes no
-   markup.
-3. **Remove them from the schema** — cleanest structurally, but means editing
-   Product schema, which Section 0 protects.
-
-Option 2 is the only one that recovers the indexed URLs without touching schema.
-**Needed:** a decision, or approval to do option 2.
+Option 2 was the right one for the reason given at the time — it restores exactly
+the URLs Google had indexed (41 of them, 203 impressions) and changes no markup,
+where option 3 would have meant editing Product schema. `scripts/regenerate-
+yoast-crops.py` regenerates them from the primaries if they are ever lost.
 
 ---
 
@@ -168,21 +185,28 @@ requested.**
 
 ---
 
-## 9. Pasted ChatGPT interface markup in seven FAQ panels
+## 9. Pasted AI-chat interface markup — DONE 2026-08-27, and it was 40 pages
 
-`/product/deodorant-paper-tubes/`, `/product/empty-lotion-tubes/`,
-`/product/kraft-paper-tubes/`, `/product/lotion-tubes/`,
-`/product/paper-lipstick-tubes/`, `/product/skincare-tubes/`,
-`/product/white-lipstick-tubes/`
+Stripped. This item said seven FAQ panels. A census across all 66 page records
+found it was far wider, in three flavours:
 
-These ship ChatGPT's own UI markup inside the FAQ panel — wrapper divs with
-classes like `has-data-writing-block:pointer-events-none` and
-`[--composer-overlap-px:28px]`. It renders harmlessly and the questions display
-correctly, so it is cosmetic in the DOM rather than visible to a reader.
+| | Count |
+|---|---|
+| ChatGPT wrapper elements (nested layout divs, `<article>` turns) | 44 |
+| Turn and message attributes (`data-turn-id`, `data-message-author-role`, …) | 39 |
+| `data-start` / `data-end` on `<p>`, `<h3>`, `<strong>`, `<br>` | **3,980** (67,267 bytes) |
+| **Pages affected** | **40 of 66** |
 
-Not cleaned up: it is dead markup, not a defect with a search or conversion
-consequence, and removing it means editing seven pages' body HTML for no
-measurable gain. **Needed:** say the word if you want it stripped.
+Including the home page, the privacy policy, the shipping policy, the refund
+page and four blog posts — none of which this item named. Plus a second,
+different assistant's UI in the cosmetic blog guide: 141 Claude interface class
+tokens on a page earning 89 clicks from position 9.70.
+
+Nothing in the site's JavaScript or CSS referenced any of it, checked first.
+Every page is verified before and after: the visible text must match character
+for character and the element census must be unchanged, or the script writes
+nothing. That guard earned its place — an earlier version destroyed two real
+tables whose class happened to contain a ChatGPT token, and the check caught it.
 
 ---
 
@@ -314,31 +338,38 @@ against it in one place rather than by re-reading seven pages.
 
 ---
 
-## 13. Category page H1s were left alone — here is why, and what I would change
+## 13. Category page H1s — DONE 2026-08-27, as one consistent rename
 
-The brief asked for the H1 to be "the category name as buyers search it". Three
-of the five already are `[export]`:
+The mailing category was named after the smallest of its three head terms
+`[export]`: "custom mailing tubes" 809 impressions, against "mailing tubes"
+4,200 at position 14.27 and "shipping tubes" 2,515 at 14.90.
 
-| H1 today | Exact-match query | Impressions |
-|---|---|---|
-| Custom Cardboard Tubes | "custom cardboard tubes" | 2,259 |
-| Custom Paper Tubes | "custom paper tubes" | 2,810 |
-| Custom Plastic Tubes | "custom plastic tubes" | 268 |
-| Custom Mailing Tubes | "custom mailing tubes" | **809** — against "mailing tubes" **4,200** and "shipping tubes" **2,515** |
-| Custom Specialty Tubes | *not a query anywhere in the 1,000-row export* | 0 |
+It is now **Mailing & Shipping Tubes**, renamed in one pass across all 31 places
+it was displayed: the category H1, the visible breadcrumb on the product pages,
+the category label under every product tile, the tag links on those tiles, the
+loop-category title with its aria-label and image alt, the footer's Top
+Categories list, and the Omnisend tracking payloads. The URL is unchanged.
 
-So two are genuinely mismatched. I did **not** change them, for a reason worth
-stating: the category H1 is not just a heading on that page. The same string is
-the visible breadcrumb on all 35 product pages, the tile category label in every
-product grid, the header navigation label, and — since A5 — the name in the
-BreadcrumbList structured data. Changing the H1 alone would make the category
-page disagree with 35 product pages about what the category is called.
+That is why it was held back from Batch B rather than done as an H1 edit. Since
+A5 the BreadcrumbList name is derived from the H1, so changing the H1 alone would
+have put the category page in disagreement with 35 product pages, the tiles and
+the structured data simultaneously. Verified after: the visible trail and the
+JSON-LD trail on `/product/cylinder-mailing-tubes/` both read
+`Home > Shop > Mailing & Shipping Tubes > Cylinder Mailing Tubes`, character for
+character.
 
-**Recommendation, as one consistent rename rather than five inconsistent ones:**
-"Custom Mailing Tubes" → "Mailing & Shipping Tubes", applied to the H1, the 35
-product breadcrumbs, the tile labels and the nav at the same time. The URL does
-not change. That is a contained job and I can do it on request. "Custom
-Specialty Tubes" should wait on the consolidation decision in item 4.
+**Two things left alone on purpose.** The header and off-canvas nav already read
+"Mailing Tubes" — the head term, short enough for a nav label — so leaving it
+reduces inconsistency rather than adding to it. And `merchant.json` still carries
+"Custom Mailing Tubes" in `product_type`, four times: it is a merchant-defined
+taxonomy field that no searcher sees and Google does not match against, while
+Merchant listings are 44% of this site's clicks. Changing a Merchant field for a
+cosmetic rename is not a trade worth making. Say the word if you want them
+aligned anyway.
+
+**Custom Specialty Tubes is still not a search term** — it appears nowhere in
+the 1,000-row export. It was not renamed because the right name depends on
+item 4, which is still yours to answer.
 
 ---
 

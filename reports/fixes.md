@@ -680,3 +680,138 @@ confirmed 500 / ~100 policy only.
 | The compliance claims against supplier documentation | No access to the manufacturers' paperwork. All 9 are logged verbatim in `owner-decisions.md` item 12 for checking |
 | The specification figures against the owner's actual manufacturers | Written as standard industry specification, as instructed. Diameters, walls, boards, closures, liners and finishes are all standard and available, but they have not been confirmed against a specific supplier's tooling |
 | End-to-end quote email delivery | Unchanged from Stage 2.3 — still owner-tested separately |
+
+---
+
+# Batch D — everything else outstanding
+
+Instructed on 2026-08-27: do all the remaining items except GA4/GTM and
+conversion tracking. `[measured]` against the built HTML unless tagged.
+
+| | Item | Result |
+|---|---|---|
+| D1 | Mailing category rename | 31 occurrences, one pass |
+| D2 | Pasted ChatGPT UI markup | 40 pages, 4,063 artefacts |
+| D3 | Horizontal overflow on mobile | 6 pages → 0, one of them mine |
+| D4 | Anchor/target mismatches | 2 fixed |
+| D5 | `Custom-Paper-Tubes/page/2/` 404 | alias added |
+| D6 | Stage 5 archive policy | 5 pages noindexed |
+| D7 | Missing Yoast crops | 68 regenerated |
+| D8 | `?add-to-cart=` URLs | 278 → 0 crawlable |
+
+## D3 — a correction to what I told you, and a regression I had shipped
+
+`scripts/overflow-check.mjs`, written in Batch B, measured `./dist` against a
+local server. The captured pages reference the theme's CSS by absolute
+production URL, so the browser was rendering them **unstyled**. Every number it
+produced was noise, including the "9 pages before, 7 after" in the D2 commit.
+
+Measured correctly — a QA build with `SITE_ORIGIN` pointed at the local server,
+so the real theme CSS loads — the truth was six pages, and the worst of them was
+a page I had shipped four commits earlier:
+
+| Page | Overflow | Cause |
+|---|---|---|
+| `/tube-size-guide/` | **386px** | mine — see below |
+| `/contact-us/` | 14px | Elementor gutter + a native file input |
+| `/about-us/` | 7px | Elementor gutter |
+| `/privacy-policy/` | 7px | Elementor gutter |
+| `/refund_returns/` | 7px | Elementor gutter |
+| `/terms-conditions/` | 7px | Elementor gutter |
+
+**The regression.** The `custom-tabs` plugin ships
+`.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide){max-width:fit-content !important; width:fit-content !important}`
+— specificity (0,6,0), important on both properties. Every section on the size
+guide sized to its widest table rather than its container: 746px inside a 375px
+viewport. The five category pages were unaffected because they render inside
+`<main>` rather than `.entry-content`, which is precisely why this had to be
+measured on all 69 pages and not the 7 I had touched.
+
+The plugin's own escape hatch is one of those five classes, but `.alignwide`
+also carries `.alignwide > a{width:100%}`, which would have turned every inline
+link in the copy into a full-width block. The specificity is beaten instead,
+scoped to these sections only.
+
+**Two fixes were removed rather than kept.** The unstyled run had me add a
+`box-sizing:border-box` declaration and a mobile table-scroll media query.
+With the real CSS loaded, the theme already sets `border-box` and no table was
+overflowing. Neither fixed anything, so both were deleted — dead CSS left in
+place to look thorough is worse than not writing it.
+
+`scripts/overflow-check.mjs` is deleted; `scripts/overflow-sweep.mjs` replaces
+it, runs against the QA build at 375/768/1440px across all 69 pages, and names
+the shallowest offending element. **Result: 0 overflowing at all three widths.**
+
+## D2 — the ChatGPT markup was 40 pages, not 7
+
+`owner-decisions.md` item 9 recorded seven FAQ panels. Enumerating every page
+record instead:
+
+| | Count |
+|---|---|
+| Wrapper elements unwrapped | 44 |
+| Turn/message attributes removed | 39 |
+| `data-start` / `data-end` attributes removed | **3,980** (67,267 bytes) |
+| Claude UI class tokens cleaned (cosmetic blog guide) | 141 |
+| **Pages affected** | **40 of 66** |
+
+Every page is checked before and after: visible text must match character for
+character and the element census must be unchanged, or the script writes
+nothing. The guard caught an earlier version destroying two real `<table>`s
+whose class happened to contain a ChatGPT token.
+
+## D7 — the crop count was 68, not 70
+
+All 68 had their 1200×1200 primary on disk. Centre crops to 16:9 and 4:3, 4.6 MB.
+
+| Check | Before | After |
+|---|---|---|
+| `ImageObject` URLs across the 35 product pages | 140 | 140 |
+| …that do not exist | **70** | **0** |
+
+## D8 — 278 add-to-cart links, two different fixes
+
+243 loop and tile buttons now point at the clean product URL; `cart.js` falls
+back to `data-product_id` and its selector still matches on
+`a.add_to_cart_button`.
+
+The other 35 are Elementor buttons on the product pages with no
+`data-product_id` and no `add_to_cart_button` class — `cart.js` can only find
+them through the href, so cleaning it would break them, and making them findable
+would mean changing what Elementor styles. They get `rel="nofollow"`.
+
+`scripts/cart-smoke.mjs` exercises all three shapes against a styled QA build:
+
+```
+PASS home tile                  stored=true navigated=false cart={"184":1}
+PASS category loop button       stored=true navigated=false cart={"71":1}
+PASS Elementor product button   stored=true navigated=false cart={"226":1}
+```
+
+Crawlable add-to-cart links in the build: **278 → 0**.
+
+## Site-wide state after Batch D `[measured]`
+
+| Check | Result |
+|---|---|
+| `"price":"0.3"` | 72, unchanged |
+| Visible `$0.30` price elements | 204, unchanged |
+| Merchant feed items / `g:price` | 35 × `0.30 USD`, unchanged |
+| `Product` / `Offer` / `AggregateRating` / `Review` | 72 each, unchanged |
+| Broken links | 0 across 17,130 references |
+| BreadcrumbList validator | 69 pages, 0 failures |
+| Horizontal overflow, 375 / 768 / 1440px | 0 pages |
+| Robots census | 58 index / 11 noindex (was 63 / 6) |
+| Sitemap URLs | 58 |
+| noindex URLs in a sitemap | 0 |
+
+## Still not done, and why
+
+| Item | Why |
+|---|---|
+| GA4, GTM, conversion tracking | Deferred by the owner |
+| Splitting food into its own category | Withdrawn — there is one food product, and a new URL would cannibalise a page already at position 13.48. Revisit at three or more |
+| Whether the plastic line is pushed | A fact about the business, not the export |
+| Eco-line 800 MOQ, free shipping, turnaround, sample policy | Owner-supplied facts; nothing invented |
+| `/pricing-and-ordering/` | Blocked on those same facts |
+| Lotion URL consolidation | Touches canonicals, which Section 0 protects |

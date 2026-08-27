@@ -27,7 +27,7 @@ export default {
       cols: ['Category', 'The job it is specified for', 'Typical wall', 'Typical diameter'],
       rows: [
         [`${a(P + '/product-category/custom-cardboard-tubes/', 'Custom cardboard tubes')}`, 'Protection — crush load, stacking, drops', '1.5 – 3.0 mm', '1½″ – 12″'],
-        [`${a(P + '/product-category/mailing-tubes/', 'Mailing tubes')}`, 'Transit — courier handling, end caps that stay on', '1.5 mm and up', '1½″ – 6″'],
+        [`${a(P + '/product-category/mailing-tubes/', 'Mailing &amp; shipping tubes')}`, 'Transit — courier handling, end caps that stay on', '1.5 mm and up', '1½″ – 6″'],
         [`${a(P + '/product-category/custom-paper-tubes/', 'Custom paper tubes')}`, 'Presentation — print surface, finish, shelf appeal', '0.5 – 1.5 mm', '¾″ – 6″'],
         [`${a(P + '/product-category/specialty-tubes/', 'Specialty tubes')}`, 'Interior — barrier liners, food contact, finish systems', '1.0 – 2.5 mm', '¾″ – 5″'],
         [`${a(P + '/product-category/custom-plastic-tubes/', 'Custom plastic tubes')}`, 'Formulation — creams, gels and liquids that are squeezed', 'n/a — extruded', '½″ – 2½″'],

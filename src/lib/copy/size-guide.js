@@ -195,6 +195,18 @@ export const FAQS = [
   { q: 'What is the minimum order quantity?',
     a: ['Our standard minimum is 500 pieces, at any size in this guide. We can produce smaller runs — from around 100 pieces — at a higher per-piece cost, since setup and printing are fixed regardless of quantity. Per-piece cost drops significantly as quantity increases.',
         'Share your size, material, printing and quantity and we will send a quote.'] },
+  { q: 'What size tube do I need for a candle?',
+    a: ['Measure the vessel, not the candle. A standard votive or tin sits in a 2½″ to 3″ internal diameter tube; a pillar or a large jar usually wants 3″ to 4″. Add 1 to 2 mm of clearance so the pack is not a fight to open.',
+        'Candles are heavier than they look, so specify a wall that does not flex when the pack is picked up — 1.5 mm or more at these diameters — and a telescoping lid or metal ends rather than a light plug cap.'] },
+  { q: 'How do I measure a rolled poster, fabric or banner?',
+    a: ['Roll it the way you actually intend to ship it, then measure the roll — not the flat sheet. Rolling tighter fits a smaller tube but sets a curl into the material that never fully relaxes.',
+        'Then add 1 to 2 mm of diametric clearance, and make the tube 1″ to 2″ longer than the roll so nothing bears against the end caps in transit. Those two allowances prevent most damage complaints on rolled goods.'] },
+  { q: 'What is the largest tube you can make?',
+    a: ['12″ internal diameter and 48″ long on standard tooling, which covers rolled artwork, wide-format prints, textiles and most industrial cores.',
+        'Larger diameters and longer lengths are possible but move onto non-standard tooling, which changes both the cost and what is practical at low quantities. Tell us early if your product needs one, because it is better designed around than discovered late.'] },
+  { q: 'Does printing change the size of the tube?',
+    a: ['Not the internal diameter, which is what your product has to fit through — that stays what you specify. What printing changes is the flat artwork dimension, because the wrap has to go all the way round plus an overlap at the seam.',
+        'So a design laid out for a 2″ tube will not fit a 3″ one. Ask for the flat dimensions for each size before laying artwork out, and keep critical type clear of the seam on every one.'] },
 ];
 
 export const faqCta =

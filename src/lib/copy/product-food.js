@@ -122,6 +122,21 @@ export const FAQS = [
   { q: 'Are the tubes recyclable?',
     a: ['A greaseproof or PE-lined tube with a paperboard cap is far closer to curbside paper than a foil-lined one, which cannot be separated at a household level. PLA-coated liners offer a compostable route, and the certification should be confirmed per build.',
         'There is a genuine trade-off here: the liners that give the longest shelf life are the ones that recycle least easily. It is worth deciding which matters more before artwork.'] },
+  { q: 'Do you supply food-grade cardboard tubes as well as paper ones?',
+    a: ['The distinction that matters is the liner, not whether the wall is described as paper or cardboard — both are wound paperboard, and neither is a food-contact surface on its own. A heavier cardboard wall is used where the pack has to take handling; the food-contact layer is the same either way.',
+        'So specify the liner from the food and the wall from the handling, and the two decisions stay independent of each other.'] },
+  { q: 'Can I get paper tubes for loose-leaf tea?',
+    a: ['Yes, and tea is one of the formats this pack suits best. Tea loses aroma and picks up moisture, so it wants a foil or metallized liner and a closure that reseals properly between uses — tin-plate ends are the usual answer.',
+        'Tea also has a low bulk density, so it takes more volume per gram than most people expect: 100 g of loose leaf needs roughly a 2½″ tube at 6½″ long, against 50 g of ground spice in a 1½″ tube at 4″.'] },
+  { q: 'What documents come with a food-grade order?',
+    a: ['A declaration of compliance naming your specific construction, and the migration test report behind it. Those two are what actually cover you, and they attach to the build rather than to the product category.',
+        'Where a retailer requires it, BRCGS Packaging Materials certified production can be requested and the certification scope supplied. Ask for all three before signing off a food build rather than after.'] },
+  { q: 'Can the tube be printed and still be food safe?',
+    a: ['Yes. Print sits on the outside of the wall and the liner sits on the inside, so they are separate layers and neither compromises the other. Full-wrap offset printing, foil, emboss and matte or gloss lamination are all available on a lined food tube.',
+        'What does need care is set-off during production and storage, which is a manufacturing control rather than a design choice — and it is one of the things the declaration of compliance covers.'] },
+  { q: 'Do you supply food tubes wholesale?',
+    a: ['Yes. The standard minimum is 500 pieces, with smaller runs from around 100 pieces at a higher per-piece cost, since setup and printing are fixed regardless of quantity.',
+        'For food specifically it is worth quoting at two or three quantities before committing, because the liner and the seal carry their own setup and their share of the per-piece cost falls faster than the tube does as volume rises.'] },
 ];
 
 export const faqCta =

@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    CUSTOM MAILING TUBES — intent: get it there undamaged
@@ -121,6 +121,7 @@ export default {
     { q: 'Do you supply custom printed mailing tubes?',
       a: ['Yes. A one- or two-color flexographic direct print is the economical route at volume and suits kraft board well. A full-color offset-printed wrap is available where the tube is part of the brand experience, and digital printing suits shorter runs without plate costs.',
           'Supply artwork with bleed on all four edges and keep critical type away from the vertical seam where the wrap overlaps itself. We will confirm the flat dimensions for your diameter before you lay it out.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Sending something unusual? ${a(P + '/product/cylinder-mailing-tubes/', 'The cylinder mailing tubes page')} covers longer spans and non-standard lengths.`,
   tiles: {

@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    CUSTOM SPECIALTY TUBES — intent: the tube has to do more than hold shape
@@ -173,6 +173,7 @@ export default {
     { q: 'Can a tube be foiled and printed for a gift or limited edition line?',
       a: ['Yes, and this is where the finish options actually earn their cost. Hot foil stamping, emboss and deboss, spot UV over a matte laminate, soft-touch lamination and textured specialty papers can all be combined on a rigid convolute body.',
           'Each finish carries its own setup, so a first run testing the format usually makes more sense in a simpler specification, with the full finish applied once the size and structure are settled.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Packing a cream or a gel rather than a solid? ${a(P + '/product-category/custom-plastic-tubes/', 'The plastic tubes category')} covers squeeze formats.`,
   tiles: {

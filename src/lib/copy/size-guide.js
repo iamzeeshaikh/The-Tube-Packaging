@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    /tube-size-guide/ — Batch C
@@ -207,6 +207,7 @@ export const FAQS = [
   { q: 'Does printing change the size of the tube?',
     a: ['Not the internal diameter, which is what your product has to fit through — that stays what you specify. What printing changes is the flat artwork dimension, because the wrap has to go all the way round plus an overlap at the seam.',
         'So a design laid out for a 2″ tube will not fit a 3″ one. Ask for the flat dimensions for each size before laying artwork out, and keep critical type clear of the seam on every one.'] },
+  ...POLICY_FAQS,
 ];
 
 export const faqCta =

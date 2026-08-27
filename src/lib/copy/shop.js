@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    /shop/ — 10,731 impressions, position 12.34, 8 clicks, 35 products.
@@ -91,6 +91,7 @@ export default {
     { q: 'What do you need from us to send a quote?',
       a: ['Four numbers and one sentence: internal diameter, length, wall thickness or size class, quantity — and what is going inside. The last one matters most, because it decides the liner and the closure, and those are the parts a specification usually leaves out.',
           'If any of those are still open, say which. A quote against a stated range is more useful than a quote against a guess, and it saves a round trip.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Not sure which category to start in? ${a(P + '/tube-size-guide/', 'The tube size guide')} routes from the product to the tube.`,
   // /shop/ lists products from every category, so its tile notes are the same

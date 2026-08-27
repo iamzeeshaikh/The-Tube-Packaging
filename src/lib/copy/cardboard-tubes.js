@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    CUSTOM CARDBOARD TUBES — intent: protection
@@ -129,6 +129,7 @@ export default {
     { q: 'What artwork do you need from us?',
       a: ['A print-ready vector file for the wrap, with bleed on all four edges, and your colors specified as Pantone references where an exact match matters. Photographic elements should be supplied at 300 dpi at final size.',
           'The wrap overlaps itself along one vertical seam, so keep logos and critical type clear of that join. We will confirm the exact flat dimensions for your tube size before you lay the artwork out, because the circumference changes with the diameter.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Have the dimensions but not the specification? ${a(P + '/contact-us/', 'Send the sizes through the contact form')} and we will come back with a build.`,
   tiles: {

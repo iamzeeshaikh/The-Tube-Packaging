@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    CUSTOM PAPER TUBES — intent: branding, not protection
@@ -146,6 +146,7 @@ export default {
     { q: 'Can you match a specific brand color?',
       a: ['Yes. Supply your colors as Pantone references and offset printing will match them closely; that is the route to take when an exact brand color matters. Digital printing is convenient for short runs but matches spot colors less precisely.',
           'One thing worth knowing: the same ink looks different on uncoated kraft than on white-lined board, because the brown substrate shifts everything warmer. If the color is critical, specify the board at the same time as the color.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Packing food or tea? ${a(P + '/product-category/specialty-tubes/', 'The specialty tubes category')} covers barrier liners and food-contact construction.`,
   tiles: {

@@ -34,3 +34,33 @@ export const WALL_CLASSES = {
   ],
 };
 
+
+/**
+ * Ordering policy answers, confirmed by the owner on 2026-08-27.
+ *
+ * Identical on every page that carries them, because they are policy rather
+ * than category copy — the same reason the MOQ answer is identical everywhere.
+ *
+ * The figures are taken from /shipping-policy/, which is the site's own
+ * authoritative statement, rather than paraphrased into a fourth version. The
+ * product pages say "8 to 10 business days" where the policy page says a 6 to 10
+ * total; 8 to 10 sits inside that, so it is not a false promise, but the
+ * inconsistency is recorded in reports/owner-decisions.md rather than copied
+ * forward here.
+ *
+ * Free shipping is stated WITH its destinations. Around twenty product pages
+ * state it unqualified, and an unqualified free-shipping claim is the single
+ * most common source of dispute on a packaging lead — so these pages name the
+ * four countries and link to the policy instead of repeating the bare claim.
+ */
+export const POLICY_FAQS = [
+  { q: 'Can I get a sample before committing to a full run?',
+    a: ['Yes. Samples can be provided to confirm sizing, material selection and design details before full production begins, so you can check the structure and the print in your hand rather than on screen.',
+        'Free design support comes with it — artwork preparation, layout help, bleed and print-ready file setup, and 3D mockups before manufacturing starts. For a first order it is worth using both, because the two things that go wrong most often are a diameter chosen without the product to hand and artwork laid out before the flat dimensions were confirmed.'] },
+  { q: 'How long does an order take?',
+    a: ['Processing takes 3 to 5 business days, which covers printing, packaging and quality checks, and orders are processed Monday to Saturday. Transit is a further 3 to 5 business days, for a total estimated delivery time of 6 to 10 business days.',
+        'Timelines vary a little with the destination city and courier workload, and a tracking link is emailed once the order ships. Embossing adds to production time, so allow extra if your build includes it.'] },
+  { q: 'Do you offer free shipping?',
+    a: ['Yes — free standard shipping to the United States, the United Kingdom, Canada and Australia. Those are the destinations the policy covers, so it is worth checking it applies to yours before you plan around it.',
+        'The full terms, including processing and transit times, order tracking and what happens if a shipment is delayed or lost, are set out on the shipping policy page.'] },
+];

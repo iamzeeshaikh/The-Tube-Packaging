@@ -27,31 +27,77 @@ on a page nobody thought to check.
 
 ---
 
-## 2. Commercial claims that are still unverified
+## 2. Commercial claims — CONFIRMED BY THE OWNER 2026-08-27, with three inconsistencies to settle
 
-None of these were changed. Counts are from the built HTML.
+Free shipping, the turnaround time and the sample policy are confirmed as real.
+They are now used in the content — three new FAQs on all eight pages this
+programme built, taking each to 13 questions. That was the largest hole in the
+new copy: the wholesale and supplier cluster is **117 queries and 45,910
+impressions at position 26** `[export]`, and those buyers want MOQ, lead time,
+samples and shipping. Until today only MOQ could be answered.
 
-| Claim | Occurrences | Pages |
+The wording used is taken from `/shipping-policy/` verbatim rather than
+paraphrased, so no fourth version of any figure enters the site. Verified after:
+the only day figures in the new sections are **3 to 5 business days** and
+**6 to 10 business days**, both straight from the policy page.
+
+### Three inconsistencies the confirmation does not resolve
+
+Confirming the claims are real does not make the site's three different versions
+of them agree. These are `[measured]` across all 68 pages.
+
+**1. Free shipping is conditional, and about twenty product pages state it
+unconditionally.** `/shipping-policy/` limits it to four countries:
+
+> "We offer free shipping to the following countries: United States, United
+> Kingdom, Canada, Australia"
+
+The product pages say things like *"Get free design and shipping on your
+order."*, *"Free design and shipping included!"*, *"…all with free design and
+shipping"* — no destination named. One page alone qualifies it: *"Free design
+and shipping support can be arranged for qualifying orders."*
+
+An unqualified free-shipping claim is the most common source of dispute on a
+packaging lead. **Recommended:** add the four countries, or the words "to
+selected regions", wherever the claim appears. It is a mechanical edit across
+about twenty pages and I have not made it, because it changes commercial
+messaging rather than fixing a defect.
+
+**2. "Starting from 50 MOQ" now contradicts the 500-piece minimum.**
+`/shipping-policy/` reads:
+
+> "All orders across the above countries qualify for: ✅ Free Standard Shipping
+> Starting from 50 MOQ."
+
+With the standard minimum settled at 500 pieces and smaller runs from around
+100, **no orderable quantity falls below 50** — so the condition can never bite
+and the line reads as a leftover from before the MOQ policy was fixed. It is not
+false; it is unreachable, and it invites the question "so is there a threshold or
+not?" **Needed:** delete the qualifier, or give the real threshold.
+
+**3. Two different turnaround figures.** `/shipping-policy/`, `/about-us/` and
+`/terms-conditions/` state 3–5 business days processing plus 3–5 transit, for a
+**6–10 business day total**. The home page and all **35 product pages** say
+*"You will receive your order within **8 to 10 business days**."*
+
+8–10 sits inside 6–10, so this is not a false promise — the product pages are
+simply more conservative. But two numbers for one thing is worth settling.
+**Recommended:** keep 6–10 as the site-wide figure, since it is the policy page's
+and the more attractive one, or drop the range from the product pages and let the
+policy carry it.
+
+### The rest of the claim inventory, unchanged
+
+| Claim | Occurrences | Status |
 |---|---|---|
-| "Free Shipping" / "free delivery" | 3 | 3 |
-| "8–10 business day turnaround" | 38 | 36 |
-| "35+ Tube products" | 2 | 1 |
-| "Reply within 24 hours from a real person" | 1 | 1 |
-| "fast / quick turnaround" (vague timing) | 59 | 36 |
-| "free design" / "free design support" | 87 | 36 |
-| sample-policy statements | 172 | 42 |
+| "Free Shipping" / "free design and shipping" | 46 across 43 wordings | Confirmed; see inconsistency 1 |
+| "8–10 business day turnaround" | 36 pages | Confirmed; see inconsistency 3 |
+| Sample and mockup statements | 50 | Confirmed |
+| "free design" / "free design support" | 46 | Confirmed |
+| "35+ Tube products" | 2 | The catalogue is exactly 35, so "35+" overstates by a little |
+| "Reply within 24 hours from a real person" | 1 | Not raised before; still unconfirmed |
 
-Two deserve attention beyond a yes/no:
-
-- **"Free Shipping"** sits on the home page directly beside the MOQ statement.
-  If it is conditional — order value, destination, weight — the condition needs
-  stating or the claim removing. It is the most common source of dispute on
-  packaging leads.
-- **"8–10 business day turnaround"** is the most-repeated promise on the site
-  and is baked into the Order Process block on every product page. Correcting it
-  later is a 36-page change, not a one-line one.
-
-**Needed:** for each, confirm / correct / remove.
+`scripts/claims-audit.py` regenerates this inventory from the built HTML.
 
 ---
 

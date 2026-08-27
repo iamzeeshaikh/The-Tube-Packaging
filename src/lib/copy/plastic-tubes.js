@@ -1,4 +1,4 @@
-import { P, a, SIZE_CLASSES, WALL_CLASSES } from './_shared.js';
+import { P, a, SIZE_CLASSES, WALL_CLASSES, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    CUSTOM PLASTIC TUBES — intent: hold a formulation paper cannot
@@ -126,6 +126,7 @@ export default {
     { q: 'Are plastic tubes recyclable?',
       a: ['A single-material PE tube with a matching cap is the most recyclable build available in this format, and it is the one to ask for if that matters. PCR blends put post-consumer recycled content into the wall, with the achievable percentage depending on the material and finish.',
           'An aluminum barrier laminate is the opposite case: it gives the best oxygen barrier and the worst recyclability, because the layers cannot be separated. That trade-off is worth making deliberately, and only when the formulation genuinely needs the barrier.'] },
+    ...POLICY_FAQS,
   ],
   faqCta: `Working across both materials? ${a(P + '/shop/', 'The full product range')} lists every tube on the site in one place.`,
   tiles: {

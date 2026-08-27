@@ -1,4 +1,4 @@
-import { P, a } from './_shared.js';
+import { P, a, POLICY_FAQS } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
    /product/tube-food-packaging/ — the food build-out
@@ -137,6 +137,7 @@ export const FAQS = [
   { q: 'Do you supply food tubes wholesale?',
     a: ['Yes. The standard minimum is 500 pieces, with smaller runs from around 100 pieces at a higher per-piece cost, since setup and printing are fixed regardless of quantity.',
         'For food specifically it is worth quoting at two or three quantities before committing, because the liner and the seal carry their own setup and their share of the per-piece cost falls faster than the tube does as volume rises.'] },
+  ...POLICY_FAQS,
 ];
 
 export const faqCta =

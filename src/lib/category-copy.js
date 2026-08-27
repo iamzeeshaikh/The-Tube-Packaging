@@ -13,10 +13,12 @@
  */
 import cardboard, { route as cardboardRoute } from './copy/cardboard-tubes.js';
 import mailing, { route as mailingRoute } from './copy/mailing-tubes.js';
+import paper, { route as paperRoute } from './copy/paper-tubes.js';
 
 export { SIZE_CLASSES, WALL_CLASSES } from './copy/_shared.js';
 
 export const COPY = {
   [cardboardRoute]: cardboard,
   [mailingRoute]: mailing,
+  [paperRoute]: paper,
 };

@@ -1,0 +1,55 @@
+// Every internal link written in the Batch B and C editorial sections, checked
+// against the pages that actually exist in the build. Also enforces the
+// portfolio linking rules: descriptive anchors, no "click here" / "view" /
+// "explore", and at most one link per paragraph.
+import fs from 'node:fs';
+import path from 'node:path';
+
+const DIST = 'dist';
+const files = [];
+(function walk(d) {
+  for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+    const p = path.join(d, e.name);
+    if (e.isDirectory()) walk(p);
+    else if (e.name === 'index.html') files.push(p);
+  }
+})(DIST);
+const routes = new Set(files.map((f) => {
+  const d = path.relative(DIST, path.dirname(f));
+  return d === '' ? '/' : '/' + d + '/';
+}));
+
+const BANNED = /^(click here|here|view|explore|read more|learn more|this page|link)$/i;
+let fails = 0, links = 0, pagesWithContent = 0;
+const fail = (m) => { fails++; console.log('FAIL ' + m); };
+
+for (const f of files.sort()) {
+  const html = fs.readFileSync(f, 'utf8');
+  const sections = [...html.matchAll(/<section class="ttp-cat[^"]*"[\s\S]*?<\/section>/g)].map((m) => m[0]);
+  if (!sections.length) continue;
+  pagesWithContent++;
+  const route = '/' + path.relative(DIST, path.dirname(f)) + '/';
+
+  for (const s of sections) {
+    for (const m of s.matchAll(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      links++;
+      const [, href, rawText] = m;
+      const text = rawText.replace(/<[^>]*>/g, '').trim();
+      const target = href.replace('https://thetubepackaging.com', '');
+      if (!target.startsWith('/')) { fail(`${route} external link ${href}`); continue; }
+      if (!routes.has(target)) fail(`${route} -> ${target} (no such page in the build)`);
+      if (BANNED.test(text)) fail(`${route} banned anchor text "${text}"`);
+      const words = text.split(/\s+/).length;
+      if (words < 2 || words > 9) fail(`${route} anchor "${text}" is ${words} word(s)`);
+    }
+    // at most one link per paragraph
+    for (const p of s.matchAll(/<p>([\s\S]*?)<\/p>/g)) {
+      const n = (p[1].match(/<a /g) || []).length;
+      if (n > 1) fail(`${route} paragraph carries ${n} links`);
+    }
+  }
+}
+console.log(`\npages with editorial sections  ${pagesWithContent}`);
+console.log(`internal links checked         ${links}`);
+console.log(fails ? `FAILURES: ${fails}` : 'all editorial links resolve and follow the anchor rules');
+process.exit(fails ? 1 : 0);

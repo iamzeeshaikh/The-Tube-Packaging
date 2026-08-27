@@ -67,6 +67,10 @@
       "destination": "/product-category/custom-paper-tubes/index.html"
     },
     {
+      "source": "/product-category/Custom-Paper-Tubes/page/2/",
+      "destination": "/product-category/custom-paper-tubes/page/2/index.html"
+    },
+    {
       "source": "/product-category/Custom-Plastic-Tubes/",
       "destination": "/product-category/custom-plastic-tubes/index.html"
     }

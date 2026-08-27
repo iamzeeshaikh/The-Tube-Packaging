@@ -1,5 +1,10 @@
 # Sitemap and archive audit — Stage 5
 
+> **Correction, 2026-08-27.** The archive table below originally recorded
+> `/thank-you/` as absent from the sitemap. It was listed in
+> `page-sitemap.xml`. The row is corrected and the page was removed from the
+> sitemap in A4, along with `/cart/`, `/checkout/` and `/my-account/`.
+
 **Report only. No archive policy change was implemented.** `[measured]` unless
 tagged otherwise.
 
@@ -88,7 +93,7 @@ a reader actually gets beyond the tiles.
 | `/category/information/` | 0 | 51 | 0.00% | 6.63 | 70 | — | 25 | yes | yes |
 | `/category/uncategorized/` | 0 | 0 | — | — | 66 | — | 7 | yes | yes |
 | `/author/shanimazhar82gmail-com/` | 1 | 11 | 9.09% | 4.27 | 67 | — | 17 | yes | yes |
-| `/thank-you/` | 0 | 60 | 0.00% | — | 18 | — | — | no | **yes** |
+| `/thank-you/` | 0 | 60 | 0.00% | — | 18 | — | — | **yes** | **yes** |
 | `/cart/` | 0 | 0 | — | — | 43 | — | 2 | **yes** | no |
 | `/checkout/` | — | — | — | — | 19 | — | — | **yes** | no |
 | `/my-account/` | 0 | 0 | — | — | 23 | — | 4 | **yes** | no |
@@ -131,7 +136,7 @@ discard a position most sites pay for.
 | `/author/shanimazhar82gmail-com/` | **noindex, follow** | A single-author site does not need an author archive. It is indexed, in the sitemap, and earns 1 click. Remove from `author-sitemap.xml` at the same time. |
 | `/category/information/` | **noindex, follow** | 51 impressions, 0 clicks, 70 editorial words. It duplicates the blog posts it lists. Position 6.63 looks appealing but on 51 impressions it is noise. |
 | `/category/uncategorized/` | **noindex, follow, and remove from the sitemap** | Zero impressions, zero clicks. A default WordPress term that should never have shipped. |
-| `/thank-you/` | **noindex, follow** | Currently `index, follow` with 60 impressions. A post-submission confirmation page has no search value and its appearance in results is a small conversion-tracking hazard. |
+| `/thank-you/` | **noindex, follow** | Currently `index, follow` with 60 impressions. A post-submission confirmation page has no search value and its appearance in results is a small conversion-tracking hazard. **Done in A4** — and removed from `page-sitemap.xml` at the same time. |
 | `/cart/`, `/checkout/`, `/my-account/` | **Remove from `page-sitemap.xml`** | Already correctly `noindex`. Only the sitemap listing is wrong. |
 | `/my-account/lost-password/` | **No change** | Already `noindex` and canonicalised to `/my-account/`. |
 

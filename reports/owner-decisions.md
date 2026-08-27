@@ -186,37 +186,26 @@ measurable gain. **Needed:** say the word if you want it stripped.
 
 ---
 
-## 10. `priceValidUntil` expires from 10 November 2026 — needs a decision before then
+## 10. `priceValidUntil` — RESOLVED 2026-08-27, but you can revisit it
 
-Every product offer carries a `priceValidUntil` captured from WordPress at crawl
-time. They are static values in `pages.json` and will not roll forward.
+**Done.** The value is now computed at build time as *build date + 1 year* and
+applied to all 72 offers on the site (35 product pages plus 37 carried on the 6
+category archives). Every Vercel deploy rolls it forward, so it cannot expire in
+place. Verified live: `2027-08-27T01:50:18+00:00`, with `price` still exactly
+`0.3`. Evidence in `reports/fixes.md`, section A1.
 
-| Date | Products |
-|---|---|
-| 2026-11-10 | 5 |
-| 2026-11-12 | 12 |
-| 2026-11-18 | 1 |
-| 2026-12-08 | 1 |
-| 2026-12-09 | 13 |
-| 2026-12-16 | 2 |
-| 2026-12-23 | 1 |
+**The alternative is equally valid and you can switch to it at any time.**
+`priceValidUntil` is *recommended*, not required, and $0.30 is a standing price
+rather than a time-limited sale — so removing the property entirely does **not**
+affect rich-result eligibility. Google would simply use the price on the page.
 
-Nothing is expired today. **The first five lapse on 10 November 2026 and all 35
-have lapsed by 24 December.** Google drops the price from rich results on an
-expired value and can flag it in Merchant Center — which, given Merchant
-listings are 44% of clicks, is the highest-consequence dated item in this whole
-programme.
+Dynamic was chosen as the lower-risk of the two, because it preserves the markup
+in exactly the shape Google has been crawling for the last year and changes only
+the date. Removal changes the shape of the offer node. With Merchant listings at
+44% of clicks, not changing shape was worth more than the tidier markup.
 
-Two fixes, neither done because both touch offer markup that Section 0 protects:
-
-1. **Remove the property.** It is optional. Google uses the page price. Simplest
-   and lowest-risk.
-2. **Generate it at build time** as a rolling date (e.g. today + 12 months), so
-   it never expires.
-
-**Recommendation: option 2**, because it preserves the markup exactly as Google
-currently sees it and only changes the value. **Needed: approval, before
-November.**
+If you would rather have it gone, it is a one-line change in
+`src/lib/pricing.js` and no other file.
 
 ---
 
@@ -245,3 +234,17 @@ With 1 and 2 the implementation is small and self-contained: one event in the
 existing submit success callback in `public/assets/ttp.js`, which all nine forms
 already pass through. Firing it on `/thank-you/` instead would miss seven of
 them, because only two forms redirect there.
+
+### Status 2026-08-27 — deferred by you, on the record
+
+Asked before Batch A shipped; the answer was to handle GA4, GTM and conversion
+tracking later. Nothing was installed and **no placeholder measurement ID was
+shipped** — a made-up `G-XXXXXXXX` either sends nothing or sends this site's
+data into somebody else's property, which is worse than the current gap.
+
+The cost of waiting, stated plainly: the five category pages in Batch B ship
+without analytics, so their effect can only be read from Search Console —
+clicks, impressions, CTR, position. That is enough to judge the work, because
+CTR is exactly what those pages fail at today (0.03%). What cannot be recovered
+later is on-site behaviour and lead volume for the weeks between now and
+whenever the tag goes in.

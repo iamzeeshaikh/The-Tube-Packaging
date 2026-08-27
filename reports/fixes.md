@@ -306,3 +306,211 @@ Parameter handling touches canonicals, so nothing here is implemented.
 | Live status for 242 of 250 GSC URLs | Vercel Attack Challenge Mode blocked the sweep; 8 spot-checked by hand, all agreeing with inference |
 | Vercel log review for high-frequency 404s | No dashboard access |
 | Whether Googlebot is affected by the bot mitigation | Cannot impersonate Googlebot. Google reports 860k impressions and 26% Merchant CTR, so there is no evidence it is |
+
+---
+
+# Batch A — schema, indexation and breadcrumbs
+
+Committed one item per commit, built, and **verified against live production**
+after deploy. `[measured]` unless tagged otherwise.
+
+Deployed 2026-08-27. `seo/full-programme` fast-forwarded into `main` (18
+commits, no divergence), pushed, `vercel --prod`, aliased to
+`thetubepackaging.com`. That deploy also carried Stages 1–3, which had been
+committed and verified on the branch but were never live.
+
+---
+
+## A1 `priceValidUntil` — FIXED
+
+**Before:** a frozen literal per product, captured from WordPress at crawl time.
+5 products expired 10 Nov 2026, all 35 by 24 Dec 2026.
+
+**After:** `src/lib/pricing.js` computes *build date + 1 year* once per build and
+rewrites only the `priceValidUntil` value in each page head. Every Vercel deploy
+refreshes it, so no deploy can leave an expired date behind. No literal date was
+hardcoded.
+
+### Scope — larger than the 35 products `[measured]`
+
+| Where | Offers |
+|---|---|
+| 35 product pages | 35 |
+| 6 category archives (each carries a Product node per listed product) | 37 |
+| **Total offers rewritten** | **72** |
+
+The brief specified 35. The category archives carry offer markup too, and
+leaving those frozen would have left 37 expiring offers on the exact pages
+Batch B is about to rebuild.
+
+### Price is untouched `[measured]`
+
+| Check | Result |
+|---|---|
+| `"price":"0.3"` in the build, before | 72 |
+| `"price":"0.3"` in the build, after | 72 |
+| Stale (2026) `priceValidUntil` in the build | **0** |
+| Distinct `priceValidUntil` values in the build | 1 |
+| Merchant feed `g:price` (product, not shipping) | 35 × `0.30 USD`, unchanged |
+| Merchant feed items | 35, unchanged |
+
+A normalised diff — every `priceValidUntil` value replaced with a constant, then
+source compared to output across all 66 page records — reports **zero** other
+textual difference. The transform cannot touch anything else.
+
+The site emits no `og:price` on any page, so there was nothing there to protect.
+
+### Live verification `[measured]`
+
+`scripts/rich-results-check.mjs` fetches production and validates the JSON-LD
+Google parses against its documented product-snippet and merchant-listing
+requirements. Five product URLs, all 16 checks passing on each:
+
+```
+https://thetubepackaging.com/product/paper-tubes/            [HTTP 200]
+  PASS  Offer.price is exactly "0.3"          "0.3"
+  PASS  Offer.priceCurrency                   "USD"
+  PASS  Offer.availability                    "https://schema.org/InStock"
+  PASS  Product.sku                           "226"
+  PASS  aggregateRating retained              "5 / 1"
+  PASS  Offer.priceValidUntil present         "2027-08-27T01:50:18+00:00"
+  PASS  priceValidUntil is in the future
+  PASS  priceValidUntil is ~12 months out     "12.0 months"
+```
+
+Identical result on `/product/cosmetic-tubes/` (sku 86),
+`/product/poster-mailing-tubes/` (sku 60), `/product/luxury-tube-packaging/`
+(sku 179) and `/product/large-cardboard-tubes/` (sku 174).
+
+Production before the deploy read `2026-11-12T04:39:23+00:00` on
+`/product/paper-tubes/` and `2026-11-10T19:48:56+00:00` on
+`/product/poster-mailing-tubes/`; both now read `2027-08-27`.
+
+> **MANUAL — not verified: Google's own Rich Results Test.** It has no public
+> API and I did not run the hosted tool, so I will not report a result from it.
+> What is above is the same JSON-LD, fetched from production and validated
+> against Google's documented requirements — it is not a substitute for the
+> tool's own verdict on rich-result eligibility.
+>
+> **MANUAL — not verified: Merchant listing eligibility.** No Merchant Center
+> access. The page-versus-feed price agreement that governs the
+> `mismatched value (page crawl) [price]` flag is verified above and unchanged;
+> what Merchant Center reports is not.
+>
+> URLs to paste into https://search.google.com/test/rich-results:
+> `/product/paper-tubes/`, `/product/cosmetic-tubes/`,
+> `/product/poster-mailing-tubes/`.
+
+---
+
+## A2 GA4 and GTM — DEFERRED BY THE OWNER
+
+Not implemented. The owner's instruction on 2026-08-27 was to handle GA4 and
+GTM later. No placeholder ID was shipped.
+
+**Consequence, recorded so it is not a surprise:** the category pages in Batch B
+ship without analytics, so their effect can only be read from Search Console
+clicks, impressions, CTR and position. On-site behaviour and lead volume before
+and after remain unmeasurable. GSC still gives a clean read on the CTR and
+click change, which is what Batch B is aimed at.
+
+Detector result stands: **GA4 0 / 68 pages, GTM 0 / 68, Google Ads
+`AW-16676839357` 68 / 68.**
+
+---
+
+## A3 Form conversion tracking — DEFERRED BY THE OWNER
+
+Not implemented, same instruction. The design is unchanged and still correct
+when it is picked up: fire on the submit success callback in
+`public/assets/ttp.js`, which all 9 forms pass through, **not** on `/thank-you/`,
+which only 2 of 9 forms reach.
+
+Quote email delivery end-to-end is still **MANUAL — not verified**; the owner is
+testing it separately.
+
+---
+
+## A4 Indexation cleanup — FIXED
+
+| Item | Before | After |
+|---|---|---|
+| `/thank-you/` robots | `index, follow, max-image-preview:large, …` | `noindex, follow` |
+| `/cart/` in `page-sitemap.xml` | submitted | removed |
+| `/checkout/` in `page-sitemap.xml` | submitted | removed |
+| `/my-account/` in `page-sitemap.xml` | submitted | removed |
+| `/thank-you/` in `page-sitemap.xml` | submitted | removed |
+
+`/thank-you/` was removed from the sitemap because noindexing it while still
+submitting it would recreate exactly the contradiction this item exists to fix.
+
+**Correction to `reports/sitemap-archive.md`.** That report's archive table
+records `/thank-you/` as *not* in the sitemap. It was in `page-sitemap.xml`. The
+report is amended in place.
+
+### Verification `[measured]`
+
+| Check | Result |
+|---|---|
+| Robots census across the build, before | 63 index / 5 noindex |
+| Robots census across the build, after | 62 index / 6 noindex |
+| Unique sitemap URLs, before | 63 |
+| Unique sitemap URLs, after | **59** |
+| noindex URLs still listed in any child sitemap | **0** |
+| Other sitemap entries changed | **0** |
+
+Live, after deploy: `/thank-you/` returns
+`<meta name='robots' content='noindex, follow' />`, and
+`https://thetubepackaging.com/page-sitemap.xml` lists 8 URLs — home, shop,
+shipping-policy, contact-us, terms-conditions, refund_returns, privacy-policy,
+about-us. No other child sitemap was opened or edited.
+
+---
+
+## A5 `BreadcrumbList` — FIXED
+
+**Before:** 0 of 68 pages emitted breadcrumb structured data, in JSON-LD,
+microdata or RDFa — while all 35 product pages render a correct, linked visible
+trail. Only the machine-readable part was missing.
+
+**After:** 61 pages emit one `BreadcrumbList` each.
+
+The trail is taken from what the page already says, so the two cannot drift:
+
+- where the theme renders `.rishi-breadcrumbs`, **its own anchors are used
+  verbatim** — same names, same URLs, same order (all 35 product pages);
+- where it renders none — the 6 category archives, 7 blog posts, 2 blog category
+  archives, the author archive and the static pages — the trail is derived from
+  the route and the page's own H1. That is the same hierarchy: the
+  `/product-category/mailing-tubes/` H1 is "Custom Mailing Tubes", which is
+  character-for-character the name the product breadcrumbs link to.
+
+### Deliberately skipped
+
+| Pages | Why |
+|---|---|
+| `/` | A one-item breadcrumb is not a trail |
+| 6 noindex pages — cart, checkout, order received, my account, lost password, thank-you | Structured data on a page that is not indexed does nothing |
+
+### Verification `[measured]`
+
+`scripts/validate-breadcrumbs.mjs`, run on the built HTML — 68 pages, **0
+failures**:
+
+| Check | Result |
+|---|---|
+| Exactly one `BreadcrumbList` per page | 61 / 61 |
+| JSON parses | 61 / 61 |
+| Positions contiguous from 1 | 61 / 61 |
+| Every `item` URL resolves to a page that exists in the build | 61 / 61 |
+| JSON names match the visible trail character for character | 35 / 35 pages that render one |
+| **Pre-existing JSON-LD byte-identical to the source record** | **68 / 68** |
+
+That last row is the one that matters against the standing rule. The comparison
+normalises A1's `priceValidUntil` and then requires the remaining JSON-LD to be
+identical — so Product, Offer, `aggregateRating`, `Review`, `ImageObject` and
+every Merchant field are provably untouched, not merely believed to be.
+
+Live, after deploy: `class="ttp-breadcrumb"` present on all five sampled product
+URLs and on `/product-category/mailing-tubes/`, with trails such as
+`Home > Shop > Custom Specialty Tubes > Luxury Tube Packaging`.

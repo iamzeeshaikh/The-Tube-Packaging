@@ -815,3 +815,74 @@ Crawlable add-to-cart links in the build: **278 → 0**.
 | Eco-line 800 MOQ, free shipping, turnaround, sample policy | Owner-supplied facts; nothing invented |
 | `/pricing-and-ordering/` | Blocked on those same facts |
 | Lotion URL consolidation | Touches canonicals, which Section 0 protects |
+
+---
+
+# MOQ settled, and FAQPage schema
+
+## The site now states one minimum, everywhere `[measured]`
+
+The home page's eco-line hero card said **800 pcs**; on the owner's decision it
+now says 500. Re-audited across all 68 pages with `scripts/moq-audit.py`:
+
+| Figure | Occurrences |
+|---|---|
+| **500** | **55** |
+| 800 | **0** |
+| "no minimum" / "no MOQ" of any form | **0** |
+
+Three contradictions were corrected before this, found by auditing every page
+rather than the ones earlier stages had touched: a specification table cell on
+`/product/custom-shipping-tubes/` reading "Custom shipping tubes no minimum",
+and two bullets in `/the-ultimate-guide-to-tube-packaging.../` pasted from
+another supplier's site — one claiming no minimum order, one claiming this
+business produces copper, aluminum, brass, bronze and steel tubes.
+
+## FAQ sections taken to 10 questions each
+
+| Page | Before | After |
+|---|---|---|
+| 5 category pages | 4–5 | **10 each** |
+| `/shop/` | 4 | **10** |
+| `/tube-size-guide/` | 6 | **10** |
+| `/product/tube-food-packaging/` | 5 | **10** |
+
+80 questions in the sections this programme built. Every new one answers demand
+the export shows — the printed cluster ("printed cardboard tubes" 1,988
+impressions at position 38 with 1 click, "custom printed tubes" 677 with none)
+and the eco cluster ("sustainable tube packaging" 637 with none, "recycled
+cardboard tube packaging" 696 at position 43 with none) were the two largest
+gaps and are now answered on four pages between them.
+
+Checked on the build: no duplicate question within a page; **zero** lead-time,
+price, free-shipping or sample-policy claims introduced, because none of those
+are confirmed.
+
+## FAQPage schema `[measured]`
+
+| | |
+|---|---|
+| Pages displaying FAQs | **43** |
+| …emitting exactly one `FAQPage` | **43** |
+| Pages displaying no FAQs | 25 |
+| …emitting a `FAQPage` | **0** |
+| `Question` / `Answer` nodes | **642** each |
+
+Extracted from the rendered HTML, not from a data file, because the site
+displays FAQs in three unrelated shapes: `.ttp-cat__faq` (the new sections),
+`.tp-faq__item` (the home page's Elementor block) and `#tab-faqs_tab` (the 35
+product pages). Extracting from the output is what makes it impossible for the
+markup to claim a question the page does not show.
+
+`scripts/validate-faq-schema.mjs` checks the absence side as well as the
+presence side, and asserts every schema question is actually rendered.
+
+> **Stated plainly, because it was advised against and then requested:** Google
+> restricted FAQ rich results to government and health sites in 2023. This will
+> not produce an expanded snippet on a packaging site. It is valid,
+> machine-readable Q&A — which is what AI assistants and other structured-data
+> consumers read — and it costs bytes and nothing else. It was the owner's call
+> and it is a defensible one; it just should not be expected to move CTR.
+
+Existing schema untouched: 72 each of `Product`, `Offer`, `AggregateRating` and
+`Review`, 72 offers at `"price":"0.3"`, 204 visible `$0.30` elements.

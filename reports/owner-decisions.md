@@ -5,18 +5,25 @@ guessed at or worked around.
 
 ---
 
-## 1. Eco-Friendly Tubes — is 800 pieces still right?
+## 1. Eco-Friendly Tubes MOQ — RESOLVED 2026-08-27
 
-The home page hero has two cards. The confirmed policy is a 500-piece standard
-minimum, and card 1 already says 500. Card 2 says **800 pcs minimum order
-quantity** for the eco-friendly line.
+The home page's second hero card read "Eco-Friendly Tubes — 800 pcs minimum
+order quantity". The owner's decision was to make it 500, so the whole site
+states one number.
 
-Both cards were left exactly as they are, as instructed. But the site now says
-"500-piece standard minimum" in seven other places, so an 800 on one card reads
-as either a genuine line-specific minimum or a leftover.
+Done, and re-audited across all 68 pages afterwards: **exactly one MOQ figure
+now exists on the site — 500 — in 55 places.** Nothing says 800, and nothing
+claims "no minimum" any more.
 
-**Needed:** confirm 800 is the real minimum for the eco line, or the number to
-replace it with.
+The confirmed policy in full, which is what every one of those 55 places says:
+a **500-piece standard minimum**, with **smaller runs from around 100 pieces**
+at a higher per-piece cost, because setup and printing are fixed regardless of
+quantity.
+
+`scripts/moq-audit.py` re-runs the check: it extracts every sentence mentioning
+a minimum or an order quantity from the built HTML and groups them by what they
+claim, so a future edit that contradicts the policy shows up rather than hiding
+on a page nobody thought to check.
 
 ---
 

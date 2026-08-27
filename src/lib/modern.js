@@ -1100,6 +1100,42 @@ select.elementor-field-textual,.tp-quote__select{
 
 img{max-width:100%}
 
+/* Elementor lays its form rows out with a negative horizontal gutter on the
+   wrapper and matching padding on each field group, and it writes the value in
+   as a hard-coded pixel number per widget:
+
+     .elementor-431 .elementor-element.elementor-element-7eeee1ea
+       .elementor-form-fields-wrapper{margin-left:calc( -51px/2 ); ... }
+
+   Full-bleed on a phone that makes the wrapper 389px wide inside a 375px
+   viewport, so five pages carrying a contact form scrolled sideways by 7 to
+   14px. The fields are single-column at this width, so the gutter has nothing
+   left to space out.
+
+   The generated selector carries four classes, so an important flag rather
+   than a specificity contest is the honest way to win it: Elementor's own
+   rule is not flagged important, and zeroing the gap variable does nothing
+   here because the value is not a variable. */
+@media (max-width:600px){
+  .elementor-form-fields-wrapper{
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+  .elementor-form-fields-wrapper > .elementor-field-group{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+  /* A native file input sizes itself from its button and filename text, not
+     from its container, so the upload field on /contact-us/ rendered 370px wide
+     inside a 338px column. It is the last element on the site that scrolled a
+     page sideways on a phone. */
+  input[type="file"].elementor-field{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:.01ms !important;

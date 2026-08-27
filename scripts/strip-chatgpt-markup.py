@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Remove the ChatGPT interface markup that was pasted into the page content.
+"""Remove the pasted AI-chat interface markup from the page content.
+
+Two different assistants' UI markup was pasted into this site over time. Both are
+handled here, because the defect and the fix are the same.
 
 reports/owner-decisions.md item 9 recorded this as seven FAQ panels carrying
 wrapper divs. A full census across all 66 page records found it is wider than
@@ -52,9 +55,15 @@ ATTRS = re.compile(
 # `min-w-(--thread-content-width)`, for instance. The token is removed; the
 # element is not.
 CLASS_TOKEN = re.compile(
-    r'(?:^|(?<=\s))(?:[^\s"]*(?:--thread-content-|--composer-overlap-px|thread-xl:'
-    r'|thread-lg:|thread-sm:|text-token-text-primary|has-data-writing-block'
-    r'|scrollbar-gutter:stable)[^\s"]*)')
+    r'(?:^|(?<=\s))(?:[^\s"]*(?:'
+    # ChatGPT
+    r'--thread-content-|--composer-overlap-px|thread-xl:|thread-lg:|thread-sm:'
+    r'|text-token-text-primary|has-data-writing-block|scrollbar-gutter:stable'
+    # Claude — pasted into the cosmetic blog guide
+    r'|text-text-\d|border-border-\d|border-t-border-\d|bg-bg-\d|font-claude'
+    r'|font-styrene|font-tiempos|text-oncolor-|shadow-element'
+    r'|hsla\(var\(--border-|:not\(:first-child\)'
+    r')[^\s"]*)')
 
 
 def clean_classes(doc):
@@ -103,7 +112,8 @@ changed = unwrapped = attrs_removed = 0
 
 for key, page in pages.items():
     before = page['content']
-    if not WRAPPER.search(before) and not ATTRS.search(before):
+    if not (WRAPPER.search(before) or ATTRS.search(before)
+            or CLASS_TOKEN.search(before)):
         continue
 
     after, n = before, 0

@@ -7,6 +7,35 @@
  * same site rather than bolted on. No captured class name is restyled.
  */
 const css = `
+/* min-width:0 and max-width:100% here are load-bearing, not defensive tidiness.
+   On /tube-size-guide/ these sections sit inside the theme's .entry-content,
+   which is a flex item, and a flex item defaults to min-width:auto — so the
+   widest table's min-width:560px pushed the section itself to 746px inside a
+   375px viewport and scrolled the whole page sideways by 386px. The category
+   pages were unaffected because they render inside <main> rather than a flex
+   item, which is exactly why this had to be measured on every page, not one.
+   (No backticks in this comment: the stylesheet lives in a JS template
+   literal.) */
+.ttp-cat,.ttp-cat__wrap,.ttp-cat__tableWrap{min-width:0;max-width:100%}
+
+/* The custom-tabs plugin ships:
+     .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft)
+       :not(.alignright):not(.is-style-wide){
+         max-width:fit-content !important; width:fit-content !important }
+   Its five :not() classes give it a specificity of (0,6,0) and it is flagged
+   important on both properties, so on /tube-size-guide/ every section sized to
+   its widest table instead of its container — 746px inside a 375px viewport,
+   scrolling the page sideways by 386px.
+   The plugin's own escape hatch is one of those five classes, but .alignwide
+   also carries rules like ".alignwide > a{width:100%}", which would turn every
+   inline link in the copy into a full-width block. So the specificity is beaten
+   instead: repeating the class six times gives (0,7,0), scoped to this page's
+   own sections and nothing else. */
+.entry-content > .ttp-cat.ttp-cat.ttp-cat.ttp-cat.ttp-cat.ttp-cat{
+  width:auto !important;
+  max-width:100% !important;
+}
+
 .ttp-cat{
   margin:0 0 22px;padding:clamp(22px,2.6vw,32px);
   border:1px solid var(--tpm-line);border-radius:var(--tpm-r-lg);
@@ -19,7 +48,7 @@ const css = `
 }
 .ttp-cat--fit,.ttp-cat--faq{background:var(--tpm-bg)}
 .ttp-cat--spec{margin-top:30px}
-.ttp-cat__wrap{max-width:1180px;margin:0 auto}
+.ttp-cat__wrap{width:100%;max-width:1180px;margin:0 auto}
 
 .ttp-cat__eyebrow{
   display:inline-block;margin:0 0 12px;padding:7px 14px;border-radius:999px;

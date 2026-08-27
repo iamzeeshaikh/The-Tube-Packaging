@@ -248,3 +248,127 @@ clicks, impressions, CTR, position. That is enough to judge the work, because
 CTR is exactly what those pages fail at today (0.03%). What cannot be recovered
 later is on-site behaviour and lead volume for the weeks between now and
 whenever the tag goes in.
+
+---
+
+## 12. Compliance claims written — check these against supplier documentation
+
+Batch B and C put food-safety and compliance language on the site for the first
+time. Every such statement is listed here with its page and its exact wording,
+so it can be checked in one place rather than hunted across pages.
+
+Enumerated by `scripts/compliance-claims.py`, which scans **every sentence in
+every editorial section of the built HTML** for compliance markers and reports
+what it finds — 31 statements across 7 pages. It works by enumerating the
+denominator and filtering, not by looking where a claim was expected, so a claim
+cannot be missed by being somewhere unexpected.
+
+**Nothing here asserts that the business holds a certification.** Everything is
+written as capability — what can be specified, and what documentation comes with
+the order — because the business sources from manufacturers rather than
+operating fixed tooling. If any of it is wrong, it is one string edit per item.
+
+### The claims that need supplier backing
+
+| # | Claim | Pages | Exact wording |
+|---|---|---|---|
+| 1 | **FDA 21 CFR 176.170 / 176.180** | `/product-category/specialty-tubes/`<br>`/product/tube-food-packaging/` | "Food-contact liners can be specified using materials compliant with FDA 21 CFR 176.170 and 176.180, which cover paper and paperboard components in contact with aqueous and fatty foods" |
+| 2 | **Declaration of compliance supplied** | both, above | "…and the manufacturer's declaration of compliance is supplied with the order." / "The manufacturer's declaration of compliance is supplied with the order and is the document that actually covers you." |
+| 3 | **EU Regulation (EC) No 1935/2004** | both | "For product sold into the EU and UK, liners can be specified against Regulation (EC) No 1935/2004" |
+| 4 | **EU Regulation (EU) No 10/2011** | both | "…and against Regulation (EU) No 10/2011 where a plastic layer is in direct contact" |
+| 5 | **Migration testing provided** | both | "…with migration test results provided by the manufacturer." |
+| 6 | **BRCGS Packaging Materials** | both | "BRCGS Packaging Materials certified production can be requested where your retail customer requires it." |
+| 7 | **Compostable / PLA route** | `/product-category/specialty-tubes/` (liner table)<br>`/product/tube-food-packaging/` (FAQ) | "PLA-coated paper — Moisture barrier from a bio-based coating — Brands needing a compostable-claim route; confirm certification per build" / "PLA-coated liners offer a compostable route, and the certification should be confirmed per build." |
+| 8 | **Documents to request** | `/product/tube-food-packaging/` | "ask for three things before you sign off a food build: the declaration of compliance naming your specific construction, the migration test report behind it, and the certification scope if a retailer has asked for one." |
+| 9 | **Tamper-evident band as a market requirement** | `/product-category/specialty-tubes/`<br>`/product/tube-food-packaging/` | "Tamper-evident shrink band — Band over the closure joint — Retail requirement in many markets" / "…it is a retail requirement in many markets." |
+
+### The disclaimers, which are the counterweight
+
+These are deliberate and should stay unless you have documentation that says
+otherwise. They are what keeps items 1–9 defensible.
+
+| Page | Wording |
+|---|---|
+| `/product-category/specialty-tubes/` | "An unlined kraft tube is not a food-contact surface." |
+| `/product-category/specialty-tubes/` | "Food-contact suitability always attaches to a specific build, so confirm it against the declaration of compliance issued for your order rather than against the category." |
+| `/product/tube-food-packaging/` | "An unlined kraft or printed tube is not a food-contact surface, whatever it is sold as." |
+| `/product/tube-food-packaging/` | "The tube wall itself is not a food-contact surface, and neither is a printed wrap." |
+| `/product-category/specialty-tubes/` | "Shelf life is a function of the liner, the seal and the storage conditions together, and it should be confirmed by testing on your own product rather than assumed from the pack specification." |
+| `/product/tube-food-packaging/` | "A wound paper wall cannot be relied on as a liquid-tight container" (and the six other "not suitable" rows) |
+
+### What was deliberately **not** written
+
+- No named certificate number, audit grade, or certifying body for this business.
+- No ISO or BfR reference, because nothing confirmed one.
+- No shelf-life figure in days or months for any product.
+- No lead time, and no price figure, anywhere in Batch B or C.
+
+**Needed:** confirm items 1–9 against your manufacturers' documentation, or tell
+me which to soften or remove.
+
+---
+
+## 13. Category page H1s were left alone — here is why, and what I would change
+
+The brief asked for the H1 to be "the category name as buyers search it". Three
+of the five already are `[export]`:
+
+| H1 today | Exact-match query | Impressions |
+|---|---|---|
+| Custom Cardboard Tubes | "custom cardboard tubes" | 2,259 |
+| Custom Paper Tubes | "custom paper tubes" | 2,810 |
+| Custom Plastic Tubes | "custom plastic tubes" | 268 |
+| Custom Mailing Tubes | "custom mailing tubes" | **809** — against "mailing tubes" **4,200** and "shipping tubes" **2,515** |
+| Custom Specialty Tubes | *not a query anywhere in the 1,000-row export* | 0 |
+
+So two are genuinely mismatched. I did **not** change them, for a reason worth
+stating: the category H1 is not just a heading on that page. The same string is
+the visible breadcrumb on all 35 product pages, the tile category label in every
+product grid, the header navigation label, and — since A5 — the name in the
+BreadcrumbList structured data. Changing the H1 alone would make the category
+page disagree with 35 product pages about what the category is called.
+
+**Recommendation, as one consistent rename rather than five inconsistent ones:**
+"Custom Mailing Tubes" → "Mailing & Shipping Tubes", applied to the H1, the 35
+product breadcrumbs, the tile labels and the nav at the same time. The URL does
+not change. That is a contained job and I can do it on request. "Custom
+Specialty Tubes" should wait on the consolidation decision in item 4.
+
+---
+
+## 14. The six page titles still say "Archives" — flagged, not fixed
+
+Every category title reads `Custom Cardboard Tubes Archives - The Tube
+Packaging`. "Archives" is a Yoast default that means nothing to a buyer, and it
+is sitting in front of 44,770 impressions.
+
+I did not fix it in Batch B on purpose. B0 put meta descriptions on these six
+URLs alone so the CTR effect of the description could be measured on its own;
+changing the titles in the same window would confound that measurement and the
+content measurement together, and titles were not in Batch B's scope.
+
+**Recommendation:** ship it as its own commit once the description effect has
+been read — it is a six-line change and the clearest remaining CTR win on the
+site after the content itself.
+
+---
+
+## 15. B0's measurement isolation is now partly spent
+
+Worth knowing rather than discovering later. The meta descriptions (commit
+`8ead883`) were written on 2026-08-04 but the branch was never deployed, so they
+reached production for the first time on **2026-08-27**, in the same deploy as
+Batch A. Batch B and C follow within the same day.
+
+That means the clean "descriptions only" window the brief designed is a matter of
+hours, not weeks. There are two ways to read the result now:
+
+1. **Hold Batch B and C on the branch** for two to four weeks, so the
+   description effect on those six URLs can be read alone. Costs the content
+   effect for that period.
+2. **Ship everything now** and read the combined effect. Faster, but the CTR
+   change cannot be split between the description and the content.
+
+I did not decide this. Given the category pages convert 0.03% today and both
+changes push the same direction, option 2 is defensible — but it is a
+measurement call, not a technical one.

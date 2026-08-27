@@ -16,6 +16,7 @@ import mailing, { route as mailingRoute } from './copy/mailing-tubes.js';
 import paper, { route as paperRoute } from './copy/paper-tubes.js';
 import specialty, { route as specialtyRoute } from './copy/specialty-tubes.js';
 import plastic, { route as plasticRoute } from './copy/plastic-tubes.js';
+import shop, { route as shopRoute } from './copy/shop.js';
 
 export { SIZE_CLASSES, WALL_CLASSES } from './copy/_shared.js';
 
@@ -25,4 +26,10 @@ export const COPY = {
   [paperRoute]: paper,
   [specialtyRoute]: specialty,
   [plasticRoute]: plastic,
+  [shopRoute]: shop,
 };
+
+// /shop/ lists products drawn from all five categories, so it reuses the
+// differentiator the product's own category already carries. One description
+// per product across the whole site, written once.
+shop.tiles = Object.assign({}, cardboard.tiles, mailing.tiles, paper.tiles, specialty.tiles, plastic.tiles);

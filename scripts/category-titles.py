@@ -73,7 +73,11 @@ for route, new in TITLES.items():
     esc = new.replace('&', '&amp;')
 
     t = re.search(r'<title>(.*?)</title>', head, re.S)
-    og = re.search(r'<meta property="og:title" content="([^"]*)"', head)
+    # match the WHOLE element, including its trailing " />". An earlier version
+    # matched only up to the closing quote and replaced it with a full element,
+    # which left the original " />" behind as a stray text node — it rendered as
+    # a visible "/>" at the top of all eight pages.
+    og = re.search(r'<meta property="og:title" content="[^"]*"\s*/>', head)
     if not t or not og:
         sys.exit(f'{route}: title or og:title not found — aborting')
     if head.count('<title>') != 1 or head.count('<meta property="og:title"') != 1:
@@ -82,6 +86,8 @@ for route, new in TITLES.items():
     head = head.replace(t.group(0), f'<title>{esc}</title>')
     head = head.replace(og.group(0),
                         f'<meta property="og:title" content="{esc}" />')
+    if '/> />' in head:
+        sys.exit(f'{route}: replacement left a stray fragment — aborting')
     pages[key]['head'] = head
     print(f'{route}\n    was: {t.group(1)}\n    now: {new}  ({len(new)} chars)')
     changed += 1

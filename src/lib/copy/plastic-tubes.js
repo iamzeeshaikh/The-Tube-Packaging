@@ -129,6 +129,31 @@ export default {
     ...POLICY_FAQS,
   ],
   faqCta: `Working across both materials? ${a(P + '/shop/', 'The full product range')} lists every tube on the site in one place.`,
+  gallery: {
+    eyebrow: "In use",
+    h2: "What gets filled into these",
+    lead: "Three formats, chosen by what the formulation does rather than by how the tube looks.",
+    items: [
+      { slug: "lotion-tubes", title: "Creams and body lotion", text: "A squeeze wall soft enough to recover its shape, with a flip top or disc cap for one handed use. The most ordered size range here." },
+      { slug: "empty-lipgloss-tubes", title: "Lip gloss and liquid lip", text: "Slim tubes with a doe foot wand in the cap. Clear or frosted where the shade of the product is the selling point." },
+      { slug: "skincare-tubes", title: "Serums and treatment products", text: "Narrower orifices and smaller fills, with a barrier laminate only where the formulation is genuinely oxygen sensitive." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Send the formulation and the fill volume",
+    refererTitle: "Custom Plastic Tubes | Lotion & Cosmetic Squeeze Tubes",
+    product: "Plastic squeeze tubes",
+    paras: [
+      "Plastic tubes are ordered by outside diameter and fill volume, which is the opposite convention from every paper tube on this site. The diameter and cap combination also has to come from an existing tooling set, so it is worth confirming before you plan a run.",
+    ],
+    points: [
+      "What the formulation is \u2014 cream, gel, serum, balm",
+      "Fill volume, and the outside diameter if you know it",
+      "Cap type \u2014 screw, flip top, disc, nozzle, wand",
+      "Quantity, and printed, sleeved or plain",
+    ],
+  },
   tiles: {
     '66': 'The general-purpose squeeze tube — the starting point when the formulation is set but the size is not.',
     '194': 'Standard lotion sizes with flip-top and disc caps, for creams and body products.',

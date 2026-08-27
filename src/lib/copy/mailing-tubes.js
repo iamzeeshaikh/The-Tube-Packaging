@@ -124,6 +124,31 @@ export default {
     ...POLICY_FAQS,
   ],
   faqCta: `Sending something unusual? ${a(P + '/product/cylinder-mailing-tubes/', 'The cylinder mailing tubes page')} covers longer spans and non-standard lengths.`,
+  gallery: {
+    eyebrow: "In use",
+    h2: "What ships in these tubes",
+    lead: "Three builds, each specified around a different kind of handling rather than a different look.",
+    items: [
+      { slug: "poster-mailing-tubes", title: "Posters, prints and artwork", text: "The 2 to 4 inch range most print shipping falls into, with plastic push caps that hold under compression and still reopen cleanly at the other end." },
+      { slug: "kraft-mailing-tubes", title: "Plain, unbranded despatch", text: "Uncoated natural kraft. The lowest cost configuration at any quantity, and it does not show handling marks the way a white gloss laminate does." },
+      { slug: "cylinder-mailing-tubes", title: "Drawings, plans and banners", text: "Longer lengths to 48 inches for architectural drawings, wide format prints and rolled signage." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Send your dimensions for a bulk quote",
+    refererTitle: "Custom Mailing & Shipping Tubes | Poster Tubes in Bulk",
+    product: "Mailing and shipping tubes",
+    paras: [
+      "Wholesale and bulk mailing tube buyers are the largest group arriving on this site, so to be direct: the standard minimum is 500 pieces, per piece cost drops sharply with quantity, and plain kraft is the cheapest configuration at every quantity.",
+    ],
+    points: [
+      "Internal diameter and length",
+      "Wall thickness, or how it will be handled",
+      "Closure \u2014 push cap, deep skirt, metal ends",
+      "Quantity, and printed or plain",
+    ],
+  },
   tiles: {
     '60': 'Sized for rolled posters and prints, 2″ to 4″, with caps that reopen without tearing the artwork.',
     '81': 'Uncoated natural kraft — the plain, unbranded, lowest-cost mailing build.',

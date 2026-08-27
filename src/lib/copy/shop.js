@@ -96,5 +96,31 @@ export default {
   faqCta: `Not sure which category to start in? ${a(P + '/tube-size-guide/', 'The tube size guide')} routes from the product to the tube.`,
   // /shop/ lists products from every category, so its tile notes are the same
   // lines the product's own category uses. Written once, not restated.
+  gallery: {
+    eyebrow: "In use",
+    h2: "A tube for each kind of job",
+    lead: "One example from each category, so the difference between them is visible rather than described.",
+    items: [
+      { slug: "large-cardboard-tubes", title: "Protection \u2014 cardboard", text: "Thick wall, large diameter, specified to survive being stacked, dropped and sorted." },
+      { slug: "poster-mailing-tubes", title: "Transit \u2014 mailing", text: "Sized for rolled prints, with end caps chosen for retention rather than looks." },
+      { slug: "cosmetic-tubes", title: "Presentation \u2014 paper", text: "A thin wall finished as a printing surface, where the pack is part of how the product sells." },
+      { slug: "tube-food-packaging", title: "Interior \u2014 specialty", text: "Lined and sealed for food contact, with the liner chosen from the food rather than the tube." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Not sure which one? Send what you know",
+    refererTitle: "Shop Custom Tube Packaging | Paper, Cardboard & Plastic",
+    product: "Custom tube packaging",
+    paras: [
+      "Every product on this page is quoted to your specification. If you have the dimensions, send them. If you only have the product, send that instead \u2014 the diameter follows from it.",
+    ],
+    points: [
+      "What is going inside",
+      "Internal diameter and length, if known",
+      "Quantity \u2014 the standard minimum is 500 pieces",
+      "Printed or plain, and any finish you want",
+    ],
+  },
   tiles: {},
 };

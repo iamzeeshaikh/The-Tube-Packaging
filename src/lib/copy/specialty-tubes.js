@@ -176,6 +176,31 @@ export default {
     ...POLICY_FAQS,
   ],
   faqCta: `Packing a cream or a gel rather than a solid? ${a(P + '/product-category/custom-plastic-tubes/', 'The plastic tubes category')} covers squeeze formats.`,
+  gallery: {
+    eyebrow: "In use",
+    h2: "Where the interior matters as much as the outside",
+    lead: "Three builds where the specification carries on past the wall \u2014 into a liner, a food contact interior or a finish system.",
+    items: [
+      { slug: "tube-food-packaging", title: "Food, coffee and tea", text: "The liner is chosen from what the food is sensitive to: greaseproof, PE, metallized film or aluminum foil. Coffee also needs a one way degassing valve." },
+      { slug: "luxury-tube-packaging", title: "Gift and presentation", text: "A convolute wound body with no visible seam, then a finish system on top \u2014 hot foil, emboss, spot UV or soft touch." },
+      { slug: "paper-lipstick-tubes", title: "Cosmetic push up formats", text: "Small diameters with the tolerance a lipstick mechanism needs, in a paper body rather than moulded plastic." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Tell us what goes inside first",
+    refererTitle: "Specialty Tubes | Luxury, Cosmetic & Food Tube Packaging",
+    product: "Specialty tubes",
+    paras: [
+      "In this category the interior is specified before the artwork. What is going in decides the liner, the liner decides the seal, and the seal decides the shelf life \u2014 so that is the first thing to tell us.",
+    ],
+    points: [
+      "What is going inside, and how long it has to stay good",
+      "The market it sells into, if compliance documents are needed",
+      "Internal diameter and height, or the fill weight",
+      "Finish \u2014 foil, emboss, soft touch, spot UV",
+    ],
+  },
   tiles: {
     '179': 'Convolute-wound rigid body with a finish system — foil, emboss, soft-touch or spot UV.',
     '169': 'Small-diameter push-up format with the tolerances a lipstick mechanism needs.',

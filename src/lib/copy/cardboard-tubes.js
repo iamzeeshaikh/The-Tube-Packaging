@@ -132,6 +132,32 @@ export default {
     ...POLICY_FAQS,
   ],
   faqCta: `Have the dimensions but not the specification? ${a(P + '/contact-us/', 'Send the sizes through the contact form')} and we will come back with a build.`,
+  gallery: {
+    eyebrow: "In use",
+    h2: "What brands pack in cardboard tubes",
+    lead: "Four of the builds ordered most often from this range, and what each one is specified around.",
+    items: [
+      { slug: "poster-mailing-tubes", title: "Rolled posters and prints", text: "A 2 to 4 inch tube with end caps that reopen without tearing the artwork. The length matters as much as the diameter: leave an inch clear at each end and the print never touches a cap." },
+      { slug: "large-cardboard-tubes", title: "Apparel, banners and textiles", text: "Large diameters from 3 up to 12 inches on a thick wall, because a wide tube with a light wall folds where a narrow one would not." },
+      { slug: "candle-tube-packaging", title: "Candles and glassware", text: "Rigid wall with a telescoping lid or crimped metal ends. Candles are heavier than they look, so the wall is chosen to stop the pack flexing when it is picked up." },
+      { slug: "industrial-cardboard-tubes", title: "Cores that carry load", text: "Convolute wound rather than spiral, so there is no seam and the wall takes a higher radial crush load. Specified for film, foil, tape and yarn." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Tell us the size and we will quote it",
+    refererTitle: "Custom Cardboard Tube Packaging | Wholesale Tubes",
+    product: "Custom cardboard tubes",
+    paras: [
+      "Every tube in this category is made to your specification rather than picked from a catalogue, so a quote needs four numbers and one sentence. Send what you have and we will fill in the rest.",
+    ],
+    points: [
+      "Internal diameter \u2014 the dimension your product passes through",
+      "Length, plus an inch or two of clearance",
+      "Wall thickness, or just the size class if you are unsure",
+      "Quantity, and what is going inside",
+    ],
+  },
   tiles: {
     '52': 'The general-purpose rigid tube — the starting point when you know the diameter but not the build.',
     '174': 'Large diameters from 3″ up to 12″, on a thick wall that will take courier handling.',

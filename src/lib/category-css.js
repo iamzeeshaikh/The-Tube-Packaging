@@ -125,6 +125,58 @@ const css = `
 .ttp-cat__faqBody{padding:0 18px 18px}
 .ttp-cat__faqBody p:last-child{margin-bottom:0}
 
+/* ── gallery: what brands pack in these ─────────────────────────────── */
+.ttp-cat__gallery{
+  display:grid;gap:18px;margin:0 0 4px;
+  grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));
+}
+.ttp-cat__card{
+  display:flex;flex-direction:column;min-width:0;
+  border:1px solid var(--tpm-line);border-radius:var(--tpm-r);
+  background:var(--tpm-surface);overflow:hidden;
+  transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.ttp-cat__card:hover{
+  border-color:var(--tpm-blue-100);box-shadow:var(--tpm-shadow);transform:translateY(-2px);
+}
+.ttp-cat__cardMedia{
+  display:block;aspect-ratio:1/1;background:var(--tpm-bg);
+  border-bottom:1px solid var(--tpm-line-soft);
+}
+.ttp-cat__cardMedia img{width:100%;height:100%;object-fit:cover;display:block}
+.ttp-cat__cardBody{padding:16px 18px 18px}
+.ttp-cat__cardTitle{
+  margin:0 0 7px;font-size:16.5px;line-height:1.3;font-weight:650;letter-spacing:-.008em;
+}
+.ttp-cat__cardTitle a{color:var(--tpm-ink);text-decoration:none}
+.ttp-cat__cardTitle a:hover{color:var(--tpm-blue-strong);text-decoration:underline}
+.ttp-cat__card p{margin:0;font-size:14.5px;line-height:1.6;color:var(--tpm-muted)}
+
+/* ── quote form ─────────────────────────────────────────────────────── */
+.ttp-cat--quote{
+  background:
+    radial-gradient(720px 320px at 92% 0%, rgba(33,108,218,.08), transparent 62%),
+    var(--tpm-surface);
+}
+.ttp-cat__quoteGrid{display:grid;gap:clamp(20px,3vw,38px);align-items:start}
+@media (min-width:900px){.ttp-cat__quoteGrid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}}
+.ttp-cat__quoteAside p{font-size:15.5px}
+.ttp-cat__quoteList{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.ttp-cat__quoteList li{
+  position:relative;padding-left:26px;font-size:15px;line-height:1.55;color:var(--tpm-ink-soft);
+}
+.ttp-cat__quoteList li:before{
+  content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;
+  background:var(--tpm-blue-50);border:1px solid var(--tpm-blue-100);
+  box-shadow:inset 0 0 0 3px var(--tpm-blue);
+}
+.ttp-cat__quoteForm{
+  padding:clamp(18px,2.4vw,26px);border:1px solid var(--tpm-line);
+  border-radius:var(--tpm-r);background:var(--tpm-surface);box-shadow:var(--tpm-shadow);
+  min-width:0;
+}
+.ttp-cat__quoteForm .elementor-form{margin:0}
+
 /* one-line differentiator on each product tile */
 .ttp-cat__tileNote{
   display:block;margin:6px 0 10px;font-size:13.5px;line-height:1.5;

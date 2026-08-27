@@ -14,6 +14,8 @@
  */
 import { COPY } from './category-copy.js';
 import { esc, table, paras, block, section, cta } from './sections.js';
+import { quoteForm } from './category-form.js';
+import catalogue from '../data/catalogue.json';
 
 function above(copy) {
   const intro = section('intro', copy.intro.eyebrow, copy.intro.h2,
@@ -23,6 +25,62 @@ function above(copy) {
     (copy.fit.note ? `<span class="ttp-cat__note">${esc(copy.fit.note)}</span>` : '') +
     (copy.fit.cta ? cta(copy.fit.cta) : ''));
   return intro + fit;
+}
+
+// The gallery image is resolved from the page's own product grid where the
+// product appears on it, and from the catalogue where it does not.
+//
+// The first version used only the grid, and /shop/ silently rendered two cards
+// instead of four — page one of /shop/ lists 16 of the 35 products, and two of
+// the four chosen were on page two. `.filter(Boolean)` swallowed it. Falling
+// back to the catalogue fixes that, and an unresolvable slug now throws rather
+// than disappearing: a card that vanishes without a word is worse than a build
+// that stops.
+const PRODUCTS = catalogue.products || catalogue;
+
+function galleryImage(html, slug) {
+  const tile = new RegExp(
+    '<a href="https://thetubepackaging\\.com/product/' + slug
+    + '/" class="woocommerce-LoopProduct-link[^>]*>\\s*<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"', 'i');
+  const m = tile.exec(html);
+  if (m) {
+    const src = m[1].replace(/-300x300(\.[a-z]+)$/i, '-600x600$1');
+    return { src, srcset: `${src} 600w, ${m[1]} 300w`, alt: m[2] };
+  }
+  const product = Object.values(PRODUCTS).find((p) => p.slug === slug);
+  if (!product) throw new Error(`gallery: no product "${slug}" in the grid or the catalogue`);
+  const base = product.image.replace(/-100x100(\.[a-z]+)$/i, '');
+  const ext = (product.image.match(/(\.[a-z]+)$/i) || ['.jpg'])[1];
+  const six = `https://thetubepackaging.com${base}-600x600${ext}`;
+  return { src: six, srcset: `${six} 600w, https://thetubepackaging.com${base}-300x300${ext} 300w`,
+           alt: product.name };
+}
+
+function gallery(copy, html) {
+  if (!copy.gallery) return '';
+  const cards = copy.gallery.items.map((it) => {
+    const img = galleryImage(html, it.slug);
+    const url = `https://thetubepackaging.com/product/${it.slug}/`;
+    return `
+<article class="ttp-cat__card">
+<a class="ttp-cat__cardMedia" href="${url}" aria-hidden="true" tabindex="-1"><img src="${img.src}" srcset="${img.srcset}" sizes="(max-width:640px) 90vw, 300px" width="600" height="600" loading="lazy" decoding="async" alt="${esc(img.alt)}"></a>
+<div class="ttp-cat__cardBody">
+<h3 class="ttp-cat__cardTitle"><a href="${url}">${esc(it.title)}</a></h3>
+<p>${esc(it.text)}</p>
+</div>
+</article>`;
+  }).join('\n');
+  return section('gallery', copy.gallery.eyebrow, copy.gallery.h2,
+    paras([copy.gallery.lead]) + `<div class="ttp-cat__gallery">${cards}</div>`
+    + (copy.gallery.note ? `<span class="ttp-cat__note">${esc(copy.gallery.note)}</span>` : ''));
+}
+
+function quote(copy) {
+  if (!copy.quote) return '';
+  const aside = `<div class="ttp-cat__quoteAside">${paras(copy.quote.paras)}`
+    + `<ul class="ttp-cat__quoteList">${copy.quote.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
+  return section('quote', copy.quote.eyebrow, copy.quote.h2,
+    `<div class="ttp-cat__quoteGrid">${aside}${quoteForm(copy.quote)}</div>`);
 }
 
 function below(copy) {
@@ -49,7 +107,7 @@ export function enhanceCategory(page) {
   if (html.indexOf(MAIN_OPEN) === -1 || html.lastIndexOf('</main>') === -1) return html;
   html = html.replace(MAIN_OPEN, MAIN_OPEN + above(copy));
   const close = html.lastIndexOf('</main>');
-  html = html.slice(0, close) + below(copy) + html.slice(close);
+  html = html.slice(0, close) + gallery(copy, html) + below(copy) + quote(copy) + html.slice(close);
 
   // One differentiator per tile, inserted immediately before the add-to-cart
   // link — which is *after* the anchor that wraps the title and the price. The

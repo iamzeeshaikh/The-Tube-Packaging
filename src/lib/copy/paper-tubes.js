@@ -149,6 +149,32 @@ export default {
     ...POLICY_FAQS,
   ],
   faqCta: `Packing food or tea? ${a(P + '/product-category/specialty-tubes/', 'The specialty tubes category')} covers barrier liners and food-contact construction.`,
+  gallery: {
+    eyebrow: "In use",
+    h2: "What brands sell in paper tubes",
+    lead: "Four retail formats from this range, and the detail that decides each one.",
+    items: [
+      { slug: "cosmetic-tubes", title: "Beauty and skincare lines", text: "Soft touch lamination, foil and full wrap print on a wall thin enough to stay elegant in the hand. This is where the finish does the selling." },
+      { slug: "kraft-paper-tubes", title: "Unbleached, recyclable retail", text: "Uncoated natural kraft with a paperboard cap. No film lamination, so the whole pack goes into curbside paper recycling as it is." },
+      { slug: "tea-paper-tubes", title: "Loose leaf tea and dry goods", text: "Lined for aroma and moisture, with a closure that reseals between uses. Tea has a low bulk density, so it needs more volume per gram than most people expect." },
+      { slug: "deodorant-paper-tubes", title: "Push up sticks", text: "A screw or ratchet base that raises the product, sized to a standard deodorant stick. The mechanism decides whether the pack stays all paper." },
+    ],
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    h2: "Send your product and we will specify the tube",
+    refererTitle: "Custom Paper Tubes | Kraft & Printed Paper Tube Packaging",
+    product: "Custom paper tubes",
+    paras: [
+      "Retail tubes are specified from the product outward: the diameter is whatever the contents need plus clearance, and the wall is whatever keeps the tube feeling solid rather than soft.",
+    ],
+    points: [
+      "What is going inside, and its widest dimension",
+      "Internal diameter and height, if you know them",
+      "Kraft or white board, and the finish you want",
+      "Quantity \u2014 ask for two or three, the difference is large",
+    ],
+  },
   tiles: {
     '226': 'The general-purpose paper tube — the starting point when you know the size but not the finish.',
     '101': 'Uncoated natural kraft, unlaminated, and recyclable as paper with a board cap.',

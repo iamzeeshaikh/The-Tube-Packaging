@@ -251,7 +251,12 @@ whenever the tag goes in.
 
 ---
 
-## 12. Compliance claims written — check these against supplier documentation
+## 12. Compliance claims written — APPROVED BY THE OWNER 2026-08-27
+
+> **Owner sign-off, 2026-08-27:** reviewed and approved as written. All nine
+> claims stay on the site in their current wording, and the six disclaimers stay
+> with them. Nothing further is needed unless a manufacturer's documentation
+> later contradicts one — this list is what to check it against.
 
 Batch B and C put food-safety and compliance language on the site for the first
 time. Every such statement is listed here with its page and its exact wording,
@@ -303,8 +308,9 @@ otherwise. They are what keeps items 1–9 defensible.
 - No shelf-life figure in days or months for any product.
 - No lead time, and no price figure, anywhere in Batch B or C.
 
-**Needed:** confirm items 1–9 against your manufacturers' documentation, or tell
-me which to soften or remove.
+**Status: closed.** Approved by the owner on 2026-08-27 without changes. Kept
+here as the reference list, so any future supplier document can be checked
+against it in one place rather than by re-reading seven pages.
 
 ---
 
@@ -336,20 +342,48 @@ Specialty Tubes" should wait on the consolidation decision in item 4.
 
 ---
 
-## 14. The six page titles still say "Archives" — flagged, not fixed
+## 14. The "Archives" titles — FIXED 2026-08-27
 
-Every category title reads `Custom Cardboard Tubes Archives - The Tube
-Packaging`. "Archives" is a Yoast default that means nothing to a buyer, and it
-is sitting in front of 44,770 impressions.
+**Why they said it.** Yoast's default title template for a taxonomy archive is
+`%%term_title%% Archives %%sep%% %%sitename%%`. It was never overridden in
+WordPress, so it rendered into the page HTML and the migration captured it
+verbatim. Nothing was broken; the default was simply never changed.
 
-I did not fix it in Batch B on purpose. B0 put meta descriptions on these six
-URLs alone so the CTR effect of the description could be measured on its own;
-changing the titles in the same window would confound that measurement and the
-content measurement together, and titles were not in Batch B's scope.
+A sweep of every page found **nine** archive-style titles, not six. Eight are
+rewritten:
 
-**Recommendation:** ship it as its own commit once the description effect has
-been read — it is a six-line change and the clearest remaining CTR win on the
-site after the content itself.
+| Page | Was | Now |
+|---|---|---|
+| `/product-category/custom-cardboard-tubes/` | Custom Cardboard Tubes Archives - The Tube Packaging | **Custom Cardboard Tube Packaging \| Wholesale Tubes** |
+| `/product-category/mailing-tubes/` | Custom Mailing Tubes Archives - The Tube Packaging | **Custom Mailing & Shipping Tubes \| Poster Tubes in Bulk** |
+| `/product-category/custom-paper-tubes/` | Custom Paper Tubes Archives - The Tube Packaging | **Custom Paper Tubes \| Kraft & Printed Paper Tube Packaging** |
+| `/product-category/specialty-tubes/` | Custom Specialty Tubes Archives - The Tube Packaging | **Specialty Tubes \| Luxury, Cosmetic & Food Tube Packaging** |
+| `/product-category/custom-plastic-tubes/` | Custom Plastic Tubes Archives - The Tube Packaging | **Custom Plastic Tubes \| Lotion & Cosmetic Squeeze Tubes** |
+| `/product-category/custom-paper-tubes/page/2/` | Custom Paper Tubes Archives - Page 2 of 2 - … | **Custom Paper Tubes \| Page 2 \| The Tube Packaging** |
+| `/shop/` | Shop - The Tube Packaging | **Shop Custom Tube Packaging \| Paper, Cardboard & Plastic** |
+| `/category/information/` | Information Archives - The Tube Packaging | **Tube Packaging Guides & Articles \| The Tube Packaging** |
+
+Each leads with the phrasing the export shows buyers using, verified against
+`data/gsc/queries.csv` before it was written `[export]`: "cardboard tube
+packaging" 12,348 at position 9.46; "mailing tubes" 4,200 and "shipping tubes"
+2,515; "paper tube packaging" 9,774; "tube food packaging" 3,612 and "luxury
+tube packaging" 1,510; "lotion tubes" 1,530; "tube packaging" 19,443. All eight
+are 48–57 characters.
+
+The brand suffix is dropped where it would have repeated "Tube Packaging" inside
+the title. Google renders a site name beside the title in its own right, so
+those words are better spent on what the page sells.
+
+**One left alone, and one thing to know:**
+
+- `/category/uncategorized/` still reads "Uncategorized Archives". It has zero
+  impressions and zero clicks and is a default WordPress term. It should be
+  **removed from the site and the sitemap**, not given a better title.
+- `/my-account/` and `/my-account/lost-password/` share a title. Both are
+  `noindex`, so a duplicate title has no search consequence there.
+
+Only `<title>` and `og:title` changed. Descriptions, H1s, canonicals, schema and
+price are untouched.
 
 ---
 
@@ -369,6 +403,11 @@ hours, not weeks. There are two ways to read the result now:
 2. **Ship everything now** and read the combined effect. Faster, but the CTR
    change cannot be split between the description and the content.
 
-I did not decide this. Given the category pages convert 0.03% today and both
-changes push the same direction, option 2 is defensible — but it is a
-measurement call, not a technical one.
+**Decided by the owner, 2026-08-27: option 2.** Batch B and C were deployed the
+same day. The title rewrite in item 14 followed, on the owner's instruction.
+
+So the CTR change on those six URLs cannot be attributed between the meta
+description, the body content and the title — all three landed within hours of
+each other. That is a deliberate trade and it is worth remembering when the
+Search Console numbers are read in four to eight weeks: the combined effect is
+readable, the split is not.

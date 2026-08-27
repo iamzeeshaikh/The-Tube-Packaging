@@ -1,5 +1,10 @@
 # Sitemap and archive audit — Stage 5
 
+> **Correction, 2026-08-27 (2).** The archive table's "Products" column is
+> wrong. It records 10, 5, 18, 5 and 8 for the five categories and 18 for
+> `/shop/`. Counted from the rendered grids and the WooCommerce result count,
+> the real figures are **8, 3, 17, 3, 6 and 35**.
+>
 > **Correction, 2026-08-27.** The archive table below originally recorded
 > `/thank-you/` as absent from the sitemap. It was listed in
 > `page-sitemap.xml`. The row is corrected and the page was removed from the

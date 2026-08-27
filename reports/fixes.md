@@ -514,3 +514,169 @@ every Merchant field are provably untouched, not merely believed to be.
 Live, after deploy: `class="ttp-breadcrumb"` present on all five sampled product
 URLs and on `/product-category/mailing-tubes/`, with trails such as
 `Home > Shop > Custom Specialty Tubes > Luxury Tube Packaging`.
+
+---
+
+# Batch B — the five category pages, and /shop/
+
+`[measured]` against the built HTML. `[export]` figures were re-checked against
+`data/gsc/queries.csv` programmatically with `scripts/query-slice.py` before any
+copy was written; none is from memory.
+
+## B0 — already done, and not redone
+
+Meta descriptions for all six URLs were written in commit `8ead883` and shipped
+alone, with no body content, no H1 change and no price change. They reached
+production for the first time in today's deploy. B0 was not repeated.
+
+The isolation B0 was designed to give is now a matter of hours rather than
+weeks, because the branch had never been deployed. That is recorded as a
+decision for the owner in `owner-decisions.md` item 15.
+
+## What changed, measured `[measured]`
+
+Editorial words counted inside `<main>`, excluding the product grid, the
+pagination and the sorting form. Stage 5's figure of 28–32 for these pages
+additionally counted the H1, the result count and the sorting dropdown labels.
+
+| Page | Editorial words before | After | Tiles | Tables | FAQs |
+|---|---|---|---|---|---|
+| `/product-category/custom-cardboard-tubes/` | 4 | **1,516** | 8 | 5 | 5 |
+| `/product-category/mailing-tubes/` | 4 | **1,334** | 3 | 4 | 5 |
+| `/product-category/custom-paper-tubes/` | 9 | **1,554** | 16 | 6 | 5 |
+| `/product-category/specialty-tubes/` | 4 | **1,837** | 3 | 6 | 5 |
+| `/product-category/custom-plastic-tubes/` | 4 | **1,026** | 6 | 3 | 4 |
+| `/shop/` | 10 | **950** | 16 | 3 | 4 |
+| `/product/tube-food-packaging/` | — | **+1,253** | — | 3 | 5 |
+| `/tube-size-guide/` (new) | — | **1,952** | — | 5 | 6 |
+
+Intro length, against the 80–120 word target: 108, 120, 120, 117, 117, 99.
+All six inside range.
+
+## The price element — the constraint that governed the implementation
+
+Each tile's one-line differentiator is inserted **immediately before the
+add-to-cart link**, which is *after* the anchor wrapping the title and the price.
+The price element keeps its text, its markup, its formatting and its position
+within its parent; adding a later sibling cannot move it. Inserting *before* it
+would have shifted its index, so that was never an option.
+
+| Check | Result |
+|---|---|
+| Visible `$0.30` price elements, source vs build, every page | **204 = 204**, 0 pages mismatched |
+| Tiles where the note precedes the price | **0** |
+| `"price":"0.3"` in the build | 72, unchanged |
+| `Product` / `Offer` / `AggregateRating` / `Review` nodes | 72 each, unchanged |
+| Merchant feed items and `g:price` | 35 × `0.30 USD`, unchanged |
+
+## Verification `[measured]`
+
+| Check | Tool | Result |
+|---|---|---|
+| Every editorial link resolves to a page in the build | `scripts/check-editorial-links.mjs` | **54 / 54** |
+| Descriptive anchors, 2–9 words, none banned | same | pass |
+| At most one link per paragraph | same | pass |
+| Whole-site link integrity | `scripts/linkcheck.py` | **0 broken across 17,130 references** |
+| Breadcrumbs still valid, existing JSON-LD untouched | `scripts/validate-breadcrumbs.mjs` | 69 pages, 0 failures |
+| No page-level horizontal overflow; wide tables scroll in their own box | `scripts/overflow-check.mjs` (real browser) | pass at **375 / 768 / 1440px**, all 31 tables scrolling internally |
+| US spelling | grep over the built pages | 0 British spellings in the new content |
+
+## Corrections to earlier reports
+
+**Product counts.** `reports/sitemap-archive.md` records 10, 5, 18, 5, 8 products
+for the five categories and 18 for `/shop/`. Counted from the rendered grids and
+the WooCommerce result count, the real figures are **8, 3, 17, 3, 6 and 35**.
+
+## B3 — the two honest assessments the brief asked for
+
+**Specialty Tubes.** As a shelf of three products — Luxury Tube Packaging, Paper
+Lipstick Tubes, Tube Food Packaging — it is a leftovers drawer, and I am not
+going to pretend those three share a buyer. What they do share is real: in all
+three the specification carries on past the wall, into a barrier liner, a
+food-contact interior or a finish system. That is a genuine distinction from
+protection, transit, print surface and squeeze dispensing, and the page is
+written to it. **The recommendation to split the food line into its own category
+still stands** — it is the biggest thing in there and it is buried behind two
+cosmetic products — but that needs a URL, which Section 0 protects. It is in
+`owner-decisions.md` item 4.
+
+**Plastic Tubes.** It earns a page, barely, and is deliberately the shortest of
+the five. Against it: the whole plastic cluster is 45 queries, 13,415
+impressions, 24 clicks at **0.18% CTR and weighted position 32.4** `[export]` —
+the weakest on the site — and 30 of those 45 queries have never earned a click.
+Content will not move a page from position 32. For it: six products live there
+and the products do convert (`/product/lotion-tubes/` earns 97 clicks at 1.19%
+CTR from position 13.33). The category is failing, not the range. So the page
+does the one job it can do — route by formulation, and send anything solid or
+dry to paper. Whether the plastic line is being pushed at all stays an owner
+decision.
+
+---
+
+# Batch C — `/tube-size-guide/`
+
+A new page at `/tube-size-guide/`, 1,952 words, indexable, in the sitemap
+(59 → 60 URLs), with a `BreadcrumbList`, a meta description and a canonical.
+
+Built on the captured `/about-us/` record through `src/lib/contentpage.js`, so it
+carries the same head, chrome and scripts as every other page, with its own
+identity swapped in.
+
+## What it targets, and the honest size of that
+
+The brief's premise is confirmed by the export: buyers search relative size
+words, the site ranks for them, and nothing defined them. All 14 figures below
+were re-checked against `data/gsc/queries.csv` `[export]`:
+
+| Query | Impressions | Clicks | Position |
+|---|---|---|---|
+| large tube | 7,100 | 1 | 14.44 |
+| large cardboard tubes | 4,681 | 25 | 16.81 |
+| large tubes | 1,418 | 5 | 14.53 |
+| small tube packaging | 969 | 1 | 10.95 |
+| large cardboard tube | 785 | 8 | 20.33 |
+| largetube | 784 | 0 | 7.41 |
+| thick cardboard tubes for crafts | 702 | 7 | 9.02 |
+| small cardboard tubes | 567 | 8 | 13.53 |
+| thick cardboard tubes | 527 | 6 | 11.89 |
+| large round cardboard tubes | 507 | 0 | 7.52 |
+| large cardboard cylinder tubes | 468 | 3 | 4.14 |
+| small diameter paper tubes | 380 | 1 | 7.05 |
+| large diameter cardboard tubes | 344 | 5 | 16.45 |
+| small paper tubes | 276 | 7 | 7.52 |
+
+So the vocabulary is in the headings, not only in a table: **three headings each
+containing "large", "small" and "thick"**, anchored to real diameters and wall
+thicknesses. A dimensions table without those words would not capture these
+queries, which is the point of the page.
+
+**But the traffic case is smaller than it looks, and Stage 4 was right about
+that.** Most of that cluster is size adjectives already served by the large and
+small product pages; the genuine fit-checking demand is closer to 1,900
+impressions. The page's real return is as a sales tool — a buyer arriving at the
+quote form already knowing their diameter, wall and closure — which is the
+lead-qualification problem, not a ranking one. It should be measured that way.
+
+## What is on it
+
+The vocabulary defined first; a diameter and length reference table from ½″ to
+12″ with a size-class column so the table itself carries the words; how to
+measure so it fits first time; a product-to-size table routing twelve product
+types to a diameter, a size class and a linked page; wall thickness and board
+weight with a straight answer on when a heavier board is worth paying for; nine
+closure types; six FAQs.
+
+**No lead time and no price figure appears on the page.** MOQ language is the
+confirmed 500 / ~100 policy only.
+
+---
+
+# What Batch B and C did not verify
+
+| Item | Why |
+|---|---|
+| Google's own Rich Results Test on any page | No public API; the hosted tool was not run |
+| Whether any of this moves CTR | Needs four to eight weeks of Search Console data. With GA4 deferred, GSC is the only instrument |
+| The compliance claims against supplier documentation | No access to the manufacturers' paperwork. All 9 are logged verbatim in `owner-decisions.md` item 12 for checking |
+| The specification figures against the owner's actual manufacturers | Written as standard industry specification, as instructed. Diameters, walls, boards, closures, liners and finishes are all standard and available, but they have not been confirmed against a specific supplier's tooling |
+| End-to-end quote email delivery | Unchanged from Stage 2.3 — still owner-tested separately |

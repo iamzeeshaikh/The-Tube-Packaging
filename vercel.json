@@ -34,6 +34,16 @@
       "source": "/product-category/custom-paper-tubes/page/1/",
       "destination": "/product-category/custom-paper-tubes/",
       "permanent": true
+    },
+    {
+      "source": "/category/uncategorized",
+      "destination": "/category/information/",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized/",
+      "destination": "/category/information/",
+      "permanent": true
     }
   ],
   "headers": [

@@ -8,6 +8,7 @@
 import Shell from '../layouts/Shell.astro';
 import PageBody from '../components/PageBody.astro';
 import { contentPage } from '../lib/contentpage.js';
+import { faqSchema } from '../lib/faq-schema.js';
 import { section, paras, block, cta } from '../lib/sections.js';
 import { esc } from '../lib/sections.js';
 import {
@@ -41,7 +42,7 @@ const body = [
 </details>`).join('\n') + cta(faqCta)),
 ].join('\n');
 ---
-<Shell page={page}>
+<Shell page={page} headExtra={faqSchema(route, body)}>
   <PageBody postId={9001} title={h1} crumb={h1} route={route}>
     <Fragment set:html={body} />
   </PageBody>

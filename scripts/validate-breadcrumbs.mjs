@@ -50,7 +50,9 @@ for (const f of files.sort()) {
     // asserts that *nothing else* in the pre-existing JSON-LD moved.
     const norm = (s) => s.replace(/"priceValidUntil":"[^"]*"/g, '"priceValidUntil":"X"');
     const before = ldScripts(src.head).map((s) => norm(s.body));
-    const after = scripts.filter((s) => !s.attrs.includes('ttp-breadcrumb')).map((s) => norm(s.body));
+    // this programme's own additions are excluded; everything else must match
+    const added = (a) => a.includes('ttp-breadcrumb') || a.includes('ttp-faq');
+    const after = scripts.filter((s) => !added(s.attrs)).map((s) => norm(s.body));
     if (JSON.stringify(before) !== JSON.stringify(after))
       fail(route, `existing JSON-LD changed (${before.length} -> ${after.length} blocks)`);
   }

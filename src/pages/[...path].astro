@@ -9,6 +9,7 @@ import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
+import { faqSchema } from '../lib/faq-schema.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
@@ -24,12 +25,16 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+// the FAQ schema must describe what the page finally renders, so the content
+// transforms run once here and the result feeds both the head and the body
+const content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 ---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
 <Fragment set:html={refreshPriceValidUntil(rewrite(page.head))} />
 <Fragment set:html={breadcrumbSchema(page)} />
+<Fragment set:html={faqSchema(page.route, content)} />
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />
@@ -42,7 +47,7 @@ const { page } = Astro.props;
 			<Fragment set:html={skipLink} />
 				<Header page={page} />
 				<Offcanvas page={page} />
-				<Fragment set:html={rewrite(enhanceProduct({ ...page, content: enhanceCategory(page) }))} />
+				<Fragment set:html={rewrite(content)} />
 				<Footer page={page} />
 				</div><!-- #page -->
 <Fragment set:html={rewrite(page.bodyTail)} />

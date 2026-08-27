@@ -15,13 +15,14 @@ import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
 import JoinChat from '../components/JoinChat.astro';
 
-const { page } = Astro.props;
+const { page, headExtra = '' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
 <Fragment set:html={refreshPriceValidUntil(rewrite(page.head))} />
 <Fragment set:html={breadcrumbSchema(page)} />
+<Fragment set:html={headExtra} />
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />

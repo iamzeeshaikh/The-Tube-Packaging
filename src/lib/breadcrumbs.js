@@ -112,6 +112,9 @@ function derivedTrail(page) {
 export function breadcrumbTrail(page) {
   if (!page || page.route === '/') return null;
   if (isNoindex(page.head)) return null;
+  // Pages built from a borrowed record carry their own trail, because the
+  // record's `content` describes the page it was borrowed from.
+  if (page.crumbs) return page.crumbs;
   return renderedTrail(page.content) || derivedTrail(page);
 }
 

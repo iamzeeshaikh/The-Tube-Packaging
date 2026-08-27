@@ -9,6 +9,7 @@ import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
 import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
+import { categoryCss } from '../lib/category-css.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
@@ -23,6 +24,7 @@ const { page } = Astro.props;
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
+<Fragment set:html={categoryCss} />
 </head>
 
 <body class={page.bodyClass}>

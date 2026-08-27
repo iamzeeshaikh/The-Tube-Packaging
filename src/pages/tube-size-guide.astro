@@ -1,0 +1,48 @@
+---
+// /tube-size-guide/ — Batch C.
+//
+// A page WordPress never served, built on the captured /about-us/ record so it
+// carries the same head, chrome and scripts as the rest of the site, and
+// rendered with the same section components as the category pages so the size
+// vocabulary reads identically wherever a buyer meets it.
+import Shell from '../layouts/Shell.astro';
+import PageBody from '../components/PageBody.astro';
+import { contentPage } from '../lib/contentpage.js';
+import { section, paras, block, cta } from '../lib/sections.js';
+import { esc } from '../lib/sections.js';
+import {
+  route, title, description, h1, intro, SECTIONS, faqH2, FAQS, faqCta,
+} from '../lib/copy/size-guide.js';
+
+const page = contentPage({
+  route,
+  title,
+  description,
+  crumb: h1,
+  // outside the range WordPress used, so it cannot collide with a real post id
+  postId: 9001,
+});
+
+const body = [
+  // The theme already renders the H1, so the opening block is lead copy only —
+  // repeating "Tube Size Guide" as an H2 directly under it would be noise.
+  `<section class="ttp-cat ttp-cat--intro">\n<div class="ttp-cat__wrap">\n${paras(intro)}</div>\n</section>`,
+  ...SECTIONS.map((s) => section(
+    s.mod,
+    s.eyebrow,
+    s.h2,
+    paras([s.lead]) + s.blocks.map(block).join('\n') + (s.cta ? cta(s.cta) : ''),
+  )),
+  section('faq', 'FAQs', faqH2,
+    FAQS.map((f) => `
+<details class="ttp-cat__faq">
+<summary>${esc(f.q)}</summary>
+<div class="ttp-cat__faqBody">${paras(f.a)}</div>
+</details>`).join('\n') + cta(faqCta)),
+].join('\n');
+---
+<Shell page={page}>
+  <PageBody postId={9001} title={h1} crumb={h1} route={route}>
+    <Fragment set:html={body} />
+  </PageBody>
+</Shell>

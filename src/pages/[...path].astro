@@ -8,6 +8,7 @@ import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
+import { enhanceProduct } from '../lib/product-render.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
@@ -41,7 +42,7 @@ const { page } = Astro.props;
 			<Fragment set:html={skipLink} />
 				<Header page={page} />
 				<Offcanvas page={page} />
-				<Fragment set:html={rewrite(enhanceCategory(page))} />
+				<Fragment set:html={rewrite(enhanceProduct({ ...page, content: enhanceCategory(page) }))} />
 				<Footer page={page} />
 				</div><!-- #page -->
 <Fragment set:html={rewrite(page.bodyTail)} />

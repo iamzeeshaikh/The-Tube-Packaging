@@ -41,50 +41,47 @@ paraphrased, so no fourth version of any figure enters the site. Verified after:
 the only day figures in the new sections are **3 to 5 business days** and
 **6 to 10 business days**, both straight from the policy page.
 
-### Three inconsistencies the confirmation does not resolve
+### The three inconsistencies — two settled by the owner, one open
 
-Confirming the claims are real does not make the site's three different versions
-of them agree. These are `[measured]` across all 68 pages.
+**1. Free shipping now names its destinations — DONE.** The owner confirms it
+applies to all orders, and authorised naming the four countries. 29 pages
+carried the claim without a destination; all 29 now state it, in one sentence
+appended to the paragraph carrying the *first* claim on each page, so a page
+mentioning it three times does not repeat the destinations three times.
 
-**1. Free shipping is conditional, and about twenty product pages state it
-unconditionally.** `/shipping-policy/` limits it to four countries:
+The home page is the exception, handled by hand: its claim is a short bullet in
+the "Why Choose Us" list, so the destinations went inside the bullet — "Free
+Shipping: To the US, UK, Canada and Australia, helping reduce overall packaging
+costs." — rather than a second sentence hanging off it.
 
-> "We offer free shipping to the following countries: United States, United
-> Kingdom, Canada, Australia"
+**2. "Starting from 50 MOQ" — REMOVED.** One paragraph deleted from
+`/shipping-policy/`, on the owner's instruction, and the only edit made to that
+page.
 
-The product pages say things like *"Get free design and shipping on your
-order."*, *"Free design and shipping included!"*, *"…all with free design and
-shipping"* — no destination named. One page alone qualifies it: *"Free design
-and shipping support can be arranged for qualifying orders."*
+The owner's concern about Merchant Center is a fair one and worth answering
+directly: Merchant reads the feed's shipping cost against what the site says.
+The feed declares `g:shipping` US at 0.00 USD, unconditionally. Removing an
+unreachable quantity threshold moves the page **towards** that, not away from it.
+Everything Merchant actually checks is untouched — destinations, Free Standard
+Shipping, 3–5 days processing, 3–5 transit, 6–10 total, tracking, and the lost
+or delayed shipments section.
 
-An unqualified free-shipping claim is the most common source of dispute on a
-packaging lead. **Recommended:** add the four countries, or the words "to
-selected regions", wherever the claim appears. It is a mechanical edit across
-about twenty pages and I have not made it, because it changes commercial
-messaging rather than fixing a defect.
+`/terms-conditions/`, `/refund_returns/` and `/privacy-policy/` were not opened
+at all. Verified by comparing each page's content against the previous commit:
+three unchanged, `/shipping-policy/` shorter by exactly 29 characters, the length
+of the deleted paragraph and nothing more.
 
-**2. "Starting from 50 MOQ" now contradicts the 500-piece minimum.**
-`/shipping-policy/` reads:
+**3. Two turnaround figures — STILL OPEN.** `/shipping-policy/`, `/about-us/`
+and `/terms-conditions/` state a **6–10 business day** total. The home page and
+all **35 product pages** say *"within 8 to 10 business days"*.
 
-> "All orders across the above countries qualify for: ✅ Free Standard Shipping
-> Starting from 50 MOQ."
-
-With the standard minimum settled at 500 pieces and smaller runs from around
-100, **no orderable quantity falls below 50** — so the condition can never bite
-and the line reads as a leftover from before the MOQ policy was fixed. It is not
-false; it is unreachable, and it invites the question "so is there a threshold or
-not?" **Needed:** delete the qualifier, or give the real threshold.
-
-**3. Two different turnaround figures.** `/shipping-policy/`, `/about-us/` and
-`/terms-conditions/` state 3–5 business days processing plus 3–5 transit, for a
-**6–10 business day total**. The home page and all **35 product pages** say
-*"You will receive your order within **8 to 10 business days**."*
-
-8–10 sits inside 6–10, so this is not a false promise — the product pages are
-simply more conservative. But two numbers for one thing is worth settling.
-**Recommended:** keep 6–10 as the site-wide figure, since it is the policy page's
-and the more attractive one, or drop the range from the product pages and let the
-policy carry it.
+8–10 sits inside 6–10, so neither is a false promise and nothing is at risk —
+but it is one thing described with two numbers. Not touched, because two of the
+three pages carrying 6–10 are pages the owner has asked to leave alone, and
+changing the product pages instead would mean editing 35 of them.
+**Recommended:** leave the policy pages as they are and drop the range from the
+product pages, letting the policy carry the number. Say the word and it is one
+pass.
 
 ### The rest of the claim inventory, unchanged
 

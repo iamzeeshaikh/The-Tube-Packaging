@@ -77,8 +77,18 @@ function gallery(copy, html) {
 
 function quote(copy) {
   if (!copy.quote) return '';
+  // the left column was mostly empty against a tall form; the direct line fills
+  // it with something a buyer can actually use, and both details are the ones
+  // already published in the header and footer
+  const direct = `
+<div class="ttp-cat__quoteDirect">
+<span>Or reach us directly</span>
+<a href="tel:(503)%20358-0443">(503) 358-0443</a>
+<a href="mailto:info@thetubepackaging.com">info@thetubepackaging.com</a>
+</div>`;
   const aside = `<div class="ttp-cat__quoteAside">${paras(copy.quote.paras)}`
-    + `<ul class="ttp-cat__quoteList">${copy.quote.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
+    + `<ul class="ttp-cat__quoteList">${copy.quote.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`
+    + direct + `</div>`;
   return section('quote', copy.quote.eyebrow, copy.quote.h2,
     `<div class="ttp-cat__quoteGrid">${aside}${quoteForm(copy.quote)}</div>`);
 }

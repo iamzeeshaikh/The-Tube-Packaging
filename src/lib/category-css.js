@@ -22,18 +22,47 @@ const css = `
      .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft)
        :not(.alignright):not(.is-style-wide){
          max-width:fit-content !important; width:fit-content !important }
-   Its five :not() classes give it a specificity of (0,6,0) and it is flagged
-   important on both properties, so on /tube-size-guide/ every section sized to
-   its widest table instead of its container — 746px inside a 375px viewport,
-   scrolling the page sideways by 386px.
-   The plugin's own escape hatch is one of those five classes, but .alignwide
-   also carries rules like ".alignwide > a{width:100%}", which would turn every
-   inline link in the copy into a full-width block. So the specificity is beaten
-   instead: repeating the class six times gives (0,7,0), scoped to this page's
-   own sections and nothing else. */
+   Five :not() classes give it (0,6,0) and it is important on both properties,
+   so on /tube-size-guide/ every section sized to its widest table instead of
+   its container — 746px inside a 375px viewport, scrolling the page sideways by
+   386px. The category pages are unaffected because they render inside <main>
+   rather than .entry-content.
+
+   The plugin's escape hatch is one of those five classes, but .alignwide also
+   carries ".alignwide > a{width:100%}", which would turn every inline link in
+   the copy into a full-width block. So the specificity is beaten instead:
+   repeating the class six times gives (0,7,0), scoped to these sections only.
+
+   DO NOT DELETE when reorganising this file. It was written in D3 for this
+   exact bug, removed by a later rewrite of the stylesheet, and the overflow
+   sweep caught the same 386px regression a second time. */
 .entry-content > .ttp-cat.ttp-cat.ttp-cat.ttp-cat.ttp-cat.ttp-cat{
   width:auto !important;
   max-width:100% !important;
+}
+
+/* The theme frames every archive title in 85px of margin above and below, then
+   the content wrapper adds another 80px — 310px between the header and the
+   first line of content, of which the H1 occupies 60. Tolerable when these
+   pages had nothing on them; now that they do, it just pushes everything below
+   the fold.
+
+   The margin comes from
+     .woocommerce-page .archive-title-wrapper .tagged-in-wrapper{margin:var(--wooMargin) 0}
+   so the variable is overridden rather than the margin — that keeps the theme's
+   own mechanism and its responsive steps, at roughly half the size. The
+   selector matches the one the theme uses to define it, and this stylesheet is
+   emitted last, so equal specificity resolves in its favour. */
+.woocommerce.archive .site-content .archive-title-wrapper .tagged-in-wrapper{--wooMargin:44px}
+@media (max-width:1024px){
+  .woocommerce.archive .site-content .archive-title-wrapper .tagged-in-wrapper{--wooMargin:34px}
+}
+@media (max-width:768px){
+  .woocommerce.archive .site-content .archive-title-wrapper .tagged-in-wrapper{--wooMargin:22px}
+}
+body.archive .main-content-wrapper{margin-top:34px}
+@media (max-width:768px){
+  body.archive .main-content-wrapper{margin-top:22px}
 }
 
 .ttp-cat{
@@ -154,59 +183,86 @@ const css = `
 
 /* ── quote form ─────────────────────────────────────────────────────── */
 /* Elementor's field gutter comes from per-widget CSS scoped to the original
-   page and element id, so a cloned form inherits none of it — the fields sat
-   flush against each other with no gap and no vertical rhythm. The layout is
-   therefore written here rather than borrowed. */
+   page id and element id, so a cloned form inherits none of it — the fields sat
+   flush against each other with no gap at all. The layout is written here
+   rather than borrowed. */
 .ttp-cat--quote{
+  position:relative;
+  overflow:hidden;
+  border-color:transparent;
   background:
-    radial-gradient(760px 340px at 94% 0%, rgba(33,108,218,.08), transparent 60%),
-    var(--tpm-surface);
+    radial-gradient(900px 420px at 100% -10%, rgba(33,108,218,.16), transparent 58%),
+    radial-gradient(700px 380px at -10% 110%, rgba(79,139,255,.13), transparent 60%),
+    linear-gradient(160deg,#f7faff 0%, #eef4ff 100%);
+  box-shadow:var(--tpm-shadow-lg);
 }
-.ttp-cat__quoteGrid{display:grid;gap:clamp(22px,3vw,44px);align-items:start}
+.ttp-cat--quote:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(33,108,218,.10) 1px, transparent 1px);
+  background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%, transparent 62%);
+  mask-image:linear-gradient(180deg,#000 0%, transparent 62%);
+  opacity:.5;
+}
+.ttp-cat--quote > .ttp-cat__wrap{position:relative}
+.ttp-cat--quote .ttp-cat__eyebrow{background:#fff;border-color:var(--tpm-blue-100)}
+
+.ttp-cat__quoteGrid{display:grid;gap:clamp(24px,3vw,48px);align-items:start}
 @media (min-width:920px){
-  .ttp-cat__quoteGrid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+  .ttp-cat__quoteGrid{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
 }
 
-.ttp-cat__quoteAside{padding-top:2px}
-.ttp-cat__quoteAside p{font-size:16px;max-width:46ch}
-.ttp-cat__quoteList{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.ttp-cat__quoteAside p{font-size:16.5px;line-height:1.62;max-width:44ch}
+.ttp-cat__quoteList{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:13px}
 .ttp-cat__quoteList li{
-  position:relative;padding-left:30px;font-size:15.5px;line-height:1.55;
+  position:relative;padding-left:34px;font-size:15.5px;line-height:1.55;
   color:var(--tpm-ink-soft);
 }
 .ttp-cat__quoteList li:before{
-  content:"";position:absolute;left:0;top:.34em;width:18px;height:18px;
-  border-radius:6px;background:var(--tpm-blue-50);border:1px solid var(--tpm-blue-100);
+  content:"";position:absolute;left:0;top:.1em;width:22px;height:22px;
+  border-radius:8px;
+  background:linear-gradient(145deg,var(--tpm-blue) 0%, #4f8bff 100%);
+  box-shadow:0 6px 14px -6px rgba(33,108,218,.9);
 }
 .ttp-cat__quoteList li:after{
-  content:"";position:absolute;left:6px;top:.72em;width:6px;height:3px;
-  border-left:2px solid var(--tpm-blue);border-bottom:2px solid var(--tpm-blue);
+  content:"";position:absolute;left:7px;top:.52em;width:7px;height:3.5px;
+  border-left:2px solid #fff;border-bottom:2px solid #fff;
   transform:rotate(-45deg);
 }
 
+/* a direct line, for buyers who would rather not fill anything in */
+.ttp-cat__quoteDirect{
+  margin:26px 0 0;padding:16px 18px;border-radius:var(--tpm-r);
+  background:rgba(255,255,255,.72);border:1px solid var(--tpm-blue-100);
+  backdrop-filter:blur(4px);
+}
+.ttp-cat__quoteDirect span{
+  display:block;font-size:12.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--tpm-blue-strong);margin-bottom:8px;
+}
+.ttp-cat__quoteDirect a{
+  display:block;font-size:16px;font-weight:650;color:var(--tpm-ink);
+  text-decoration:none;line-height:1.7;
+}
+.ttp-cat__quoteDirect a:hover{color:var(--tpm-blue-strong);text-decoration:underline}
+
 .ttp-cat__quoteForm{
-  padding:clamp(20px,2.6vw,30px);
-  border:1px solid var(--tpm-line);
-  border-radius:var(--tpm-r-lg);
-  background:var(--tpm-surface);
-  box-shadow:var(--tpm-shadow-lg);
+  padding:clamp(22px,2.8vw,34px);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:22px;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(6px);
+  box-shadow:0 2px 6px rgba(11,18,32,.05), 0 28px 60px -28px rgba(11,18,32,.35);
   min-width:0;
 }
 .ttp-cat__quoteForm .elementor-form{margin:0}
 
-/* the layout Elementor would otherwise have supplied */
 .ttp-cat__quoteForm .elementor-form-fields-wrapper{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px 18px;
-  margin:0 !important;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px 18px;margin:0 !important;
 }
 .ttp-cat__quoteForm .elementor-field-group{
-  margin:0 !important;
-  padding:0 !important;
-  width:auto;
-  max-width:none;
-  min-width:0;
+  margin:0 !important;padding:0 !important;width:auto;max-width:none;min-width:0;
 }
 .ttp-cat__quoteForm .elementor-col-100,
 .ttp-cat__quoteForm .e-form__buttons,
@@ -218,54 +274,59 @@ const css = `
 }
 
 .ttp-cat__quoteForm label.elementor-field-label{
-  display:block;margin:0 0 8px;font-size:13px;font-weight:650;
-  letter-spacing:.01em;color:var(--tpm-ink);
+  display:block;margin:0 0 8px;font-size:12.5px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--tpm-muted);
 }
-.ttp-cat__quoteForm .elementor-field-textual{min-height:50px}
-.ttp-cat__quoteForm textarea.elementor-field-textual{min-height:132px;resize:vertical}
+.ttp-cat__quoteForm .elementor-field-textual{
+  min-height:52px;
+  background:#f4f7fd !important;
+  border:1.5px solid transparent !important;
+  border-radius:13px !important;
+  box-shadow:none !important;
+  font-size:15.5px;
+  transition:background-color .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+.ttp-cat__quoteForm .elementor-field-textual::placeholder{color:#9aa6bd}
+.ttp-cat__quoteForm .elementor-field-textual:hover{background:#eef3fc !important}
+.ttp-cat__quoteForm .elementor-field-textual:focus{
+  background:#fff !important;
+  border-color:var(--tpm-blue) !important;
+  box-shadow:var(--tpm-ring) !important;
+  outline:none;
+}
+.ttp-cat__quoteForm textarea.elementor-field-textual{min-height:134px;resize:vertical}
 
-/* the native file input, which otherwise renders as raw browser chrome */
 .ttp-cat__quoteForm input[type="file"].elementor-field{
-  width:100%;
-  padding:11px 14px;
-  font-size:14px;
-  color:var(--tpm-muted);
-  background:var(--tpm-bg);
-  border:1px dashed #c9d4e8;
-  border-radius:12px;
-  cursor:pointer;
+  width:100%;padding:13px 16px;font-size:14px;color:var(--tpm-muted);
+  background:#f4f7fd;border:1.5px dashed #c9d7f0;border-radius:13px;cursor:pointer;
+  transition:border-color .16s ease, background-color .16s ease;
 }
 .ttp-cat__quoteForm input[type="file"]::file-selector-button{
-  margin-right:12px;padding:8px 14px;border:0;border-radius:8px;cursor:pointer;
-  background:var(--tpm-blue-50);color:var(--tpm-blue-strong);
-  font-size:13px;font-weight:650;font-family:inherit;
+  margin-right:14px;padding:9px 15px;border:0;border-radius:9px;cursor:pointer;
+  background:#fff;color:var(--tpm-blue-strong);
+  font-size:13px;font-weight:700;font-family:inherit;
+  box-shadow:0 1px 2px rgba(11,18,32,.08);
 }
-.ttp-cat__quoteForm input[type="file"]:hover{border-color:var(--tpm-blue-100)}
+.ttp-cat__quoteForm input[type="file"]:hover{border-color:var(--tpm-blue);background:#eef3fc}
 
-.ttp-cat__quoteForm .elementor-g-recaptcha{margin:2px 0 0}
+.ttp-cat__quoteForm .elementor-g-recaptcha{margin:0}
+.ttp-cat__quoteForm .elementor-field-type-recaptcha{margin-top:-4px}
 .ttp-cat__quoteForm .e-form__buttons{display:flex}
 .ttp-cat__quoteForm button[type="submit"].elementor-button{
-  width:100%;
-  min-height:52px;
-  padding:14px 22px;
-  border:0;
-  border-radius:12px;
+  width:100%;min-height:54px;padding:15px 24px;border:0;border-radius:14px;
   background:linear-gradient(145deg,var(--tpm-blue) 0%, #4f8bff 100%);
-  color:#fff;
-  font-size:15.5px;
-  font-weight:700;
-  letter-spacing:.01em;
-  cursor:pointer;
-  box-shadow:0 12px 24px -12px rgba(33,108,218,.9);
+  color:#fff;font-size:16px;font-weight:700;letter-spacing:.01em;cursor:pointer;
+  box-shadow:0 14px 28px -12px rgba(33,108,218,.95);
   transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
 }
 .ttp-cat__quoteForm button[type="submit"].elementor-button:hover{
   transform:translateY(-1px);
-  box-shadow:0 16px 30px -12px rgba(33,108,218,.95);
-  filter:saturate(1.06);
+  box-shadow:0 18px 34px -12px rgba(33,108,218,1);
+  filter:saturate(1.08);
 }
+.ttp-cat__quoteForm button[type="submit"].elementor-button:active{transform:translateY(0)}
 .ttp-cat__quoteForm .elementor-message{
-  grid-column:1 / -1;margin:0;padding:12px 14px;border-radius:10px;font-size:14.5px;
+  grid-column:1 / -1;margin:0;padding:13px 15px;border-radius:12px;font-size:14.5px;
 }
 .ttp-cat__quoteForm .elementor-message-success{
   background:#e9f7ef;border:1px solid #bfe6cf;color:#1a6b3c;

@@ -153,29 +153,126 @@ const css = `
 .ttp-cat__card p{margin:0;font-size:14.5px;line-height:1.6;color:var(--tpm-muted)}
 
 /* ── quote form ─────────────────────────────────────────────────────── */
+/* Elementor's field gutter comes from per-widget CSS scoped to the original
+   page and element id, so a cloned form inherits none of it — the fields sat
+   flush against each other with no gap and no vertical rhythm. The layout is
+   therefore written here rather than borrowed. */
 .ttp-cat--quote{
   background:
-    radial-gradient(720px 320px at 92% 0%, rgba(33,108,218,.08), transparent 62%),
+    radial-gradient(760px 340px at 94% 0%, rgba(33,108,218,.08), transparent 60%),
     var(--tpm-surface);
 }
-.ttp-cat__quoteGrid{display:grid;gap:clamp(20px,3vw,38px);align-items:start}
-@media (min-width:900px){.ttp-cat__quoteGrid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}}
-.ttp-cat__quoteAside p{font-size:15.5px}
-.ttp-cat__quoteList{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.ttp-cat__quoteGrid{display:grid;gap:clamp(22px,3vw,44px);align-items:start}
+@media (min-width:920px){
+  .ttp-cat__quoteGrid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+}
+
+.ttp-cat__quoteAside{padding-top:2px}
+.ttp-cat__quoteAside p{font-size:16px;max-width:46ch}
+.ttp-cat__quoteList{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px}
 .ttp-cat__quoteList li{
-  position:relative;padding-left:26px;font-size:15px;line-height:1.55;color:var(--tpm-ink-soft);
+  position:relative;padding-left:30px;font-size:15.5px;line-height:1.55;
+  color:var(--tpm-ink-soft);
 }
 .ttp-cat__quoteList li:before{
-  content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;
-  background:var(--tpm-blue-50);border:1px solid var(--tpm-blue-100);
-  box-shadow:inset 0 0 0 3px var(--tpm-blue);
+  content:"";position:absolute;left:0;top:.34em;width:18px;height:18px;
+  border-radius:6px;background:var(--tpm-blue-50);border:1px solid var(--tpm-blue-100);
 }
+.ttp-cat__quoteList li:after{
+  content:"";position:absolute;left:6px;top:.72em;width:6px;height:3px;
+  border-left:2px solid var(--tpm-blue);border-bottom:2px solid var(--tpm-blue);
+  transform:rotate(-45deg);
+}
+
 .ttp-cat__quoteForm{
-  padding:clamp(18px,2.4vw,26px);border:1px solid var(--tpm-line);
-  border-radius:var(--tpm-r);background:var(--tpm-surface);box-shadow:var(--tpm-shadow);
+  padding:clamp(20px,2.6vw,30px);
+  border:1px solid var(--tpm-line);
+  border-radius:var(--tpm-r-lg);
+  background:var(--tpm-surface);
+  box-shadow:var(--tpm-shadow-lg);
   min-width:0;
 }
 .ttp-cat__quoteForm .elementor-form{margin:0}
+
+/* the layout Elementor would otherwise have supplied */
+.ttp-cat__quoteForm .elementor-form-fields-wrapper{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px 18px;
+  margin:0 !important;
+}
+.ttp-cat__quoteForm .elementor-field-group{
+  margin:0 !important;
+  padding:0 !important;
+  width:auto;
+  max-width:none;
+  min-width:0;
+}
+.ttp-cat__quoteForm .elementor-col-100,
+.ttp-cat__quoteForm .e-form__buttons,
+.ttp-cat__quoteForm .elementor-field-type-recaptcha,
+.ttp-cat__quoteForm .elementor-field-type-upload{grid-column:1 / -1}
+.ttp-cat__quoteForm .elementor-field-type-text[style*="none"]{display:none}
+@media (max-width:620px){
+  .ttp-cat__quoteForm .elementor-form-fields-wrapper{grid-template-columns:1fr}
+}
+
+.ttp-cat__quoteForm label.elementor-field-label{
+  display:block;margin:0 0 8px;font-size:13px;font-weight:650;
+  letter-spacing:.01em;color:var(--tpm-ink);
+}
+.ttp-cat__quoteForm .elementor-field-textual{min-height:50px}
+.ttp-cat__quoteForm textarea.elementor-field-textual{min-height:132px;resize:vertical}
+
+/* the native file input, which otherwise renders as raw browser chrome */
+.ttp-cat__quoteForm input[type="file"].elementor-field{
+  width:100%;
+  padding:11px 14px;
+  font-size:14px;
+  color:var(--tpm-muted);
+  background:var(--tpm-bg);
+  border:1px dashed #c9d4e8;
+  border-radius:12px;
+  cursor:pointer;
+}
+.ttp-cat__quoteForm input[type="file"]::file-selector-button{
+  margin-right:12px;padding:8px 14px;border:0;border-radius:8px;cursor:pointer;
+  background:var(--tpm-blue-50);color:var(--tpm-blue-strong);
+  font-size:13px;font-weight:650;font-family:inherit;
+}
+.ttp-cat__quoteForm input[type="file"]:hover{border-color:var(--tpm-blue-100)}
+
+.ttp-cat__quoteForm .elementor-g-recaptcha{margin:2px 0 0}
+.ttp-cat__quoteForm .e-form__buttons{display:flex}
+.ttp-cat__quoteForm button[type="submit"].elementor-button{
+  width:100%;
+  min-height:52px;
+  padding:14px 22px;
+  border:0;
+  border-radius:12px;
+  background:linear-gradient(145deg,var(--tpm-blue) 0%, #4f8bff 100%);
+  color:#fff;
+  font-size:15.5px;
+  font-weight:700;
+  letter-spacing:.01em;
+  cursor:pointer;
+  box-shadow:0 12px 24px -12px rgba(33,108,218,.9);
+  transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+}
+.ttp-cat__quoteForm button[type="submit"].elementor-button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 16px 30px -12px rgba(33,108,218,.95);
+  filter:saturate(1.06);
+}
+.ttp-cat__quoteForm .elementor-message{
+  grid-column:1 / -1;margin:0;padding:12px 14px;border-radius:10px;font-size:14.5px;
+}
+.ttp-cat__quoteForm .elementor-message-success{
+  background:#e9f7ef;border:1px solid #bfe6cf;color:#1a6b3c;
+}
+.ttp-cat__quoteForm .elementor-message-danger{
+  background:#fdecec;border:1px solid #f5c2c2;color:#a32020;
+}
 
 /* one-line differentiator on each product tile */
 .ttp-cat__tileNote{

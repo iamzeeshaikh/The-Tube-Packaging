@@ -3,7 +3,7 @@
 // the migrated pages with it; the cart-flow pages that WordPress never served
 // as HTML (checkout, order received) borrow the cart page's record so they
 // inherit the same head, body classes, header, footer and scripts.
-import { rewrite } from '../lib/site.js';
+import { rewrite, stripEagerRecaptcha, stripDeadScripts } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
@@ -38,7 +38,7 @@ const { page, headExtra = '' } = Astro.props;
 				<slot />
 				<Footer page={page} />
 				</div><!-- #page -->
-<Fragment set:html={rewrite(page.bodyTail)} />
+<Fragment set:html={stripDeadScripts(stripEagerRecaptcha(rewrite(page.bodyTail)), page.content)} />
 {page.popup && <Fragment set:html={rewrite(page.popup)} />}
 <JoinChat page={page} />
 <script src="/assets/ttp.js" data-elementor-frontend={page.elementorFrontend ? "1" : "0"} defer></script>

@@ -192,9 +192,23 @@
 
   // ---------------------------------------------------------- 4. reCAPTCHA
   // The quote forms carry a visible "I'm not a robot" checkbox. Elementor Pro
-  // loaded the API with render=explicit and rendered each widget itself.
+  // loaded the API on page load and rendered each widget immediately.
+  //
+  // That cost 1.4 MB of third-party JavaScript on every page carrying a form —
+  // Google ships recaptcha__en.js at 344 KB and fetches it once per frame, four
+  // times in practice, plus 2 x 41 KB of styles. It was the largest single
+  // weight on the site and none of it is needed until someone actually starts
+  // filling a form in.
+  //
+  // So the API is now loaded on first interaction with any form: focus, input
+  // or pointerdown. By the time a person has typed their name the widget has
+  // rendered, and ttp.js still refuses to submit a form whose captcha has no
+  // response, so nothing about the verification changes.
   var captchas = document.querySelectorAll('.elementor-g-recaptcha');
   if (captchas.length) {
+    var API = 'https://www.google.com/recaptcha/api.js?render=explicit';
+    var started = false;
+
     var renderAll = function () {
       Array.prototype.forEach.call(captchas, function (el) {
         if (el.dataset.rendered) return;
@@ -206,12 +220,39 @@
         });
       });
     };
-    var waitForApi = setInterval(function () {
+
+    var loadCaptcha = function () {
+      if (started) return;
+      started = true;
       if (window.grecaptcha && grecaptcha.render) {
-        clearInterval(waitForApi);
         grecaptcha.ready ? grecaptcha.ready(renderAll) : renderAll();
+        return;
       }
-    }, 100);
+      var s = document.createElement('script');
+      s.src = API;
+      s.async = true;
+      s.defer = true;
+      s.onload = function () {
+        var waitForApi = setInterval(function () {
+          if (window.grecaptcha && grecaptcha.render) {
+            clearInterval(waitForApi);
+            grecaptcha.ready ? grecaptcha.ready(renderAll) : renderAll();
+          }
+        }, 50);
+      };
+      document.head.appendChild(s);
+    };
+
+    ['focusin', 'pointerdown', 'keydown'].forEach(function (evt) {
+      document.addEventListener(evt, function (e) {
+        if (e.target && e.target.closest && e.target.closest('form.elementor-form')) {
+          loadCaptcha();
+        }
+      }, { passive: true });
+    });
+    // a form already in view and focused by the browser still gets one
+    if (document.activeElement && document.activeElement.closest
+        && document.activeElement.closest('form.elementor-form')) loadCaptcha();
   }
 
   // -------------------------------------------------------------- 5. forms

@@ -15,14 +15,13 @@
  * `ttp.js` binds every `form.elementor-form` on the page, appends `page_url`
  * at submit time and posts to /api/form/, so nothing else has to be wired.
  *
- * The reCAPTCHA widget needs Google's API present. Product pages load it in
- * their body tail; these pages never did, and ttp.js refuses to submit a form
- * whose captcha has no response — so the loader is emitted with the form. It is
- * the same URL and the same `render=explicit` mode ttp.js expects.
+ * No reCAPTCHA loader is emitted here. ttp.js fetches Google's API on the first
+ * interaction with any form and renders the widgets then — 1.4 MB of
+ * third-party JavaScript that used to load on every page carrying a form, for
+ * people who mostly never touch it.
  */
 
 const RECAPTCHA_SITEKEY = '6LelJqwrAAAAAEkxjxWF3PF2TEmtsKiICKHRnz7a';
-const RECAPTCHA_SRC = 'https://www.google.com/recaptcha/api.js?render=explicit&#038;ver=4.2.1';
 
 const esc = (s) => String(s).replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/"/g, '&quot;');
 
@@ -71,6 +70,5 @@ export function quoteForm({ refererTitle, product }) {
 </div>
 </form>
 </div>
-<script id="ttp-cat-recaptcha-api" src="${RECAPTCHA_SRC}"></script>
 `;
 }

@@ -1,11 +1,12 @@
 ---
 import pages from '../data/pages.json';
-import { rewrite } from '../lib/site.js';
+import { rewrite, stripEagerRecaptcha, stripDeadScripts } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
 import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
+import { heroPicture, heroPreload } from '../lib/hero-image.js';
 import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
@@ -27,7 +28,10 @@ export function getStaticPaths() {
 const { page } = Astro.props;
 // the FAQ schema must describe what the page finally renders, so the content
 // transforms run once here and the result feeds both the head and the body
-const content = enhanceProduct({ ...page, content: enhanceCategory(page) });
+let content = enhanceProduct({ ...page, content: enhanceCategory(page) });
+// the home page hero is the LCP element; give it renditions and a preload
+const isHome = page.route === '/';
+if (isHome) content = heroPicture(content);
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -35,6 +39,7 @@ const content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 <Fragment set:html={refreshPriceValidUntil(rewrite(page.head))} />
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={faqSchema(page.route, content)} />
+{isHome && <Fragment set:html={heroPreload} />}
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />
@@ -50,7 +55,7 @@ const content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 				<Fragment set:html={rewrite(content)} />
 				<Footer page={page} />
 				</div><!-- #page -->
-<Fragment set:html={rewrite(page.bodyTail)} />
+<Fragment set:html={stripDeadScripts(stripEagerRecaptcha(rewrite(page.bodyTail)), content)} />
 {page.popup && <Fragment set:html={rewrite(page.popup)} />}
 <JoinChat page={page} />
 <script src="/assets/ttp.js" data-elementor-frontend={page.elementorFrontend ? "1" : "0"} defer></script>

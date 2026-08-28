@@ -230,6 +230,12 @@ body.archive .main-content-wrapper{margin-top:34px}
   transform:rotate(-45deg);
 }
 
+.ttp-cat__quoteAlt{
+  margin:22px 0 0;padding:14px 16px;border-radius:var(--tpm-r);
+  background:rgba(255,255,255,.72);border:1px dashed var(--tpm-blue-100);
+  font-size:15px;line-height:1.6;color:var(--tpm-ink-soft);
+}
+
 /* a direct line, for buyers who would rather not fill anything in */
 .ttp-cat__quoteDirect{
   margin:26px 0 0;padding:16px 18px;border-radius:var(--tpm-r);

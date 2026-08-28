@@ -211,4 +211,4 @@ export const FAQS = [
 ];
 
 export const faqCta =
-  `Have your diameter, length and wall? ${a(P + '/contact-us/', 'Send the specification through the contact form')} and we will quote against it.`;
+  `Have your diameter, length and wall? ${a(P + '/tube-configurator/', 'Build it in the tube configurator')} and it reaches us as a specification rather than a message.`;

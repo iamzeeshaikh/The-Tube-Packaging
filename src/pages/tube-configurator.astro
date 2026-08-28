@@ -1,0 +1,21 @@
+---
+// /tube-configurator/ — the specification builder.
+//
+// Built on the captured /about-us/ record like /tube-size-guide/, so it carries
+// the same head, chrome and scripts as the rest of the site.
+import Shell from '../layouts/Shell.astro';
+import PageBody from '../components/PageBody.astro';
+import { contentPage } from '../lib/contentpage.js';
+import { paras } from '../lib/sections.js';
+import { configurator, configuratorCss } from '../lib/configurator.js';
+import { route, title, description, h1, intro } from '../lib/copy/configurator.js';
+
+const page = contentPage({ route, title, description, crumb: h1, postId: 9002 });
+---
+<Shell page={page} headExtra={configuratorCss}>
+  <PageBody postId={9002} title={h1} crumb={h1} route={route}>
+    <Fragment set:html={`<section class="ttp-cat ttp-cat--intro"><div class="ttp-cat__wrap">${paras(intro)}</div></section>`} />
+    <Fragment set:html={configurator()} />
+  </PageBody>
+  <script is:inline src="/assets/configurator.js" defer></script>
+</Shell>

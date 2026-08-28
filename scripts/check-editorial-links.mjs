@@ -36,6 +36,14 @@ for (const f of files.sort()) {
       const [, href, rawText] = m;
       const text = rawText.replace(/<[^>]*>/g, '').trim();
       const target = href.replace('https://thetubepackaging.com', '');
+      // tel: and mailto: are the same contact details the header and footer
+      // already publish; they are not page links and have nothing to resolve
+      if (/^(tel:|mailto:)/i.test(href)) {
+        if (!/^(tel:\(503\)%20358-0443|mailto:info@thetubepackaging\.com)$/i.test(href)) {
+          fail(`${route} unexpected contact link ${href}`);
+        }
+        continue;
+      }
       if (!target.startsWith('/')) { fail(`${route} external link ${href}`); continue; }
       if (!routes.has(target)) fail(`${route} -> ${target} (no such page in the build)`);
       if (BANNED.test(text)) fail(`${route} banned anchor text "${text}"`);

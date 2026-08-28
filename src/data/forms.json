@@ -214,5 +214,41 @@
    "email": "Email",
    "message": "Message"
   }
+ },
+ "ttpconfig": {
+  "form_name": "Tube Configurator",
+  "email_to": "shanimazhar82@gmail.com, customforms24@gmail.com ",
+  "email_to_2": "shanimazhar82@gmail.com",
+  "email_subject": "New tube configurator specification from thetubepackaging.com",
+  "email_subject_2": "New tube configurator specification from thetubepackaging.com",
+  "email_from": "info@thetubepackaging.com",
+  "email_from_name": "thetubepackaging.com",
+  "email_from_2": "info@thetubepackaging.com",
+  "email_from_name_2": "thetubepackaging.com",
+  "success_message": "Thank you — your specification has been sent. We will come back with a quote.",
+  "error_message": "An error occurred.",
+  "invalid_message": "There's something wrong. The form is invalid.",
+  "button_text": "Send my specification",
+  "submit_actions": [
+   "email"
+  ],
+  "field_labels": {
+   "packing": "Packing",
+   "size": "Size class",
+   "diameter": "Internal diameter",
+   "length": "Length",
+   "wall": "Wall thickness",
+   "material": "Material",
+   "closure": "Closure",
+   "finish": "Finish",
+   "liner": "Food-contact liner",
+   "quantity": "Quantity",
+   "name": "Name",
+   "email": "Email",
+   "phone": "Phone",
+   "company": "Company",
+   "message": "Anything else",
+   "artwork": "Artwork"
+  }
  }
 }

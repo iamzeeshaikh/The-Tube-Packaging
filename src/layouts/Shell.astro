@@ -21,7 +21,7 @@ const { page, headExtra = '' } = Astro.props;
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<Fragment set:html={deferChat(refreshPriceValidUntil(rewrite(page.head)))} />
+<Fragment set:html={(deferChat(refreshPriceValidUntil(rewrite(page.head))))} />
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={headExtra} />
 <Fragment set:html={cssFixes} />

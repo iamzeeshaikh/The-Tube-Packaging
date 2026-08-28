@@ -886,3 +886,86 @@ presence side, and asserts every schema question is actually rendered.
 
 Existing schema untouched: 72 each of `Product`, `Offer`, `AggregateRating` and
 `Review`, 72 offers at `"price":"0.3"`, 204 visible `$0.30` elements.
+
+---
+
+# Core Web Vitals
+
+Measured before anything was changed, on a throttled Pixel 5 against production.
+Baseline: home performance **66**, LCP **6.0s**; category **89**, LCP 2.6s.
+"Reduce unused JavaScript" was the top opportunity on every page at **507 KB**.
+
+## What was actually slow `[measured]`
+
+Three things, none of which was the obvious "a big image somewhere".
+
+**1. reCAPTCHA, 1.4 MB on every page carrying a form.** Google ships
+`recaptcha__en.js` at 344 KB and fetches it once per frame — four times in
+practice — plus 2 × 41 KB of styles. It loaded on page load, before anyone had
+touched a form, on 42 pages. On the six category pages it was **my own doing**:
+I shipped the loader with the quote form.
+
+**2. The home page LCP element was a 379 KB image.** `banner.jpg`, 1920×765,
+served at full size to a 390px phone with no `srcset`.
+
+**3. The Zendesk chat bootstrapped from an inline script at the top of `<head>`**,
+so its bundle competed with the stylesheet and the LCP image before anything
+had painted, on all 69 pages.
+
+## What changed
+
+| | |
+|---|---|
+| reCAPTCHA | loads on first focus/pointerdown/keydown inside a form, not on page load |
+| Zendesk chat | loads on first interaction, or 5s after the load event |
+| Home hero | WebP + JPEG at 480/768/1200/1920 behind `<picture>`, with a matching preload — a phone takes **4 KB** instead of 379 KB |
+| WordPress emoji polyfill | removed from all 66 pages that carried it |
+| WooCommerce gallery scripts | removed from the 34 pages with no gallery; the 35 product pages keep them |
+
+## Result — deterministic byte census `[measured]`
+
+Lighthouse against production is too noisy to use as the scoreboard here: the
+host challenges the measurement tool, and three consecutive runs on the category
+page returned a score of 0. The home page read 66, then 91, then 68 across runs.
+So the honest scoreboard is bytes and requests, measured on one local server
+across two builds of the same tree, with a 7-second window so every deferred
+loader had fired.
+
+| Page | Requests | First-party | **Third-party** |
+|---|---|---|---|
+| `/` | 122 → **111** | 2,479 → **2,075 KB** | 953 → **186 KB** |
+| `/product-category/custom-cardboard-tubes/` | 61 → **49** | 919 → 951 KB | 913 → **147 KB** |
+| `/product/paper-tubes/` | 84 → **78** | 1,048 → 1,208 KB | 955 → **150 KB** |
+
+Third-party weight is down about **80% on every page**. Lighthouse's "unused
+JavaScript" fell from **507 KB to 78 KB**.
+
+**The first-party rises are not regressions, and it is worth saying why rather
+than hiding them.** On the product page `block-library/style.min.css` (128 KB),
+`custom.js` and `hooks.min.js` show as *newly loaded* in the after run — because
+in the before run they had not finished inside the measurement window, starved
+by 1.4 MB of reCAPTCHA. The page now finishes loading; it did not get heavier.
+
+## Two corrections to my own measurements
+
+The first asset census read `Content-Length` and reported **836 KB of
+JavaScript**. Measured from disk it is 212 KB — the real weight was CSS and
+third-party. And the first count of pages loading gallery scripts said 69 of 69
+*after* the fix, because it matched the script name inside an inline config blob
+rather than a `<script src>` tag. The strip had worked.
+
+## Verification
+
+Every behaviour that could break was tested rather than assumed:
+
+| Check | Result |
+|---|---|
+| reCAPTCHA absent before interaction, present after | 6 category pages, a product page, the home page — all pass |
+| Category quote form still submits | 6 / 6 |
+| Configurator still submits | pass, both food and non-food paths |
+| Product and home forms still submit | pass |
+| Chat absent before interaction, present after | 0 requests before, 8 after, on 3 pages |
+| Cart add-to-cart | all three button shapes pass |
+| Horizontal overflow 375 / 768 / 1440px | 0 pages |
+| Links | 0 broken across 17,603 references |
+| Price | 72 offers at `"price":"0.3"`, 204 visible `$0.30` |

@@ -9,6 +9,7 @@ import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
 import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
+import { deferChat } from '../lib/defer-chat.js';
 import { categoryCss } from '../lib/category-css.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
@@ -20,7 +21,7 @@ const { page, headExtra = '' } = Astro.props;
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<Fragment set:html={refreshPriceValidUntil(rewrite(page.head))} />
+<Fragment set:html={deferChat(refreshPriceValidUntil(rewrite(page.head)))} />
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={headExtra} />
 <Fragment set:html={cssFixes} />

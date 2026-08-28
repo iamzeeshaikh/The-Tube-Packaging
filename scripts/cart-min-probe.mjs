@@ -36,6 +36,26 @@ if (field) {
   const after = await p.evaluate(() => { const i = document.querySelector('input.qty'); return i ? i.value : null; });
   check(after === null || Number(after) >= 100, 'typing 5 is clamped back to 100', `now ${after}`);
 }
+// a cart saved before the minimum existed — the case the browser was actually
+// showing, which the add-path checks above did not cover
+await p.goto('http://localhost:4325/product-category/custom-cardboard-tubes/', { waitUntil: 'load' });
+const key = await p.evaluate(() => {
+  const k = Object.keys(localStorage).find((n) => /cart/i.test(n));
+  localStorage.setItem(k, JSON.stringify({ 71: 1 }));
+  return k;
+});
+await p.goto('http://localhost:4325/cart/', { waitUntil: 'load' });
+await p.waitForTimeout(900);
+const legacy = await p.evaluate(() => {
+  const i = document.querySelector('input.qty');
+  // the header cell also carries .product-subtotal, so read the body row's
+  const row = document.querySelector('tbody tr.cart_item, tbody tr');
+  const cell = row && row.querySelector('.product-subtotal');
+  return { shown: i ? i.value : null, sub: cell ? cell.textContent : null };
+});
+check(Number(legacy.shown) >= 100, 'a cart saved as 1 renders as 100', `shows ${legacy.shown}, key ${key}`);
+check(/30\.00|\$30/.test(String(legacy.sub || '')), 'its subtotal is 100 x $0.30', String(legacy.sub || '').trim());
+
 await b.close(); s.kill();
 console.log(fails ? `\n${fails} failure(s)` : '\nthe cart never holds fewer than 100');
 process.exit(fails ? 1 : 0);

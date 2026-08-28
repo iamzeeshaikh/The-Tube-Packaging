@@ -17,13 +17,20 @@
   var catalogue = null;
 
   // ------------------------------------------------------------------ state
+  // Nothing on this site is sold below 100 pieces: the standard minimum is 500
+  // and smaller runs start at around 100, so a cart holding 1 contradicted the
+  // policy stated on every product page.
+  var MIN_QTY = 100;
+
   function read() {
     try {
       var raw = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
       var out = {};
       for (var id in raw) {
         var q = parseInt(raw[id], 10);
-        if (q > 0) out[id] = q;
+        // a cart saved before the 100-piece minimum existed still holds the old
+        // quantity, so clamp on the way in as well as on add and on update
+        if (q > 0) out[id] = Math.max(MIN_QTY, q);
       }
       return out;
     } catch (e) {
@@ -35,11 +42,6 @@
     localStorage.setItem(STORE_KEY, JSON.stringify(cart));
     document.dispatchEvent(new CustomEvent('ttp:cart-changed'));
   }
-
-  // Nothing on this site is sold below 100 pieces: the standard minimum is 500
-  // and smaller runs start at around 100, so a cart holding 1 contradicted the
-  // policy stated on every product page.
-  var MIN_QTY = 100;
 
   function add(id, qty) {
     var cart = read();

@@ -20,11 +20,11 @@ const ANCHOR = '</div><!-- .crumbs -->';
 const BAR = `
 <div class="ttp-cfgcta">
 <span class="ttp-cfgcta__text">Know your size? Not sure yet? Build the specification step by step and send it for a quote.</span>
-<a class="ttp-cfgcta__btn" href="https://thetubepackaging.com/tube-configurator/">Build a Quote</a>
+<a class="ttp-cfgcta__btn" href="https://thetubepackaging.com/design-your-tube-packaging/">Build a Quote</a>
 </div>`;
 
 export function configuratorCta(html, route) {
-  if (!html || route === '/tube-configurator/') return html;
+  if (!html || route === '/design-your-tube-packaging/') return html;
   if (html.indexOf(ANCHOR) === -1) return html;
   // after the first breadcrumb block only
   return html.replace(ANCHOR, ANCHOR + BAR);

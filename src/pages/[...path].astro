@@ -9,6 +9,8 @@ import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { deferChat } from '../lib/defer-chat.js';
 import { heroPicture, heroPreload } from '../lib/hero-image.js';
 import { configuratorCta, configuratorCtaCss } from '../lib/configurator-cta.js';
+import { embedConfigurator, embedCss, isProduct } from '../lib/product-configurator.js';
+import { configuratorCss } from '../lib/configurator.js';
 import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
@@ -34,8 +36,11 @@ let content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 // the home page hero is the LCP element; give it renditions and a preload
 const isHome = page.route === '/';
 if (isHome) content = heroPicture(content);
-// a visible way in to the configurator, under the breadcrumb
-content = configuratorCta(content, page.route);
+// product pages carry the configurator itself, after the description; every
+// other page gets the bar that links to it
+const onProduct = isProduct(page.route);
+content = onProduct ? embedConfigurator(content, page.route)
+                    : configuratorCta(content, page.route);
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -48,6 +53,7 @@ content = configuratorCta(content, page.route);
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />
 <Fragment set:html={configuratorCtaCss} />
+{onProduct && <Fragment set:html={configuratorCss + embedCss} />}
 </head>
 
 <body class={page.bodyClass}>
@@ -65,5 +71,6 @@ content = configuratorCta(content, page.route);
 <JoinChat page={page} />
 <script src="/assets/ttp.js" data-elementor-frontend={page.elementorFrontend ? "1" : "0"} defer></script>
 <script src="/assets/cart.js" defer></script>
+{onProduct && <script is:inline src="/assets/configurator.js" defer></script>}
 </body>
 </html>

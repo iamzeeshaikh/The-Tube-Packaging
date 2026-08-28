@@ -51,7 +51,15 @@ for (const route of ROUTES) {
 
   // touching the form is what should fetch it
   await page.click('#ttp-cat-name');
-  await page.waitForTimeout(2500);
+  // Google's widget is a third-party iframe and its render time varies; wait for
+  // it rather than sleeping a fixed 2.5s, which made this probe flaky — a
+  // different page failed on each run
+  await page.waitForSelector('.elementor-g-recaptcha iframe', { timeout: 25000 })
+    .catch(() => {});
+  await page.waitForFunction(() => {
+    const f = document.querySelector('form.elementor-form');
+    return !!(f && f.querySelector('[name="g-recaptcha-response"]'));
+  }, null, { timeout: 25000 }).catch(() => {});
   const state = await page.evaluate(() => ({
     apiLoaded: typeof window.grecaptcha !== 'undefined',
     widget: !!document.querySelector('.elementor-g-recaptcha iframe'),

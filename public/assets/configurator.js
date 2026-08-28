@@ -119,16 +119,27 @@
     if (msg) msg.hidden = true;
   });
 
-  function requires(step) {
-    return ['packing', 'size', 'diameter', 'length', 'wall', 'material', 'closure', 'quantity']
-      .indexOf(step) !== -1;
+  var REQUIRED = ['packing', 'size', 'diameter', 'length', 'wall', 'material',
+    'closure', 'quantity'];
+
+  // a step now holds several fields, so every required one in the visible step
+  // has to be answered before it will advance
+  function missingIn(stepEl) {
+    var names = {};
+    [].forEach.call(stepEl.querySelectorAll('input[type=radio]'), function (i) {
+      var m = /form_fields\[(.+?)\]/.exec(i.name);
+      if (m && !i.closest('[hidden]')) names[m[1]] = true;
+    });
+    return Object.keys(names).filter(function (n) {
+      return REQUIRED.indexOf(n) !== -1 && !checked(n);
+    });
   }
 
   nextBtn.addEventListener('click', function () {
     var cur = active()[at];
-    var step = cur.dataset.step;
-    if (requires(step) && !checked(step)) {
-      show_message('err', 'Pick one to continue.');
+    var missing = missingIn(cur);
+    if (missing.length) {
+      show_message('err', 'Please choose ' + (missing.length > 1 ? 'each option' : 'an option') + ' to continue.');
       return;
     }
     msg.hidden = true;
@@ -146,6 +157,15 @@
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    // the last step carries quantity as well as the contact fields, and the
+    // Send button bypasses the Continue validation — so check the whole form
+    var unanswered = active().reduce(function (all, stepEl) {
+      return all.concat(missingIn(stepEl));
+    }, []);
+    if (unanswered.length) {
+      show_message('err', 'Please complete every step before sending.');
+      return;
+    }
     var name = form.querySelector('#cfg-name');
     var email = form.querySelector('#cfg-email');
     if (!name.value.trim() || !email.value.trim() || !email.checkValidity()) {

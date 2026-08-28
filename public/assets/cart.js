@@ -36,9 +36,14 @@
     document.dispatchEvent(new CustomEvent('ttp:cart-changed'));
   }
 
+  // Nothing on this site is sold below 100 pieces: the standard minimum is 500
+  // and smaller runs start at around 100, so a cart holding 1 contradicted the
+  // policy stated on every product page.
+  var MIN_QTY = 100;
+
   function add(id, qty) {
     var cart = read();
-    cart[id] = (cart[id] || 0) + (qty || 1);
+    cart[id] = Math.max(MIN_QTY, (cart[id] || 0) + (qty || MIN_QTY));
     write(cart);
   }
 
@@ -103,7 +108,7 @@
             '<label class="screen-reader-text" for="qty-' + l.product.id + '">' +
             esc(l.product.name) + ' quantity</label>' +
             '<input type="number" id="qty-' + l.product.id + '" class="input-text qty text" ' +
-            'step="1" min="1" name="qty[' + l.product.id + ']" value="' + l.qty + '" ' +
+            'step="1" min="' + MIN_QTY + '" name="qty[' + l.product.id + ']" value="' + l.qty + '" ' +
             'data-qty="' + l.product.id + '" /></div></td>' +
           '<td class="product-subtotal" data-title="Subtotal">' + money(l.total) + '</td>' +
         '</tr>';
@@ -413,8 +418,14 @@
         var next = read();
         Array.prototype.forEach.call(document.querySelectorAll('[data-qty]'), function (input) {
           var q = parseInt(input.value, 10);
-          if (q > 0) next[input.dataset.qty] = q;
-          else delete next[input.dataset.qty];
+          if (q > 0) {
+            // clamp rather than reject, so the field cannot end up below the
+            // minimum the rest of the site promises
+            if (q < MIN_QTY) { q = MIN_QTY; input.value = String(MIN_QTY); }
+            next[input.dataset.qty] = q;
+          } else {
+            delete next[input.dataset.qty];
+          }
         });
         write(next);
       }

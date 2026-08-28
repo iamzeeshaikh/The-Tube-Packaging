@@ -44,6 +44,16 @@
       "source": "/category/uncategorized/",
       "destination": "/category/information/",
       "permanent": true
+    },
+    {
+      "source": "/tube-configurator",
+      "destination": "/design-your-tube-packaging/",
+      "permanent": true
+    },
+    {
+      "source": "/tube-configurator/",
+      "destination": "/design-your-tube-packaging/",
+      "permanent": true
     }
   ],
   "headers": [

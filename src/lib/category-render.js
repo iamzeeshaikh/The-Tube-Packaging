@@ -82,7 +82,7 @@ function quote(copy) {
   // already published in the header and footer
   const direct = `
 <p class="ttp-cat__quoteAlt">Not sure what to put in the message?
-<a href="https://thetubepackaging.com/tube-configurator/">Build your specification step by step</a>
+<a href="https://thetubepackaging.com/design-your-tube-packaging/">Build your specification step by step</a>
 and it arrives here filled in.</p>
 <div class="ttp-cat__quoteDirect">
 <span>Or reach us directly</span>

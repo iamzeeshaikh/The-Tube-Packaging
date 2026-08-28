@@ -1,7 +1,7 @@
 import { P, a } from './_shared.js';
 
 /* ══════════════════════════════════════════════════════════════════════
-   /tube-configurator/ — the specification builder
+   /design-your-tube-packaging/ — the specification builder
    ══════════════════════════════════════════════════════════════════════
    Why it exists, in one line: the owner's problem is that leads arrive
    without a specification and die on price, and every page in this
@@ -24,16 +24,16 @@ import { P, a } from './_shared.js';
    does not can still finish.
    ══════════════════════════════════════════════════════════════════════ */
 
-export const route = '/tube-configurator/';
-export const title = 'Tube Configurator | Build Your Specification | The Tube Packaging';
+export const route = '/design-your-tube-packaging/';
+export const title = 'Design Your Tube Packaging | Build a Spec in Minutes | The Tube Packaging';
 export const description =
-  'Build your custom tube specification step by step — what you are packing, size, wall '
-  + 'thickness, material, closure and finish — then send it for a quote. No account needed.';
-export const h1 = 'Tube Configurator';
+  'Design your custom tube packaging step by step — what you are packing, size, wall '
+  + 'thickness, material, closure and finish — then send the specification for a quote.';
+export const h1 = 'Design Your Tube Packaging';
 
 export const intro = [
   'Most quote requests arrive with a product and a quantity and nothing else, which means a round of questions before anyone can price anything. This asks for the specification up front instead.',
-  `Start with what you are packing and the rest is pre-filled with sensible defaults you can change. Ten short steps — eleven if you are packing food, which adds the liner — no account, and nothing here commits you to anything. If you would rather read first, ${a(P + '/tube-size-guide/', 'the tube size guide')} covers the same ground in prose.`,
+  `Start with what you are packing and the rest is pre-filled with sensible defaults you can change. Five short steps — six if you are packing food, which adds the liner — no account, and nothing here commits you to anything. If you would rather read first, ${a(P + '/tube-size-guide/', 'the tube size guide')} covers the same ground in prose.`,
 ];
 
 // Step 1 doubles as the router: each product sets defaults for the steps after
@@ -52,9 +52,9 @@ export const PACKING = [
   { id: 'balm',      label: 'Lip balm and lipstick',   slug: 'paper-lip-balm-tubes',
     defaults: { size: 'small', diameter: '¾"', length: '3"', wall: 'thin', material: 'printed', closure: 'push-up' } },
   { id: 'food',      label: 'Tea, coffee and food',    slug: 'tube-food-packaging', food: true,
-    defaults: { size: 'medium', diameter: '3"', length: '7"', wall: 'standard', material: 'printed', closure: 'metal-ends' } },
+    defaults: { size: 'medium', diameter: '3"', length: '8"', wall: 'standard', material: 'printed', closure: 'metal-ends' } },
   { id: 'creams',    label: 'Creams, gels and lotions', slug: 'lotion-tubes', plastic: true,
-    defaults: { size: 'small', diameter: '1½"', length: '5"', wall: 'n/a', material: 'plastic', closure: 'flip-top' } },
+    defaults: { size: 'small', diameter: '1½"', length: '6"', wall: 'n/a', material: 'plastic', closure: 'flip-top' } },
   { id: 'other',     label: 'Something else',          slug: 'paper-tubes',
     defaults: { size: 'medium', diameter: '2"', length: '6"', wall: 'standard', material: 'kraft', closure: 'board-cap' } },
 ];
@@ -134,17 +134,43 @@ export const QUANTITIES = [
 ];
 
 export const STEPS = [
-  { id: 'packing',  title: 'What are you packing?',  hint: 'This sets sensible defaults for every step after it. You can change any of them.' },
-  { id: 'size',     title: 'Size class',             hint: 'Internal diameter is the dimension your product has to pass through.' },
-  { id: 'diameter', title: 'Internal diameter',      hint: 'Allow 1 – 2 mm over the widest part of the product.' },
-  { id: 'length',   title: 'Length',                 hint: 'Add 1″ to 2″ beyond the contents so nothing bears against the end caps.' },
-  { id: 'wall',     title: 'Wall thickness',         hint: 'Thick means a heavier wall, not a wider tube.' },
-  { id: 'material', title: 'Material',               hint: 'What the outside is made of, and what it prints like.' },
-  { id: 'closure',  title: 'Closure',                hint: 'How it opens, how well it seals, and how it feels to receive.' },
-  { id: 'finish',   title: 'Finish',                 hint: 'Optional. Each finish carries its own setup.' },
-  { id: 'liner',    title: 'Food-contact liner',     hint: 'The liner is what makes a tube food safe, not the wall.', food: true },
-  { id: 'quantity', title: 'Quantity',               hint: 'Per-piece cost drops significantly as quantity increases.' },
-  { id: 'details',  title: 'Your details',           hint: 'Artwork is optional — send it later if it is not ready.' },
+  { id: 'packing',  title: 'What are you packing?',
+    hint: 'This sets sensible defaults for everything after it. You can change any of them.',
+    groups: [{ field: 'packing' }] },
+
+  { id: 'size',     title: 'Size',
+    hint: 'Internal diameter is the dimension your product has to pass through. Allow 1 – 2 mm over the widest part, and 1″ to 2″ of extra length so nothing bears against the end caps.',
+    groups: [
+      { field: 'size',     label: 'Size class' },
+      { field: 'diameter', label: 'Internal diameter' },
+      { field: 'length',   label: 'Length' },
+    ] },
+
+  { id: 'build',    title: 'Material and wall',
+    hint: 'The wall decides whether it survives handling; the material decides how it looks and prints.',
+    groups: [
+      { field: 'material', label: 'Material' },
+      { field: 'wall',     label: 'Wall thickness' },
+    ] },
+
+  { id: 'finish',   title: 'Closure and finish',
+    hint: 'The closure decides how it opens and seals. Finish is optional — each one carries its own setup.',
+    groups: [
+      { field: 'closure', label: 'Closure' },
+      { field: 'finish',  label: 'Finish' },
+    ] },
+
+  { id: 'liner',    title: 'Food-contact liner',
+    hint: 'The liner is what makes a tube food safe, not the wall.',
+    food: true,
+    groups: [{ field: 'liner' }] },
+
+  { id: 'details',  title: 'Quantity and your details',
+    hint: 'Artwork is optional — send it later if it is not ready.',
+    groups: [
+      { field: 'quantity', label: 'Quantity' },
+      { field: 'details' },
+    ] },
 ];
 
 export const outro =

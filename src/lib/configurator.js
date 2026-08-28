@@ -98,27 +98,42 @@ function stepBody(id) {
 }
 
 export function configurator() {
-  const steps = STEPS.map((s, i) => `
+  const steps = STEPS.map((s, i) => {
+    const body = s.groups.map((g) => {
+      const inner = stepBody(g.field);
+      if (!g.label) return inner;
+      return `<h3 class="ttp-cfg__group">${esc(g.label)}</h3>\n${inner}`;
+    }).join('\n');
+    return `
 <section class="ttp-cfg__step" data-step="${s.id}"${s.food ? ' data-food-only="1"' : ''} hidden>
 <p class="ttp-cfg__count"><span class="ttp-cfg__n">${i + 1}</span> of <span class="ttp-cfg__total">${STEPS.length}</span></p>
 <h2 class="ttp-cfg__title">${esc(s.title)}</h2>
 <p class="ttp-cfg__hint">${esc(s.hint)}</p>
-${stepBody(s.id)}
-</section>`).join('');
+${body}
+</section>`;
+  }).join('');
 
-  const summaryRows = STEPS.filter((s) => s.id !== 'details').map((s) => `
-<div class="ttp-cfg__sumRow" data-sum="${s.id}"${s.food ? ' data-food-only="1"' : ''} hidden>
-<dt>${esc(s.title.replace(/\?$/, ''))}</dt><dd></dd>
+  // the summary lists every field, not every step, now that steps group them
+  const FIELDS = [
+    ['packing', 'What are you packing'], ['size', 'Size class'],
+    ['diameter', 'Internal diameter'], ['length', 'Length'],
+    ['material', 'Material'], ['wall', 'Wall thickness'],
+    ['closure', 'Closure'], ['finish', 'Finish'],
+    ['liner', 'Food-contact liner'], ['quantity', 'Quantity'],
+  ];
+  const summaryRows = FIELDS.map(([field, label]) => `
+<div class="ttp-cfg__sumRow" data-sum="${field}"${field === 'liner' ? ' data-food-only="1"' : ''} hidden>
+<dt>${esc(label)}</dt><dd></dd>
 </div>`).join('');
 
   return `
 <div class="ttp-cfg" id="ttp-configurator">
 <form class="ttp-cfg__form" method="post" novalidate>
 <input type="hidden" name="form_id" value="ttpconfig">
-<input type="hidden" name="referer_title" value="Tube Configurator | The Tube Packaging">
+<input type="hidden" name="referer_title" value="Design Your Tube Packaging | The Tube Packaging">
 <input type="text" name="form_fields[field_228829a]" class="ttp-cfg__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-<div class="ttp-cfg__progress" role="progressbar" aria-label="Configurator progress" aria-valuemin="1" aria-valuemax="${STEPS.length}" aria-valuenow="1">
+<div class="ttp-cfg__progress" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="${STEPS.length}" aria-valuenow="1">
 <span class="ttp-cfg__bar"></span>
 </div>
 
@@ -165,6 +180,9 @@ const css = `
   text-transform:uppercase;color:var(--tpm-blue-strong)}
 .ttp-cfg__title{margin:0 0 6px;font-size:clamp(21px,2.2vw,28px);line-height:1.2;
   letter-spacing:-.02em;color:var(--tpm-ink)}
+.ttp-cfg__group{margin:22px 0 10px;font-size:13px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--tpm-muted)}
+.ttp-cfg__group:first-of-type{margin-top:0}
 .ttp-cfg__hint{margin:0 0 18px;font-size:15px;line-height:1.6;color:var(--tpm-muted);max-width:62ch}
 
 .ttp-cfg__grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}

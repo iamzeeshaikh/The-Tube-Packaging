@@ -211,4 +211,4 @@ export const FAQS = [
 ];
 
 export const faqCta =
-  `Have your diameter, length and wall? ${a(P + '/tube-configurator/', 'Build it in the tube configurator')} and it reaches us as a specification rather than a message.`;
+  `Have your diameter, length and wall? ${a(P + '/design-your-tube-packaging/', 'Build it in the tube configurator')} and it reaches us as a specification rather than a message.`;

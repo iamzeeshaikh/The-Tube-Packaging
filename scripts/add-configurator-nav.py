@@ -34,7 +34,7 @@ import json, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CHROME = ROOT / 'src/data/chrome.json'
-URL = 'https://thetubepackaging.com/tube-configurator/'
+URL = 'https://thetubepackaging.com/design-your-tube-packaging/'
 LABEL = 'Build a Quote'
 
 MENU_END = '</ul>\n</li>\n</ul>'

@@ -20,11 +20,13 @@ const check = (ok, label, extra = '') => {
   console.log(`${ok ? 'PASS' : 'FAIL'}  ${label}${extra ? '  ' + extra : ''}`);
 };
 
+const ROUTE = process.env.CFG_ROUTE || '/design-your-tube-packaging/';
+
 async function run(pick, expectFood) {
   const page = await browser.newPage({ viewport: { width: 1280, height: 950 } });
   let body = null;
   await page.route('**/api/form/**', async (r) => { body = r.request().postData() || ''; await r.abort(); });
-  await page.goto(`http://localhost:${PORT}/tube-configurator/`, { waitUntil: 'load' });
+  await page.goto(`http://localhost:${PORT}${ROUTE}`, { waitUntil: 'load' });
   await page.waitForTimeout(900);
 
   const visible = () => page.$$eval('.ttp-cfg__step:not([hidden])', (n) => n.map((s) => s.dataset.step));
@@ -43,20 +45,27 @@ async function run(pick, expectFood) {
     const v = await visible();
     if (!v.length) break;
     seen.push(v[0]);
-    const done = await page.$eval('.ttp-cfg__send', (b) => !b.hidden).catch(() => false);
-    if (done) break;
     // pick the first option where the step requires one and nothing is chosen —
     // the app refuses to advance otherwise, which is the intended behaviour and
     // is what this loop originally tripped over
     await page.evaluate(() => {
       const step = document.querySelector('.ttp-cfg__step:not([hidden])');
-      const radios = [...step.querySelectorAll('input[type=radio]')]
-        .filter((r) => !r.closest('[hidden]'));
-      if (radios.length && !radios.some((r) => r.checked)) {
-        radios[0].checked = true;
-        radios[0].dispatchEvent(new Event('change', { bubbles: true }));
-      }
+      // a step now holds several groups; answer every unanswered one
+      const byName = {};
+      [...step.querySelectorAll('input[type=radio]')]
+        .filter((r) => !r.closest('[hidden]'))
+        .forEach((r) => { (byName[r.name] = byName[r.name] || []).push(r); });
+      Object.values(byName).forEach((group) => {
+        if (!group.some((r) => r.checked)) {
+          group[0].checked = true;
+          group[0].dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      });
     });
+    // the last step carries quantity alongside the contact fields, so it has to
+    // be answered here too before the walk stops
+    const done = await page.$eval('.ttp-cfg__send', (b) => !b.hidden).catch(() => false);
+    if (done) break;
     await page.click('.ttp-cfg__next');
     await page.waitForTimeout(220);
   }

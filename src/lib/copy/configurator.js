@@ -33,7 +33,7 @@ export const h1 = 'Tube Configurator';
 
 export const intro = [
   'Most quote requests arrive with a product and a quantity and nothing else, which means a round of questions before anyone can price anything. This asks for the specification up front instead.',
-  `Start with what you are packing and the rest is pre-filled with sensible defaults you can change. Nine short steps, no account, and nothing here commits you to anything. If you would rather read first, ${a(P + '/tube-size-guide/', 'the tube size guide')} covers the same ground in prose.`,
+  `Start with what you are packing and the rest is pre-filled with sensible defaults you can change. Ten short steps — eleven if you are packing food, which adds the liner — no account, and nothing here commits you to anything. If you would rather read first, ${a(P + '/tube-size-guide/', 'the tube size guide')} covers the same ground in prose.`,
 ];
 
 // Step 1 doubles as the router: each product sets defaults for the steps after

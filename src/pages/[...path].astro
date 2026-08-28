@@ -15,6 +15,7 @@ import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
 import { faqSchema } from '../lib/faq-schema.js';
+import { rebuildArchive, archiveResultCount, brandByline, resourcesCss } from '../lib/resources.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
 import Footer from '../components/Footer.astro';
@@ -33,6 +34,9 @@ const { page } = Astro.props;
 // the FAQ schema must describe what the page finally renders, so the content
 // transforms run once here and the result feeds both the head and the body
 let content = enhanceProduct({ ...page, content: enhanceCategory(page) });
+// the guides archive is rebuilt from the post sitemap: the captured markup
+// listed six of the eight published posts
+content = archiveResultCount(rebuildArchive({ ...page, content }), page.route);
 // the home page hero is the LCP element; give it renditions and a preload
 const isHome = page.route === '/';
 if (isHome) content = heroPicture(content);
@@ -41,6 +45,8 @@ if (isHome) content = heroPicture(content);
 const onProduct = isProduct(page.route);
 content = onProduct ? embedConfigurator(content, page.route)
                     : configuratorCta(content, page.route);
+// the theme printed the owner's personal Gmail address as the author byline
+content = brandByline(content);
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -53,6 +59,7 @@ content = onProduct ? embedConfigurator(content, page.route)
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />
 <Fragment set:html={configuratorCtaCss} />
+<Fragment set:html={resourcesCss ? `<style>${resourcesCss}</style>` : ''} />
 {onProduct && <Fragment set:html={configuratorCss + embedCss} />}
 </head>
 

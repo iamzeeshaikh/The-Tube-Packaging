@@ -1,12 +1,13 @@
 ---
 import { region } from '../lib/chrome.js';
+import { footerResources, brandByline } from '../lib/resources.js';
 const { page } = Astro.props;
 
 // The product column had no heading while "Top Categories" sat beside it. It is
 // added here rather than in chrome.json because region() patches the footer by
 // splitting it into tags and replacing them by index -- inserting markup there
 // would shift every index in each page's chromeDiff.
-const html = region('footer', page).replace(
+const html = brandByline(footerResources(region('footer', page))).replace(
   '<nav id="footer-site-navigation"',
   '<section class="widget widget_nav_menu"><h2 class="widget-title">Top Products</h2></section>'
   + '<nav id="footer-site-navigation"',

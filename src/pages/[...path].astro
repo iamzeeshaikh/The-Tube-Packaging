@@ -8,6 +8,7 @@ import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { deferChat } from '../lib/defer-chat.js';
 import { heroPicture, heroPreload } from '../lib/hero-image.js';
+import { configuratorCta, configuratorCtaCss } from '../lib/configurator-cta.js';
 import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
@@ -33,6 +34,8 @@ let content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 // the home page hero is the LCP element; give it renditions and a preload
 const isHome = page.route === '/';
 if (isHome) content = heroPicture(content);
+// a visible way in to the configurator, under the breadcrumb
+content = configuratorCta(content, page.route);
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -44,6 +47,7 @@ if (isHome) content = heroPicture(content);
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />
+<Fragment set:html={configuratorCtaCss} />
 </head>
 
 <body class={page.bodyClass}>

@@ -969,3 +969,81 @@ Every behaviour that could break was tested rather than assumed:
 | Horizontal overflow 375 / 768 / 1440px | 0 pages |
 | Links | 0 broken across 17,603 references |
 | Price | 72 offers at `"price":"0.3"`, 204 visible `$0.30` |
+
+---
+
+## 2026-08-28 — Configurator URL, product-page embed, shorter flow, cart minimum
+
+### What changed
+
+**URL renamed.** `/tube-configurator/` is now `/design-your-tube-packaging/`.
+The slug was picked from Search Console rather than invented: *"tube packaging
+design"* had **438 impressions and 0 clicks** [export] over the reporting
+window, so the page name now matches a query the site already surfaces for.
+A permanent redirect is in `vercel.json`; live it answers **308** (Vercel's
+permanent redirect — Google treats 308 and 301 the same). Verified live:
+`/tube-configurator/` → `/design-your-tube-packaging/`, canonical and `<h1>`
+both on the new URL, **0** pages still linking the old one and **69** linking
+the new one [measured].
+
+**Embedded on product pages.** The configurator is rendered in full on all
+**35/35** product pages, placed after the description tabs and before
+*Customization Options*, so it reads as part of the page instead of a floating
+bar. The CTA bar is suppressed on those 35 pages and kept on the other 15
+[measured].
+
+**Flow shortened from 11 steps to 6** (5 where the food-liner step does not
+apply), by grouping related fields: packing / size + diameter + length /
+material + wall / closure + finish / liner / quantity + details.
+
+**Cart minimum is 100 pieces.** Add-to-cart stores 100, the quantity field
+carries `min="100"`, and typing a lower number is clamped back to 100
+[measured, 4/4 checks].
+
+### Defects this batch found and fixed
+
+1. **Two "what is packed" defaults pointed at lengths that were not options** —
+   food defaulted to `7"` and creams to `5"`, neither of which exists in the
+   length list. The size step could therefore never be completed for those two
+   products: the form correctly refused to advance and there was no way to
+   satisfy it. Now `8"` and `6"`. All 9 products audited: every default matches
+   a real option [measured].
+2. **Quantity could be submitted empty.** Validation ran on *Continue*, but the
+   last step ends in *Send*, which bypassed it — and quantity now lives on that
+   last step. Send validates every required field in the active steps.
+3. Two probe bugs, not site bugs: `configurator-probe` stopped walking before
+   answering the final step, and `category-form-probe` slept a fixed 2.5s for
+   Google's reCAPTCHA iframe, which failed a *different* page on every run. Both
+   fixed; the form probe is green on two consecutive runs.
+
+### Verification (styled build, `dist-qa`)
+
+| Check | Result |
+|---|---|
+| Configurator, standalone page | 12/12 |
+| Configurator, embedded on a product page | 12/12 |
+| Cart minimum | 4/4 |
+| Add-to-cart still works (home, category, product) | 3/3 |
+| Category quote form, 5 pages | 5/5, twice |
+| Chat deferred until interaction | 3/3 |
+| Heads well formed | 69/69 |
+| FAQPage matches the page | 43/43 pages, 666 questions |
+| BreadcrumbList | 58 pages (10 noindex + home skipped) |
+| Editorial links | 94/94 resolve |
+| Horizontal overflow at 375 / 768 / 1440 | 0 pages |
+
+**Price untouched:** 72 offers at `"price":"0.3"`, 244 visible `$0.30` across 46
+pages. The only other prices anywhere in the build are `$0.15`–`$0.40` in one
+blog post, describing embossing die surcharges — original WordPress copy, not a
+product price [measured].
+
+**MOQ:** one figure site-wide, 500 pieces, 57 occurrences across 43 pages
+[measured].
+
+### Still with the owner
+
+- GA4 / GTM and form-conversion tracking — deferred by the owner.
+- Merchant Center lists return **Method: In store**, but the site says returns
+  are accepted **by mail only**. The recommendation is to change the Merchant
+  setting, not the site, since the shipping, terms and refund pages must not be
+  edited.

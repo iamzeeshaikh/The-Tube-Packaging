@@ -1,0 +1,43 @@
+---
+// The articles written for this site, as opposed to the posts migrated from
+// WordPress (which the catch-all route renders from pages.json).
+//
+// This route is more specific than [...path].astro, so Astro matches it first
+// for these five slugs and falls through to the catch-all for everything else.
+import Shell from '../layouts/Shell.astro';
+import PageBody from '../components/PageBody.astro';
+import { contentPage } from '../lib/contentpage.js';
+import { faqSchema } from '../lib/faq-schema.js';
+import { renderResource, resourcePageCss } from '../lib/resource-page.js';
+import { blogSchema } from '../lib/blog-page.js';
+import { ARTICLES } from '../lib/copy/blog/index.js';
+
+export function getStaticPaths() {
+  return ARTICLES.map((copy, i) => ({
+    params: { article: copy.route.slice(1, -1) },
+    props: { copy, postId: 9200 + i },
+  }));
+}
+
+const { copy, postId } = Astro.props;
+const page = {
+  ...contentPage({
+    route: copy.route,
+    title: copy.title,
+    description: copy.description,
+    crumb: copy.h1,
+    postId,
+  }),
+  crumbs: [
+    { name: 'Home', url: 'https://thetubepackaging.com/' },
+    { name: 'Guides & Articles', url: 'https://thetubepackaging.com/category/information/' },
+    { name: copy.h1, url: 'https://thetubepackaging.com' + copy.route },
+  ],
+};
+const body = renderResource(copy);
+---
+<Shell page={page} headExtra={faqSchema(copy.route, body) + blogSchema(copy) + `<style>${resourcePageCss}</style>`}>
+  <PageBody postId={postId} title={copy.h1} crumb={copy.h1} route={copy.route} parent={{ name: 'Guides & Articles', route: '/category/information/' }}>
+    <Fragment set:html={body} />
+  </PageBody>
+</Shell>

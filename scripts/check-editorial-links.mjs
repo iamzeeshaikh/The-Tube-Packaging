@@ -20,7 +20,7 @@ const routes = new Set(files.map((f) => {
 }));
 
 const BANNED = /^(click here|here|view|explore|read more|learn more|this page|link)$/i;
-let fails = 0, links = 0, pagesWithContent = 0;
+let fails = 0, links = 0, external = 0, pagesWithContent = 0;
 const fail = (m) => { fails++; console.log('FAIL ' + m); };
 
 for (const f of files.sort()) {
@@ -31,6 +31,7 @@ for (const f of files.sort()) {
   const route = '/' + path.relative(DIST, path.dirname(f)) + '/';
 
   for (const s of sections) {
+    const inSources = s.includes('ttp-res__sources');
     for (const m of s.matchAll(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
       links++;
       const [, href, rawText] = m;
@@ -44,7 +45,13 @@ for (const f of files.sort()) {
         }
         continue;
       }
-      if (!target.startsWith('/')) { fail(`${route} external link ${href}`); continue; }
+      if (!target.startsWith('/')) {
+        // resource pages cite their technical claims; those links are external
+        // by design, are confined to the sources list and carry rel=nofollow
+        if (inSources && /rel="nofollow noopener"/.test(m[0])) { external++; continue; }
+        fail(`${route} external link ${href}`);
+        continue;
+      }
       if (!routes.has(target)) fail(`${route} -> ${target} (no such page in the build)`);
       if (BANNED.test(text)) fail(`${route} banned anchor text "${text}"`);
       const words = text.split(/\s+/).length;
@@ -59,5 +66,6 @@ for (const f of files.sort()) {
 }
 console.log(`\npages with editorial sections  ${pagesWithContent}`);
 console.log(`internal links checked         ${links}`);
+console.log(`cited external sources         ${external}`);
 console.log(fails ? `FAILURES: ${fails}` : 'all editorial links resolve and follow the anchor rules');
 process.exit(fails ? 1 : 0);

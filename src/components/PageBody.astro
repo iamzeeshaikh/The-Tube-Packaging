@@ -3,7 +3,7 @@
 // page: breadcrumb, article, entry header, entry content.
 import { rewrite } from '../lib/site.js';
 
-const { postId, title, crumb, route } = Astro.props;
+const { postId, title, crumb, route, parent } = Astro.props;
 // absolute like the theme's own breadcrumbs, but routed through rewrite() so a
 // QA build points at the QA origin instead of the live site
 const SITE = rewrite('https://thetubepackaging.com');
@@ -24,7 +24,7 @@ const SITE = rewrite('https://thetubepackaging.com');
 										<rect width="11.6667" height="20" fill="white" transform="matrix(-1 0 0 1 11.851 0)"/>
 									</clipPath>
 								</defs>
-							</svg></span></span><span class="current"><a href={SITE + route}><span>{crumb}</span></a><meta content="2" /></span>
+							</svg></span></span>{parent && <span><a href={SITE + parent.route}><span>{parent.name}</span></a><meta content="2" /><span class="separator"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.82516 0.234375L10.9918 9.40104L11.5643 10.0002L10.9918 10.5994L1.82516 19.766L0.62683 18.5677L9.19516 10.0002L0.625998 1.43271L1.82516 0.234375Z" fill="currentColor"/></svg></span></span>}<span class="current"><a href={SITE + route}><span>{crumb}</span></a><meta content={parent ? "3" : "2"} /></span>
 						</div>
 					</div><!-- .crumbs -->
 					<article id={`post-${postId}`} class={`post-${postId} page type-page status-publish hentry rishi-post no-post-thumbnail`}>

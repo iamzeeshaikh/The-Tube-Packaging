@@ -1,0 +1,88 @@
+---
+// /resources/ — the hub.
+//
+// Sizes & Specifications points at the existing /tube-size-guide/ rather than a
+// second page on the same subject: two pages competing for the same queries is
+// how a topic cluster loses to itself.
+import Shell from '../../layouts/Shell.astro';
+import PageBody from '../../components/PageBody.astro';
+import { contentPage } from '../../lib/contentpage.js';
+import { resourcePageCss, answer, esc, paras, SITE } from '../../lib/resource-page.js';
+import { MODULES } from '../../lib/copy/resources/index.js';
+import { posts } from '../../lib/resources.js';
+
+const route = '/resources/';
+const h1 = 'Tube Packaging Resources';
+const title = 'Tube Packaging Resources: Guides, Specs & Comparisons | The Tube Packaging';
+const description = 'Specification guides, size tables, printing and shipping references, '
+  + 'sustainability and comparisons for custom tube packaging, in one place.';
+
+const DIRECT = 'Everything here answers a specification question rather than selling a product. '
+  + 'Start with the size guide if you know what you are packing, materials and construction if '
+  + 'you do not, and comparisons if you are choosing between two options. Every figure quoted '
+  + 'matches the tables the quotes are built from.';
+
+const CARDS = [
+  { name: 'Materials & Construction', route: '/resources/materials-and-construction/',
+    blurb: 'Spiral and convolute winding, wall thickness in millimeters, board choices, liners and closures.' },
+  { name: 'Sizes & Specifications', route: '/tube-size-guide/',
+    blurb: 'Internal diameter and length reference tables, size classes, and how to order by the right dimension.' },
+  { name: 'Printing & Design', route: '/resources/printing-and-design/',
+    blurb: 'Wrap against direct print, artwork setup, bleed and seam allowance, color on uncoated board, finishes.' },
+  { name: 'Shipping & Protection', route: '/resources/shipping-and-protection/',
+    blurb: 'Carrier size limits, how girth is measured, wall thickness for courier handling, end caps that stay on.' },
+  { name: 'Sustainability & Recycling', route: '/resources/sustainability/',
+    blurb: 'Which parts of a tube recycle, why seamed metal is harder than a plastic cap, what compostable certifies.' },
+  { name: 'Industry Applications', route: '/resources/industry-applications/',
+    blurb: 'Diameters, liners and closures by sector: cosmetics, food and drink, print and art, candles, cores.' },
+  { name: 'Comparisons & Alternatives', route: '/resources/comparisons/',
+    blurb: 'Tube or box, kraft or white, plastic cap or metal end, paper or plastic tube, wrap or direct print.' },
+];
+
+const page = contentPage({ route, title, description, crumb: 'Resources', postId: 9090 });
+const articles = posts().slice(0, 4);
+
+const grid = (items) => '<div class="ttp-res__hub">' + items.map((c) => `
+<div class="ttp-res__hubCard">
+<h3><a href="${SITE}${c.route}">${esc(c.name)}</a></h3>
+<p>${esc(c.blurb)}</p>
+<a class="ttp-res__hubGo" href="${SITE}${c.route}">Open ${esc(c.name)}</a>
+</div>`).join('') + '</div>';
+
+const body = [
+  `<section class="ttp-cat ttp-cat--intro ttp-res__sec"><div class="ttp-cat__wrap">`
+  + answer(DIRECT)
+  + paras([
+    'These pages are written to be used while a specification is being decided, so the dimensions and ordering facts on them match the '
+    + `<a href="${SITE}/tube-size-guide/">tube size and diameter tables</a>` + ' exactly.',
+    'If you already know roughly what you are packing, the '
+    + `<a href="${SITE}/design-your-tube-packaging/">step-by-step specification builder</a>`
+    + ' will turn it into a quote request without reading anything first.',
+  ])
+  + '</div></section>',
+  `<section class="ttp-cat ttp-cat--topics ttp-res__sec" aria-labelledby="ttp-res-topics"><div class="ttp-cat__wrap">`
+  + `<span class="ttp-cat__eyebrow">Topics</span><h2 class="ttp-cat__h2" id="ttp-res-topics">Which reference do you need?</h2>`
+  + grid(CARDS) + '</div></section>',
+  `<section class="ttp-cat ttp-cat--articles ttp-res__sec" aria-labelledby="ttp-res-articles"><div class="ttp-cat__wrap">`
+  + `<span class="ttp-cat__eyebrow">Articles</span><h2 class="ttp-cat__h2" id="ttp-res-articles">Latest guides and articles</h2>`
+  + grid(articles.map((a) => ({ name: a.title, route: a.route, blurb: a.excerpt })))
+  + `<p><a href="${SITE}/category/information/">Browse all guides and articles</a></p></div></section>`,
+].join('\n');
+
+const hubSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': SITE + route + '#collection',
+  name: h1,
+  description,
+  inLanguage: 'en-US',
+  url: SITE + route,
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.ttp-res__answer'] },
+  hasPart: CARDS.map((c) => ({ '@type': 'WebPage', name: c.name, url: SITE + c.route })),
+});
+---
+<Shell page={page} headExtra={`<script type="application/ld+json">${hubSchema}</script><style>${resourcePageCss}</style>`}>
+  <PageBody postId={9090} title={h1} crumb="Resources" route={route}>
+    <Fragment set:html={body} />
+  </PageBody>
+</Shell>

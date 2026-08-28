@@ -1,0 +1,43 @@
+---
+// The topic pillar pages under /resources/.
+//
+// Each one is a copy module; this route renders them all through the shared
+// resource-page template so the components appear in the same order and the
+// schema is generated the same way on every page.
+import Shell from '../../layouts/Shell.astro';
+import PageBody from '../../components/PageBody.astro';
+import { contentPage } from '../../lib/contentpage.js';
+import { faqSchema } from '../../lib/faq-schema.js';
+import { renderResource, articleSchema, resourcePageCss } from '../../lib/resource-page.js';
+import { MODULES } from '../../lib/copy/resources/index.js';
+
+export function getStaticPaths() {
+  return MODULES.map((copy, i) => ({
+    params: { page: copy.route.replace('/resources/', '').replace(/\/$/, '') },
+    // ids well outside the range WordPress used, so they cannot collide
+    props: { copy, postId: 9100 + i },
+  }));
+}
+
+const { copy, postId } = Astro.props;
+const page = {
+  ...contentPage({
+    route: copy.route,
+    title: copy.title,
+    description: copy.description,
+    crumb: copy.h1,
+    postId,
+  }),
+  crumbs: [
+    { name: 'Home', url: 'https://thetubepackaging.com/' },
+    { name: 'Resources', url: 'https://thetubepackaging.com/resources/' },
+    { name: copy.h1, url: 'https://thetubepackaging.com' + copy.route },
+  ],
+};
+const body = renderResource(copy);
+---
+<Shell page={page} headExtra={faqSchema(copy.route, body) + articleSchema(copy) + `<style>${resourcePageCss}</style>`}>
+  <PageBody postId={postId} title={copy.h1} crumb={copy.h1} route={copy.route} parent={{ name: 'Resources', route: '/resources/' }}>
+    <Fragment set:html={body} />
+  </PageBody>
+</Shell>

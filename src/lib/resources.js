@@ -15,6 +15,7 @@
 // emitted chunk, not to the project, and fails during the build
 import postSitemap from '../../public/post-sitemap.xml?raw';
 import pages from '../data/pages.json' with { type: 'json' };
+import { ARTICLES } from './copy/blog/index.js';
 
 const SITE = 'https://thetubepackaging.com';
 const ARCHIVE = '/category/information/';
@@ -42,6 +43,24 @@ function postRoutes() {
   return [...postSitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
     .map((m) => m[1].replace(SITE, ''))
     .filter((r) => byRoute.has(r));
+}
+
+// the articles written for this site are not in the WordPress post sitemap, so
+// they are merged in here and sorted with the rest by date
+function nativePosts() {
+  return ARTICLES.map((a) => {
+    const d = new Date(a.published + 'T00:00:00Z');
+    return {
+      route: a.route,
+      title: a.h1,
+      excerpt: a.excerpt,
+      iso: a.published + 'T00:00:00+00:00',
+      image: a.image || '',
+      alt: a.h1,
+      date: d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }),
+      time: d.getTime(),
+    };
+  });
 }
 
 let cache = null;
@@ -77,7 +96,7 @@ export function posts() {
       date: d ? d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '',
       time: d ? d.getTime() : 0,
     };
-  }).sort((a, b) => b.time - a.time);
+  }).concat(nativePosts()).sort((a, b) => b.time - a.time);
   return cache;
 }
 
@@ -136,6 +155,7 @@ export function brandByline(html) {
 }
 
 const RESOURCE_LINKS = [
+  ['Resources &amp; Guides', '/resources/'],
   ['Guides &amp; Articles', ARCHIVE],
   ['Tube Size Guide', '/tube-size-guide/'],
   ['Design Your Tube Packaging', '/design-your-tube-packaging/'],
@@ -156,7 +176,7 @@ export function footerResources(html) {
 
 export function offcanvasResources(html) {
   if (html.includes('menu-item-ttpres')) return html;
-  const items = RESOURCE_LINKS.slice(0, 2).map(([label, href], i) =>
+  const items = RESOURCE_LINKS.slice(0, 3).map(([label, href], i) =>
     `<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-ttpres${i}">`
     + `<a href="${SITE}${href}">${label}</a></li>`).join('\n');
   const anchor = `<li id="menu-item-ttpcfg"`;

@@ -11,9 +11,11 @@
  * The desktop header is deliberately left alone: adding an item to it makes the
  * theme's sticky-header script insert a 746px gap on every page.
  */
-// bundled by Vite at build time; reading it from disk resolves relative to the
+// The WordPress post sitemap, kept as the record of which captured pages were
+// posts. It is no longer served: the site now publishes one flat sitemap.
+// Bundled by Vite at build time; reading it from disk resolves relative to the
 // emitted chunk, not to the project, and fails during the build
-import postSitemap from '../../public/post-sitemap.xml?raw';
+import postSitemap from '../data/wp-post-sitemap.xml?raw';
 import pages from '../data/pages.json' with { type: 'json' };
 import { ARTICLES } from './copy/blog/index.js';
 

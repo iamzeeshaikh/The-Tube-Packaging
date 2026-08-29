@@ -54,6 +54,41 @@
       "source": "/tube-configurator/",
       "destination": "/design-your-tube-packaging/",
       "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/product-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/category-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/product_cat-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/author-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
     }
   ],
   "headers": [
@@ -74,10 +109,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap_index.xml"
-    },
     {
       "source": "/product-category/Custom-Cardboard-Tubes/",
       "destination": "/product-category/custom-cardboard-tubes/index.html"

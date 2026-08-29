@@ -36,6 +36,23 @@ const MODIFIED = [
   /<meta[^>]*property=['"]article:published_time['"][^>]*content=['"]([^'"]+)['"]/i,
 ];
 
+// Sitemaps require W3C Datetime. Several captured WordPress posts publish
+// article:modified_time with a basic-format offset (+0000 rather than +00:00),
+// which Search Console rejects -- it reported exactly those seven as errors.
+function w3cDate(value, fallback) {
+  if (!value) return fallback;
+  let v = String(value).trim();
+  // basic-format offset -> extended
+  v = v.replace(/([+-]\d{2})(\d{2})$/, '$1:$2');
+  // a bare date is valid on its own; anything else has to parse
+  if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return v;
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$/.test(v)) {
+    const d = new Date(v);
+    return Number.isNaN(d.getTime()) ? fallback : d.toISOString().replace(/\.\d{3}Z$/, '+00:00');
+  }
+  return v;
+}
+
 export function flatSitemap({ fallbackDate }) {
   return {
     name: 'ttp-flat-sitemap',
@@ -52,7 +69,7 @@ export function flatSitemap({ fallbackDate }) {
           let mod = fallbackDate;
           for (const re of MODIFIED) {
             const m = re.exec(html);
-            if (m) { mod = m[1]; break; }
+            if (m) { mod = w3cDate(m[1], fallbackDate); break; }
           }
           rows.push({ route, mod });
         }

@@ -86,7 +86,7 @@ function quote(copy) {
 and it arrives here filled in.</p>
 <div class="ttp-cat__quoteDirect">
 <span>Or reach us directly</span>
-<a href="tel:(503)%20358-0443">(503) 358-0443</a>
+<a href="tel:+15033580443">(503) 358-0443</a>
 <a href="mailto:info@thetubepackaging.com">info@thetubepackaging.com</a>
 </div>`;
   const aside = `<div class="ttp-cat__quoteAside">${paras(copy.quote.paras)}`

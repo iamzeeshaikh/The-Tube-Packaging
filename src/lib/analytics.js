@@ -4,4 +4,6 @@
 export const GA4_ID = 'G-VFELHL96YM';
 
 export const ga4Tag = `<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');</script>`;
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');</script>
+<script defer src="/ga4-events.js"></script>
+<script>document.addEventListener('joinchat:open',function(e){if(typeof gtag==='function')gtag('event','whatsapp_click',{link_url:(e.detail&&e.detail.link)||'',link_text:'joinchat'});});</script>`;

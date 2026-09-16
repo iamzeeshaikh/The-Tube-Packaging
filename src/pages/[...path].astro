@@ -4,6 +4,7 @@ import { rewrite, stripEagerRecaptcha, stripDeadScripts } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
+import { ga4Tag } from '../lib/analytics.js';
 import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { deferChat } from '../lib/defer-chat.js';
@@ -55,6 +56,7 @@ content = brandByline(content);
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={faqSchema(page.route, content)} />
 {isHome && <Fragment set:html={heroPreload} />}
+<Fragment set:html={ga4Tag} />
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />

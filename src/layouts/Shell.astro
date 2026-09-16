@@ -7,6 +7,7 @@ import { rewrite, stripEagerRecaptcha, stripDeadScripts } from '../lib/site.js';
 import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
+import { ga4Tag } from '../lib/analytics.js';
 import { refreshPriceValidUntil } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { deferChat } from '../lib/defer-chat.js';
@@ -24,6 +25,7 @@ const { page, headExtra = '' } = Astro.props;
 <Fragment set:html={(deferChat(refreshPriceValidUntil(rewrite(page.head))))} />
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={headExtra} />
+<Fragment set:html={ga4Tag} />
 <Fragment set:html={cssFixes} />
 <Fragment set:html={modernCss} />
 <Fragment set:html={categoryCss} />

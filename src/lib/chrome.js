@@ -38,5 +38,8 @@ export function region(name, page) {
 export const skipLink = rewrite(chrome.skip);
 
 export function joinchat(page) {
-  return rewrite(chrome.joinchat).replace('%%JC%%', rewrite(page.joinchatSettings));
+  // ga_event "" stops Joinchat sending its own generate_lead to GA4 on every
+  // WhatsApp open; /ga4-events.js sends whatsapp_click from joinchat:open instead.
+  const settings = rewrite(page.joinchatSettings).replace(/^\{/, '{"ga_event":"",');
+  return rewrite(chrome.joinchat).replace('%%JC%%', settings);
 }

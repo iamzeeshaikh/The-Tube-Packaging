@@ -19,12 +19,35 @@ const tokens = {
  * holds those differing tags by position, so a single shared markup blob
  * reproduces every page exactly.
  */
+// A diff tag and the shared tag it replaces differ only in per-page state.
+const identity = (tag) => tag
+  .replace(/\s(loading|fetchpriority|decoding|aria-current|class|style)="[^"]*"/g, '')
+  .replace(/\s+/g, ' ');
+
+// The footer blob gained tags after the footer diffs were captured, so their
+// indexes point 8 tokens early: the certificate image landed on a </div> (two
+// badge rows) and the current-menu class on the wrong category. Each diff tag
+// is therefore placed on the nearest token with the same identity; a tag with
+// no match is dropped rather than overwrite an unrelated token.
+function place(list, index, tag) {
+  const want = identity(tag);
+  for (let d = 0; d <= 40; d++) {
+    for (const j of d ? [index + d, index - d] : [index]) {
+      if (list[j] !== undefined && identity(list[j]) === want) return j;
+    }
+  }
+  return -1;
+}
+
 export function region(name, page) {
   const diff = page.chromeDiff?.[name];
   const html = diff
     ? (() => {
         const out = tokens[name].slice();
-        for (const [i, tag] of Object.entries(diff)) out[i] = tag;
+        for (const [i, tag] of Object.entries(diff)) {
+          const j = place(tokens[name], Number(i), tag);
+          if (j >= 0) out[j] = tag;
+        }
         return out.join('');
       })()
     : chrome[name];

@@ -176,6 +176,15 @@ export function footerResources(html) {
   return html.replace('<section id="nav_menu-7"', widget + '<section id="nav_menu-7"');
 }
 
+// Owner request 2026-10-10: a Trustpilot review link at the end of the footer's
+// company menu (after Terms & Conditions).
+export function footerTrustpilot(html) {
+  if (html.includes('menu-item-ttptp')) return html;
+  const item = '<li id="menu-item-ttptp" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-ttptp">'
+    + '<a href="https://www.trustpilot.com/evaluate/thetubepackaging.com" target="_blank" rel="noopener">Review Us on Trustpilot</a></li>';
+  return html.replace(/(<li id="menu-item-438"[^>]*>[\s\S]*?<\/li>)/, `$1\n${item}`);
+}
+
 export function offcanvasResources(html) {
   if (html.includes('menu-item-ttpres')) return html;
   const items = RESOURCE_LINKS.slice(0, 3).map(([label, href], i) =>

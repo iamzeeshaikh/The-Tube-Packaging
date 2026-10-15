@@ -28,6 +28,12 @@ const LABELS = {
 const money = (n) => catalogue.currencySymbol + Number(n).toFixed(catalogue.decimals);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// one plain address only: no lists, no display names, no header line breaks
+const EMAIL_RE = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/;
+const headerSafe = (s) => String(s ?? '').replace(/[\r\n]+/g, ' ').trim();
+// the 100-piece minimum every product page states; the cart enforces it in the
+// browser, this clamps a smaller line up on the server too
+const MIN_QTY = 100;
 
 function readBody(req) {
   if (req.body && typeof req.body === 'object') return Promise.resolve(req.body);
@@ -65,15 +71,16 @@ export default async function handler(req, res) {
       message: 'Please fill in the required fields before placing your order.',
     });
   }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(billing.billing_email)) {
-    return res.status(400).json({ ok: false, message: 'Please enter a valid email address.' });
-  }
+  // an unusable email never blocks the order: the store still gets it, flagged,
+  // and only the customer confirmation is skipped
+  const email = headerSafe(billing.billing_email);
+  const emailOk = email.length <= 254 && EMAIL_RE.test(email);
 
   // rebuild the order from the catalogue: never trust prices from the client
   const items = [];
   for (const line of Array.isArray(body.items) ? body.items : []) {
     const product = catalogue.products[String(line.id)];
-    const qty = Math.max(1, Math.min(100000, parseInt(line.qty, 10) || 0));
+    const qty = Math.max(MIN_QTY, Math.min(100000, parseInt(line.qty, 10) || 0));
     if (!product || !qty) continue;
     items.push({ ...product, qty, total: product.price * qty });
   }
@@ -133,8 +140,8 @@ export default async function handler(req, res) {
     await transport.sendMail({
       from,
       to: storeTo,
-      replyTo: billing.billing_email,
-      subject: `[${STORE_NAME}] New order ${orderNumber} — ${money(total)} (Cash on delivery)`,
+      replyTo: emailOk ? email : undefined,
+      subject: `${emailOk ? '' : '[Possible spam] '}[${STORE_NAME}] New order ${orderNumber} — ${money(total)} (Cash on delivery)`,
       text,
       html: orderHtml,
     });
@@ -146,20 +153,38 @@ export default async function handler(req, res) {
     });
   }
 
-  // customer confirmation is best-effort: the order is already with the store
-  try {
-    await transport.sendMail({
-      from,
-      to: billing.billing_email,
-      subject: `Your ${STORE_NAME} order ${orderNumber}`,
-      text: `Thank you. Your order has been received.\n\n${text}\n\n` +
-        `Pay with cash upon delivery.\n\n${STORE_NAME}\n${STORE_ADDRESS}\n${STORE_PHONE}`,
-      html: `<p>Thank you. Your order has been received.</p>${orderHtml}` +
-        `<p>Pay with cash upon delivery.</p>` +
-        `<p>${STORE_NAME}<br>${STORE_ADDRESS}<br>${STORE_PHONE}</p>`,
-    });
-  } catch (err) {
-    console.error('customer confirmation failed', err);
+  // customer confirmation is best-effort: the order is already with the store.
+  // It goes to one validated address and repeats only what the server knows
+  // (order number, catalogue lines, totals, store contact) -- never the
+  // visitor's own text, so the mailbox cannot be used to relay messages.
+  if (emailOk) {
+    // letters only, so the greeting cannot carry a link or a message
+    const firstName = headerSafe(billing.billing_first_name).replace(/[^\p{L}\p{M}\s'-]/gu, '').trim().slice(0, 40);
+    const summaryText = [
+      `Order ${orderNumber}`, date, 'Payment method: Cash on delivery', '',
+      ...items.map((i) => `${i.name} x ${i.qty} — ${money(i.total)}`),
+      '', `Total: ${money(total)}`,
+    ].join('\n');
+    const summaryHtml =
+      `<h2>Order ${esc(orderNumber)}</h2>` +
+      `<p>${esc(date)} &middot; Payment method: <strong>Cash on delivery</strong></p>` +
+      `<table cellpadding="6" cellspacing="0" border="0">${rows}` +
+      `<tr><td align="right"><strong>Total</strong></td><td align="right">${money(total)}</td></tr>` +
+      `</table>`;
+    try {
+      await transport.sendMail({
+        from,
+        to: email,
+        subject: `Your ${STORE_NAME} order ${orderNumber}`,
+        text: `Thank you${firstName ? ', ' + firstName : ''}. Your order has been received.\n\n${summaryText}\n\n` +
+          `Pay with cash upon delivery.\n\n${STORE_NAME}\n${STORE_ADDRESS}\n${STORE_PHONE}`,
+        html: `<p>Thank you${firstName ? ', ' + esc(firstName) : ''}. Your order has been received.</p>${summaryHtml}` +
+          `<p>Pay with cash upon delivery.</p>` +
+          `<p>${STORE_NAME}<br>${STORE_ADDRESS}<br>${STORE_PHONE}</p>`,
+      });
+    } catch (err) {
+      console.error('customer confirmation failed', err);
+    }
   }
 
   return res.status(200).json({ ok: true, orderNumber, date, total });

@@ -51,6 +51,14 @@ const HONEYPOT = new Set([
   'form_fields[field_7678a05]', 'form_fields[field_361fe73]',
 ]);
 
+// Forms that render the reCAPTCHA v2 checkbox, so a submission without a
+// token did not come through the page.
+const CAPTCHA_FORMS = new Set(['2bb183f5', 'e0d8389']);
+
+// one plain address only: no lists, no display names, no header line breaks
+const EMAIL_RE = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/;
+const headerSafe = (s) => String(s ?? '').replace(/[\r\n]+/g, ' ').trim();
+
 // Elementor mailed the field's *label*, not its generated id. forms.json carries
 // the label for every field, so notifications read "Phone" rather than
 // "field_f54cfcb"; anything unmapped falls back to a readable version of the id.
@@ -81,31 +89,38 @@ export default async function handler(req, res) {
   const cfg = forms[fields.form_id];
   if (!cfg) return res.status(400).json({ ok: false, message: 'An error occurred.' });
 
-  // silently accept honeypot hits so bots get no signal
+  // Nothing a spam check finds ever drops an enquiry: it only marks the subject
+  // so the inbox can sort it. The visitor sees the normal success either way.
+  let suspect = false;
+
+  // a filled honeypot field means the form was not filled in by a person
   for (const trap of HONEYPOT) {
-    if (fields[trap]) return res.status(200).json({ ok: true, message: cfg.success_message });
+    if (fields[trap]) suspect = true;
   }
 
   // Forms that show the reCAPTCHA v2 checkbox were verified server-side by
-  // Elementor Pro; keep that check with the same key pair.
-  if (fields['g-recaptcha-response'] !== undefined && process.env.RECAPTCHA_SECRET_KEY) {
-    const body = new URLSearchParams({
-      secret: process.env.RECAPTCHA_SECRET_KEY,
-      response: fields['g-recaptcha-response'] || '',
-    });
-    try {
-      const verify = await fetch('https://www.google.com/recaptcha/api/siteverify',
-        { method: 'POST', body });
-      const outcome = await verify.json();
-      if (!outcome.success) {
-        return res.status(400).json({
-          ok: false,
-          message: cfg.invalid_message || "There's something wrong. The form is invalid.",
-        });
+  // Elementor Pro; keep that check with the same key pair. A token that is
+  // missing on a form that renders the checkbox, or that fails verification,
+  // marks the submission instead of rejecting it.
+  const token = fields['g-recaptcha-response'];
+  const needsToken = CAPTCHA_FORMS.has(fields.form_id);
+  if (process.env.RECAPTCHA_SECRET_KEY && (token !== undefined || needsToken)) {
+    if (!token) {
+      suspect = true;
+    } else {
+      const body = new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY,
+        response: String(token),
+      });
+      try {
+        const verify = await fetch('https://www.google.com/recaptcha/api/siteverify',
+          { method: 'POST', body });
+        const outcome = await verify.json();
+        if (!outcome.success) suspect = true;
+      } catch (err) {
+        console.error('recaptcha verify failed', err);
+        suspect = true;
       }
-    } catch (err) {
-      console.error('recaptcha verify failed', err);
-      return res.status(502).json({ ok: false, message: cfg.error_message || 'An error occurred.' });
     }
   }
 
@@ -136,14 +151,16 @@ export default async function handler(req, res) {
 
   const to = (process.env.FORM_TO_OVERRIDE || cfg.email_to)
     .split(',').map((s) => s.trim()).filter(Boolean);
-  const replyTo = fields['form_fields[email]'] || undefined;
+  const replyAddress = headerSafe(fields['form_fields[email]']);
+  const replyTo = EMAIL_RE.test(replyAddress) && replyAddress.length <= 254 ? replyAddress : undefined;
 
   try {
     await transport.sendMail({
       from: `"${cfg.email_from_name || process.env.MAIL_FROM_NAME}" <${cfg.email_from || process.env.MAIL_FROM_EMAIL}>`,
       to,
       replyTo,
-      subject: cfg.email_subject || `New message from "${cfg.form_name}"`,
+      subject: (suspect ? '[Possible spam] ' : '') +
+        (cfg.email_subject || `New message from "${cfg.form_name}"`),
       text,
       html,
       attachments: files,

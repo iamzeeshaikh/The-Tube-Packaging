@@ -10,6 +10,8 @@ import { contentPage } from '../../lib/contentpage.js';
 import { resourcePageCss, answer, esc, paras, SITE } from '../../lib/resource-page.js';
 import { MODULES } from '../../lib/copy/resources/index.js';
 import { posts } from '../../lib/resources.js';
+import { pageFaqSection } from '../../lib/page-faqs.js';
+import { faqSchema } from '../../lib/faq-schema.js';
 
 const route = '/resources/';
 const h1 = 'Tube Packaging Resources';
@@ -67,6 +69,7 @@ const body = [
   + `<span class="ttp-cat__eyebrow">Articles</span><h2 class="ttp-cat__h2" id="ttp-res-articles">Latest guides and articles</h2>`
   + grid(articles.map((a) => ({ name: a.title, route: a.route, blurb: a.excerpt })))
   + `<p><a href="${SITE}/category/information/">Browse all guides and articles</a></p></div></section>`,
+  pageFaqSection(route),
 ].join('\n');
 
 const hubSchema = JSON.stringify({
@@ -81,7 +84,7 @@ const hubSchema = JSON.stringify({
   hasPart: CARDS.map((c) => ({ '@type': 'WebPage', name: c.name, url: SITE + c.route })),
 });
 ---
-<Shell page={page} headExtra={`<script type="application/ld+json">${hubSchema}</script><style>${resourcePageCss}</style>`}>
+<Shell page={page} headExtra={`<script type="application/ld+json">${hubSchema}</script><style>${resourcePageCss}</style>` + faqSchema(route, body)}>
   <PageBody postId={9090} title={h1} crumb="Resources" route={route}>
     <Fragment set:html={body} />
   </PageBody>

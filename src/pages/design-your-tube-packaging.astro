@@ -9,13 +9,17 @@ import { contentPage } from '../lib/contentpage.js';
 import { paras } from '../lib/sections.js';
 import { configurator, configuratorCss } from '../lib/configurator.js';
 import { route, title, description, h1, intro } from '../lib/copy/configurator.js';
+import { pageFaqSection } from '../lib/page-faqs.js';
+import { faqSchema } from '../lib/faq-schema.js';
 
 const page = contentPage({ route, title, description, crumb: h1, postId: 9002 });
+const faqHtml = pageFaqSection(route);
 ---
-<Shell page={page} headExtra={configuratorCss}>
+<Shell page={page} headExtra={configuratorCss + faqSchema(route, faqHtml)}>
   <PageBody postId={9002} title={h1} crumb={h1} route={route}>
     <Fragment set:html={`<section class="ttp-cat ttp-cat--intro"><div class="ttp-cat__wrap">${paras(intro)}</div></section>`} />
     <Fragment set:html={configurator()} />
+    <Fragment set:html={faqHtml} />
   </PageBody>
   <script is:inline src="/assets/configurator.js" defer></script>
 </Shell>

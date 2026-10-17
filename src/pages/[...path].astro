@@ -16,6 +16,7 @@ import { categoryCss } from '../lib/category-css.js';
 import { enhanceCategory } from '../lib/category-render.js';
 import { enhanceProduct } from '../lib/product-render.js';
 import { faqSchema } from '../lib/faq-schema.js';
+import { injectPageFaqs } from '../lib/page-faqs.js';
 import { rebuildArchive, archiveResultCount, brandByline, resourcesCss } from '../lib/resources.js';
 import Header from '../components/Header.astro';
 import Offcanvas from '../components/Offcanvas.astro';
@@ -48,6 +49,8 @@ content = onProduct ? embedConfigurator(content, page.route)
                     : configuratorCta(content, page.route);
 // the theme printed the owner's personal Gmail address as the author byline
 content = brandByline(content);
+// the pages that had no FAQ section get one, before the schema reads the markup
+content = injectPageFaqs(page.route, content);
 ---
 <!DOCTYPE html>
 <html lang="en-US">

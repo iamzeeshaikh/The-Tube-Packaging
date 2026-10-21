@@ -8,6 +8,7 @@
  *
  * There is no price calculation here, deliberately. See src/lib/copy/configurator.js.
  */
+var LOADED_AT = Date.now();
 (function () {
   var root = document.getElementById('ttp-configurator');
   if (!root) return;
@@ -177,6 +178,7 @@
     sendBtn.textContent = 'Sending…';
     var data = new FormData(form);
     data.append('page_url', location.href);
+    data.append('ts', String(LOADED_AT)); // when the page loaded; the server labels posts without it or within 3 s of it
     fetch('/api/form/', { method: 'POST', body: data })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (res) {

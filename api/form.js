@@ -7,6 +7,7 @@
 import Busboy from 'busboy';
 import nodemailer from 'nodemailer';
 import forms from '../src/data/forms.json' with { type: 'json' };
+import { spamReasons } from './_spam.js';
 
 export const config = { api: { bodyParser: false } };
 
@@ -91,11 +92,11 @@ export default async function handler(req, res) {
 
   // Nothing a spam check finds ever drops an enquiry: it only marks the subject
   // so the inbox can sort it. The visitor sees the normal success either way.
-  let suspect = false;
+  const reasons = [];
 
   // a filled honeypot field means the form was not filled in by a person
   for (const trap of HONEYPOT) {
-    if (fields[trap]) suspect = true;
+    if (fields[trap]) reasons.push('hidden field filled');
   }
 
   // Forms that show the reCAPTCHA v2 checkbox were verified server-side by
@@ -106,7 +107,7 @@ export default async function handler(req, res) {
   const needsToken = CAPTCHA_FORMS.has(fields.form_id);
   if (process.env.RECAPTCHA_SECRET_KEY && (token !== undefined || needsToken)) {
     if (!token) {
-      suspect = true;
+      reasons.push('no reCAPTCHA token');
     } else {
       const body = new URLSearchParams({
         secret: process.env.RECAPTCHA_SECRET_KEY,
@@ -116,13 +117,28 @@ export default async function handler(req, res) {
         const verify = await fetch('https://www.google.com/recaptcha/api/siteverify',
           { method: 'POST', body });
         const outcome = await verify.json();
-        if (!outcome.success) suspect = true;
+        if (!outcome.success) reasons.push('reCAPTCHA failed');
       } catch (err) {
         console.error('recaptcha verify failed', err);
-        suspect = true;
+        reasons.push('reCAPTCHA check errored');
       }
     }
   }
+
+  // Random-letter names and messages, Gmail dot-trick addresses, and posts
+  // that never loaded the page (no `ts`) or came within seconds of loading it.
+  const byLabel = (re) => Object.entries(cfg.field_labels || {})
+    .filter(([, label]) => re.test(label))
+    .map(([id]) => fields[`form_fields[${id}]`])
+    .filter((v) => typeof v === 'string' && v.trim());
+  reasons.push(...spamReasons({
+    names: byLabel(/name/i),
+    message: byLabel(/message|information|anything else/i).join(' '),
+    email: fields['form_fields[email]'],
+    sentAt: fields.ts,
+  }));
+  const suspect = reasons.length > 0;
+  const spamLine = suspect ? `Spam check: ${reasons.join('; ')}` : '';
 
   const rows = Object.entries(fields)
     .filter(([k]) => k.startsWith('form_fields[') && !HONEYPOT.has(k))
@@ -133,13 +149,14 @@ export default async function handler(req, res) {
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   const html = [
+    suspect ? `<p style="background:#fde3d8;padding:6px 10px"><strong>${esc(spamLine)}</strong></p>` : '',
     '<table cellpadding="6" cellspacing="0" border="0">',
     ...rows.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`),
     '</table>',
     `<p>Sent from ${esc(fields.page_url || fields.referer_title || '')}</p>`,
   ].join('\n');
 
-  const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n') +
+  const text = (suspect ? spamLine + '\n\n' : '') + rows.map(([k, v]) => `${k}: ${v}`).join('\n') +
     `\n\nSent from ${fields.page_url || ''}`;
 
   const transport = nodemailer.createTransport({

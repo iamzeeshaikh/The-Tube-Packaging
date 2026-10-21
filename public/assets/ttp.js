@@ -10,6 +10,7 @@
  *   3. the popup dialog and its trigger links
  *   4. Elementor Pro form submission
  */
+var LOADED_AT = Date.now();
 (function () {
   'use strict';
 
@@ -313,6 +314,7 @@
     if (button) button.classList.add('elementor-button-state');
     var data = new FormData(form);
     data.append('page_url', location.href);
+    data.append('ts', String(LOADED_AT)); // when the page loaded; the server labels posts without it or within 3 s of it
 
     fetch('/api/form/', { method: 'POST', body: data })
       .then(function (r) { return r.json().catch(function () { return {}; }); })

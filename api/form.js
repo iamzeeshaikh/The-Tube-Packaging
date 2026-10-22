@@ -131,10 +131,17 @@ export default async function handler(req, res) {
     .filter(([, label]) => re.test(label))
     .map(([id]) => fields[`form_fields[${id}]`])
     .filter((v) => typeof v === 'string' && v.trim());
+  // The other typed boxes (product, quantity, company) catch one canned
+  // sentence pasted into every field.
+  const others = {};
+  for (const [id, label] of Object.entries(cfg.field_labels || {})) {
+    if (/product|quantity|company|subject/i.test(label) && typeof fields[`form_fields[${id}]`] === 'string') others[label] = fields[`form_fields[${id}]`];
+  }
   reasons.push(...spamReasons({
     names: byLabel(/name/i),
     message: byLabel(/message|information|anything else/i).join(' '),
     email: fields['form_fields[email]'],
+    fields: others,
     sentAt: fields.ts,
   }));
   const suspect = reasons.length > 0;

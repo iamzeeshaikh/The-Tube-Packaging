@@ -129,7 +129,7 @@ export default async function handler(req, res) {
   // that never loaded the page (no `ts`) or came within seconds of loading it.
   const byLabel = (re) => Object.entries(cfg.field_labels || {})
     .filter(([, label]) => re.test(label))
-    .map(([id]) => fields[`form_fields[${id}]`])
+    .flatMap(([id]) => [].concat(fields[`form_fields[${id}]`] ?? []))
     .filter((v) => typeof v === 'string' && v.trim());
   // The other typed boxes (product, quantity, company) catch one canned
   // sentence pasted into every field.
@@ -146,6 +146,13 @@ export default async function handler(req, res) {
   }));
   const suspect = reasons.length > 0;
   const spamLine = suspect ? `Spam check: ${reasons.join('; ')}` : '';
+  // One line per submission in the function log, so a spam that slipped
+  // through can be inspected without asking for the email.
+  console.log('form', JSON.stringify({
+    form_id: fields.form_id, reasons, ts: fields.ts ? 'yes' : 'no',
+    names: byLabel(/name/i), message: byLabel(/message|information|anything else/i).join(' ').slice(0, 80),
+    email: String(fields['form_fields[email]'] || ''), ua: (req.headers['user-agent'] || '').slice(0, 60),
+  }));
 
   const rows = Object.entries(fields)
     .filter(([k]) => k.startsWith('form_fields[') && !HONEYPOT.has(k))

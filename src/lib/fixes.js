@@ -34,4 +34,14 @@ export const cssFixes = `<style id="ttp-fixes">
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* the mobile header is brand blue and so is the logo, which made the name
+   almost unreadable on phones; give the mobile logo a white plate (2026-11) */
+.header-items.first-wrapper a.site-logo {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  line-height: 0;
+}
 </style>`;

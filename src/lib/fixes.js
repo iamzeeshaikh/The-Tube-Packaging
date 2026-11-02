@@ -37,11 +37,11 @@ export const cssFixes = `<style id="ttp-fixes">
 
 /* the mobile header is brand blue and so is the logo, which made the name
    almost unreadable on phones; give the mobile logo a white plate (2026-11) */
-.header-items.first-wrapper a.site-logo {
-  display: inline-block;
+/* a box-shadow spread draws the plate without changing any box size, so the
+   header height and the page below it never move (no layout shift) */
+.header-items.first-wrapper a.site-logo img {
   background: #ffffff;
-  border-radius: 8px;
-  padding: 5px 10px;
-  line-height: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 6px #ffffff;
 }
 </style>`;

@@ -40,6 +40,8 @@ export const cssFixes = `<style id="ttp-fixes">
 /* a box-shadow spread draws the plate without changing any box size, so the
    header height and the page below it never move (no layout shift) */
 .header-items.first-wrapper a.site-logo img {
+  width: 150px;
+  height: 30px;
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 0 0 6px #ffffff;

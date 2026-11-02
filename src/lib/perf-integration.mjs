@@ -246,6 +246,8 @@ export function perfFixes() {
           // an empty data: icon left by a WordPress plugin sat before the real
           // favicon links and could win in some browsers (2026-11)
           html = html.replace('<link rel="icon" href="data:,">', '');
+          // the header logo is above the fold on every page: load it eagerly
+          html = html.replace(/<img loading="lazy"( width="500" height="100" src="https:\/\/thetubepackaging\.com\/wp-content\/uploads\/2024\/07\/ttp\.png")/g, '<img$1');
           html = bundleCss(html, dist, pageUrl, written);
           writeFileSync(file, html);
         }

@@ -199,6 +199,31 @@ function webpSources(html, dist) {
   });
 }
 
+// 6. Alt text for the shared header/footer images, which the WordPress theme
+//    printed with alt="" on every page (logo, social icons, trust badges).
+//    Matched on the file name only; an image that already has alt text is left
+//    alone. (2026-11)
+const CHROME_ALTS = {
+  'ttp.png': 'The Tube Packaging logo',
+  'fb-icon-300x300.png': 'The Tube Packaging on Facebook',
+  'linkedin-png-300x222.avif': 'The Tube Packaging on LinkedIn',
+  'Secure-Payment-Methods.png': 'Secure payment methods',
+  'Secure-Site.png': 'Secure site',
+  'DHL.png': 'DHL shipping',
+  'FEDEX.png': 'FedEx shipping',
+  'dmca-badge-w250-2x1-01.png': 'DMCA protected',
+  'secure-icons.png': 'Secured and DMCA protected badges',
+  'certificate.png': 'Security and trust badges',
+};
+function chromeAlts(html) {
+  return html.replace(/<img\b[^>]*>/g, (tag) => {
+    if (!/\salt=""/.test(tag)) return tag;
+    const src = /\ssrc="([^"]+)"/.exec(tag);
+    const alt = src && CHROME_ALTS[src[1].split('/').pop()];
+    return alt ? tag.replace(/\salt=""/, ` alt="${alt}"`) : tag;
+  });
+}
+
 export function perfFixes() {
   return {
     name: 'ttp-perf',
@@ -217,6 +242,10 @@ export function perfFixes() {
           html = deferAnalytics(html);
           html = deferScripts(html);
           html = webpSources(html, dist);
+          html = chromeAlts(html);
+          // an empty data: icon left by a WordPress plugin sat before the real
+          // favicon links and could win in some browsers (2026-11)
+          html = html.replace('<link rel="icon" href="data:,">', '');
           html = bundleCss(html, dist, pageUrl, written);
           writeFileSync(file, html);
         }

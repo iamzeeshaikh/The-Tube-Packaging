@@ -5,7 +5,7 @@ import { skipLink } from '../lib/chrome.js';
 import { cssFixes } from '../lib/fixes.js';
 import { modernCss } from '../lib/modern.js';
 import { ga4Tag, clarityTag } from '../lib/analytics.js';
-import { refreshPriceValidUntil } from '../lib/pricing.js';
+import { refreshPriceValidUntil, addOfferPolicies } from '../lib/pricing.js';
 import { breadcrumbSchema } from '../lib/breadcrumbs.js';
 import { deferChat } from '../lib/defer-chat.js';
 import { heroPicture, heroPreload } from '../lib/hero-image.js';
@@ -41,6 +41,14 @@ let content = enhanceProduct({ ...page, content: enhanceCategory(page) });
 content = archiveResultCount(rebuildArchive({ ...page, content }), page.route);
 // the home page hero is the LCP element; give it renditions and a preload
 const isHome = page.route === '/';
+// the home page already carries the Organization node; every other page points
+// at the same @id so the brand is stated once per page (2026-11)
+const organizationSchema = '<script type="application/ld+json" id="ttp-org">' + JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://thetubepackaging.com#Organization',
+  name: 'The Tube Packaging', url: 'https://thetubepackaging.com',
+  logo: 'https://thetubepackaging.com/wp-content/uploads/2024/07/ttp.png',
+  email: 'info@thetubepackaging.com', telephone: '+15033580443',
+}) + '</script>';
 if (isHome) content = heroPicture(content);
 // product pages carry the configurator itself, after the description; every
 // other page gets the bar that links to it
@@ -55,7 +63,8 @@ content = injectPageFaqs(page.route, content);
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<Fragment set:html={deferChat(refreshPriceValidUntil(rewrite(page.head)))} />
+<Fragment set:html={deferChat(addOfferPolicies(refreshPriceValidUntil(rewrite(page.head))))} />
+{!isHome && <Fragment set:html={organizationSchema} />}
 <Fragment set:html={breadcrumbSchema(page)} />
 <Fragment set:html={faqSchema(page.route, content)} />
 {isHome && <Fragment set:html={heroPreload} />}

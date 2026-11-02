@@ -49,6 +49,14 @@ var LOADED_AT = Date.now();
   }
 
   var animated = document.querySelectorAll('.elementor-invisible');
+  // Phones: show the sections straight away, without the entrance animation.
+  // The product pages' quote section slid in (slideInDown) while the page was
+  // still settling, and PSI mobile measured it as a 0.36-0.47 layout shift.
+  // (2026-11)
+  if (animated.length && window.matchMedia && window.matchMedia('(max-width: 767px)').matches) {
+    Array.prototype.forEach.call(animated, function (el) { el.classList.remove('elementor-invisible'); });
+    animated = [];
+  }
   if (animated.length) {
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries, obs) {
